@@ -19,7 +19,8 @@ import {
   Briefcase,
   ChevronDown,
   ChevronUp,
-  CheckCircle2
+  CheckCircle2,
+  MessageSquareQuote
 } from "lucide-react";
 import { 
   ResponsiveContainer, 
@@ -89,6 +90,18 @@ interface ShoonyaStock {
   Pillar_3_Qualitative_Scuttlebutt: string;
   Pillar_4_Macro_Risks: string;
   Trigger_Source: string;
+  ValuePickr_Scuttlebutt?: {
+    topic_id: number;
+    topic_title: string;
+    thread_url: string;
+    posts: Array<{
+      author: string;
+      date: string;
+      post_number?: number;
+      text: string;
+      url?: string;
+    }>;
+  };
 }
 
 interface ScreenerData {
@@ -594,6 +607,40 @@ export default function QuantDashboard() {
                                       </p>
                                     </div>
                                   </div>
+
+                                  {/* Verbatim ValuePickr Grassroots Discussion */}
+                                  {stock.ValuePickr_Scuttlebutt && (
+                                    <div className="p-3.5 rounded-lg bg-slate-900/90 border border-cyan-500/30 space-y-2.5">
+                                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
+                                        <div className="font-bold text-cyan-300 flex items-center gap-1.5 text-xs">
+                                          <MessageSquareQuote className="w-4 h-4 text-cyan-400" />
+                                          ValuePickr Grassroots Investor Discussion (Verbatim Excerpts)
+                                        </div>
+                                        <a 
+                                          href={stock.ValuePickr_Scuttlebutt.thread_url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-[11px] text-cyan-400 hover:text-cyan-300 font-mono flex items-center gap-1 hover:underline"
+                                        >
+                                          Open Thread #{stock.ValuePickr_Scuttlebutt.topic_id} <ExternalLink className="w-3 h-3" />
+                                        </a>
+                                      </div>
+
+                                      <div className="space-y-2">
+                                        {stock.ValuePickr_Scuttlebutt.posts.map((post, idx) => (
+                                          <div key={idx} className="p-2.5 rounded bg-slate-950/60 border border-slate-800/80 text-xs">
+                                            <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1 font-mono">
+                                              <span className="font-semibold text-emerald-400">@{post.author}</span>
+                                              <span>{post.date}</span>
+                                            </div>
+                                            <p className="text-slate-300 italic leading-relaxed font-sans">
+                                              &quot;{post.text}&quot;
+                                            </p>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  )}
 
                                   {/* Bottom Status bar */}
                                   <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-500 pt-1">

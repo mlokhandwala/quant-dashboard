@@ -42,6 +42,7 @@ jobs:
       - name: Run Autonomous Macro Ingestion Pipeline
         run: |
           python scripts/update_macro_pipeline.py
+          python scripts/sync_valuepickr_scuttlebutt.py
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
