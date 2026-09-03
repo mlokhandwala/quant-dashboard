@@ -41,7 +41,7 @@ interface MacroData {
   usdinr: { value: number; unit: string; percentile_10yr: number; verdict: string; trend: string };
   fii_dii_history: Array<{ Year: string; FII_Net_Inflow_Cr?: number; DII_Net_Inflow_Cr?: number; FII_Net_Equity_Cr?: number; DII_Net_Equity_Cr?: number; Strategic_Market_Dynamic?: string }>;
   india_macro_history: Array<any>;
-  daily_chart_history?: Array<{ Date: string; Brent: number; US10Y: number; DXY: number; USDINR: number; Nifty50: number }>;
+  daily_chart_history?: Array<{ Date: string; Brent: number; US10Y: number; DXY: number; USDINR: number; Nifty50: number; IndiaGSec?: number }>;
 }
 
 interface StockItem {
