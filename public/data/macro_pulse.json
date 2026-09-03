@@ -1,0 +1,6020 @@
+{
+  "last_updated": "2026-09-03 21:00:00",
+  "brent_crude": {
+    "value": 96.66,
+    "unit": "USD/bbl",
+    "percentile_10yr": 94.0,
+    "verdict": "ELEVATED",
+    "trend": "+21.7% MoM"
+  },
+  "us_10y": {
+    "value": 4.76,
+    "unit": "%",
+    "percentile_10yr": 99.3,
+    "verdict": "RESTRICTIVE",
+    "trend": "High Global Discount Rate"
+  },
+  "india_10y": {
+    "value": 6.89,
+    "unit": "%",
+    "percentile_10yr": 35.0,
+    "verdict": "BENIGN / EQUITY FRIENDLY",
+    "trend": "Anchored Domestic Cost of Capital"
+  },
+  "dxy": {
+    "value": 99.02,
+    "unit": "Index",
+    "percentile_10yr": 61.1,
+    "verdict": "NEUTRAL-TO-SOFT",
+    "trend": "-0.7% MoM"
+  },
+  "usdinr": {
+    "value": 94.47,
+    "unit": "INR",
+    "percentile_10yr": 98.5,
+    "verdict": "TAILWIND FOR EXPORTERS",
+    "trend": "Pharma & IT Realization Boost"
+  },
+  "fii_dii_history": [
+    {
+      "Year": 2015,
+      "FII_Net_Equity_Cr": 17808,
+      "DII_Net_Equity_Cr": 72199,
+      "Trend": "DII Absorption of FII Inflows"
+    },
+    {
+      "Year": 2016,
+      "FII_Net_Equity_Cr": 20566,
+      "DII_Net_Equity_Cr": 36120,
+      "Trend": "Demonetization Surge in Mutual Funds"
+    },
+    {
+      "Year": 2017,
+      "FII_Net_Equity_Cr": 51449,
+      "DII_Net_Equity_Cr": 115996,
+      "Trend": "Post-GST Bull Run, Massive SIP Growth"
+    },
+    {
+      "Year": 2018,
+      "FII_Net_Equity_Cr": -33014,
+      "DII_Net_Equity_Cr": 109590,
+      "Trend": "DIIs Cushioned IL&FS NBFC Crisis"
+    },
+    {
+      "Year": 2019,
+      "FII_Net_Equity_Cr": 101122,
+      "DII_Net_Equity_Cr": 42225,
+      "Trend": "Corporate Tax Cut Rally"
+    },
+    {
+      "Year": 2020,
+      "FII_Net_Equity_Cr": 170262,
+      "DII_Net_Equity_Cr": -35665,
+      "Trend": "Post-COVID Global Liquidity Flood"
+    },
+    {
+      "Year": 2021,
+      "FII_Net_Equity_Cr": 25752,
+      "DII_Net_Equity_Cr": 94840,
+      "Trend": "Retail Demat Boom, DII Dominance"
+    },
+    {
+      "Year": 2022,
+      "FII_Net_Equity_Cr": -121439,
+      "DII_Net_Equity_Cr": 276699,
+      "Trend": "Historic FII Exodus Absorbed by DII SIPs"
+    },
+    {
+      "Year": 2023,
+      "FII_Net_Equity_Cr": 171107,
+      "DII_Net_Equity_Cr": 181297,
+      "Trend": "Twin Institutional Engine Driving Nifty 20k+"
+    },
+    {
+      "Year": 2024,
+      "FII_Net_Equity_Cr": -14450,
+      "DII_Net_Equity_Cr": 453120,
+      "Trend": "Record Domestic SIP Expansion (DII Hegemony)"
+    },
+    {
+      "Year": 2025,
+      "FII_Net_Equity_Cr": -48200,
+      "DII_Net_Equity_Cr": 512000,
+      "Trend": "DIIs Driving Market Resilience"
+    },
+    {
+      "Year": 2026,
+      "FII_Net_Equity_Cr": 12500,
+      "DII_Net_Equity_Cr": 380000,
+      "Trend": "FII Rotation into High-ROCE Manufacturing"
+    }
+  ],
+  "india_macro_history": [
+    {
+      "Date": "1957-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.471388,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.471388,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.471388,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.500524,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.51145,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.540586,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.540586,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.5551549999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.566081,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.5551549999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.566081,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1957-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.5551549999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.526018,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.51145,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.51145,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.526018,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.5551549999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.595217,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6352799999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.649848,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.664416,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6899099999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.678984,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1958-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6352799999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.609785,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.624354,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.609785,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.609785,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6352799999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.664416,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7190470000000002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.733615,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.733615,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1959-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.678984,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.678984,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.664416,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.678984,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6899099999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.733615,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.733615,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7190470000000002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7190470000000002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1960-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6899099999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.6899099999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.704479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7190470000000002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7481830000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.759109,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.759109,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.759109,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.759109,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1961-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.759109,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7481830000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7481830000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.7481830000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.759109,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.773678,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.788246,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.81374,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.8283080000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.8283080000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.842876,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.8283080000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1962-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.802814,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.788246,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.773678,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.788246,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.802814,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.81374,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.842876,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.857445,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.872013,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.882939,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.897507,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.897507,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1963-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.926644,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.926644,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.952138,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.966706,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 1.981274,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.021337,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.061399,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.119672,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.145166,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.185229,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.243502,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.243502,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1964-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.254428,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.268996,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.228934,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.185229,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.199797,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.2143650000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.243502,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.309059,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.338195,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.367332,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.367332,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.378258,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1965-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.378258,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.378258,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.392826,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.392826,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.407394,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.487519,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.545792,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.585854,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.611349,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.625917,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.640485,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.669621,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1966-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.709684,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.709684,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.724252,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.749747,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.778883,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.833513,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.9027130000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.928207,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.957343,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.942775,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.982838,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.971911,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1967-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.942775,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.026542,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.982838,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.928207,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.942775,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.917281,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.942775,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.928207,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.993764,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.0119740000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.026542,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.960985,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1968-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.877218,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.859008,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.84444,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.859008,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.877218,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.909997,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.993764,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.0119740000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.0119740000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.0119740000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.993764,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.979196,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1969-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.979196,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.979196,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 2.979196,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.0119740000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.044752,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.077531,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.113951,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.12852,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.14673,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.161298,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.179508,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.179508,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1970-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.12852,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.095741,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.095741,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.095741,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.095741,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.095741,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.14673,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.197718,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.263275,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.2960540000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.2960540000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.314264,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1971-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.281486,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.263275,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.2450650000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.263275,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.281486,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.2960540000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.379821,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.4490199999999995,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.4817980000000004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.500008,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.514577,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.5327870000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1972-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.5327870000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.5327870000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.5837760000000003,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.634764,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.718531,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.835077,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 3.918844,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.086378,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.155577,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.173788,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.272123000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.3558900000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1973-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.3741,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.439657,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.490645,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.625401,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.760157,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.945901,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.062447,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.233624,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.401158000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.619680000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.634249,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.568692,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1974-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.484925,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.484925,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.466714,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.401158000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.433936,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.499493,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.517703,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.452147,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.401158000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.368379,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.3173900000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.299181,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1975-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.146214,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.0151,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.880344999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.811146,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.862133999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.880344999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.894913,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 4.9968900000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.0151,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.080657,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.113436,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.146214,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1976-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.146214,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.164424,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.215413,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.248192,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.266402,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.350169,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.382947,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.466714,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.499493,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.568692,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.550482,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.550482,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1977-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.550482,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.466714,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.382947,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.401158000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.415726,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.433936,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.499493,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.550482,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.568692,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.652459,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.721658000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.721658000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1978-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.634249,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.586902,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.535913,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.586902,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.670669,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.703448000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.805425,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 5.940181,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.056726,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.107715,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.140493,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.191482,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1979-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.293459,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.242471,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.20605,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.275249,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.308028,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.428216,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.493772,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.628528,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.679517,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.763284,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.828841000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.9126080000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1980-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.865261,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 6.9126080000000005,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.032795,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.065574000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.182119,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.284097,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.386074000000002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.52083,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.637374999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.670153999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.739352999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.772131,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1981-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.739352999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.721141999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.706574000000002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.688364,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.721141999999999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.772131,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 7.9068869999999984,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.041643,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.209177,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.227387,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.260165,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.343933,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1982-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.362142999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.325723,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.413132000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.445910000000001,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.547888,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.76641,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 8.966722,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.101479,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.236235,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.320002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.385558,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.436547,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1983-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.403769,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.472968,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.436547,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.385558,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.403769,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.454758,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.65507,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.840815,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.859025,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.910013,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.961002,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.00835,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1984-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.891803,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.891803,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.840815,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.859025,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 9.99378,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.09212,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.19409,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.34706,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.39805,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.41262,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.51459,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.59836,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1985-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.59836,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.58015,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.64935,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.73312,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.81688,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 10.95164,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.06818,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.23936,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.30492,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.37412,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.52344,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.63999,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1986-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.57443,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.57443,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.54165,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.54165,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.62542,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 11.82573,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.02969,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.17901,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.38296,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.53229,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.61606,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.69982,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1987-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.65248,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.66704,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.60149,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.66704,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.83458,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 12.96933,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.155079999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.3736,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.45737,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.55935,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.84707,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.92998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1988-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.76415,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.68123,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.68123,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.76415,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 13.84707,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.0129,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.09582,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.26165,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.42748,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.59332,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.59332,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.59332,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1989-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.5104,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.42748,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.5104,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.67623,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 14.92498,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 15.09082,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 15.33957,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 15.67123,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 15.75415,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 15.83707,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.16873,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.417479999999998,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1990-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.5004,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.74915,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.74915,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.66623,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.74915,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 16.91498,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 17.32956,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 17.74415,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 17.9929,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.32456,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.4904,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.65623,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1991-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.65623,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.90498,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.9879,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 18.9879,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 19.15373,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 19.40248,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 19.56831,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.06581,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.06581,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.14873,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.23164,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.23164,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1992-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.14873,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 19.98289,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 19.98289,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.14873,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.31456,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.39748,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.72914,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 20.97789,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.22664,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.47539,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.72414,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.97289,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1993-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.88997,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1994-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.80706,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1994-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 21.97289,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1994-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 22.13873,
+      "India_IIP_Index": NaN
+    },
+    {
+      "Date": "1994-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 22.30456,
+      "India_IIP_Index": 26.95337
+    },
+    {
+      "Date": "1994-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 22.55331,
+      "India_IIP_Index": 27.38882
+    },
+    {
+      "Date": "1994-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 22.96789,
+      "India_IIP_Index": 28.10877
+    },
+    {
+      "Date": "1994-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 23.29956,
+      "India_IIP_Index": 28.34607
+    },
+    {
+      "Date": "1994-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 23.54831,
+      "India_IIP_Index": 28.53
+    },
+    {
+      "Date": "1994-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 23.87997,
+      "India_IIP_Index": 28.74524
+    },
+    {
+      "Date": "1994-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 23.96289,
+      "India_IIP_Index": 29.14412
+    },
+    {
+      "Date": "1994-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 24.12872,
+      "India_IIP_Index": 29.57867
+    },
+    {
+      "Date": "1994-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 23.96289,
+      "India_IIP_Index": 29.99461
+    },
+    {
+      "Date": "1995-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 23.96289,
+      "India_IIP_Index": 30.54258
+    },
+    {
+      "Date": "1995-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 24.12872,
+      "India_IIP_Index": 30.32036
+    },
+    {
+      "Date": "1995-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 24.29456,
+      "India_IIP_Index": 30.54761
+    },
+    {
+      "Date": "1995-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 24.46039,
+      "India_IIP_Index": 31.19469
+    },
+    {
+      "Date": "1995-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 24.87497,
+      "India_IIP_Index": 30.96254
+    },
+    {
+      "Date": "1995-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 25.37247,
+      "India_IIP_Index": 31.23869
+    },
+    {
+      "Date": "1995-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 25.95289,
+      "India_IIP_Index": 31.96857
+    },
+    {
+      "Date": "1995-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.11872,
+      "India_IIP_Index": 32.07505
+    },
+    {
+      "Date": "1995-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.28455,
+      "India_IIP_Index": 33.35632
+    },
+    {
+      "Date": "1995-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.45039,
+      "India_IIP_Index": 32.39363
+    },
+    {
+      "Date": "1995-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.61622,
+      "India_IIP_Index": 33.1841
+    },
+    {
+      "Date": "1995-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.28455,
+      "India_IIP_Index": 33.73757
+    },
+    {
+      "Date": "1996-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.11872,
+      "India_IIP_Index": 34.13727
+    },
+    {
+      "Date": "1996-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.20164,
+      "India_IIP_Index": 33.47269
+    },
+    {
+      "Date": "1996-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.45039,
+      "India_IIP_Index": 34.92425
+    },
+    {
+      "Date": "1996-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 26.86497,
+      "India_IIP_Index": 34.58413
+    },
+    {
+      "Date": "1996-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 27.19664,
+      "India_IIP_Index": 34.95609
+    },
+    {
+      "Date": "1996-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 27.61122,
+      "India_IIP_Index": 34.51357
+    },
+    {
+      "Date": "1996-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 28.10872,
+      "India_IIP_Index": 34.11421
+    },
+    {
+      "Date": "1996-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 28.44038,
+      "India_IIP_Index": 34.92056
+    },
+    {
+      "Date": "1996-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 28.5233,
+      "India_IIP_Index": 34.59007
+    },
+    {
+      "Date": "1996-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 28.68913,
+      "India_IIP_Index": 35.1228
+    },
+    {
+      "Date": "1996-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 28.93788,
+      "India_IIP_Index": 33.9593
+    },
+    {
+      "Date": "1996-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.0208,
+      "India_IIP_Index": 34.99657
+    },
+    {
+      "Date": "1997-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.0208,
+      "India_IIP_Index": 34.68936
+    },
+    {
+      "Date": "1997-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.0208,
+      "India_IIP_Index": 35.47995
+    },
+    {
+      "Date": "1997-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.10372,
+      "India_IIP_Index": 36.05666
+    },
+    {
+      "Date": "1997-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.35247,
+      "India_IIP_Index": 36.08526
+    },
+    {
+      "Date": "1997-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.18663,
+      "India_IIP_Index": 36.33492
+    },
+    {
+      "Date": "1997-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.43538,
+      "India_IIP_Index": 36.65428
+    },
+    {
+      "Date": "1997-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.68413,
+      "India_IIP_Index": 36.92703
+    },
+    {
+      "Date": "1997-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.76705,
+      "India_IIP_Index": 36.81491
+    },
+    {
+      "Date": "1997-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 29.93288,
+      "India_IIP_Index": 37.37297
+    },
+    {
+      "Date": "1997-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 30.26455,
+      "India_IIP_Index": 37.55028
+    },
+    {
+      "Date": "1997-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 30.34747,
+      "India_IIP_Index": 37.58358
+    },
+    {
+      "Date": "1997-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 30.84496,
+      "India_IIP_Index": 37.42739
+    },
+    {
+      "Date": "1998-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 31.83996,
+      "India_IIP_Index": 37.6106
+    },
+    {
+      "Date": "1998-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 31.67413,
+      "India_IIP_Index": 37.98297
+    },
+    {
+      "Date": "1998-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 31.5083,
+      "India_IIP_Index": 37.46576
+    },
+    {
+      "Date": "1998-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 31.75705,
+      "India_IIP_Index": 37.93493
+    },
+    {
+      "Date": "1998-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 32.25455,
+      "India_IIP_Index": 37.95919
+    },
+    {
+      "Date": "1998-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 33.08371,
+      "India_IIP_Index": 38.54072
+    },
+    {
+      "Date": "1998-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.07871,
+      "India_IIP_Index": 38.33091
+    },
+    {
+      "Date": "1998-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.24454,
+      "India_IIP_Index": 38.48766
+    },
+    {
+      "Date": "1998-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.82496,
+      "India_IIP_Index": 38.41571
+    },
+    {
+      "Date": "1998-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.90288,
+      "India_IIP_Index": 37.60761
+    },
+    {
+      "Date": "1998-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.31746,
+      "India_IIP_Index": 39.40788
+    },
+    {
+      "Date": "1998-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.57121,
+      "India_IIP_Index": 39.01621
+    },
+    {
+      "Date": "1999-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.82496,
+      "India_IIP_Index": 39.70019
+    },
+    {
+      "Date": "1999-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.41038,
+      "India_IIP_Index": 39.33694
+    },
+    {
+      "Date": "1999-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.327459999999995,
+      "India_IIP_Index": 39.21398
+    },
+    {
+      "Date": "1999-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.41038,
+      "India_IIP_Index": 39.83234
+    },
+    {
+      "Date": "1999-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.74204,
+      "India_IIP_Index": 40.78373
+    },
+    {
+      "Date": "1999-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 34.82496,
+      "India_IIP_Index": 40.36361
+    },
+    {
+      "Date": "1999-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.15663,
+      "India_IIP_Index": 40.79242
+    },
+    {
+      "Date": "1999-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.32246,
+      "India_IIP_Index": 41.11758
+    },
+    {
+      "Date": "1999-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.57121,
+      "India_IIP_Index": 41.09966
+    },
+    {
+      "Date": "1999-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.23454,
+      "India_IIP_Index": 40.78972
+    },
+    {
+      "Date": "1999-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.31746,
+      "India_IIP_Index": 40.78096
+    },
+    {
+      "Date": "1999-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.73704,
+      "India_IIP_Index": 42.10605
+    },
+    {
+      "Date": "2000-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.73704,
+      "India_IIP_Index": 41.642
+    },
+    {
+      "Date": "2000-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.65413,
+      "India_IIP_Index": 41.09042
+    },
+    {
+      "Date": "2000-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 35.98579,
+      "India_IIP_Index": 42.6038
+    },
+    {
+      "Date": "2000-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.31746,
+      "India_IIP_Index": 42.77522
+    },
+    {
+      "Date": "2000-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.48329,
+      "India_IIP_Index": 43.07992
+    },
+    {
+      "Date": "2000-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.64912,
+      "India_IIP_Index": 42.75114
+    },
+    {
+      "Date": "2000-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.89788,
+      "India_IIP_Index": 42.84707
+    },
+    {
+      "Date": "2000-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.73204,
+      "India_IIP_Index": 42.92888
+    },
+    {
+      "Date": "2000-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.81496,
+      "India_IIP_Index": 43.43838
+    },
+    {
+      "Date": "2000-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 37.22954,
+      "India_IIP_Index": 43.32015
+    },
+    {
+      "Date": "2000-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 37.31246,
+      "India_IIP_Index": 43.77005
+    },
+    {
+      "Date": "2000-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.98079,
+      "India_IIP_Index": 43.68871
+    },
+    {
+      "Date": "2001-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.89788,
+      "India_IIP_Index": 43.24702
+    },
+    {
+      "Date": "2001-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.73204,
+      "India_IIP_Index": 43.93343
+    },
+    {
+      "Date": "2001-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 36.89788,
+      "India_IIP_Index": 43.80357
+    },
+    {
+      "Date": "2001-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 37.14663,
+      "India_IIP_Index": 43.93332
+    },
+    {
+      "Date": "2001-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 37.39537,
+      "India_IIP_Index": 43.81442
+    },
+    {
+      "Date": "2001-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 37.89288,
+      "India_IIP_Index": 44.03944
+    },
+    {
+      "Date": "2001-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.39037,
+      "India_IIP_Index": 43.74323
+    },
+    {
+      "Date": "2001-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.63912,
+      "India_IIP_Index": 44.14936
+    },
+    {
+      "Date": "2001-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.55621,
+      "India_IIP_Index": 44.26254
+    },
+    {
+      "Date": "2001-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.80495,
+      "India_IIP_Index": 44.42151
+    },
+    {
+      "Date": "2001-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 39.13662,
+      "India_IIP_Index": 44.87817
+    },
+    {
+      "Date": "2001-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.88787,
+      "India_IIP_Index": 44.91918
+    },
+    {
+      "Date": "2002-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.72204,
+      "India_IIP_Index": 44.83217
+    },
+    {
+      "Date": "2002-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.63912,
+      "India_IIP_Index": 45.09081
+    },
+    {
+      "Date": "2002-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.80495,
+      "India_IIP_Index": 45.36222
+    },
+    {
+      "Date": "2002-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 38.88787,
+      "India_IIP_Index": 45.90337
+    },
+    {
+      "Date": "2002-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 39.13662,
+      "India_IIP_Index": 45.69966
+    },
+    {
+      "Date": "2002-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 39.46829,
+      "India_IIP_Index": 46.10546
+    },
+    {
+      "Date": "2002-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 39.88287,
+      "India_IIP_Index": 46.65891
+    },
+    {
+      "Date": "2002-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.13162,
+      "India_IIP_Index": 46.95699
+    },
+    {
+      "Date": "2002-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.21454,
+      "India_IIP_Index": 46.82148
+    },
+    {
+      "Date": "2002-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.38037,
+      "India_IIP_Index": 47.31229
+    },
+    {
+      "Date": "2002-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.5462,
+      "India_IIP_Index": 46.97102
+    },
+    {
+      "Date": "2002-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.13162,
+      "India_IIP_Index": 47.51075
+    },
+    {
+      "Date": "2003-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.04871,
+      "India_IIP_Index": 47.77882
+    },
+    {
+      "Date": "2003-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.13162,
+      "India_IIP_Index": 48.39274
+    },
+    {
+      "Date": "2003-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.38037,
+      "India_IIP_Index": 47.99529
+    },
+    {
+      "Date": "2003-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.87787,
+      "India_IIP_Index": 48.09949
+    },
+    {
+      "Date": "2003-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 40.96079,
+      "India_IIP_Index": 48.78961
+    },
+    {
+      "Date": "2003-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.20954,
+      "India_IIP_Index": 48.95836
+    },
+    {
+      "Date": "2003-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.5412,
+      "India_IIP_Index": 49.6014
+    },
+    {
+      "Date": "2003-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.37537,
+      "India_IIP_Index": 49.84206
+    },
+    {
+      "Date": "2003-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.37537,
+      "India_IIP_Index": 50.18027
+    },
+    {
+      "Date": "2003-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.70704,
+      "India_IIP_Index": 49.98143
+    },
+    {
+      "Date": "2003-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.78995,
+      "India_IIP_Index": 51.15827
+    },
+    {
+      "Date": "2003-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.62412,
+      "India_IIP_Index": 50.92152
+    },
+    {
+      "Date": "2004-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.78995,
+      "India_IIP_Index": 51.65935
+    },
+    {
+      "Date": "2004-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.78995,
+      "India_IIP_Index": 50.85638
+    },
+    {
+      "Date": "2004-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.78995,
+      "India_IIP_Index": 51.51861
+    },
+    {
+      "Date": "2004-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 41.78995,
+      "India_IIP_Index": 54.01192
+    },
+    {
+      "Date": "2004-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 42.12162,
+      "India_IIP_Index": 53.60933
+    },
+    {
+      "Date": "2004-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 42.45329,
+      "India_IIP_Index": 53.7301
+    },
+    {
+      "Date": "2004-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 42.86787,
+      "India_IIP_Index": 55.44793
+    },
+    {
+      "Date": "2004-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.28245,
+      "India_IIP_Index": 55.79958
+    },
+    {
+      "Date": "2004-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.36537,
+      "India_IIP_Index": 56.72229
+    },
+    {
+      "Date": "2004-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.61412,
+      "India_IIP_Index": 56.86512
+    },
+    {
+      "Date": "2004-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.5312,
+      "India_IIP_Index": 56.84608
+    },
+    {
+      "Date": "2004-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.19954,
+      "India_IIP_Index": 57.24195
+    },
+    {
+      "Date": "2005-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.61412,
+      "India_IIP_Index": 57.16153
+    },
+    {
+      "Date": "2005-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.5312,
+      "India_IIP_Index": 57.88214
+    },
+    {
+      "Date": "2005-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.5312,
+      "India_IIP_Index": 58.86161
+    },
+    {
+      "Date": "2005-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.86287,
+      "India_IIP_Index": 56.36187
+    },
+    {
+      "Date": "2005-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.69703,
+      "India_IIP_Index": 56.69711
+    },
+    {
+      "Date": "2005-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 43.86287,
+      "India_IIP_Index": 57.68686
+    },
+    {
+      "Date": "2005-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 44.60912,
+      "India_IIP_Index": 56.58878
+    },
+    {
+      "Date": "2005-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 44.77495,
+      "India_IIP_Index": 58.06918
+    },
+    {
+      "Date": "2005-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 44.94078,
+      "India_IIP_Index": 57.77893
+    },
+    {
+      "Date": "2005-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.43828,
+      "India_IIP_Index": 59.00667
+    },
+    {
+      "Date": "2005-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.85286,
+      "India_IIP_Index": 58.17199
+    },
+    {
+      "Date": "2005-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.60411,
+      "India_IIP_Index": 60.26303
+    },
+    {
+      "Date": "2006-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.5212,
+      "India_IIP_Index": 61.25228
+    },
+    {
+      "Date": "2006-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.5212,
+      "India_IIP_Index": 61.55499
+    },
+    {
+      "Date": "2006-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.5212,
+      "India_IIP_Index": 62.72617
+    },
+    {
+      "Date": "2006-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 45.90373,
+      "India_IIP_Index": 62.0391
+    },
+    {
+      "Date": "2006-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 46.28626,
+      "India_IIP_Index": 62.78899
+    },
+    {
+      "Date": "2006-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 47.05132,
+      "India_IIP_Index": 62.89713
+    },
+    {
+      "Date": "2006-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 47.43385,
+      "India_IIP_Index": 64.99783
+    },
+    {
+      "Date": "2006-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 47.43385,
+      "India_IIP_Index": 63.91274
+    },
+    {
+      "Date": "2006-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 47.81638,
+      "India_IIP_Index": 65.53379
+    },
+    {
+      "Date": "2006-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.58145,
+      "India_IIP_Index": 64.42336
+    },
+    {
+      "Date": "2006-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.58145,
+      "India_IIP_Index": 70.06536
+    },
+    {
+      "Date": "2006-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.58145,
+      "India_IIP_Index": 68.84689
+    },
+    {
+      "Date": "2007-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.58145,
+      "India_IIP_Index": 69.8091
+    },
+    {
+      "Date": "2007-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.96398,
+      "India_IIP_Index": 70.20722
+    },
+    {
+      "Date": "2007-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.58145,
+      "India_IIP_Index": 71.70661
+    },
+    {
+      "Date": "2007-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 48.96398,
+      "India_IIP_Index": 72.58376
+    },
+    {
+      "Date": "2007-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 49.34651,
+      "India_IIP_Index": 74.70207
+    },
+    {
+      "Date": "2007-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 49.72904,
+      "India_IIP_Index": 75.15701
+    },
+    {
+      "Date": "2007-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 50.4941,
+      "India_IIP_Index": 75.26715
+    },
+    {
+      "Date": "2007-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 50.87663,
+      "India_IIP_Index": 75.49085
+    },
+    {
+      "Date": "2007-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 50.87663,
+      "India_IIP_Index": 74.4225
+    },
+    {
+      "Date": "2007-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 51.25916,
+      "India_IIP_Index": 76.6977
+    },
+    {
+      "Date": "2007-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 51.25916,
+      "India_IIP_Index": 77.30314
+    },
+    {
+      "Date": "2007-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 51.25916,
+      "India_IIP_Index": 78.4024
+    },
+    {
+      "Date": "2008-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 51.25916,
+      "India_IIP_Index": 79.28104
+    },
+    {
+      "Date": "2008-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 51.6417,
+      "India_IIP_Index": 79.27101
+    },
+    {
+      "Date": "2008-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 52.40676,
+      "India_IIP_Index": 80.15997
+    },
+    {
+      "Date": "2008-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 52.78929,
+      "India_IIP_Index": 79.952
+    },
+    {
+      "Date": "2008-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 53.17182,
+      "India_IIP_Index": 80.18629
+    },
+    {
+      "Date": "2008-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 53.55435,
+      "India_IIP_Index": 81.27293
+    },
+    {
+      "Date": "2008-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 54.70195,
+      "India_IIP_Index": 79.20731
+    },
+    {
+      "Date": "2008-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 55.46701,
+      "India_IIP_Index": 80.13097
+    },
+    {
+      "Date": "2008-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 55.84954,
+      "India_IIP_Index": 82.15518
+    },
+    {
+      "Date": "2008-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 56.6146,
+      "India_IIP_Index": 79.67675
+    },
+    {
+      "Date": "2008-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 56.6146,
+      "India_IIP_Index": 78.96045
+    },
+    {
+      "Date": "2008-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 56.23206999999999,
+      "India_IIP_Index": 76.89181
+    },
+    {
+      "Date": "2009-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 56.6146,
+      "India_IIP_Index": 75.37524
+    },
+    {
+      "Date": "2009-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 56.6146,
+      "India_IIP_Index": 76.24326
+    },
+    {
+      "Date": "2009-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 56.6146,
+      "India_IIP_Index": 75.69012
+    },
+    {
+      "Date": "2009-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 57.37966,
+      "India_IIP_Index": 78.05914
+    },
+    {
+      "Date": "2009-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 57.76219,
+      "India_IIP_Index": 78.97525
+    },
+    {
+      "Date": "2009-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 58.52726,
+      "India_IIP_Index": 79.58847
+    },
+    {
+      "Date": "2009-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 61.20497,
+      "India_IIP_Index": 80.4558
+    },
+    {
+      "Date": "2009-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 61.97004,
+      "India_IIP_Index": 84.52279
+    },
+    {
+      "Date": "2009-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 62.35256999999999,
+      "India_IIP_Index": 83.58832
+    },
+    {
+      "Date": "2009-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 63.117630000000005,
+      "India_IIP_Index": 81.63593
+    },
+    {
+      "Date": "2009-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 64.26522,
+      "India_IIP_Index": 84.06258
+    },
+    {
+      "Date": "2009-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 64.64775,
+      "India_IIP_Index": 84.27239
+    },
+    {
+      "Date": "2010-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 65.79535,
+      "India_IIP_Index": 85.80334
+    },
+    {
+      "Date": "2010-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 65.03028,
+      "India_IIP_Index": 86.7054
+    },
+    {
+      "Date": "2010-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 65.03028,
+      "India_IIP_Index": 86.6475
+    },
+    {
+      "Date": "2010-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 65.03028,
+      "India_IIP_Index": 88.02976
+    },
+    {
+      "Date": "2010-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 65.79535,
+      "India_IIP_Index": 85.5834
+    },
+    {
+      "Date": "2010-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 66.56041,
+      "India_IIP_Index": 85.47383
+    },
+    {
+      "Date": "2010-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 68.09053,
+      "India_IIP_Index": 88.68886
+    },
+    {
+      "Date": "2010-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 68.09053,
+      "India_IIP_Index": 88.03306
+    },
+    {
+      "Date": "2010-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 68.47306,
+      "India_IIP_Index": 88.79897
+    },
+    {
+      "Date": "2010-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 69.23813,
+      "India_IIP_Index": 91.13898
+    },
+    {
+      "Date": "2010-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 69.62066,
+      "India_IIP_Index": 89.53669
+    },
+    {
+      "Date": "2010-12-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 70.76825,
+      "India_IIP_Index": 91.17019
+    },
+    {
+      "Date": "2011-01-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 71.91584,
+      "India_IIP_Index": 92.23947
+    },
+    {
+      "Date": "2011-02-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 70.76825,
+      "India_IIP_Index": 92.42698
+    },
+    {
+      "Date": "2011-03-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 70.76825,
+      "India_IIP_Index": 94.70483
+    },
+    {
+      "Date": "2011-04-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 71.15078000000001,
+      "India_IIP_Index": 92.84566
+    },
+    {
+      "Date": "2011-05-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 71.53331,
+      "India_IIP_Index": 90.50412
+    },
+    {
+      "Date": "2011-06-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 72.29838000000002,
+      "India_IIP_Index": 93.74711
+    },
+    {
+      "Date": "2011-07-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 73.8285,
+      "India_IIP_Index": 92.08945
+    },
+    {
+      "Date": "2011-08-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 74.21103000000002,
+      "India_IIP_Index": 90.64955
+    },
+    {
+      "Date": "2011-09-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 75.35862,
+      "India_IIP_Index": 91.04017
+    },
+    {
+      "Date": "2011-10-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 75.74115999999998,
+      "India_IIP_Index": 86.54274
+    },
+    {
+      "Date": "2011-11-01",
+      "India_10Y_GSec_Yield": NaN,
+      "India_CPI_Index": 76.12368999999998,
+      "India_IIP_Index": 95.13275
+    },
+    {
+      "Date": "2011-12-01",
+      "India_10Y_GSec_Yield": 8.56,
+      "India_CPI_Index": 75.35862,
+      "India_IIP_Index": 93.92416
+    },
+    {
+      "Date": "2012-01-01",
+      "India_10Y_GSec_Yield": 8.235,
+      "India_CPI_Index": 75.74115999999998,
+      "India_IIP_Index": 92.9523
+    },
+    {
+      "Date": "2012-02-01",
+      "India_10Y_GSec_Yield": 8.1925,
+      "India_CPI_Index": 76.12368999999998,
+      "India_IIP_Index": 93.06204
+    },
+    {
+      "Date": "2012-03-01",
+      "India_10Y_GSec_Yield": 8.374,
+      "India_CPI_Index": 76.88875,
+      "India_IIP_Index": 92.26727
+    },
+    {
+      "Date": "2012-04-01",
+      "India_10Y_GSec_Yield": 8.5875,
+      "India_CPI_Index": 78.41887,
+      "India_IIP_Index": 90.60534
+    },
+    {
+      "Date": "2012-05-01",
+      "India_10Y_GSec_Yield": 8.565,
+      "India_CPI_Index": 78.8014,
+      "India_IIP_Index": 92.74928
+    },
+    {
+      "Date": "2012-06-01",
+      "India_10Y_GSec_Yield": 8.204,
+      "India_CPI_Index": 79.56646999999998,
+      "India_IIP_Index": 91.55138
+    },
+    {
+      "Date": "2012-07-01",
+      "India_10Y_GSec_Yield": 8.09666666666667,
+      "India_CPI_Index": 81.09659,
+      "India_IIP_Index": 90.9651
+    },
+    {
+      "Date": "2012-08-01",
+      "India_10Y_GSec_Yield": 8.196,
+      "India_CPI_Index": 81.86164999999998,
+      "India_IIP_Index": 91.21331
+    },
+    {
+      "Date": "2012-09-01",
+      "India_10Y_GSec_Yield": 8.175,
+      "India_CPI_Index": 82.24418,
+      "India_IIP_Index": 89.84103
+    },
+    {
+      "Date": "2012-10-01",
+      "India_10Y_GSec_Yield": 8.1475,
+      "India_CPI_Index": 83.00924999999998,
+      "India_IIP_Index": 92.14184
+    },
+    {
+      "Date": "2012-11-01",
+      "India_10Y_GSec_Yield": 8.20254,
+      "India_CPI_Index": 83.39178000000001,
+      "India_IIP_Index": 91.12928
+    },
+    {
+      "Date": "2012-12-01",
+      "India_10Y_GSec_Yield": 8.1375,
+      "India_CPI_Index": 83.77431,
+      "India_IIP_Index": 91.37257
+    },
+    {
+      "Date": "2013-01-01",
+      "India_10Y_GSec_Yield": 7.8725,
+      "India_CPI_Index": 84.53936999999999,
+      "India_IIP_Index": 91.36618
+    },
+    {
+      "Date": "2013-02-01",
+      "India_10Y_GSec_Yield": 7.8375,
+      "India_CPI_Index": 85.30443000000001,
+      "India_IIP_Index": 91.15114
+    },
+    {
+      "Date": "2013-03-01",
+      "India_10Y_GSec_Yield": 7.91,
+      "India_CPI_Index": 85.68696,
+      "India_IIP_Index": 92.90253
+    },
+    {
+      "Date": "2013-04-01",
+      "India_10Y_GSec_Yield": 7.83,
+      "India_CPI_Index": 86.45203000000002,
+      "India_IIP_Index": 93.64129
+    },
+    {
+      "Date": "2013-05-01",
+      "India_10Y_GSec_Yield": 7.502,
+      "India_CPI_Index": 87.21709,
+      "India_IIP_Index": 93.18452
+    },
+    {
+      "Date": "2013-06-01",
+      "India_10Y_GSec_Yield": 7.40215,
+      "India_CPI_Index": 88.36468,
+      "India_IIP_Index": 90.84338
+    },
+    {
+      "Date": "2013-07-01",
+      "India_10Y_GSec_Yield": 7.724375,
+      "India_CPI_Index": 89.89480999999996,
+      "India_IIP_Index": 93.66383
+    },
+    {
+      "Date": "2013-08-01",
+      "India_10Y_GSec_Yield": 8.328,
+      "India_CPI_Index": 90.65987,
+      "India_IIP_Index": 95.03808
+    },
+    {
+      "Date": "2013-09-01",
+      "India_10Y_GSec_Yield": 8.6025,
+      "India_CPI_Index": 91.0424,
+      "India_IIP_Index": 95.51048
+    },
+    {
+      "Date": "2013-10-01",
+      "India_10Y_GSec_Yield": 8.5725,
+      "India_CPI_Index": 92.18999,
+      "India_IIP_Index": 93.93129
+    },
+    {
+      "Date": "2013-11-01",
+      "India_10Y_GSec_Yield": 8.86304,
+      "India_CPI_Index": 92.95506,
+      "India_IIP_Index": 94.50271
+    },
+    {
+      "Date": "2013-12-01",
+      "India_10Y_GSec_Yield": 8.87536825,
+      "India_CPI_Index": 91.42493,
+      "India_IIP_Index": 94.74145
+    },
+    {
+      "Date": "2014-01-01",
+      "India_10Y_GSec_Yield": 8.76454,
+      "India_CPI_Index": 90.65987,
+      "India_IIP_Index": 95.96628
+    },
+    {
+      "Date": "2014-02-01",
+      "India_10Y_GSec_Yield": 8.8125,
+      "India_CPI_Index": 91.0424,
+      "India_IIP_Index": 96.02834
+    },
+    {
+      "Date": "2014-03-01",
+      "India_10Y_GSec_Yield": 8.8375,
+      "India_CPI_Index": 91.42493,
+      "India_IIP_Index": 95.87386
+    },
+    {
+      "Date": "2014-04-01",
+      "India_10Y_GSec_Yield": 8.9875,
+      "India_CPI_Index": 92.57253,
+      "India_IIP_Index": 97.41208
+    },
+    {
+      "Date": "2014-05-01",
+      "India_10Y_GSec_Yield": 8.75292,
+      "India_CPI_Index": 93.33759,
+      "India_IIP_Index": 97.28342
+    },
+    {
+      "Date": "2014-06-01",
+      "India_10Y_GSec_Yield": 8.6336,
+      "India_CPI_Index": 94.10265,
+      "India_IIP_Index": 98.17392
+    },
+    {
+      "Date": "2014-07-01",
+      "India_10Y_GSec_Yield": 8.6559,
+      "India_CPI_Index": 96.39783,
+      "India_IIP_Index": 98.97353
+    },
+    {
+      "Date": "2014-08-01",
+      "India_10Y_GSec_Yield": 8.56064,
+      "India_CPI_Index": 96.78036,
+      "India_IIP_Index": 98.13538
+    },
+    {
+      "Date": "2014-09-01",
+      "India_10Y_GSec_Yield": 8.49115,
+      "India_CPI_Index": 96.78036,
+      "India_IIP_Index": 98.95578
+    },
+    {
+      "Date": "2014-10-01",
+      "India_10Y_GSec_Yield": 8.40188,
+      "India_CPI_Index": 96.78036,
+      "India_IIP_Index": 94.47784
+    },
+    {
+      "Date": "2014-11-01",
+      "India_10Y_GSec_Yield": 8.18685,
+      "India_CPI_Index": 96.78036,
+      "India_IIP_Index": 101.3627
+    },
+    {
+      "Date": "2014-12-01",
+      "India_10Y_GSec_Yield": 7.955925,
+      "India_CPI_Index": 96.78036,
+      "India_IIP_Index": 98.68978
+    },
+    {
+      "Date": "2015-01-01",
+      "India_10Y_GSec_Yield": 7.79366,
+      "India_CPI_Index": 97.1629,
+      "India_IIP_Index": 98.09304
+    },
+    {
+      "Date": "2015-02-01",
+      "India_10Y_GSec_Yield": 7.7342,
+      "India_CPI_Index": 96.78036,
+      "India_IIP_Index": 98.86512
+    },
+    {
+      "Date": "2015-03-01",
+      "India_10Y_GSec_Yield": 7.8208,
+      "India_CPI_Index": 97.1629,
+      "India_IIP_Index": 98.18272
+    },
+    {
+      "Date": "2015-04-01",
+      "India_10Y_GSec_Yield": 7.83696666666667,
+      "India_CPI_Index": 97.92796,
+      "India_IIP_Index": 98.11169
+    },
+    {
+      "Date": "2015-05-01",
+      "India_10Y_GSec_Yield": 7.85218,
+      "India_CPI_Index": 98.69302,
+      "India_IIP_Index": 98.91391
+    },
+    {
+      "Date": "2015-06-01",
+      "India_10Y_GSec_Yield": 7.805225,
+      "India_CPI_Index": 99.84061,
+      "India_IIP_Index": 98.98512
+    },
+    {
+      "Date": "2015-07-01",
+      "India_10Y_GSec_Yield": 7.81692,
+      "India_CPI_Index": 100.6057,
+      "India_IIP_Index": 100.4515
+    },
+    {
+      "Date": "2015-08-01",
+      "India_10Y_GSec_Yield": 7.785975,
+      "India_CPI_Index": 100.9882,
+      "India_IIP_Index": 101.4292
+    },
+    {
+      "Date": "2015-09-01",
+      "India_10Y_GSec_Yield": 7.73205,
+      "India_CPI_Index": 101.7533,
+      "India_IIP_Index": 100.7934
+    },
+    {
+      "Date": "2015-10-01",
+      "India_10Y_GSec_Yield": 7.5969,
+      "India_CPI_Index": 102.9009,
+      "India_IIP_Index": 103.4218
+    },
+    {
+      "Date": "2015-11-01",
+      "India_10Y_GSec_Yield": 7.7452,
+      "India_CPI_Index": 103.2834,
+      "India_IIP_Index": 101.6274
+    },
+    {
+      "Date": "2015-12-01",
+      "India_10Y_GSec_Yield": 7.791575,
+      "India_CPI_Index": 102.9009,
+      "India_IIP_Index": 102.1344
+    },
+    {
+      "Date": "2016-01-01",
+      "India_10Y_GSec_Yield": 7.66876,
+      "India_CPI_Index": 102.9009,
+      "India_IIP_Index": 102.458
+    },
+    {
+      "Date": "2016-02-01",
+      "India_10Y_GSec_Yield": 7.720025,
+      "India_CPI_Index": 102.1358,
+      "India_IIP_Index": 102.1779
+    },
+    {
+      "Date": "2016-03-01",
+      "India_10Y_GSec_Yield": 7.584775,
+      "India_CPI_Index": 102.5183,
+      "India_IIP_Index": 103.0305
+    },
+    {
+      "Date": "2016-04-01",
+      "India_10Y_GSec_Yield": 7.43606,
+      "India_CPI_Index": 103.6659,
+      "India_IIP_Index": 104.2878
+    },
+    {
+      "Date": "2016-05-01",
+      "India_10Y_GSec_Yield": 7.2793,
+      "India_CPI_Index": 105.196,
+      "India_IIP_Index": 105.6433
+    },
+    {
+      "Date": "2016-06-01",
+      "India_10Y_GSec_Yield": 7.502625,
+      "India_CPI_Index": 105.9611,
+      "India_IIP_Index": 107.0064
+    },
+    {
+      "Date": "2016-07-01",
+      "India_10Y_GSec_Yield": 7.35092,
+      "India_CPI_Index": 107.1087,
+      "India_IIP_Index": 105.6908
+    },
+    {
+      "Date": "2016-08-01",
+      "India_10Y_GSec_Yield": 7.14185,
+      "India_CPI_Index": 106.3436,
+      "India_IIP_Index": 104.8896
+    },
+    {
+      "Date": "2016-09-01",
+      "India_10Y_GSec_Yield": 6.86438,
+      "India_CPI_Index": 105.9611,
+      "India_IIP_Index": 105.7285
+    },
+    {
+      "Date": "2016-10-01",
+      "India_10Y_GSec_Yield": 6.784525,
+      "India_CPI_Index": 106.3436,
+      "India_IIP_Index": 108.2415
+    },
+    {
+      "Date": "2016-11-01",
+      "India_10Y_GSec_Yield": 6.613,
+      "India_CPI_Index": 105.9611,
+      "India_IIP_Index": 106.2647
+    },
+    {
+      "Date": "2016-12-01",
+      "India_10Y_GSec_Yield": 6.52812,
+      "India_CPI_Index": 105.196,
+      "India_IIP_Index": 104.8987
+    },
+    {
+      "Date": "2017-01-01",
+      "India_10Y_GSec_Yield": 6.7918,
+      "India_CPI_Index": 104.8135,
+      "India_IIP_Index": 105.7581
+    },
+    {
+      "Date": "2017-02-01",
+      "India_10Y_GSec_Yield": 6.9794,
+      "India_CPI_Index": 104.8135,
+      "India_IIP_Index": 107.0553
+    },
+    {
+      "Date": "2017-03-01",
+      "India_10Y_GSec_Yield": 7.11756,
+      "India_CPI_Index": 105.196,
+      "India_IIP_Index": 107.4443
+    },
+    {
+      "Date": "2017-04-01",
+      "India_10Y_GSec_Yield": 7.16485,
+      "India_CPI_Index": 105.9611,
+      "India_IIP_Index": 108.0137
+    },
+    {
+      "Date": "2017-05-01",
+      "India_10Y_GSec_Yield": 7.1144,
+      "India_CPI_Index": 106.3436,
+      "India_IIP_Index": 108.2729
+    },
+    {
+      "Date": "2017-06-01",
+      "India_10Y_GSec_Yield": 6.58302,
+      "India_CPI_Index": 107.1087,
+      "India_IIP_Index": 106.7035
+    },
+    {
+      "Date": "2017-07-01",
+      "India_10Y_GSec_Yield": 6.54905,
+      "India_CPI_Index": 109.0214,
+      "India_IIP_Index": 106.9109
+    },
+    {
+      "Date": "2017-08-01",
+      "India_10Y_GSec_Yield": 6.6025,
+      "India_CPI_Index": 109.0214,
+      "India_IIP_Index": 110.0302
+    },
+    {
+      "Date": "2017-09-01",
+      "India_10Y_GSec_Yield": 6.72384,
+      "India_CPI_Index": 109.0214,
+      "India_IIP_Index": 110.5556
+    },
+    {
+      "Date": "2017-10-01",
+      "India_10Y_GSec_Yield": 6.94395,
+      "India_CPI_Index": 109.7864,
+      "India_IIP_Index": 110.0814
+    },
+    {
+      "Date": "2017-11-01",
+      "India_10Y_GSec_Yield": 7.16575,
+      "India_CPI_Index": 110.169,
+      "India_IIP_Index": 115.104
+    },
+    {
+      "Date": "2017-12-01",
+      "India_10Y_GSec_Yield": 7.35076,
+      "India_CPI_Index": 109.4039,
+      "India_IIP_Index": 112.7984
+    },
+    {
+      "Date": "2018-01-01",
+      "India_10Y_GSec_Yield": 7.219725,
+      "India_CPI_Index": 110.169,
+      "India_IIP_Index": 113.2417
+    },
+    {
+      "Date": "2018-02-01",
+      "India_10Y_GSec_Yield": 7.571275,
+      "India_CPI_Index": 109.7864,
+      "India_IIP_Index": 114.3817
+    },
+    {
+      "Date": "2018-03-01",
+      "India_10Y_GSec_Yield": 7.60806,
+      "India_CPI_Index": 109.7864,
+      "India_IIP_Index": 113.1409
+    },
+    {
+      "Date": "2018-04-01",
+      "India_10Y_GSec_Yield": 7.547875,
+      "India_CPI_Index": 110.169,
+      "India_IIP_Index": 112.7216
+    },
+    {
+      "Date": "2018-05-01",
+      "India_10Y_GSec_Yield": 7.846075,
+      "India_CPI_Index": 110.5515,
+      "India_IIP_Index": 112.4851
+    },
+    {
+      "Date": "2018-06-01",
+      "India_10Y_GSec_Yield": 7.93574,
+      "India_CPI_Index": 111.3165,
+      "India_IIP_Index": 114.7806
+    },
+    {
+      "Date": "2018-07-01",
+      "India_10Y_GSec_Yield": 7.800625,
+      "India_CPI_Index": 115.1419,
+      "India_IIP_Index": 113.5731
+    },
+    {
+      "Date": "2018-08-01",
+      "India_10Y_GSec_Yield": 7.82458,
+      "India_CPI_Index": 115.1419,
+      "India_IIP_Index": 115.3802
+    },
+    {
+      "Date": "2018-09-01",
+      "India_10Y_GSec_Yield": 8.019075,
+      "India_CPI_Index": 115.1419,
+      "India_IIP_Index": 116.2728
+    },
+    {
+      "Date": "2018-10-01",
+      "India_10Y_GSec_Yield": 7.92485,
+      "India_CPI_Index": 115.5244,
+      "India_IIP_Index": 119.1606
+    },
+    {
+      "Date": "2018-11-01",
+      "India_10Y_GSec_Yield": 7.78462,
+      "India_CPI_Index": 115.5244,
+      "India_IIP_Index": 115.2904
+    },
+    {
+      "Date": "2018-12-01",
+      "India_10Y_GSec_Yield": 7.37335,
+      "India_CPI_Index": 115.1419,
+      "India_IIP_Index": 115.4519
+    },
+    {
+      "Date": "2019-01-01",
+      "India_10Y_GSec_Yield": 7.34735,
+      "India_CPI_Index": 117.437,
+      "India_IIP_Index": 114.727
+    },
+    {
+      "Date": "2019-02-01",
+      "India_10Y_GSec_Yield": 7.4312,
+      "India_CPI_Index": 117.437,
+      "India_IIP_Index": 114.4899
+    },
+    {
+      "Date": "2019-03-01",
+      "India_10Y_GSec_Yield": 7.41366,
+      "India_CPI_Index": 118.2021,
+      "India_IIP_Index": 116.2688
+    },
+    {
+      "Date": "2019-04-01",
+      "India_10Y_GSec_Yield": 7.421075,
+      "India_CPI_Index": 119.3497,
+      "India_IIP_Index": 116.1259
+    },
+    {
+      "Date": "2019-05-01",
+      "India_10Y_GSec_Yield": 7.3271,
+      "India_CPI_Index": 120.1148,
+      "India_IIP_Index": 117.8522
+    },
+    {
+      "Date": "2019-06-01",
+      "India_10Y_GSec_Yield": 6.96805,
+      "India_CPI_Index": 120.8798,
+      "India_IIP_Index": 116.7972
+    },
+    {
+      "Date": "2019-07-01",
+      "India_10Y_GSec_Yield": 6.597725,
+      "India_CPI_Index": 122.0274,
+      "India_IIP_Index": 118.5474
+    },
+    {
+      "Date": "2019-08-01",
+      "India_10Y_GSec_Yield": 6.61912,
+      "India_CPI_Index": 122.4099,
+      "India_IIP_Index": 114.0543
+    },
+    {
+      "Date": "2019-09-01",
+      "India_10Y_GSec_Yield": 6.81335,
+      "India_CPI_Index": 123.175,
+      "India_IIP_Index": 111.0008
+    },
+    {
+      "Date": "2019-10-01",
+      "India_10Y_GSec_Yield": 6.5418,
+      "India_CPI_Index": 124.3226,
+      "India_IIP_Index": 111.2068
+    },
+    {
+      "Date": "2019-11-01",
+      "India_10Y_GSec_Yield": 6.63498,
+      "India_CPI_Index": 125.4702,
+      "India_IIP_Index": 117.9999
+    },
+    {
+      "Date": "2019-12-01",
+      "India_10Y_GSec_Yield": 6.848575,
+      "India_CPI_Index": 126.2353,
+      "India_IIP_Index": 115.4566
+    },
+    {
+      "Date": "2020-01-01",
+      "India_10Y_GSec_Yield": 6.8218,
+      "India_CPI_Index": 126.2353,
+      "India_IIP_Index": 117.0925
+    },
+    {
+      "Date": "2020-02-01",
+      "India_10Y_GSec_Yield": 6.65965,
+      "India_CPI_Index": 125.4702,
+      "India_IIP_Index": 116.4763
+    },
+    {
+      "Date": "2020-03-01",
+      "India_10Y_GSec_Yield": 6.701575,
+      "India_CPI_Index": 124.7051,
+      "India_IIP_Index": 94.19592
+    },
+    {
+      "Date": "2020-04-01",
+      "India_10Y_GSec_Yield": 6.76515,
+      "India_CPI_Index": 125.8527,
+      "India_IIP_Index": 49.61062
+    },
+    {
+      "Date": "2020-05-01",
+      "India_10Y_GSec_Yield": 5.91544,
+      "India_CPI_Index": 126.2353,
+      "India_IIP_Index": 79.07681
+    },
+    {
+      "Date": "2020-06-01",
+      "India_10Y_GSec_Yield": 5.8551,
+      "India_CPI_Index": 127.0003,
+      "India_IIP_Index": 97.29153
+    },
+    {
+      "Date": "2020-07-01",
+      "India_10Y_GSec_Yield": 5.81452,
+      "India_CPI_Index": 128.5304,
+      "India_IIP_Index": 105.6832
+    },
+    {
+      "Date": "2020-08-01",
+      "India_10Y_GSec_Yield": 6.0105,
+      "India_CPI_Index": 129.2955,
+      "India_IIP_Index": 106.1583
+    },
+    {
+      "Date": "2020-09-01",
+      "India_10Y_GSec_Yield": 6.024675,
+      "India_CPI_Index": 130.1179,
+      "India_IIP_Index": 112.1846
+    },
+    {
+      "Date": "2020-10-01",
+      "India_10Y_GSec_Yield": 5.94484,
+      "India_CPI_Index": 131.6603,
+      "India_IIP_Index": 116.3681
+    },
+    {
+      "Date": "2020-11-01",
+      "India_10Y_GSec_Yield": 5.8952,
+      "India_CPI_Index": 132.101,
+      "India_IIP_Index": 116.1108
+    },
+    {
+      "Date": "2020-12-01",
+      "India_10Y_GSec_Yield": 5.8929,
+      "India_CPI_Index": 130.8891,
+      "India_IIP_Index": 117.4653
+    },
+    {
+      "Date": "2021-01-01",
+      "India_10Y_GSec_Yield": 5.94162,
+      "India_CPI_Index": 130.22799999999998,
+      "India_IIP_Index": 116.7576
+    },
+    {
+      "Date": "2021-02-01",
+      "India_10Y_GSec_Yield": 6.1935,
+      "India_CPI_Index": 131.1094,
+      "India_IIP_Index": 116.609
+    },
+    {
+      "Date": "2021-03-01",
+      "India_10Y_GSec_Yield": 6.350775,
+      "India_CPI_Index": 131.7705,
+      "India_IIP_Index": 116.7046
+    },
+    {
+      "Date": "2021-04-01",
+      "India_10Y_GSec_Yield": 6.2801,
+      "India_CPI_Index": 132.3214,
+      "India_IIP_Index": 115.8919
+    },
+    {
+      "Date": "2021-05-01",
+      "India_10Y_GSec_Yield": 6.225375,
+      "India_CPI_Index": 132.8723,
+      "India_IIP_Index": 101.1032
+    },
+    {
+      "Date": "2021-06-01",
+      "India_10Y_GSec_Yield": 6.267675,
+      "India_CPI_Index": 134.0842,
+      "India_IIP_Index": 110.9549
+    },
+    {
+      "Date": "2021-07-01",
+      "India_10Y_GSec_Yield": 6.20842,
+      "India_CPI_Index": 135.2961,
+      "India_IIP_Index": 117.8436
+    },
+    {
+      "Date": "2021-08-01",
+      "India_10Y_GSec_Yield": 6.280325,
+      "India_CPI_Index": 135.5165,
+      "India_IIP_Index": 119.6326
+    },
+    {
+      "Date": "2021-09-01",
+      "India_10Y_GSec_Yield": 6.1883,
+      "India_CPI_Index": 135.847,
+      "India_IIP_Index": 117.3245
+    },
+    {
+      "Date": "2021-10-01",
+      "India_10Y_GSec_Yield": 6.35978,
+      "India_CPI_Index": 137.6098,
+      "India_IIP_Index": 121.3427
+    },
+    {
+      "Date": "2021-11-01",
+      "India_10Y_GSec_Yield": 6.354375,
+      "India_CPI_Index": 138.4912,
+      "India_IIP_Index": 116.9877
+    },
+    {
+      "Date": "2021-12-01",
+      "India_10Y_GSec_Yield": 6.44032,
+      "India_CPI_Index": 138.1607,
+      "India_IIP_Index": 118.5863
+    },
+    {
+      "Date": "2022-01-01",
+      "India_10Y_GSec_Yield": 6.643025,
+      "India_CPI_Index": 137.8302,
+      "India_IIP_Index": 119.0099
+    },
+    {
+      "Date": "2022-02-01",
+      "India_10Y_GSec_Yield": 6.750475,
+      "India_CPI_Index": 137.72,
+      "India_IIP_Index": 117.9887
+    },
+    {
+      "Date": "2022-03-01",
+      "India_10Y_GSec_Yield": 6.819825,
+      "India_CPI_Index": 138.8218,
+      "India_IIP_Index": 119.2456
+    },
+    {
+      "Date": "2022-04-01",
+      "India_10Y_GSec_Yield": 7.1058,
+      "India_CPI_Index": 140.6947,
+      "India_IIP_Index": 123.8863
+    },
+    {
+      "Date": "2022-05-01",
+      "India_10Y_GSec_Yield": 7.38565,
+      "India_CPI_Index": 142.127,
+      "India_IIP_Index": 120.8571
+    },
+    {
+      "Date": "2022-06-01",
+      "India_10Y_GSec_Yield": 7.529625,
+      "India_CPI_Index": 142.3474,
+      "India_IIP_Index": 125.1665
+    },
+    {
+      "Date": "2022-07-01",
+      "India_10Y_GSec_Yield": 7.40206,
+      "India_CPI_Index": 143.1186,
+      "India_IIP_Index": 120.5761
+    },
+    {
+      "Date": "2022-08-01",
+      "India_10Y_GSec_Yield": 7.27475,
+      "India_CPI_Index": 143.4492,
+      "India_IIP_Index": 118.4695
+    },
+    {
+      "Date": "2022-09-01",
+      "India_10Y_GSec_Yield": 7.280374,
+      "India_CPI_Index": 144.6611,
+      "India_IIP_Index": 121.3596
+    },
+    {
+      "Date": "2022-10-01",
+      "India_10Y_GSec_Yield": 7.464925,
+      "India_CPI_Index": 145.9832,
+      "India_IIP_Index": 116.3506
+    },
+    {
+      "Date": "2022-11-01",
+      "India_10Y_GSec_Yield": 7.357575,
+      "India_CPI_Index": 145.9832,
+      "India_IIP_Index": 125.8132
+    },
+    {
+      "Date": "2022-12-01",
+      "India_10Y_GSec_Yield": 7.29416,
+      "India_CPI_Index": 145.7628,
+      "India_IIP_Index": 124.9108
+    },
+    {
+      "Date": "2023-01-01",
+      "India_10Y_GSec_Yield": 7.39,
+      "India_CPI_Index": 146.3137,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-02-01",
+      "India_10Y_GSec_Yield": 7.334525,
+      "India_CPI_Index": 146.2036,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-03-01",
+      "India_10Y_GSec_Yield": 7.36,
+      "India_CPI_Index": 146.8646,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-04-01",
+      "India_10Y_GSec_Yield": 7.18,
+      "India_CPI_Index": 147.8562,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-05-01",
+      "India_10Y_GSec_Yield": 7.0125,
+      "India_CPI_Index": 148.4071,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-06-01",
+      "India_10Y_GSec_Yield": 7.054,
+      "India_CPI_Index": 150.2801,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-07-01",
+      "India_10Y_GSec_Yield": 7.1125,
+      "India_CPI_Index": 153.9159,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-08-01",
+      "India_10Y_GSec_Yield": 7.185,
+      "India_CPI_Index": 153.365,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-09-01",
+      "India_10Y_GSec_Yield": 7.172,
+      "India_CPI_Index": 151.492,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-10-01",
+      "India_10Y_GSec_Yield": 7.35,
+      "India_CPI_Index": 152.4836,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-11-01",
+      "India_10Y_GSec_Yield": 7.27,
+      "India_CPI_Index": 153.2548,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2023-12-01",
+      "India_10Y_GSec_Yield": 7.224,
+      "India_CPI_Index": 152.9243,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-01-01",
+      "India_10Y_GSec_Yield": 7.2025,
+      "India_CPI_Index": 153.0345,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-02-01",
+      "India_10Y_GSec_Yield": 7.09,
+      "India_CPI_Index": 153.365,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-03-01",
+      "India_10Y_GSec_Yield": 7.068,
+      "India_CPI_Index": 153.0345,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-04-01",
+      "India_10Y_GSec_Yield": 7.15,
+      "India_CPI_Index": 153.5853,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-05-01",
+      "India_10Y_GSec_Yield": 7.054,
+      "India_CPI_Index": 154.1362,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-06-01",
+      "India_10Y_GSec_Yield": 7.0225,
+      "India_CPI_Index": 155.7889,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-07-01",
+      "India_10Y_GSec_Yield": 7.0075,
+      "India_CPI_Index": 157.2212,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-08-01",
+      "India_10Y_GSec_Yield": 6.91,
+      "India_CPI_Index": 157.111,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-09-01",
+      "India_10Y_GSec_Yield": 6.8325,
+      "India_CPI_Index": 157.8822,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-10-01",
+      "India_10Y_GSec_Yield": 6.785,
+      "India_CPI_Index": 159.2043,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-11-01",
+      "India_10Y_GSec_Yield": 6.812,
+      "India_CPI_Index": 159.2043,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2024-12-01",
+      "India_10Y_GSec_Yield": 6.7775,
+      "India_CPI_Index": 158.3229,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-01-01",
+      "India_10Y_GSec_Yield": 6.758,
+      "India_CPI_Index": 157.772,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-02-01",
+      "India_10Y_GSec_Yield": 6.7325,
+      "India_CPI_Index": 157.3313,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-03-01",
+      "India_10Y_GSec_Yield": 6.6825,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-04-01",
+      "India_10Y_GSec_Yield": 6.455,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-05-01",
+      "India_10Y_GSec_Yield": 6.272,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-06-01",
+      "India_10Y_GSec_Yield": 6.3075,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-07-01",
+      "India_10Y_GSec_Yield": 6.35,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-08-01",
+      "India_10Y_GSec_Yield": 6.522,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-09-01",
+      "India_10Y_GSec_Yield": 6.585,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-10-01",
+      "India_10Y_GSec_Yield": 6.482,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-11-01",
+      "India_10Y_GSec_Yield": 6.5375,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2025-12-01",
+      "India_10Y_GSec_Yield": 6.6325,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2026-01-01",
+      "India_10Y_GSec_Yield": 6.732,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2026-02-01",
+      "India_10Y_GSec_Yield": 6.77,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2026-03-01",
+      "India_10Y_GSec_Yield": 6.84,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2026-04-01",
+      "India_10Y_GSec_Yield": 7.05,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2026-05-01",
+      "India_10Y_GSec_Yield": 7.02,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    },
+    {
+      "Date": "2026-06-01",
+      "India_10Y_GSec_Yield": 6.89,
+      "India_CPI_Index": 157.5517,
+      "India_IIP_Index": 125.6181
+    }
+  ],
+  "global_macro_recent": [
+    {
+      "Date": "2026-06-12",
+      "Brent_Crude_USD": 87.33000183105469,
+      "US_Dollar_Index_DXY": 99.75,
+      "USD_INR_Exchange_Rate": 95.76010131835938,
+      "Sensex_Index": 75527.953125,
+      "Nifty_Auto_Index": 26293.849609375,
+      "Nifty_Energy_Index": 39244.44921875,
+      "Nifty_FMCG_Index": 48827.6015625,
+      "Nifty_IT_Index": 27795.75,
+      "Nifty_Pharma_Index": 24380.05078125,
+      "Nifty_Bank_Index": 56814.80078125,
+      "Nifty_50_Index": 23622.900390625,
+      "US_10Y_Yield": 4.486999988555908
+    },
+    {
+      "Date": "2026-06-15",
+      "Brent_Crude_USD": 83.16999816894531,
+      "US_Dollar_Index_DXY": 99.62999725341795,
+      "USD_INR_Exchange_Rate": 95.11029815673828,
+      "Sensex_Index": 76264.328125,
+      "Nifty_Auto_Index": 26977.5,
+      "Nifty_Energy_Index": 39493.94921875,
+      "Nifty_FMCG_Index": 49043.3984375,
+      "Nifty_IT_Index": 28067.900390625,
+      "Nifty_Pharma_Index": 24220.099609375,
+      "Nifty_Bank_Index": 57198.80078125,
+      "Nifty_50_Index": 23853.900390625,
+      "US_10Y_Yield": 4.468999862670898
+    },
+    {
+      "Date": "2026-06-16",
+      "Brent_Crude_USD": 78.95999908447266,
+      "US_Dollar_Index_DXY": 99.54000091552734,
+      "USD_INR_Exchange_Rate": 94.74169921875,
+      "Sensex_Index": 76808.4765625,
+      "Nifty_Auto_Index": 26891.55078125,
+      "Nifty_Energy_Index": 39915.3984375,
+      "Nifty_FMCG_Index": 49642.3984375,
+      "Nifty_IT_Index": 28568.099609375,
+      "Nifty_Pharma_Index": 24157.849609375,
+      "Nifty_Bank_Index": 57297.1484375,
+      "Nifty_50_Index": 23989.150390625,
+      "US_10Y_Yield": 4.427999973297119
+    },
+    {
+      "Date": "2026-06-17",
+      "Brent_Crude_USD": 79.55000305175781,
+      "US_Dollar_Index_DXY": 100.08999633789062,
+      "USD_INR_Exchange_Rate": 94.88860321044922,
+      "Sensex_Index": 77155.6171875,
+      "Nifty_Auto_Index": 26724.400390625,
+      "Nifty_Energy_Index": 40238.44921875,
+      "Nifty_FMCG_Index": 49556.05078125,
+      "Nifty_IT_Index": 28809.55078125,
+      "Nifty_Pharma_Index": 24146.55078125,
+      "Nifty_Bank_Index": 57585.05078125,
+      "Nifty_50_Index": 24085.69921875,
+      "US_10Y_Yield": 4.4629998207092285
+    },
+    {
+      "Date": "2026-06-18",
+      "Brent_Crude_USD": 79.8499984741211,
+      "US_Dollar_Index_DXY": 100.8499984741211,
+      "USD_INR_Exchange_Rate": 94.85890197753906,
+      "Sensex_Index": 77409.9765625,
+      "Nifty_Auto_Index": 26746.400390625,
+      "Nifty_Energy_Index": 40457.30078125,
+      "Nifty_FMCG_Index": 49654.5,
+      "Nifty_IT_Index": 28466.44921875,
+      "Nifty_Pharma_Index": 24282.19921875,
+      "Nifty_Bank_Index": 57963.80078125,
+      "Nifty_50_Index": 24168.0,
+      "US_10Y_Yield": 4.451000213623047
+    },
+    {
+      "Date": "2026-06-19",
+      "Brent_Crude_USD": 79.8499984741211,
+      "US_Dollar_Index_DXY": 100.8499984741211,
+      "USD_INR_Exchange_Rate": 94.33989715576172,
+      "Sensex_Index": 76802.8984375,
+      "Nifty_Auto_Index": 26583.349609375,
+      "Nifty_Energy_Index": 40548.1015625,
+      "Nifty_FMCG_Index": 49558.69921875,
+      "Nifty_IT_Index": 27426.849609375,
+      "Nifty_Pharma_Index": 24460.30078125,
+      "Nifty_Bank_Index": 57685.75,
+      "Nifty_50_Index": 24013.099609375,
+      "US_10Y_Yield": 4.451000213623047
+    },
+    {
+      "Date": "2026-06-22",
+      "Brent_Crude_USD": 77.9000015258789,
+      "US_Dollar_Index_DXY": 101.0199966430664,
+      "USD_INR_Exchange_Rate": 94.3302993774414,
+      "Sensex_Index": 77094.0703125,
+      "Nifty_Auto_Index": 26703.44921875,
+      "Nifty_Energy_Index": 40773.80078125,
+      "Nifty_FMCG_Index": 49355.1015625,
+      "Nifty_IT_Index": 27628.55078125,
+      "Nifty_Pharma_Index": 24762.900390625,
+      "Nifty_Bank_Index": 57935.6015625,
+      "Nifty_50_Index": 24102.900390625,
+      "US_10Y_Yield": 4.508999824523926
+    },
+    {
+      "Date": "2026-06-23",
+      "Brent_Crude_USD": 77.08000183105469,
+      "US_Dollar_Index_DXY": 101.41000366210938,
+      "USD_INR_Exchange_Rate": 94.70059967041016,
+      "Sensex_Index": 76200.6796875,
+      "Nifty_Auto_Index": 26496.5,
+      "Nifty_Energy_Index": 40268.69921875,
+      "Nifty_FMCG_Index": 49059.05078125,
+      "Nifty_IT_Index": 27012.05078125,
+      "Nifty_Pharma_Index": 24989.94921875,
+      "Nifty_Bank_Index": 57183.75,
+      "Nifty_50_Index": 23824.099609375,
+      "US_10Y_Yield": 4.493000030517578
+    },
+    {
+      "Date": "2026-06-24",
+      "Brent_Crude_USD": 73.73999786376953,
+      "US_Dollar_Index_DXY": 101.61000061035156,
+      "USD_INR_Exchange_Rate": 95.18370056152344,
+      "Sensex_Index": 76991.21875,
+      "Nifty_Auto_Index": 26384.349609375,
+      "Nifty_Energy_Index": 39908.3984375,
+      "Nifty_FMCG_Index": 49085.1015625,
+      "Nifty_IT_Index": 27566.69921875,
+      "Nifty_Pharma_Index": 25018.94921875,
+      "Nifty_Bank_Index": 58150.3515625,
+      "Nifty_50_Index": 24021.650390625,
+      "US_10Y_Yield": 4.401999950408936
+    },
+    {
+      "Date": "2026-06-25",
+      "Brent_Crude_USD": 75.26000213623047,
+      "US_Dollar_Index_DXY": 101.43000030517578,
+      "USD_INR_Exchange_Rate": 94.4406967163086,
+      "Sensex_Index": 77100.46875,
+      "Nifty_Auto_Index": 26977.75,
+      "Nifty_Energy_Index": 39637.0,
+      "Nifty_FMCG_Index": 49419.25,
+      "Nifty_IT_Index": 27330.849609375,
+      "Nifty_Pharma_Index": 24969.5,
+      "Nifty_Bank_Index": 58177.05078125,
+      "Nifty_50_Index": 24056.0,
+      "US_10Y_Yield": 4.392000198364258
+    },
+    {
+      "Date": "2026-06-26",
+      "Brent_Crude_USD": 71.98999786376953,
+      "US_Dollar_Index_DXY": 101.36000061035156,
+      "USD_INR_Exchange_Rate": 94.40039825439452,
+      "Sensex_Index": 77100.46875,
+      "Nifty_Auto_Index": 26977.75,
+      "Nifty_Energy_Index": 39637.0,
+      "Nifty_FMCG_Index": 49419.25,
+      "Nifty_IT_Index": 27330.849609375,
+      "Nifty_Pharma_Index": 24969.5,
+      "Nifty_Bank_Index": 58177.05078125,
+      "Nifty_50_Index": 24056.0,
+      "US_10Y_Yield": 4.372000217437744
+    },
+    {
+      "Date": "2026-06-29",
+      "Brent_Crude_USD": 73.1500015258789,
+      "US_Dollar_Index_DXY": 101.11000061035156,
+      "USD_INR_Exchange_Rate": 94.36029815673828,
+      "Sensex_Index": 76728.3671875,
+      "Nifty_Auto_Index": 26417.599609375,
+      "Nifty_Energy_Index": 39718.0,
+      "Nifty_FMCG_Index": 49127.6484375,
+      "Nifty_IT_Index": 27038.5,
+      "Nifty_Pharma_Index": 25227.900390625,
+      "Nifty_Bank_Index": 57727.3515625,
+      "Nifty_50_Index": 23946.25,
+      "US_10Y_Yield": 4.374000072479248
+    },
+    {
+      "Date": "2026-06-30",
+      "Brent_Crude_USD": 72.91999816894531,
+      "US_Dollar_Index_DXY": 101.19000244140624,
+      "USD_INR_Exchange_Rate": 94.79049682617188,
+      "Sensex_Index": 76478.671875,
+      "Nifty_Auto_Index": 26479.80078125,
+      "Nifty_Energy_Index": 39740.5,
+      "Nifty_FMCG_Index": 48794.19921875,
+      "Nifty_IT_Index": 26299.05078125,
+      "Nifty_Pharma_Index": 25326.400390625,
+      "Nifty_Bank_Index": 57542.8984375,
+      "Nifty_50_Index": 23865.75,
+      "US_10Y_Yield": 4.418000221252441
+    },
+    {
+      "Date": "2026-07-01",
+      "Brent_Crude_USD": 71.56999969482422,
+      "US_Dollar_Index_DXY": 101.38999938964844,
+      "USD_INR_Exchange_Rate": 94.91799926757812,
+      "Sensex_Index": 76922.640625,
+      "Nifty_Auto_Index": 26783.19921875,
+      "Nifty_Energy_Index": 39764.8515625,
+      "Nifty_FMCG_Index": 49806.80078125,
+      "Nifty_IT_Index": 25769.80078125,
+      "Nifty_Pharma_Index": 25182.69921875,
+      "Nifty_Bank_Index": 58033.05078125,
+      "Nifty_50_Index": 24005.849609375,
+      "US_10Y_Yield": 4.474999904632568
+    },
+    {
+      "Date": "2026-07-02",
+      "Brent_Crude_USD": 71.80000305175781,
+      "US_Dollar_Index_DXY": 100.86000061035156,
+      "USD_INR_Exchange_Rate": 95.4175033569336,
+      "Sensex_Index": 77502.1171875,
+      "Nifty_Auto_Index": 27108.19921875,
+      "Nifty_Energy_Index": 39707.0,
+      "Nifty_FMCG_Index": 50084.69921875,
+      "Nifty_IT_Index": 26965.05078125,
+      "Nifty_Pharma_Index": 25308.900390625,
+      "Nifty_Bank_Index": 58031.6484375,
+      "Nifty_50_Index": 24175.69921875,
+      "US_10Y_Yield": 4.485000133514404
+    },
+    {
+      "Date": "2026-07-03",
+      "Brent_Crude_USD": 71.80000305175781,
+      "US_Dollar_Index_DXY": 100.86000061035156,
+      "USD_INR_Exchange_Rate": 95.527099609375,
+      "Sensex_Index": 77763.90625,
+      "Nifty_Auto_Index": 26988.099609375,
+      "Nifty_Energy_Index": 39178.6015625,
+      "Nifty_FMCG_Index": 50096.3984375,
+      "Nifty_IT_Index": 27439.400390625,
+      "Nifty_Pharma_Index": 25745.150390625,
+      "Nifty_Bank_Index": 57938.5,
+      "Nifty_50_Index": 24270.849609375,
+      "US_10Y_Yield": 4.485000133514404
+    },
+    {
+      "Date": "2026-07-06",
+      "Brent_Crude_USD": 71.98999786376953,
+      "US_Dollar_Index_DXY": 100.8499984741211,
+      "USD_INR_Exchange_Rate": 95.2147979736328,
+      "Sensex_Index": 78285.0703125,
+      "Nifty_Auto_Index": 27353.94921875,
+      "Nifty_Energy_Index": 39481.44921875,
+      "Nifty_FMCG_Index": 50196.3515625,
+      "Nifty_IT_Index": 27276.44921875,
+      "Nifty_Pharma_Index": 25866.25,
+      "Nifty_Bank_Index": 58291.5,
+      "Nifty_50_Index": 24430.349609375,
+      "US_10Y_Yield": 4.479000091552734
+    },
+    {
+      "Date": "2026-07-07",
+      "Brent_Crude_USD": 74.16000366210938,
+      "US_Dollar_Index_DXY": 101.13999938964844,
+      "USD_INR_Exchange_Rate": 95.60350036621094,
+      "Sensex_Index": 78180.71875,
+      "Nifty_Auto_Index": 27343.5,
+      "Nifty_Energy_Index": 39188.44921875,
+      "Nifty_FMCG_Index": 50225.8515625,
+      "Nifty_IT_Index": 27939.150390625,
+      "Nifty_Pharma_Index": 25677.69921875,
+      "Nifty_Bank_Index": 58200.69921875,
+      "Nifty_50_Index": 24398.69921875,
+      "US_10Y_Yield": 4.52899980545044
+    },
+    {
+      "Date": "2026-07-08",
+      "Brent_Crude_USD": 78.0199966430664,
+      "US_Dollar_Index_DXY": 101.0500030517578,
+      "USD_INR_Exchange_Rate": 95.59339904785156,
+      "Sensex_Index": 76503.6015625,
+      "Nifty_Auto_Index": 26733.400390625,
+      "Nifty_Energy_Index": 38695.6484375,
+      "Nifty_FMCG_Index": 48977.3984375,
+      "Nifty_IT_Index": 27555.19921875,
+      "Nifty_Pharma_Index": 25429.80078125,
+      "Nifty_Bank_Index": 56742.6015625,
+      "Nifty_50_Index": 23882.05078125,
+      "US_10Y_Yield": 4.568999767303467
+    },
+    {
+      "Date": "2026-07-09",
+      "Brent_Crude_USD": 76.30000305175781,
+      "US_Dollar_Index_DXY": 100.94000244140624,
+      "USD_INR_Exchange_Rate": 95.86180114746094,
+      "Sensex_Index": 76741.8203125,
+      "Nifty_Auto_Index": 26676.349609375,
+      "Nifty_Energy_Index": 38838.1015625,
+      "Nifty_FMCG_Index": 49350.1484375,
+      "Nifty_IT_Index": 27471.25,
+      "Nifty_Pharma_Index": 25656.25,
+      "Nifty_Bank_Index": 57252.44921875,
+      "Nifty_50_Index": 23962.80078125,
+      "US_10Y_Yield": 4.539000034332275
+    },
+    {
+      "Date": "2026-07-10",
+      "Brent_Crude_USD": 76.01000213623047,
+      "US_Dollar_Index_DXY": 100.97000122070312,
+      "USD_INR_Exchange_Rate": 95.39019775390624,
+      "Sensex_Index": 77569.390625,
+      "Nifty_Auto_Index": 26860.75,
+      "Nifty_Energy_Index": 39242.05078125,
+      "Nifty_FMCG_Index": 49310.6015625,
+      "Nifty_IT_Index": 28010.400390625,
+      "Nifty_Pharma_Index": 25674.099609375,
+      "Nifty_Bank_Index": 58045.8984375,
+      "Nifty_50_Index": 24206.900390625,
+      "US_10Y_Yield": 4.568999767303467
+    },
+    {
+      "Date": "2026-07-13",
+      "Brent_Crude_USD": 83.30000305175781,
+      "US_Dollar_Index_DXY": 101.27999877929688,
+      "USD_INR_Exchange_Rate": 95.3249969482422,
+      "Sensex_Index": 77616.3984375,
+      "Nifty_Auto_Index": 26981.5,
+      "Nifty_Energy_Index": 39220.3515625,
+      "Nifty_FMCG_Index": 48809.8984375,
+      "Nifty_IT_Index": 29015.849609375,
+      "Nifty_Pharma_Index": 25643.349609375,
+      "Nifty_Bank_Index": 58131.44921875,
+      "Nifty_50_Index": 24211.0,
+      "US_10Y_Yield": 4.609000205993652
+    },
+    {
+      "Date": "2026-07-14",
+      "Brent_Crude_USD": 84.7300033569336,
+      "US_Dollar_Index_DXY": 100.94000244140624,
+      "USD_INR_Exchange_Rate": 96.29889678955078,
+      "Sensex_Index": 77054.9375,
+      "Nifty_Auto_Index": 26547.5,
+      "Nifty_Energy_Index": 39203.1484375,
+      "Nifty_FMCG_Index": 48524.94921875,
+      "Nifty_IT_Index": 28724.75,
+      "Nifty_Pharma_Index": 25907.099609375,
+      "Nifty_Bank_Index": 57462.30078125,
+      "Nifty_50_Index": 24052.05078125,
+      "US_10Y_Yield": 4.585000038146973
+    },
+    {
+      "Date": "2026-07-15",
+      "Brent_Crude_USD": 84.94999694824219,
+      "US_Dollar_Index_DXY": 100.5,
+      "USD_INR_Exchange_Rate": 96.42530059814452,
+      "Sensex_Index": 77185.4296875,
+      "Nifty_Auto_Index": 26645.099609375,
+      "Nifty_Energy_Index": 39381.25,
+      "Nifty_FMCG_Index": 48286.5,
+      "Nifty_IT_Index": 28532.25,
+      "Nifty_Pharma_Index": 26003.599609375,
+      "Nifty_Bank_Index": 57757.8515625,
+      "Nifty_50_Index": 24078.5,
+      "US_10Y_Yield": 4.545000076293945
+    },
+    {
+      "Date": "2026-07-16",
+      "Brent_Crude_USD": 84.2300033569336,
+      "US_Dollar_Index_DXY": 100.7300033569336,
+      "USD_INR_Exchange_Rate": 96.49859619140624,
+      "Sensex_Index": 77186.8671875,
+      "Nifty_Auto_Index": 26767.55078125,
+      "Nifty_Energy_Index": 39345.80078125,
+      "Nifty_FMCG_Index": 48408.0,
+      "Nifty_IT_Index": 28722.599609375,
+      "Nifty_Pharma_Index": 26008.05078125,
+      "Nifty_Bank_Index": 57582.25,
+      "Nifty_50_Index": 24072.75,
+      "US_10Y_Yield": 4.568999767303467
+    },
+    {
+      "Date": "2026-07-17",
+      "Brent_Crude_USD": 88.0999984741211,
+      "US_Dollar_Index_DXY": 100.75,
+      "USD_INR_Exchange_Rate": 96.6521987915039,
+      "Sensex_Index": 78151.453125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 29226.599609375,
+      "Nifty_Pharma_Index": 25645.0,
+      "Nifty_Bank_Index": 58521.3984375,
+      "Nifty_50_Index": 24334.30078125,
+      "US_10Y_Yield": 4.540999889373779
+    },
+    {
+      "Date": "2026-07-20",
+      "Brent_Crude_USD": 89.22000122070312,
+      "US_Dollar_Index_DXY": 100.98999786376952,
+      "USD_INR_Exchange_Rate": 96.28479766845705,
+      "Sensex_Index": 77708.5234375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 29161.900390625,
+      "Nifty_Pharma_Index": 26003.150390625,
+      "Nifty_Bank_Index": 57945.0,
+      "Nifty_50_Index": 24238.5,
+      "US_10Y_Yield": 4.5980000495910645
+    },
+    {
+      "Date": "2026-07-21",
+      "Brent_Crude_USD": 91.01000213623048,
+      "US_Dollar_Index_DXY": 101.18000030517578,
+      "USD_INR_Exchange_Rate": 96.4896011352539,
+      "Sensex_Index": 77470.109375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 28984.400390625,
+      "Nifty_Pharma_Index": 26092.849609375,
+      "Nifty_Bank_Index": 57835.3515625,
+      "Nifty_50_Index": 24187.69921875,
+      "US_10Y_Yield": 4.627999782562256
+    },
+    {
+      "Date": "2026-07-22",
+      "Brent_Crude_USD": 94.06999969482422,
+      "US_Dollar_Index_DXY": 101.13999938964844,
+      "USD_INR_Exchange_Rate": 96.34089660644533,
+      "Sensex_Index": 76755.046875,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 28549.849609375,
+      "Nifty_Pharma_Index": 25752.25,
+      "Nifty_Bank_Index": 57126.80078125,
+      "Nifty_50_Index": 23996.25,
+      "US_10Y_Yield": 4.6570000648498535
+    },
+    {
+      "Date": "2026-07-23",
+      "Brent_Crude_USD": 100.69000244140624,
+      "US_Dollar_Index_DXY": 101.43000030517578,
+      "USD_INR_Exchange_Rate": 96.55709838867188,
+      "Sensex_Index": 76391.390625,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 28533.55078125,
+      "Nifty_Pharma_Index": 25653.55078125,
+      "Nifty_Bank_Index": 56592.0,
+      "Nifty_50_Index": 23869.599609375,
+      "US_10Y_Yield": 4.703000068664551
+    },
+    {
+      "Date": "2026-07-24",
+      "Brent_Crude_USD": 96.77999877929688,
+      "US_Dollar_Index_DXY": 101.47000122070312,
+      "USD_INR_Exchange_Rate": 96.87689971923828,
+      "Sensex_Index": 76059.7734375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 28767.94921875,
+      "Nifty_Pharma_Index": 25548.150390625,
+      "Nifty_Bank_Index": 56693.5,
+      "Nifty_50_Index": 23767.44921875,
+      "US_10Y_Yield": 4.678999900817871
+    },
+    {
+      "Date": "2026-07-27",
+      "Brent_Crude_USD": 88.36000061035156,
+      "US_Dollar_Index_DXY": 101.51000213623048,
+      "USD_INR_Exchange_Rate": 96.56729888916016,
+      "Sensex_Index": 76835.78125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 29441.900390625,
+      "Nifty_Pharma_Index": 25945.75,
+      "Nifty_Bank_Index": 57087.19921875,
+      "Nifty_50_Index": 23995.94921875,
+      "US_10Y_Yield": 4.640999794006348
+    },
+    {
+      "Date": "2026-07-28",
+      "Brent_Crude_USD": 84.08999633789062,
+      "US_Dollar_Index_DXY": 101.37999725341795,
+      "USD_INR_Exchange_Rate": 95.77410125732422,
+      "Sensex_Index": 76765.921875,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30418.349609375,
+      "Nifty_Pharma_Index": 25998.849609375,
+      "Nifty_Bank_Index": 56755.6015625,
+      "Nifty_50_Index": 23985.349609375,
+      "US_10Y_Yield": 4.604000091552734
+    },
+    {
+      "Date": "2026-07-29",
+      "Brent_Crude_USD": 90.73999786376952,
+      "US_Dollar_Index_DXY": 100.8000030517578,
+      "USD_INR_Exchange_Rate": 95.59870147705078,
+      "Sensex_Index": 77654.6015625,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31123.099609375,
+      "Nifty_Pharma_Index": 26373.349609375,
+      "Nifty_Bank_Index": 57205.8984375,
+      "Nifty_50_Index": 24250.19921875,
+      "US_10Y_Yield": 4.622000217437744
+    },
+    {
+      "Date": "2026-07-30",
+      "Brent_Crude_USD": 89.02999877929688,
+      "US_Dollar_Index_DXY": 100.01000213623048,
+      "USD_INR_Exchange_Rate": 95.72859954833984,
+      "Sensex_Index": 77928.1484375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31194.55078125,
+      "Nifty_Pharma_Index": 26346.05078125,
+      "Nifty_Bank_Index": 57147.5,
+      "Nifty_50_Index": 24317.150390625,
+      "US_10Y_Yield": 4.663000106811523
+    },
+    {
+      "Date": "2026-07-31",
+      "Brent_Crude_USD": 90.12000274658205,
+      "US_Dollar_Index_DXY": 99.8000030517578,
+      "USD_INR_Exchange_Rate": 95.68479919433594,
+      "Sensex_Index": 78094.640625,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30708.94921875,
+      "Nifty_Pharma_Index": 26534.80078125,
+      "Nifty_Bank_Index": 57264.8515625,
+      "Nifty_50_Index": 24383.599609375,
+      "US_10Y_Yield": 4.744999885559082
+    },
+    {
+      "Date": "2026-08-03",
+      "Brent_Crude_USD": 83.7699966430664,
+      "US_Dollar_Index_DXY": 99.95999908447266,
+      "USD_INR_Exchange_Rate": 95.4021987915039,
+      "Sensex_Index": 78639.03125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31715.25,
+      "Nifty_Pharma_Index": 26662.80078125,
+      "Nifty_Bank_Index": 58247.94921875,
+      "Nifty_50_Index": 24774.30078125,
+      "US_10Y_Yield": 4.685999870300293
+    },
+    {
+      "Date": "2026-08-04",
+      "Brent_Crude_USD": 79.36000061035156,
+      "US_Dollar_Index_DXY": 99.88999938964844,
+      "USD_INR_Exchange_Rate": 95.33159637451172,
+      "Sensex_Index": 78428.953125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31454.150390625,
+      "Nifty_Pharma_Index": 26597.5,
+      "Nifty_Bank_Index": 57907.19921875,
+      "Nifty_50_Index": 24614.900390625,
+      "US_10Y_Yield": 4.626999855041504
+    },
+    {
+      "Date": "2026-08-05",
+      "Brent_Crude_USD": 79.44999694824219,
+      "US_Dollar_Index_DXY": 99.69000244140624,
+      "USD_INR_Exchange_Rate": 95.09719848632812,
+      "Sensex_Index": 78581.0,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31404.05078125,
+      "Nifty_Pharma_Index": 26563.55078125,
+      "Nifty_Bank_Index": 57739.94921875,
+      "Nifty_50_Index": 24624.650390625,
+      "US_10Y_Yield": 4.617000102996826
+    },
+    {
+      "Date": "2026-08-06",
+      "Brent_Crude_USD": 82.48999786376953,
+      "US_Dollar_Index_DXY": 99.97000122070312,
+      "USD_INR_Exchange_Rate": 95.07730102539062,
+      "Sensex_Index": 78954.7578125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31106.25,
+      "Nifty_Pharma_Index": 26564.80078125,
+      "Nifty_Bank_Index": 58063.6484375,
+      "Nifty_50_Index": 24636.0,
+      "US_10Y_Yield": 4.670000076293945
+    },
+    {
+      "Date": "2026-08-07",
+      "Brent_Crude_USD": 83.55000305175781,
+      "US_Dollar_Index_DXY": 99.5999984741211,
+      "USD_INR_Exchange_Rate": 95.31189727783205,
+      "Sensex_Index": 78499.171875,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31547.69921875,
+      "Nifty_Pharma_Index": 26541.80078125,
+      "Nifty_Bank_Index": 57746.44921875,
+      "Nifty_50_Index": 24570.650390625,
+      "US_10Y_Yield": 4.659999847412109
+    },
+    {
+      "Date": "2026-08-10",
+      "Brent_Crude_USD": 87.72000122070312,
+      "US_Dollar_Index_DXY": 99.80999755859376,
+      "USD_INR_Exchange_Rate": 95.21029663085938,
+      "Sensex_Index": 78542.4375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31631.44921875,
+      "Nifty_Pharma_Index": 26479.55078125,
+      "Nifty_Bank_Index": 57686.94921875,
+      "Nifty_50_Index": 24583.80078125,
+      "US_10Y_Yield": 4.698999881744385
+    },
+    {
+      "Date": "2026-08-11",
+      "Brent_Crude_USD": 88.91000366210938,
+      "US_Dollar_Index_DXY": 99.81999969482422,
+      "USD_INR_Exchange_Rate": 95.39669799804688,
+      "Sensex_Index": 78154.25,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31823.150390625,
+      "Nifty_Pharma_Index": 26750.44921875,
+      "Nifty_Bank_Index": 57446.25,
+      "Nifty_50_Index": 24471.69921875,
+      "US_10Y_Yield": 4.684000015258789
+    },
+    {
+      "Date": "2026-08-12",
+      "Brent_Crude_USD": 88.9800033569336,
+      "US_Dollar_Index_DXY": 100.01000213623048,
+      "USD_INR_Exchange_Rate": 95.37989807128906,
+      "Sensex_Index": 77966.3515625,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31332.55078125,
+      "Nifty_Pharma_Index": 26762.5,
+      "Nifty_Bank_Index": 57885.8515625,
+      "Nifty_50_Index": 24435.94921875,
+      "US_10Y_Yield": 4.682000160217285
+    },
+    {
+      "Date": "2026-08-13",
+      "Brent_Crude_USD": 87.06999969482422,
+      "US_Dollar_Index_DXY": 99.95999908447266,
+      "USD_INR_Exchange_Rate": 95.34429931640624,
+      "Sensex_Index": 78079.9609375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31453.900390625,
+      "Nifty_Pharma_Index": 26686.80078125,
+      "Nifty_Bank_Index": 57635.25,
+      "Nifty_50_Index": 24395.849609375,
+      "US_10Y_Yield": 4.640999794006348
+    },
+    {
+      "Date": "2026-08-14",
+      "Brent_Crude_USD": 88.5199966430664,
+      "US_Dollar_Index_DXY": 99.66999816894533,
+      "USD_INR_Exchange_Rate": 95.40119934082033,
+      "Sensex_Index": 78009.25,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31357.75,
+      "Nifty_Pharma_Index": 26445.55078125,
+      "Nifty_Bank_Index": 57491.1015625,
+      "Nifty_50_Index": 24366.0,
+      "US_10Y_Yield": 4.696000099182129
+    },
+    {
+      "Date": "2026-08-17",
+      "Brent_Crude_USD": 90.87000274658205,
+      "US_Dollar_Index_DXY": 99.63999938964844,
+      "USD_INR_Exchange_Rate": 95.45030212402344,
+      "Sensex_Index": 77728.15625,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30807.80078125,
+      "Nifty_Pharma_Index": 26341.55078125,
+      "Nifty_Bank_Index": 57497.80078125,
+      "Nifty_50_Index": 24287.650390625,
+      "US_10Y_Yield": 4.723999977111816
+    },
+    {
+      "Date": "2026-08-18",
+      "Brent_Crude_USD": 91.0199966430664,
+      "US_Dollar_Index_DXY": 99.6500015258789,
+      "USD_INR_Exchange_Rate": 95.69409942626952,
+      "Sensex_Index": 77235.4609375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30213.44921875,
+      "Nifty_Pharma_Index": 26361.900390625,
+      "Nifty_Bank_Index": 57262.3984375,
+      "Nifty_50_Index": 24154.900390625,
+      "US_10Y_Yield": 4.705999851226807
+    },
+    {
+      "Date": "2026-08-19",
+      "Brent_Crude_USD": 91.62000274658205,
+      "US_Dollar_Index_DXY": 98.83000183105467,
+      "USD_INR_Exchange_Rate": 95.81639862060548,
+      "Sensex_Index": 76909.6796875,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30433.05078125,
+      "Nifty_Pharma_Index": 26313.80078125,
+      "Nifty_Bank_Index": 57239.75,
+      "Nifty_50_Index": 24078.30078125,
+      "US_10Y_Yield": 4.652999877929688
+    },
+    {
+      "Date": "2026-08-20",
+      "Brent_Crude_USD": 93.77999877929688,
+      "US_Dollar_Index_DXY": 98.9000015258789,
+      "USD_INR_Exchange_Rate": 95.49600219726562,
+      "Sensex_Index": 77537.71875,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30673.05078125,
+      "Nifty_Pharma_Index": 26416.0,
+      "Nifty_Bank_Index": 57495.8984375,
+      "Nifty_50_Index": 24231.849609375,
+      "US_10Y_Yield": 4.696000099182129
+    },
+    {
+      "Date": "2026-08-21",
+      "Brent_Crude_USD": 94.38999938964844,
+      "US_Dollar_Index_DXY": 98.8000030517578,
+      "USD_INR_Exchange_Rate": 95.77220153808594,
+      "Sensex_Index": 77540.828125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30532.25,
+      "Nifty_Pharma_Index": 26359.75,
+      "Nifty_Bank_Index": 57761.94921875,
+      "Nifty_50_Index": 24252.0,
+      "US_10Y_Yield": 4.73799991607666
+    },
+    {
+      "Date": "2026-08-24",
+      "Brent_Crude_USD": 92.16999816894533,
+      "US_Dollar_Index_DXY": 99.0,
+      "USD_INR_Exchange_Rate": 95.70030212402344,
+      "Sensex_Index": 77369.109375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30596.900390625,
+      "Nifty_Pharma_Index": 26339.30078125,
+      "Nifty_Bank_Index": 57525.94921875,
+      "Nifty_50_Index": 24219.05078125,
+      "US_10Y_Yield": 4.703999996185303
+    },
+    {
+      "Date": "2026-08-25",
+      "Brent_Crude_USD": 88.58000183105469,
+      "US_Dollar_Index_DXY": 98.91999816894533,
+      "USD_INR_Exchange_Rate": 95.7230987548828,
+      "Sensex_Index": 77656.09375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30771.80078125,
+      "Nifty_Pharma_Index": 26564.0,
+      "Nifty_Bank_Index": 57514.19921875,
+      "Nifty_50_Index": 24334.55078125,
+      "US_10Y_Yield": 4.638999938964844
+    },
+    {
+      "Date": "2026-08-26",
+      "Brent_Crude_USD": 87.83999633789062,
+      "US_Dollar_Index_DXY": 99.16999816894533,
+      "USD_INR_Exchange_Rate": 93.5460968017578,
+      "Sensex_Index": 77472.9375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30318.849609375,
+      "Nifty_Pharma_Index": 26626.30078125,
+      "Nifty_Bank_Index": 57783.75,
+      "Nifty_50_Index": 24207.75,
+      "US_10Y_Yield": 4.664000034332275
+    },
+    {
+      "Date": "2026-08-27",
+      "Brent_Crude_USD": 89.69999694824219,
+      "US_Dollar_Index_DXY": 99.16000366210938,
+      "USD_INR_Exchange_Rate": 95.4302978515625,
+      "Sensex_Index": 76933.59375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30221.150390625,
+      "Nifty_Pharma_Index": 26848.75,
+      "Nifty_Bank_Index": 57509.94921875,
+      "Nifty_50_Index": 24090.849609375,
+      "US_10Y_Yield": 4.671999931335449
+    },
+    {
+      "Date": "2026-08-28",
+      "Brent_Crude_USD": 89.69999694824219,
+      "US_Dollar_Index_DXY": 99.16000366210938,
+      "USD_INR_Exchange_Rate": 95.47039794921876,
+      "Sensex_Index": 76933.59375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 30221.150390625,
+      "Nifty_Pharma_Index": 26848.75,
+      "Nifty_Bank_Index": 57509.94921875,
+      "Nifty_50_Index": 24090.849609375,
+      "US_10Y_Yield": 4.671999931335449
+    },
+    {
+      "Date": "2026-08-31",
+      "Brent_Crude_USD": 90.48999786376952,
+      "US_Dollar_Index_DXY": 99.43000030517578,
+      "USD_INR_Exchange_Rate": 95.38030242919922,
+      "Sensex_Index": 76957.2734375,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31191.44921875,
+      "Nifty_Pharma_Index": 27186.44921875,
+      "Nifty_Bank_Index": 58024.94921875,
+      "Nifty_50_Index": 24080.400390625,
+      "US_10Y_Yield": 4.757999897003174
+    },
+    {
+      "Date": "2026-09-01",
+      "Brent_Crude_USD": 94.6500015258789,
+      "US_Dollar_Index_DXY": 99.66999816894533,
+      "USD_INR_Exchange_Rate": 95.1144027709961,
+      "Sensex_Index": 76944.28125,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31496.69921875,
+      "Nifty_Pharma_Index": 26792.650390625,
+      "Nifty_Bank_Index": 57409.6015625,
+      "Nifty_50_Index": 24055.80078125,
+      "US_10Y_Yield": 4.796000003814697
+    },
+    {
+      "Date": "2026-09-02",
+      "Brent_Crude_USD": 95.62999725341795,
+      "US_Dollar_Index_DXY": 99.55999755859376,
+      "USD_INR_Exchange_Rate": 94.9552001953125,
+      "Sensex_Index": 76570.3515625,
+      "Nifty_Auto_Index": 27099.75,
+      "Nifty_Energy_Index": 39277.0,
+      "Nifty_FMCG_Index": 48748.69921875,
+      "Nifty_IT_Index": 31102.900390625,
+      "Nifty_Pharma_Index": 26780.69921875,
+      "Nifty_Bank_Index": 57172.0,
+      "Nifty_50_Index": 23914.44921875,
+      "US_10Y_Yield": 4.796000003814697
+    },
+    {
+      "Date": "2026-09-03",
+      "Brent_Crude_USD": 96.66000366210938,
+      "US_Dollar_Index_DXY": 99.02200317382812,
+      "USD_INR_Exchange_Rate": 94.4749984741211,
+      "Sensex_Index": 76152.859375,
+      "Nifty_Auto_Index": 27837.400390625,
+      "Nifty_Energy_Index": 38140.80078125,
+      "Nifty_FMCG_Index": 45955.6484375,
+      "Nifty_IT_Index": 30838.849609375,
+      "Nifty_Pharma_Index": 26658.650390625,
+      "Nifty_Bank_Index": 57380.6015625,
+      "Nifty_50_Index": 23873.44921875,
+      "US_10Y_Yield": 4.759999752044678
+    }
+  ]
+}
