@@ -510,14 +510,14 @@ export default function QuantDashboard() {
                 <div>
                   <h2 className="text-base font-bold text-white flex items-center gap-2">
                     <BarChart3 className="w-5 h-5 text-emerald-400" />
-                    Institutional Absorption: Domestic Structural Revolution (? Cr)
+                    Institutional Absorption: Domestic Structural Revolution (₹ Cr)
                   </h2>
                   <p className="text-xs text-slate-400 mt-0.5">
                     10-Year historical comparison of Foreign Institutional (FII) vs Domestic Institutional (DII) Net Flows
                   </p>
                 </div>
                 <div className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
-                  DII Inflow 2026 YTD: <span className="font-bold text-emerald-400 font-mono">+?4,94,850 Cr</span>
+                  DII Inflow 2026 YTD: <span className="font-bold text-emerald-400 font-mono">+₹4,94,850 Cr</span>
                 </div>
               </div>
 
@@ -526,14 +526,14 @@ export default function QuantDashboard() {
                   <BarChart data={macro.fii_dii_history} margin={{ top: 20, right: 20, left: 10, bottom: 20 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
                     <XAxis dataKey="Year" stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 12 }} />
-                    <YAxis stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 11 }} tickFormatter={(val) => `?${val / 1000}k`} />
+                    <YAxis stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 11 }} tickFormatter={(val) => `₹${Math.round(val / 1000)}k`} />
                     <Tooltip 
-                      contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", borderRadius: "8px", fontSize: "12px" }}
-                      formatter={(val: any) => [`?${Number(val).toLocaleString("en-IN")} Cr`]}
+                      contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", borderRadius: "8px", fontSize: "12px", fontFamily: "monospace" }}
+                      formatter={(val: any) => [`₹${Number(val).toLocaleString("en-IN")} Cr`]}
                     />
                     <Legend wrapperStyle={{ fontSize: "12px", paddingTop: "10px" }} />
-                    <Bar dataKey="FII_Net_Inflow_Cr" name="FII Net Inflow (? Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
-                    <Bar dataKey="DII_Net_Inflow_Cr" name="DII Net Inflow (? Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
+                    <Bar dataKey="FII_Net_Equity_Cr" name="FII Net Equity Inflow (₹ Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
+                    <Bar dataKey="DII_Net_Equity_Cr" name="DII Net Equity Inflow (₹ Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
