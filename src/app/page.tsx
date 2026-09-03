@@ -79,7 +79,7 @@ export default function QuantDashboard() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<"macro" | "planA" | "planB" | "traps" | "search">("macro");
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedIndicator, setSelectedIndicator] = useState<"Brent" | "US10Y" | "USDINR" | "DXY" | "Nifty50">("Brent");
+  const [selectedIndicator, setSelectedIndicator] = useState<"Brent" | "US10Y" | "IndiaGSec" | "USDINR" | "DXY" | "Nifty50">("Brent");
   const [timeframe, setTimeframe] = useState<"1M" | "6M" | "1Y" | "ALL">("1Y");
 
   useEffect(() => {
@@ -134,6 +134,13 @@ export default function QuantDashboard() {
       color: "#f59e0b",
       dataKey: "US10Y",
       desc: "Global risk-free rate anchor. Elevated yields keep global discount rates high, capping emerging market valuation multiples."
+    },
+    IndiaGSec: {
+      name: "India 10-Year Sovereign G-Sec Yield",
+      unit: "%",
+      color: "#10b981",
+      dataKey: "IndiaGSec",
+      desc: "Benchmark domestic sovereign borrowing cost. Anchored yields at 6.89% provide an equity-friendly domestic capital structure."
     },
     USDINR: {
       name: "USD / INR Exchange Rate",
@@ -326,7 +333,14 @@ export default function QuantDashboard() {
               </div>
 
               {/* India 10Y G-Sec */}
-              <div className="p-4 rounded-xl bg-[#0e1626] border border-emerald-500/30 shadow-sm relative">
+              <div 
+                onClick={() => setSelectedIndicator("IndiaGSec")}
+                className={`p-4 rounded-xl border transition cursor-pointer relative ${
+                  selectedIndicator === "IndiaGSec" 
+                    ? "bg-[#141e33] border-emerald-500 ring-2 ring-emerald-500/20 shadow-lg" 
+                    : "bg-[#0e1626] border-emerald-500/30 hover:border-emerald-500/60"
+                }`}
+              >
                 <div className="flex items-center justify-between text-xs text-slate-400">
                   <span className="font-semibold text-slate-200">India 10Y G-Sec</span>
                   <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
@@ -339,7 +353,10 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-emerald-400 flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" /> BENIGN / ANCHORED
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">Low domestic borrowing cost</div>
+                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
+                  <span>Low domestic borrowing cost</span>
+                  <span className="text-[10px] text-emerald-400 underline font-mono">Click to chart</span>
+                </div>
               </div>
 
               {/* USD / INR */}

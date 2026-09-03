@@ -118,6 +118,30 @@ def update_macro_data():
     except Exception as e:
         print(f"Warning: Live yfinance fetch encountered an error: {e}. Preserving existing baseline.")
 
+    # Fetch official India 10Y G-Sec from FRED
+    try:
+        url = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=INDIRLTLT01STM"
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            import io
+            df_gsec = pd.read_csv(io.StringIO(res.text)).dropna()
+            df_gsec.columns = ["Date", "GSec"]
+            df_gsec["GSec"] = pd.to_numeric(df_gsec["GSec"], errors="coerce").fillna(6.89)
+            latest_gsec = round(float(df_gsec["GSec"].iloc[-1]), 2)
+            existing.setdefault("india_10y", {})["value"] = latest_gsec
+            month_to_gsec = {str(r["Date"])[:7]: round(float(r["GSec"]), 2) for _, r in df_gsec.tail(60).iterrows()}
+            
+            if "daily_chart_history" in existing:
+                last_known = latest_gsec
+                for pt in existing["daily_chart_history"]:
+                    ym = pt["Date"][:7]
+                    if ym in month_to_gsec:
+                        last_known = month_to_gsec[ym]
+                    pt["IndiaGSec"] = last_known
+            print(f"Successfully updated India 10Y G-Sec: {latest_gsec}%")
+    except Exception as ge:
+        print(f"Notice: India G-Sec FRED fetch error: {ge}")
+
     # Guarantee strict JSON without NaNs
     def clean_nan(obj):
         if isinstance(obj, float) and (np.isnan(obj) or np.isinf(obj)):
