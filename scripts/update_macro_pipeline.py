@@ -174,5 +174,46 @@ def update_macro_data():
         json.dump(cleaned, f, indent=2, allow_nan=False)
     print(f"Saved updated macro_pulse.json to {macro_file}")
 
+def update_portfolio_data():
+    portfolio_file = os.path.join(PUBLIC_DATA_DIR, "shoonya_portfolio.json")
+    if not os.path.exists(portfolio_file):
+        print("shoonya_portfolio.json does not exist yet; skipping.")
+        return
+    try:
+        with open(portfolio_file, "r", encoding="utf-8") as f:
+            pdata = json.load(f)
+        stocks = pdata.get("portfolio", [])
+        if not stocks:
+            return
+        
+        import yfinance as yf
+        tickers = [s["Symbol"] + ".NS" for s in stocks]
+        print(f"Refreshing live CMP and PE for {len(stocks)} Shoonya portfolio holdings...")
+        
+        df = yf.download(tickers, period="5d", progress=False)
+        closes = df["Close"] if (df is not None and not df.empty and "Close" in df) else None
+        
+        for s in stocks:
+            sym_ns = s["Symbol"] + ".NS"
+            if closes is not None and sym_ns in closes:
+                s_close = closes[sym_ns].dropna()
+                if not s_close.empty:
+                    s["CMP"] = round(float(s_close.iloc[-1]), 2)
+            try:
+                t = yf.Ticker(sym_ns)
+                pe = t.info.get("trailingPE") or t.info.get("forwardPE")
+                if pe and float(pe) > 0:
+                    s["PE"] = round(float(pe), 1)
+            except Exception:
+                pass
+                
+        pdata["last_updated"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(portfolio_file, "w", encoding="utf-8") as f:
+            json.dump(pdata, f, indent=2)
+        print(f"Successfully refreshed Shoonya portfolio data at {pdata['last_updated']}.")
+    except Exception as e:
+        print(f"Error updating portfolio data: {e}")
+
 if __name__ == "__main__":
     update_macro_data()
+    update_portfolio_data()

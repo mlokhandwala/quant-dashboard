@@ -15,7 +15,11 @@ import {
   DollarSign, 
   Layers,
   ExternalLink,
-  ChevronRight
+  ChevronRight,
+  Briefcase,
+  ChevronDown,
+  ChevronUp,
+  CheckCircle2
 } from "lucide-react";
 import { 
   ResponsiveContainer, 
@@ -61,6 +65,32 @@ interface StockItem {
   MCap_Cr?: number;
 }
 
+interface ShoonyaStock {
+  Symbol: string;
+  Name: string;
+  Strategy: string;
+  Horizon: string;
+  Allocation_Pct: number;
+  Entry_Price: number;
+  CMP: number;
+  Target_Price: number;
+  Stop_Loss: number;
+  PE: number;
+  Avg_ROCE_Pct: number;
+  Cash_Conv_Pct: number;
+  Latest_Debt_Cr: number;
+  Cum_CFO_Cr: number;
+  Cum_PAT_Cr: number;
+  Moat_Rating: string;
+  Forensic_Status: string;
+  Thesis_Summary: string;
+  Pillar_1_Business_Model: string;
+  Pillar_2_Financial_Moat: string;
+  Pillar_3_Qualitative_Scuttlebutt: string;
+  Pillar_4_Macro_Risks: string;
+  Trigger_Source: string;
+}
+
 interface ScreenerData {
   last_updated: string;
   total_audited_equities: number;
@@ -76,8 +106,12 @@ interface ScreenerData {
 export default function QuantDashboard() {
   const [macro, setMacro] = useState<MacroData | null>(null);
   const [screener, setScreener] = useState<ScreenerData | null>(null);
+  const [portfolio, setPortfolio] = useState<ShoonyaStock[]>([]);
+  const [portfolioUpdated, setPortfolioUpdated] = useState<string>("");
+  const [expandedStock, setExpandedStock] = useState<string | null>(null);
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<"macro" | "planA" | "planB" | "traps" | "search">("macro");
+  const [activeTab, setActiveTab] = useState<"macro" | "planA" | "planB" | "shoonya" | "traps" | "search">("shoonya");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedIndicator, setSelectedIndicator] = useState<"Brent" | "US10Y" | "IndiaGSec" | "USDINR" | "DXY" | "Nifty50">("Brent");
   const [timeframe, setTimeframe] = useState<"1M" | "6M" | "1Y" | "ALL">("1Y");
@@ -88,14 +122,20 @@ export default function QuantDashboard() {
     async function loadData() {
       try {
         const basePath = process.env.NODE_ENV === "production" ? "/quant-dashboard" : "";
-        const [macroRes, screenerRes] = await Promise.all([
+        const [macroRes, screenerRes, portRes] = await Promise.all([
           fetch(`${basePath}/data/macro_pulse.json`),
-          fetch(`${basePath}/data/forensic_screener.json`)
+          fetch(`${basePath}/data/forensic_screener.json`),
+          fetch(`${basePath}/data/shoonya_portfolio.json`).catch(() => null)
         ]);
         const m = await macroRes.json();
         const s = await screenerRes.json();
         setMacro(m);
         setScreener(s);
+        if (portRes && portRes.ok) {
+          const p = await portRes.json();
+          setPortfolio(p.portfolio || []);
+          setPortfolioUpdated(p.last_updated || "");
+        }
       } catch (err) {
         console.error("Failed loading data", err);
       } finally {
@@ -235,6 +275,17 @@ export default function QuantDashboard() {
         {/* Navigation Tabs */}
         <div className="flex flex-wrap items-center gap-2 border-b border-slate-800 pb-3">
           <button
+            onClick={() => setActiveTab("shoonya")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+              activeTab === "shoonya"
+                ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-slate-950 shadow-lg shadow-emerald-500/20 font-bold"
+                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
+            }`}
+          >
+            <Briefcase className="w-4 h-4 text-slate-950" /> Shoonya Portfolio & Theses ({portfolio.length})
+          </button>
+
+          <button
             onClick={() => setActiveTab("macro")}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
               activeTab === "macro"
@@ -267,28 +318,302 @@ export default function QuantDashboard() {
             <Flame className="w-4 h-4 text-cyan-400" /> Plan B: Dhandho Deep Value ({screener?.plan_b_count})
           </button>
 
-          <button
-            onClick={() => setActiveTab("traps")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
-              activeTab === "traps"
-                ? "bg-rose-500 text-white shadow-lg shadow-rose-500/20 font-semibold"
-                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
-            }`}
-          >
-            <AlertTriangle className="w-4 h-4 text-rose-400" /> Forensic Traps ({screener?.traps_count})
-          </button>
+          {/* Archival Dropdown for Forensic Traps & All Equities Search */}
+          <div className="relative">
+            <button
+              onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition ${
+                activeTab === "traps" || activeTab === "search"
+                  ? "bg-slate-800 text-white border border-slate-700"
+                  : "bg-slate-900/60 text-slate-400 hover:bg-slate-800 hover:text-white border border-slate-800"
+              }`}
+            >
+              <span>More Screeners</span>
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${moreMenuOpen ? "rotate-180" : ""}`} />
+            </button>
 
-          <button
-            onClick={() => setActiveTab("search")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
-              activeTab === "search"
-                ? "bg-purple-500 text-white shadow-lg shadow-purple-500/20 font-semibold"
-                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
-            }`}
-          >
-            <Search className="w-4 h-4 text-purple-400" /> 2,566 Equities Screener
-          </button>
+            {moreMenuOpen && (
+              <div 
+                className="absolute left-0 mt-2 w-64 rounded-xl bg-slate-900 border border-slate-800 shadow-2xl z-50 p-1.5 space-y-1 font-sans"
+                onMouseLeave={() => setMoreMenuOpen(false)}
+              >
+                <button
+                  onClick={() => {
+                    setActiveTab("traps");
+                    setMoreMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-left transition ${
+                    activeTab === "traps" ? "bg-rose-500/20 text-rose-300" : "text-slate-300 hover:bg-slate-800"
+                  }`}
+                >
+                  <AlertTriangle className="w-4 h-4 text-rose-400 shrink-0" />
+                  <div>
+                    <div className="font-semibold text-rose-300">Forensic Traps ({screener?.traps_count})</div>
+                    <div className="text-[10px] text-slate-400">125 high debt / paper profit disasters</div>
+                  </div>
+                </button>
+
+                <button
+                  onClick={() => {
+                    setActiveTab("search");
+                    setMoreMenuOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-medium text-left transition ${
+                    activeTab === "search" ? "bg-purple-500/20 text-purple-300" : "text-slate-300 hover:bg-slate-800"
+                  }`}
+                >
+                  <Search className="w-4 h-4 text-purple-400 shrink-0" />
+                  <div>
+                    <div className="font-semibold text-purple-300">2,566 Equities Auditor</div>
+                    <div className="text-[10px] text-slate-400">Search entire listed NSE database</div>
+                  </div>
+                </button>
+              </div>
+            )}
+          </div>
         </div>
+
+        {/* TAB 0: SHOONYA ACTIVE INVESTMENTS & AUDITED THESES */}
+        {activeTab === "shoonya" && (
+          <div className="space-y-6">
+            {/* Header summary banner */}
+            <div className="p-5 rounded-xl bg-gradient-to-br from-[#0c1524] to-[#080d17] border border-emerald-500/30 shadow-xl space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                    <Briefcase className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h2 className="text-base font-bold text-white flex items-center gap-2">
+                      Active Shoonya Investments & Forensic Conviction Dossiers
+                    </h2>
+                    <p className="text-xs text-slate-400">
+                      Vetted high-conviction positions with verified 4-Pillar Scuttlebutt, 10-Yr Cash Conversion, and Debt Cleanliness.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-mono">
+                  <span className="px-3 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
+                    {portfolio.length} Live Positions
+                  </span>
+                  <span className="text-slate-400">
+                    {portfolioUpdated ? `Synced: ${portfolioUpdated}` : "Automated Periodic Updates Active"}
+                  </span>
+                </div>
+              </div>
+
+              {/* Quick stats ribbon */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                  <div className="text-[11px] text-slate-400">Median 10-Yr ROCE</div>
+                  <div className="text-base font-bold text-amber-400 font-mono">59.3%</div>
+                </div>
+                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                  <div className="text-[11px] text-slate-400">Avg Cash Conversion</div>
+                  <div className="text-base font-bold text-emerald-400 font-mono">189.7%</div>
+                </div>
+                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                  <div className="text-[11px] text-slate-400">Aggregate Net Debt</div>
+                  <div className="text-base font-bold text-cyan-400 font-mono">₹121 Cr (Negligible)</div>
+                </div>
+                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                  <div className="text-[11px] text-slate-400">Zero-Junk Forensic Pass</div>
+                  <div className="text-base font-bold text-emerald-300 font-mono">100% (5/5 Clean)</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Holdings Table with Expandable In-Row Thesis Drawer */}
+            <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                  <Layers className="w-4 h-4 text-emerald-400" />
+                  Portfolio Holdings Ledger (Click row or &quot;Show Details&quot; to inspect full thesis)
+                </h3>
+                <span className="text-xs text-slate-400 font-mono">
+                  Autonomous GitHub Actions Sync: Active
+                </span>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs border-collapse">
+                  <thead>
+                    <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
+                      <th className="py-2.5 px-3">Script / Symbol</th>
+                      <th className="py-2.5 px-3">Company Name</th>
+                      <th className="py-2.5 px-3">Strategy / Horizon</th>
+                      <th className="py-2.5 px-3 text-right">Allocation</th>
+                      <th className="py-2.5 px-3 text-right">Entry (₹)</th>
+                      <th className="py-2.5 px-3 text-right">CMP (₹)</th>
+                      <th className="py-2.5 px-3 text-right">P/E</th>
+                      <th className="py-2.5 px-3 text-right">Gain / Loss</th>
+                      <th className="py-2.5 px-3 text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60 font-mono">
+                    {portfolio.map((stock) => {
+                      const isExpanded = expandedStock === stock.Symbol;
+                      const gainPct = stock.Entry_Price && stock.CMP 
+                        ? (((stock.CMP - stock.Entry_Price) / stock.Entry_Price) * 100).toFixed(1) 
+                        : "0.0";
+                      const isGain = Number(gainPct) >= 0;
+
+                      return (
+                        <React.Fragment key={stock.Symbol}>
+                          <tr 
+                            onClick={() => setExpandedStock(isExpanded ? null : stock.Symbol)}
+                            className={`cursor-pointer transition ${isExpanded ? "bg-slate-800/60" : "hover:bg-slate-800/40"}`}
+                          >
+                            <td className="py-3 px-3 font-bold text-emerald-400 flex items-center gap-1.5">
+                              {isExpanded ? <ChevronUp className="w-3.5 h-3.5 text-emerald-400" /> : <ChevronDown className="w-3.5 h-3.5 text-slate-500" />}
+                              {stock.Symbol}
+                            </td>
+                            <td className="py-3 px-3 font-sans text-slate-200 font-medium">
+                              {stock.Name}
+                            </td>
+                            <td className="py-3 px-3">
+                              <span className={`px-2 py-0.5 rounded text-[10px] font-semibold font-sans ${
+                                stock.Strategy.includes("Plan A") 
+                                  ? "bg-amber-500/10 text-amber-300 border border-amber-500/20"
+                                  : "bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
+                              }`}>
+                                {stock.Strategy.split(":")[0]} • {stock.Horizon}
+                              </span>
+                            </td>
+                            <td className="py-3 px-3 text-right font-bold text-slate-200">{stock.Allocation_Pct}%</td>
+                            <td className="py-3 px-3 text-right text-slate-300">₹{stock.Entry_Price}</td>
+                            <td className="py-3 px-3 text-right font-bold text-white">₹{stock.CMP}</td>
+                            <td className="py-3 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
+                            <td className={`py-3 px-3 text-right font-bold ${isGain ? "text-emerald-400" : "text-rose-400"}`}>
+                              {isGain ? `+${gainPct}%` : `${gainPct}%`}
+                            </td>
+                            <td className="py-3 px-3 text-center">
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setExpandedStock(isExpanded ? null : stock.Symbol);
+                                }}
+                                className={`px-2.5 py-1 rounded text-[11px] font-sans font-semibold transition ${
+                                  isExpanded 
+                                    ? "bg-emerald-500 text-slate-950 shadow" 
+                                    : "bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
+                                }`}
+                              >
+                                {isExpanded ? "Hide Thesis" : "View Thesis ▾"}
+                              </button>
+                            </td>
+                          </tr>
+
+                          {/* Expandable In-Row Thesis Drawer */}
+                          {isExpanded && (
+                            <tr className="bg-[#090e17] border-b-2 border-emerald-500/40">
+                              <td colSpan={9} className="p-5 font-sans">
+                                <div className="space-y-4 max-w-6xl mx-auto">
+                                  
+                                  {/* Top Banner of the Dossier */}
+                                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3.5 rounded-lg bg-slate-900/90 border border-slate-800">
+                                    <div>
+                                      <div className="text-xs text-slate-400 uppercase tracking-wider font-mono">Investment Thesis Dossier</div>
+                                      <div className="text-base font-bold text-white flex items-center gap-2 mt-0.5">
+                                        <span>{stock.Name} ({stock.Symbol})</span>
+                                        <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">
+                                          {stock.Forensic_Status.split("(")[0].trim()}
+                                        </span>
+                                      </div>
+                                    </div>
+
+                                    <div className="flex flex-wrap items-center gap-4 text-xs font-mono">
+                                      <div>
+                                        <span className="text-slate-400">Target: </span>
+                                        <span className="font-bold text-emerald-400">₹{stock.Target_Price}</span>
+                                      </div>
+                                      <div>
+                                        <span className="text-slate-400">Stop-Loss: </span>
+                                        <span className="font-bold text-rose-400">₹{stock.Stop_Loss}</span>
+                                      </div>
+                                      <div>
+                                        <span className="text-slate-400">10-Yr ROCE: </span>
+                                        <span className="font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</span>
+                                      </div>
+                                      <div>
+                                        <span className="text-slate-400">10-Yr Cash Conv: </span>
+                                        <span className="font-bold text-emerald-300">{stock.Cash_Conv_Pct}%</span>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  {/* Core Executive Summary */}
+                                  <div className="p-3.5 rounded-lg bg-emerald-950/20 border border-emerald-500/30 text-xs text-slate-200 leading-relaxed">
+                                    <span className="font-bold text-emerald-400 uppercase tracking-wide mr-2 font-mono">Core Conviction Rationale:</span>
+                                    {stock.Thesis_Summary}
+                                  </div>
+
+                                  {/* The 4-Pillar Deep Dive Grid */}
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                                    {/* Pillar 1: Business Model */}
+                                    <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
+                                      <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
+                                        <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                                        1. Business Engine & Competitive Advantage
+                                      </div>
+                                      <p className="text-slate-400 leading-relaxed">
+                                        {stock.Pillar_1_Business_Model}
+                                      </p>
+                                    </div>
+
+                                    {/* Pillar 2: Financial Moat */}
+                                    <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
+                                      <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
+                                        <Award className="w-4 h-4 text-amber-400" />
+                                        2. 10-Year Audited Financial Moat
+                                      </div>
+                                      <p className="text-slate-400 leading-relaxed">
+                                        {stock.Pillar_2_Financial_Moat}
+                                      </p>
+                                    </div>
+
+                                    {/* Pillar 3: Qualitative Scuttlebutt */}
+                                    <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
+                                      <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
+                                        <ShieldCheck className="w-4 h-4 text-cyan-400" />
+                                        3. Qualitative Scuttlebutt & Governance Audit
+                                      </div>
+                                      <p className="text-slate-400 leading-relaxed">
+                                        {stock.Pillar_3_Qualitative_Scuttlebutt}
+                                      </p>
+                                    </div>
+
+                                    {/* Pillar 4: Macro & Risks */}
+                                    <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
+                                      <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
+                                        <AlertTriangle className="w-4 h-4 text-rose-400" />
+                                        4. Macro Vulnerabilities & Downside Protections
+                                      </div>
+                                      <p className="text-slate-400 leading-relaxed">
+                                        {stock.Pillar_4_Macro_Risks}
+                                      </p>
+                                    </div>
+                                  </div>
+
+                                  {/* Bottom Status bar */}
+                                  <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-500 pt-1">
+                                    <span>Moat Rating: <span className="text-slate-300 font-sans">{stock.Moat_Rating}</span></span>
+                                    <span>Source: <span className="text-slate-300">{stock.Trigger_Source}</span></span>
+                                  </div>
+
+                                </div>
+                              </td>
+                            </tr>
+                          )}
+                        </React.Fragment>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* TAB 1: MACRO REGIME RADAR */}
         {activeTab === "macro" && macro && (
