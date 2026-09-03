@@ -81,6 +81,8 @@ export default function QuantDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedIndicator, setSelectedIndicator] = useState<"Brent" | "US10Y" | "IndiaGSec" | "USDINR" | "DXY" | "Nifty50">("Brent");
   const [timeframe, setTimeframe] = useState<"1M" | "6M" | "1Y" | "ALL">("1Y");
+  const [flowTimeframe, setFlowTimeframe] = useState<"3Y" | "5Y" | "ALL">("ALL");
+  const [flowMode, setFlowMode] = useState<"both" | "net">("both");
 
   useEffect(() => {
     async function loadData() {
@@ -119,6 +121,23 @@ export default function QuantDashboard() {
     if (timeframe === "1Y") return history.slice(-250);
     return history;
   }, [macro, timeframe]);
+
+  const filteredFlowHistory = React.useMemo(() => {
+    if (!macro?.fii_dii_history) return [];
+    let list = macro.fii_dii_history.map(item => {
+      const fii = Number(item.FII_Net_Equity_Cr || 0);
+      const dii = Number(item.DII_Net_Equity_Cr || 0);
+      return {
+        ...item,
+        FII_Net_Equity_Cr: fii,
+        DII_Net_Equity_Cr: dii,
+        Net_Domestic_Absorption_Cr: dii - Math.abs(fii < 0 ? fii : 0) // Net positive cushion
+      };
+    });
+    if (flowTimeframe === "3Y") return list.slice(-3);
+    if (flowTimeframe === "5Y") return list.slice(-5);
+    return list;
+  }, [macro, flowTimeframe]);
 
   const indicatorConfigs = {
     Brent: {
@@ -506,24 +525,73 @@ export default function QuantDashboard() {
 
             {/* Institutional Flow Decoupling Chart */}
             <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 border-b border-slate-800 pb-3">
                 <div>
-                  <h2 className="text-base font-bold text-white flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5 text-emerald-400" />
-                    Institutional Absorption: Domestic Structural Revolution (₹ Cr)
-                  </h2>
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-base font-bold text-white flex items-center gap-2">
+                      <BarChart3 className="w-5 h-5 text-emerald-400" />
+                      Institutional Absorption: Domestic Structural Revolution (₹ Cr)
+                    </h2>
+                    <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
+                      {flowTimeframe === "ALL" ? "2015-2026 (12Y)" : flowTimeframe === "5Y" ? "2022-2026 (5Y)" : "2024-2026 (3Y)"}
+                    </span>
+                  </div>
                   <p className="text-xs text-slate-400 mt-0.5">
-                    10-Year historical comparison of Foreign Institutional (FII) vs Domestic Institutional (DII) Net Flows
+                    Multi-horizon comparison of Foreign Institutional (FII) vs Domestic Institutional (DII) Net Equity Flows
                   </p>
                 </div>
-                <div className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
-                  DII Inflow 2026 YTD: <span className="font-bold text-emerald-400 font-mono">+₹4,94,850 Cr</span>
+
+                <div className="flex flex-wrap items-center gap-2">
+                  {/* Mode Toggle */}
+                  <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs font-mono">
+                    <button
+                      onClick={() => setFlowMode("both")}
+                      className={`px-2.5 py-1 rounded transition ${
+                        flowMode === "both"
+                          ? "bg-emerald-500 text-slate-950 font-bold"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      FII vs DII
+                    </button>
+                    <button
+                      onClick={() => setFlowMode("net")}
+                      className={`px-2.5 py-1 rounded transition ${
+                        flowMode === "net"
+                          ? "bg-cyan-500 text-slate-950 font-bold"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      Net Absorption
+                    </button>
+                  </div>
+
+                  {/* Horizon Toggle */}
+                  <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs font-mono">
+                    {(["3Y", "5Y", "ALL"] as const).map((h) => (
+                      <button
+                        key={h}
+                        onClick={() => setFlowTimeframe(h)}
+                        className={`px-2.5 py-1 rounded transition ${
+                          flowTimeframe === h
+                            ? "bg-slate-700 text-white font-bold"
+                            : "text-slate-400 hover:text-white"
+                        }`}
+                      >
+                        {h}
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="text-xs text-slate-300 bg-slate-900/90 px-2.5 py-1.5 rounded-lg border border-slate-800 font-mono hidden sm:block">
+                    2026 YTD DII: <span className="font-bold text-emerald-400">+₹3,80,000 Cr</span>
+                  </div>
                 </div>
               </div>
 
               <div className="h-80 w-full pt-2">
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={macro.fii_dii_history} margin={{ top: 20, right: 20, left: 10, bottom: 20 }}>
+                  <BarChart data={filteredFlowHistory} margin={{ top: 20, right: 20, left: 10, bottom: 20 }}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
                     <XAxis dataKey="Year" stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 12 }} />
                     <YAxis stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 11 }} tickFormatter={(val) => `₹${Math.round(val / 1000)}k`} />
@@ -532,8 +600,14 @@ export default function QuantDashboard() {
                       formatter={(val: any) => [`₹${Number(val).toLocaleString("en-IN")} Cr`]}
                     />
                     <Legend wrapperStyle={{ fontSize: "12px", paddingTop: "10px" }} />
-                    <Bar dataKey="FII_Net_Equity_Cr" name="FII Net Equity Inflow (₹ Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
-                    <Bar dataKey="DII_Net_Equity_Cr" name="DII Net Equity Inflow (₹ Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
+                    {flowMode === "both" ? (
+                      <>
+                        <Bar dataKey="FII_Net_Equity_Cr" name="FII Net Equity (₹ Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
+                        <Bar dataKey="DII_Net_Equity_Cr" name="DII Net Equity (₹ Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
+                      </>
+                    ) : (
+                      <Bar dataKey="Net_Domestic_Absorption_Cr" name="Net Domestic Absorption Cushion (₹ Cr)" fill="#06b6d4" radius={[4, 4, 0, 0]} />
+                    )}
                   </BarChart>
                 </ResponsiveContainer>
               </div>
