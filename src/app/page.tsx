@@ -27,7 +27,9 @@ import {
   Legend, 
   LineChart, 
   Line, 
-  CartesianGrid 
+  CartesianGrid,
+  AreaChart,
+  Area 
 } from "recharts";
 
 interface MacroData {
@@ -37,8 +39,9 @@ interface MacroData {
   india_10y: { value: number; unit: string; percentile_10yr: number; verdict: string; trend: string };
   dxy: { value: number; unit: string; percentile_10yr: number; verdict: string; trend: string };
   usdinr: { value: number; unit: string; percentile_10yr: number; verdict: string; trend: string };
-  fii_dii_history: Array<{ Year: string; FII_Net_Inflow_Cr: number; DII_Net_Inflow_Cr: number; Strategic_Market_Dynamic: string }>;
+  fii_dii_history: Array<{ Year: string; FII_Net_Inflow_Cr?: number; DII_Net_Inflow_Cr?: number; FII_Net_Equity_Cr?: number; DII_Net_Equity_Cr?: number; Strategic_Market_Dynamic?: string }>;
   india_macro_history: Array<any>;
+  daily_chart_history?: Array<{ Date: string; Brent: number; US10Y: number; DXY: number; USDINR: number; Nifty50: number }>;
 }
 
 interface StockItem {
@@ -76,6 +79,8 @@ export default function QuantDashboard() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<"macro" | "planA" | "planB" | "traps" | "search">("macro");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedIndicator, setSelectedIndicator] = useState<"Brent" | "US10Y" | "USDINR" | "DXY" | "Nifty50">("Brent");
+  const [timeframe, setTimeframe] = useState<"1M" | "6M" | "1Y" | "ALL">("1Y");
 
   useEffect(() => {
     async function loadData() {
@@ -105,6 +110,55 @@ export default function QuantDashboard() {
       .filter(s => s.Symbol.toLowerCase().includes(q) || s.Name.toLowerCase().includes(q))
       .slice(0, 30);
   }, [screener, searchQuery]);
+
+  const filteredChartHistory = React.useMemo(() => {
+    if (!macro?.daily_chart_history) return [];
+    const history = macro.daily_chart_history;
+    if (timeframe === "1M") return history.slice(-22);
+    if (timeframe === "6M") return history.slice(-125);
+    if (timeframe === "1Y") return history.slice(-250);
+    return history;
+  }, [macro, timeframe]);
+
+  const indicatorConfigs = {
+    Brent: {
+      name: "Brent Crude Oil",
+      unit: "USD/bbl",
+      color: "#f43f5e",
+      dataKey: "Brent",
+      desc: "Energy & input cost benchmark. Elevated levels squeeze margins across paints, adhesives, chemicals, and tires."
+    },
+    US10Y: {
+      name: "US 10-Year Treasury Yield",
+      unit: "%",
+      color: "#f59e0b",
+      dataKey: "US10Y",
+      desc: "Global risk-free rate anchor. Elevated yields keep global discount rates high, capping emerging market valuation multiples."
+    },
+    USDINR: {
+      name: "USD / INR Exchange Rate",
+      unit: "INR",
+      color: "#06b6d4",
+      dataKey: "USDINR",
+      desc: "Currency valuation measure. Currency softening acts as a top-line margin tailwind for Indian Pharma and IT exporters."
+    },
+    DXY: {
+      name: "US Dollar Index (DXY)",
+      unit: "Index",
+      color: "#a855f7",
+      dataKey: "DXY",
+      desc: "Tracks the greenback vs a basket of global currencies. Softness supports emerging market institutional liquidity."
+    },
+    Nifty50: {
+      name: "Nifty 50 Benchmark Index",
+      unit: "Points",
+      color: "#10b981",
+      dataKey: "Nifty50",
+      desc: "Core Indian large-cap equity gauge reflecting domestic economic momentum and institutional absorption."
+    }
+  };
+
+  const activeConfig = indicatorConfigs[selectedIndicator];
 
   if (loading) {
     return (
@@ -217,9 +271,16 @@ export default function QuantDashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               
               {/* Brent Crude */}
-              <div className="p-4 rounded-xl bg-[#0e1626] border border-slate-800 shadow-sm relative overflow-hidden">
+              <div 
+                onClick={() => setSelectedIndicator("Brent")}
+                className={`p-4 rounded-xl border transition cursor-pointer relative overflow-hidden ${
+                  selectedIndicator === "Brent" 
+                    ? "bg-[#141e33] border-rose-500 ring-2 ring-rose-500/20 shadow-lg" 
+                    : "bg-[#0e1626] border-slate-800 hover:border-slate-700"
+                }`}
+              >
                 <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>Brent Crude Oil</span>
+                  <span className="font-semibold text-slate-200">Brent Crude Oil</span>
                   <span className="px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">
                     {macro.brent_crude.percentile_10yr}th %ile
                   </span>
@@ -231,14 +292,24 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-rose-400 flex items-center gap-1">
                   <TrendingUp className="w-3.5 h-3.5" /> {macro.brent_crude.trend}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">Margin squeeze risk on chemicals/paints</div>
+                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
+                  <span>Margin Squeeze Risk</span>
+                  <span className="text-[10px] text-rose-400 underline font-mono">Click to chart</span>
+                </div>
               </div>
 
               {/* US 10Y Yield */}
-              <div className="p-4 rounded-xl bg-[#0e1626] border border-slate-800 shadow-sm">
+              <div 
+                onClick={() => setSelectedIndicator("US10Y")}
+                className={`p-4 rounded-xl border transition cursor-pointer relative ${
+                  selectedIndicator === "US10Y" 
+                    ? "bg-[#141e33] border-amber-500 ring-2 ring-amber-500/20 shadow-lg" 
+                    : "bg-[#0e1626] border-slate-800 hover:border-slate-700"
+                }`}
+              >
                 <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>US 10-Yr Yield</span>
-                  <span className="px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 font-mono">
+                  <span className="font-semibold text-slate-200">US 10-Yr Yield</span>
+                  <span className="px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 font-mono">
                     {macro.us_10y.percentile_10yr}th %ile
                   </span>
                 </div>
@@ -248,13 +319,16 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-amber-400 flex items-center gap-1">
                   <AlertTriangle className="w-3.5 h-3.5" /> {macro.us_10y.verdict}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">Elevates global cost of capital</div>
+                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
+                  <span>Global Discount Rate</span>
+                  <span className="text-[10px] text-amber-400 underline font-mono">Click to chart</span>
+                </div>
               </div>
 
               {/* India 10Y G-Sec */}
               <div className="p-4 rounded-xl bg-[#0e1626] border border-emerald-500/30 shadow-sm relative">
                 <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>India 10-Yr G-Sec</span>
+                  <span className="font-semibold text-slate-200">India 10Y G-Sec</span>
                   <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
                     {macro.india_10y.percentile_10yr}th %ile
                   </span>
@@ -263,43 +337,154 @@ export default function QuantDashboard() {
                   {macro.india_10y.value}%
                 </div>
                 <div className="mt-2 text-xs font-medium text-emerald-400 flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5" /> BENIGN / EQUITY TAILWIND
+                  <ShieldCheck className="w-3.5 h-3.5" /> BENIGN / ANCHORED
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">Anchored domestic sovereign liquidity</div>
+                <div className="text-[11px] text-slate-400 mt-1">Low domestic borrowing cost</div>
               </div>
 
               {/* USD / INR */}
-              <div className="p-4 rounded-xl bg-[#0e1626] border border-slate-800 shadow-sm">
+              <div 
+                onClick={() => setSelectedIndicator("USDINR")}
+                className={`p-4 rounded-xl border transition cursor-pointer relative ${
+                  selectedIndicator === "USDINR" 
+                    ? "bg-[#141e33] border-cyan-500 ring-2 ring-cyan-500/20 shadow-lg" 
+                    : "bg-[#0e1626] border-slate-800 hover:border-slate-700"
+                }`}
+              >
                 <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>USD / INR Exchange</span>
-                  <span className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Top Tier</span>
+                  <span className="font-semibold text-slate-200">USD / INR</span>
+                  <span className="px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono">Top Tier</span>
                 </div>
                 <div className="mt-2 text-2xl font-bold font-mono text-white tracking-tight">
-                  ?{macro.usdinr.value}
+                  ₹{macro.usdinr.value}
                 </div>
                 <div className="mt-2 text-xs font-medium text-cyan-400 flex items-center gap-1">
                   <TrendingUp className="w-3.5 h-3.5" /> Exporter Tailwinds
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">Realization boost for IT & Pharma</div>
+                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
+                  <span>IT / Pharma Boost</span>
+                  <span className="text-[10px] text-cyan-400 underline font-mono">Click to chart</span>
+                </div>
               </div>
 
-              {/* US Dollar Index */}
-              <div className="p-4 rounded-xl bg-[#0e1626] border border-slate-800 shadow-sm">
+              {/* Dollar Index (DXY) */}
+              <div 
+                onClick={() => setSelectedIndicator("DXY")}
+                className={`p-4 rounded-xl border transition cursor-pointer relative ${
+                  selectedIndicator === "DXY" 
+                    ? "bg-[#141e33] border-purple-500 ring-2 ring-purple-500/20 shadow-lg" 
+                    : "bg-[#0e1626] border-slate-800 hover:border-slate-700"
+                }`}
+              >
                 <div className="flex items-center justify-between text-xs text-slate-400">
-                  <span>Dollar Index (DXY)</span>
-                  <span className="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">
+                  <span className="font-semibold text-slate-200">Dollar Index (DXY)</span>
+                  <span className="px-1.5 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 font-mono">
                     {macro.dxy.percentile_10yr}th %ile
                   </span>
                 </div>
                 <div className="mt-2 text-2xl font-bold font-mono text-white tracking-tight">
                   {macro.dxy.value}
                 </div>
-                <div className="mt-2 text-xs font-medium text-slate-300 flex items-center gap-1">
-                  <Activity className="w-3.5 h-3.5 text-emerald-400" /> Neutral-to-Soft
+                <div className="mt-2 text-xs font-medium text-purple-400 flex items-center gap-1">
+                  <Activity className="w-3.5 h-3.5 text-purple-400" /> Neutral-to-Soft
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1">Limits broad emerging market flight</div>
+                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
+                  <span>Limits EM Outflows</span>
+                  <span className="text-[10px] text-purple-400 underline font-mono">Click to chart</span>
+                </div>
               </div>
 
+            </div>
+
+            {/* EXPANDED INTERACTIVE HISTORICAL CHART CARD */}
+            <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-base font-bold text-white flex items-center gap-2">
+                      <BarChart3 className="w-5 h-5 text-emerald-400" />
+                      {activeConfig.name} Multi-Horizon Historical Trajectory
+                    </h2>
+                    <span className="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">
+                      Unit: {activeConfig.unit}
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-1 max-w-3xl">
+                    {activeConfig.desc}
+                  </p>
+                </div>
+
+                {/* Timeframe Buttons */}
+                <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs font-mono">
+                  {(["1M", "6M", "1Y", "ALL"] as const).map((tf) => (
+                    <button
+                      key={tf}
+                      onClick={() => setTimeframe(tf)}
+                      className={`px-3 py-1 rounded transition ${
+                        timeframe === tf
+                          ? "bg-emerald-500 text-slate-950 font-bold"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      {tf}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Chart Body */}
+              <div className="h-80 w-full pt-2">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={filteredChartHistory} margin={{ top: 10, right: 20, left: 10, bottom: 20 }}>
+                    <defs>
+                      <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor={activeConfig.color} stopOpacity={0.4}/>
+                        <stop offset="95%" stopColor={activeConfig.color} stopOpacity={0.0}/>
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
+                    <XAxis 
+                      dataKey="Date" 
+                      stroke="#64748b" 
+                      tick={{ fill: "#94a3b8", fontSize: 11 }}
+                      tickFormatter={(val) => {
+                        const d = new Date(val);
+                        return `${d.toLocaleString("default", { month: "short" })} ${d.getFullYear().toString().slice(-2)}`;
+                      }}
+                    />
+                    <YAxis 
+                      stroke="#64748b" 
+                      tick={{ fill: "#94a3b8", fontSize: 11 }}
+                      domain={["auto", "auto"]}
+                    />
+                    <Tooltip 
+                      contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", borderRadius: "8px", fontSize: "12px", fontFamily: "monospace" }}
+                      formatter={(val: any) => [`${Number(val).toLocaleString()} ${activeConfig.unit}`, activeConfig.name]}
+                    />
+                    <Area 
+                      type="monotone" 
+                      dataKey={activeConfig.dataKey} 
+                      stroke={activeConfig.color} 
+                      strokeWidth={2}
+                      fillOpacity={1} 
+                      fill="url(#colorGradient)" 
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs border-t border-slate-800/80 text-slate-400 font-mono">
+                <div className="flex items-center gap-4">
+                  <span>Click other macro cards above to switch indicator view</span>
+                  <button 
+                    onClick={() => setSelectedIndicator("Nifty50")} 
+                    className={`underline hover:text-white ${selectedIndicator === "Nifty50" ? "text-emerald-400 font-bold" : ""}`}
+                  >
+                    View Nifty 50 Trend
+                  </button>
+                </div>
+                <span>Data points: {filteredChartHistory.length} trading sessions</span>
+              </div>
             </div>
 
             {/* Institutional Flow Decoupling Chart */}
