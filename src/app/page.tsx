@@ -498,6 +498,8 @@ export default function QuantDashboard() {
                       formatter={(val: any) => [`${Number(val).toLocaleString()} ${activeConfig.unit}`, activeConfig.name]}
                     />
                     <Area 
+                      isAnimationActive={true}
+                      animationDuration={300}
                       type="monotone" 
                       dataKey={activeConfig.dataKey} 
                       stroke={activeConfig.color} 
@@ -602,11 +604,11 @@ export default function QuantDashboard() {
                     <Legend wrapperStyle={{ fontSize: "12px", paddingTop: "10px" }} />
                     {flowMode === "both" ? (
                       <>
-                        <Bar dataKey="FII_Net_Equity_Cr" name="FII Net Equity (₹ Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
-                        <Bar dataKey="DII_Net_Equity_Cr" name="DII Net Equity (₹ Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
+                        <Bar isAnimationActive={true} animationDuration={300} dataKey="FII_Net_Equity_Cr" name="FII Net Equity (₹ Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
+                        <Bar isAnimationActive={true} animationDuration={300} dataKey="DII_Net_Equity_Cr" name="DII Net Equity (₹ Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
                       </>
                     ) : (
-                      <Bar dataKey="Net_Domestic_Absorption_Cr" name="Net Domestic Absorption Cushion (₹ Cr)" fill="#06b6d4" radius={[4, 4, 0, 0]} />
+                      <Bar isAnimationActive={true} animationDuration={300} dataKey="Net_Domestic_Absorption_Cr" name="Net Domestic Absorption Cushion (₹ Cr)" fill="#06b6d4" radius={[4, 4, 0, 0]} />
                     )}
                   </BarChart>
                 </ResponsiveContainer>
@@ -615,7 +617,7 @@ export default function QuantDashboard() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-xs text-slate-300">
                 <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
                   <div className="font-semibold text-emerald-400 mb-1">Permanent Domestic Bid</div>
-                  DII SIP inflows (~?28,000+ Cr/month) have structurally decoupled Indian equities from foreign capital flight.
+                  DII SIP inflows (~₹28,000+ Cr/month) have structurally decoupled Indian equities from foreign capital flight.
                 </div>
                 <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
                   <div className="font-semibold text-cyan-400 mb-1">Sovereign Debt Anchored</div>
@@ -640,7 +642,7 @@ export default function QuantDashboard() {
                   Plan A: Quality Moat Compounders (Top {screener.plan_a_top.length} Stocks)
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Criteria: 10-Year Average ROCE = 20%, 10-Year Cash Conversion (CFO/PAT) = 70%, Debt = ?300 Cr.
+                  Criteria: 10-Year Average ROCE = 20%, 10-Year Cash Conversion (CFO/PAT) = 70%, Debt ≤ ₹300 Cr.
                 </p>
               </div>
               <div className="text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded border border-emerald-500/20 font-medium">
@@ -656,10 +658,10 @@ export default function QuantDashboard() {
                     <th className="py-2.5 px-3">Company Name</th>
                     <th className="py-2.5 px-3 text-right">10-Yr Avg ROCE</th>
                     <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr CFO (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr PAT (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">Debt (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">CMP (?)</th>
+                    <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">CMP (₹)</th>
                     <th className="py-2.5 px-3 text-right">P/E</th>
                   </tr>
                 </thead>
@@ -670,10 +672,10 @@ export default function QuantDashboard() {
                       <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
                       <td className="py-2 px-3 text-right font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</td>
                       <td className="py-2 px-3 text-right text-emerald-300 font-bold">{stock.Cash_Conv_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-cyan-300">?{stock.Latest_Debt_Cr}</td>
-                      <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `?${stock.CMP}` : "-"}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right text-cyan-300">₹{stock.Latest_Debt_Cr}</td>
+                      <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `₹${stock.CMP}` : "-"}</td>
                       <td className="py-2 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
                     </tr>
                   ))}
@@ -693,7 +695,7 @@ export default function QuantDashboard() {
                   Plan B: Pabrai Dhandho Deep Value (Top {screener.plan_b_top.length} Stocks)
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Criteria: 10-Year Cash Conversion = 75%, Clean Balance Sheet (Debt = ?150 Cr), ROCE 15% to 35%.
+                  Criteria: 10-Year Cash Conversion ≥ 75%, Clean Balance Sheet (Debt ≤ ₹150 Cr), ROCE 15% to 35%.
                 </p>
               </div>
               <div className="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded border border-cyan-500/20 font-medium">
@@ -709,10 +711,10 @@ export default function QuantDashboard() {
                     <th className="py-2.5 px-3">Company Name</th>
                     <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
                     <th className="py-2.5 px-3 text-right">10-Yr Avg ROCE</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr CFO (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr PAT (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">Debt (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">CMP (?)</th>
+                    <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">CMP (₹)</th>
                     <th className="py-2.5 px-3 text-right">P/E</th>
                   </tr>
                 </thead>
@@ -723,10 +725,10 @@ export default function QuantDashboard() {
                       <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
                       <td className="py-2 px-3 text-right font-bold text-emerald-300">{stock.Cash_Conv_Pct}%</td>
                       <td className="py-2 px-3 text-right text-amber-300 font-bold">{stock.Avg_ROCE_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{stock.Latest_Debt_Cr}</td>
-                      <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `?${stock.CMP}` : "-"}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{stock.Latest_Debt_Cr}</td>
+                      <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `₹${stock.CMP}` : "-"}</td>
                       <td className="py-2 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
                     </tr>
                   ))}
@@ -760,10 +762,10 @@ export default function QuantDashboard() {
                   <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
                     <th className="py-2.5 px-3">Ticker</th>
                     <th className="py-2.5 px-3">Company Name</th>
-                    <th className="py-2.5 px-3 text-right">Total Debt (? Cr)</th>
+                    <th className="py-2.5 px-3 text-right">Total Debt (₹ Cr)</th>
                     <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr CFO (? Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr PAT (? Cr)</th>
+                    <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
                     <th className="py-2.5 px-3">Forensic Diagnosis</th>
                   </tr>
                 </thead>
@@ -772,10 +774,10 @@ export default function QuantDashboard() {
                     <tr key={stock.Symbol} className="hover:bg-rose-950/20 transition">
                       <td className="py-2 px-3 font-bold text-rose-400">{stock.Symbol}</td>
                       <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
-                      <td className="py-2 px-3 text-right font-bold text-rose-300">?{Math.round(stock.Latest_Debt_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right font-bold text-rose-300">₹{Math.round(stock.Latest_Debt_Cr).toLocaleString()}</td>
                       <td className="py-2 px-3 text-right text-rose-400 font-bold">{stock.Cash_Conv_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
                       <td className="py-2 px-3 font-sans text-xs text-rose-300/80">
                         {stock.Latest_Debt_Cr > 5000 ? "Crushing Debt Burden" : "Severe Accrual Mirage / Low CFO"}
                       </td>
@@ -829,10 +831,10 @@ export default function QuantDashboard() {
                       <th className="py-2.5 px-3">Company Name</th>
                       <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
                       <th className="py-2.5 px-3 text-right">10-Yr Avg ROCE</th>
-                      <th className="py-2.5 px-3 text-right">Debt (? Cr)</th>
-                      <th className="py-2.5 px-3 text-right">10-Yr CFO (? Cr)</th>
-                      <th className="py-2.5 px-3 text-right">10-Yr PAT (? Cr)</th>
-                      <th className="py-2.5 px-3 text-right">CMP (?)</th>
+                      <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
+                      <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
+                      <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
+                      <th className="py-2.5 px-3 text-right">CMP (₹)</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-800/60 font-mono">
@@ -847,11 +849,11 @@ export default function QuantDashboard() {
                           {stock.Avg_ROCE_Pct}%
                         </td>
                         <td className={`py-2 px-3 text-right ${stock.Latest_Debt_Cr > 1000 ? "text-rose-400 font-bold" : "text-slate-300"}`}>
-                          ?{stock.Latest_Debt_Cr}
+                          ₹{stock.Latest_Debt_Cr}
                         </td>
-                        <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                        <td className="py-2 px-3 text-right text-slate-300">?{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                        <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `?${stock.CMP}` : "-"}</td>
+                        <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
+                        <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
+                        <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `₹${stock.CMP}` : "-"}</td>
                       </tr>
                     ))}
                   </tbody>
