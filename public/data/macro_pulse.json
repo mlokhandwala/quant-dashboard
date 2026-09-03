@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-09-03 17:31:11 IST",
+  "last_updated": "2026-09-03 17:42:28 IST",
   "brent_crude": {
-    "value": 96.08,
+    "value": 95.81,
     "unit": "USD/bbl",
     "percentile_10yr": 94.0,
     "verdict": "ELEVATED",
-    "trend": "+20.9% 1-MoM"
+    "trend": "+20.6% 1-MoM"
   },
   "us_10y": {
     "value": 4.76,
@@ -22,7 +22,7 @@
     "trend": "Anchored Domestic Cost of Capital"
   },
   "dxy": {
-    "value": 98.87,
+    "value": 98.88,
     "unit": "Index",
     "percentile_10yr": 61.1,
     "verdict": "NEUTRAL-TO-SOFT",
@@ -10518,9 +10518,9 @@
     },
     {
       "Date": "2026-09-03",
-      "Brent": 96.08,
+      "Brent": 95.81,
       "US10Y": 4.76,
-      "DXY": 98.87,
+      "DXY": 98.88,
       "USDINR": 94.47,
       "Nifty50": 23873.4,
       "IndiaGSec": 6.89
