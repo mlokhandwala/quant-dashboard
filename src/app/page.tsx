@@ -80,9 +80,10 @@ export default function QuantDashboard() {
   useEffect(() => {
     async function loadData() {
       try {
+        const basePath = process.env.NODE_ENV === "production" ? "/quant-dashboard" : "";
         const [macroRes, screenerRes] = await Promise.all([
-          fetch("/data/macro_pulse.json"),
-          fetch("/data/forensic_screener.json")
+          fetch(`${basePath}/data/macro_pulse.json`),
+          fetch(`${basePath}/data/forensic_screener.json`)
         ]);
         const m = await macroRes.json();
         const s = await screenerRes.json();
