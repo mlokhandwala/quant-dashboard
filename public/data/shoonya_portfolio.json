@@ -54,12 +54,20 @@
         ]
       },
       "GTT_Orders": {
-        "stop_loss_gtt": {
-          "al_id": "26090400001748",
-          "condition": "LTP_B",
-          "trigger": 166.0,
-          "limit": 165.0,
-          "status": "ACTIVE (1-Year Validity)"
+        "oco_order": {
+          "al_id": "26090400002068",
+          "condition": "LMT_BOS_O (One-Cancels-Other)",
+          "leg1_target": {
+            "trigger": 238.0,
+            "limit": 240.0,
+            "desc": "Target Harvest (+27.9%)"
+          },
+          "leg2_stop_loss": {
+            "trigger": 170.0,
+            "limit": 168.0,
+            "desc": "Stop-Loss Floor (-10.5%)"
+          },
+          "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
       }
     },
@@ -117,17 +125,17 @@
       },
       "GTT_Orders": {
         "oco_order": {
-          "al_id": "26090400001964",
+          "al_id": "26090400002069",
           "condition": "LMT_BOS_O (One-Cancels-Other)",
           "leg1_target": {
             "trigger": 895.0,
             "limit": 900.0,
-            "desc": "Target Harvest (+44%)"
+            "desc": "Target Harvest (+44.3%)"
           },
           "leg2_stop_loss": {
             "trigger": 545.0,
             "limit": 540.0,
-            "desc": "Stop-Loss Floor (-13%)"
+            "desc": "Stop-Loss Floor (-13.4%)"
           },
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
@@ -186,19 +194,20 @@
         ]
       },
       "GTT_Orders": {
-        "target_harvest_gtt": {
-          "al_id": "26090400001746",
-          "condition": "LTP_A",
-          "trigger": 575.0,
-          "limit": 580.0,
-          "status": "ACTIVE (1-Year Validity)"
-        },
-        "stop_loss_gtt": {
-          "al_id": "26090400001747",
-          "condition": "LTP_B",
-          "trigger": 368.0,
-          "limit": 365.0,
-          "status": "ACTIVE (1-Year Validity)"
+        "oco_order": {
+          "al_id": "26090400002061",
+          "condition": "LMT_BOS_O (One-Cancels-Other)",
+          "leg1_target": {
+            "trigger": 575.0,
+            "limit": 580.0,
+            "desc": "Target Harvest (+37.9%)"
+          },
+          "leg2_stop_loss": {
+            "trigger": 370.0,
+            "limit": 365.0,
+            "desc": "Stop-Loss Floor (-13.2%)"
+          },
+          "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
       }
     }
