@@ -96,6 +96,22 @@ interface ShoonyaStock {
   Pillar_3_Qualitative_Scuttlebutt: string;
   Pillar_4_Macro_Risks: string;
   Trigger_Source: string;
+  GTT_Orders?: {
+    target_harvest_gtt?: {
+      al_id: string;
+      condition: string;
+      trigger: number;
+      limit: number;
+      status: string;
+    };
+    stop_loss_gtt?: {
+      al_id: string;
+      condition: string;
+      trigger: number;
+      limit: number;
+      status: string;
+    };
+  };
   ValuePickr_Scuttlebutt?: {
     topic_id: number;
     topic_title: string;
@@ -575,6 +591,32 @@ export default function QuantDashboard() {
                                       </div>
                                     </div>
                                   </div>
+
+                                  {/* Active Shoonya GTT Orders Ribbon */}
+                                  {stock.GTT_Orders && (
+                                    <div className="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+                                      <div className="flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                                        <span className="text-blue-300 font-bold font-sans">Active Shoonya GTT Orders (1-Year Server-Side Trigger):</span>
+                                      </div>
+                                      <div className="flex flex-wrap items-center gap-4 text-[11px]">
+                                        {stock.GTT_Orders.target_harvest_gtt && (
+                                          <div className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
+                                            <span>Target Harvest: </span>
+                                            <span className="font-bold text-white">Trigger ≥ ₹{stock.GTT_Orders.target_harvest_gtt.trigger}</span> → Limit ₹{stock.GTT_Orders.target_harvest_gtt.limit}
+                                            <span className="text-[10px] text-slate-400 ml-1.5">(Alert #{stock.GTT_Orders.target_harvest_gtt.al_id})</span>
+                                          </div>
+                                        )}
+                                        {stock.GTT_Orders.stop_loss_gtt && (
+                                          <div className="px-2 py-0.5 rounded bg-rose-500/10 border border-rose-500/30 text-rose-300">
+                                            <span>Stop-Loss Floor: </span>
+                                            <span className="font-bold text-white">Trigger ≤ ₹{stock.GTT_Orders.stop_loss_gtt.trigger}</span> → Limit ₹{stock.GTT_Orders.stop_loss_gtt.limit}
+                                            <span className="text-[10px] text-slate-400 ml-1.5">(Alert #{stock.GTT_Orders.stop_loss_gtt.al_id})</span>
+                                          </div>
+                                        )}
+                                      </div>
+                                    </div>
+                                  )}
 
                                   {/* Core Executive Summary */}
                                   <div className="p-3.5 rounded-lg bg-emerald-950/20 border border-emerald-500/30 text-xs text-slate-200 leading-relaxed">

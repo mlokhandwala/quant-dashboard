@@ -52,6 +52,15 @@
             "url": "https://forum.valuepickr.com/t/61884/1"
           }
         ]
+      },
+      "GTT_Orders": {
+        "stop_loss_gtt": {
+          "al_id": "26090400001748",
+          "condition": "LTP_B",
+          "trigger": 166.0,
+          "limit": 165.0,
+          "status": "ACTIVE (1-Year Validity)"
+        }
       }
     },
     {
@@ -105,6 +114,22 @@
             "url": "https://forum.valuepickr.com/t/3294/239"
           }
         ]
+      },
+      "GTT_Orders": {
+        "target_harvest_gtt": {
+          "al_id": "26090400001744",
+          "condition": "LTP_A",
+          "trigger": 895.0,
+          "limit": 900.0,
+          "status": "ACTIVE (1-Year Validity)"
+        },
+        "stop_loss_gtt": {
+          "al_id": "26090400001745",
+          "condition": "LTP_B",
+          "trigger": 545.0,
+          "limit": 540.0,
+          "status": "ACTIVE (1-Year Validity)"
+        }
       }
     },
     {
@@ -158,6 +183,22 @@
             "url": "https://forum.valuepickr.com/t/8695/62"
           }
         ]
+      },
+      "GTT_Orders": {
+        "target_harvest_gtt": {
+          "al_id": "26090400001746",
+          "condition": "LTP_A",
+          "trigger": 575.0,
+          "limit": 580.0,
+          "status": "ACTIVE (1-Year Validity)"
+        },
+        "stop_loss_gtt": {
+          "al_id": "26090400001747",
+          "condition": "LTP_B",
+          "trigger": 368.0,
+          "limit": 365.0,
+          "status": "ACTIVE (1-Year Validity)"
+        }
       }
     }
   ],
