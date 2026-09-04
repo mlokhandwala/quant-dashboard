@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04 06:18:42",
+  "last_updated": "2026-09-04 06:30:34",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -74,7 +74,7 @@
       "Product": "CNC Delivery",
       "Entry_Price": 623.87,
       "Invested_Value": 3119.35,
-      "CMP": 622.1,
+      "CMP": 621.9,
       "Current_Value": 3112.5,
       "Unrealized_PnL": -6.85,
       "Allocation_Pct": 31.5,
@@ -144,7 +144,7 @@
       "Product": "CNC Delivery",
       "Entry_Price": 420.5,
       "Invested_Value": 2102.5,
-      "CMP": 420.45,
+      "CMP": 419.9,
       "Current_Value": 2104.25,
       "Unrealized_PnL": 1.75,
       "Allocation_Pct": 21.2,
@@ -203,5 +203,5 @@
       }
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-04 06:18:56"
+  "last_scuttlebutt_sync": "2026-09-04 06:30:48"
 }
