@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "last_updated": "2026-09-04 14:45:09",
+=======
+  "last_updated": "2026-09-04 08:46:03",
+>>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -10,15 +14,24 @@
       "Quantity": 60,
       "Order_No": "26090400127093",
       "Product": "CNC Delivery",
+<<<<<<< HEAD
       "Entry_Price": 188.4,
       "Invested_Value": 11304.25,
       "CMP": 190.8,
       "Current_Value": 11448.0,
       "Unrealized_PnL": 143.75,
       "Allocation_Pct": 25.8,
+=======
+      "Entry_Price": 187.64,
+      "Invested_Value": 4691.0,
+      "CMP": 189.63,
+      "Current_Value": 4690.5,
+      "Unrealized_PnL": -0.5,
+      "Allocation_Pct": 47.3,
+>>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
       "Target_Price": 240.0,
       "Stop_Loss": 165.0,
-      "PE": 17.5,
+      "PE": 17.6,
       "Avg_ROCE_Pct": 78.7,
       "Cash_Conv_Pct": 99.3,
       "Latest_Debt_Cr": 53.0,
@@ -80,12 +93,21 @@
       "Quantity": 15,
       "Order_No": "26090400127103",
       "Product": "CNC Delivery",
+<<<<<<< HEAD
       "Entry_Price": 624.42,
       "Invested_Value": 9366.35,
       "CMP": 621.0,
       "Current_Value": 9315.0,
       "Unrealized_PnL": -51.35,
       "Allocation_Pct": 21.4,
+=======
+      "Entry_Price": 623.87,
+      "Invested_Value": 3119.35,
+      "CMP": 624.25,
+      "Current_Value": 3112.5,
+      "Unrealized_PnL": -6.85,
+      "Allocation_Pct": 31.5,
+>>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
       "Target_Price": 900.0,
       "Stop_Loss": 540.0,
       "PE": 13.0,
@@ -150,12 +172,21 @@
       "Quantity": 12,
       "Order_No": "26090400127110",
       "Product": "CNC Delivery",
+<<<<<<< HEAD
       "Entry_Price": 420.44,
       "Invested_Value": 5045.3,
       "CMP": 419.0,
       "Current_Value": 5028.0,
       "Unrealized_PnL": -17.3,
       "Allocation_Pct": 11.5,
+=======
+      "Entry_Price": 420.5,
+      "Invested_Value": 2102.5,
+      "CMP": 420.3,
+      "Current_Value": 2104.25,
+      "Unrealized_PnL": 1.75,
+      "Allocation_Pct": 21.2,
+>>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
       "Target_Price": 580.0,
       "Stop_Loss": 365.0,
       "PE": 8.6,
@@ -278,5 +309,5 @@
       "GTT_Orders": {}
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-04 07:22:16"
+  "last_scuttlebutt_sync": "2026-09-04 08:46:18"
 }
