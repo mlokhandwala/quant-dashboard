@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04 07:22:01",
+  "last_updated": "2026-09-04 14:45:09",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -7,15 +7,15 @@
       "Strategy": "Plan A: Munger Fortress Compounder",
       "Horizon": "12 to 24-Month Long-Term Moat",
       "Engine": "Plan A",
-      "Quantity": 25,
+      "Quantity": 60,
       "Order_No": "26090400127093",
       "Product": "CNC Delivery",
-      "Entry_Price": 187.64,
-      "Invested_Value": 4691.0,
-      "CMP": 188.43,
-      "Current_Value": 4690.5,
-      "Unrealized_PnL": -0.5,
-      "Allocation_Pct": 47.3,
+      "Entry_Price": 188.4,
+      "Invested_Value": 11304.25,
+      "CMP": 190.8,
+      "Current_Value": 11448.0,
+      "Unrealized_PnL": 143.75,
+      "Allocation_Pct": 25.8,
       "Target_Price": 240.0,
       "Stop_Loss": 165.0,
       "PE": 17.5,
@@ -60,12 +60,12 @@
           "leg1_target": {
             "trigger": 238.0,
             "limit": 240.0,
-            "desc": "Target Harvest (+27.9%)"
+            "desc": "Target Harvest (27.4%)"
           },
           "leg2_stop_loss": {
             "trigger": 170.0,
             "limit": 168.0,
-            "desc": "Stop-Loss Floor (-10.5%)"
+            "desc": "Stop-Loss Floor (-10.8%)"
           },
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
@@ -77,15 +77,15 @@
       "Strategy": "Plan B: Pabrai Dhandho Re-Rating",
       "Horizon": "18 to 36-Month Regulated Transition",
       "Engine": "Plan B",
-      "Quantity": 5,
+      "Quantity": 15,
       "Order_No": "26090400127103",
       "Product": "CNC Delivery",
-      "Entry_Price": 623.87,
-      "Invested_Value": 3119.35,
-      "CMP": 625.95,
-      "Current_Value": 3112.5,
-      "Unrealized_PnL": -6.85,
-      "Allocation_Pct": 31.5,
+      "Entry_Price": 624.42,
+      "Invested_Value": 9366.35,
+      "CMP": 621.0,
+      "Current_Value": 9315.0,
+      "Unrealized_PnL": -51.35,
+      "Allocation_Pct": 21.4,
       "Target_Price": 900.0,
       "Stop_Loss": 540.0,
       "PE": 13.0,
@@ -130,12 +130,12 @@
           "leg1_target": {
             "trigger": 895.0,
             "limit": 900.0,
-            "desc": "Target Harvest (+44.3%)"
+            "desc": "Target Harvest (44.1%)"
           },
           "leg2_stop_loss": {
             "trigger": 545.0,
             "limit": 540.0,
-            "desc": "Stop-Loss Floor (-13.4%)"
+            "desc": "Stop-Loss Floor (-13.5%)"
           },
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
@@ -147,15 +147,15 @@
       "Strategy": "Plan B: Pabrai Dhandho Re-Rating",
       "Horizon": "12 to 24-Month Capex / Re-Rating",
       "Engine": "Plan B",
-      "Quantity": 5,
+      "Quantity": 12,
       "Order_No": "26090400127110",
       "Product": "CNC Delivery",
-      "Entry_Price": 420.5,
-      "Invested_Value": 2102.5,
-      "CMP": 420.25,
-      "Current_Value": 2104.25,
-      "Unrealized_PnL": 1.75,
-      "Allocation_Pct": 21.2,
+      "Entry_Price": 420.44,
+      "Invested_Value": 5045.3,
+      "CMP": 419.0,
+      "Current_Value": 5028.0,
+      "Unrealized_PnL": -17.3,
+      "Allocation_Pct": 11.5,
       "Target_Price": 580.0,
       "Stop_Loss": 365.0,
       "PE": 8.6,
@@ -200,7 +200,7 @@
           "leg1_target": {
             "trigger": 575.0,
             "limit": 580.0,
-            "desc": "Target Harvest (+37.9%)"
+            "desc": "Target Harvest (38.0%)"
           },
           "leg2_stop_loss": {
             "trigger": 370.0,
@@ -210,6 +210,72 @@
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
       }
+    },
+    {
+      "Symbol": "CAMS",
+      "Name": "Computer Age Management Services Limited",
+      "Strategy": "Plan A: Munger Fortress Compounder",
+      "Horizon": "24 to 36-Month Duopoly Moat",
+      "Engine": "Plan A",
+      "Quantity": 12,
+      "Order_No": "26090400191562",
+      "Product": "CNC Delivery",
+      "Entry_Price": 748.5,
+      "Invested_Value": 8982.0,
+      "CMP": 749.6,
+      "Current_Value": 8995.2,
+      "Unrealized_PnL": 13.2,
+      "Allocation_Pct": 20.5,
+      "Target_Price": 950.0,
+      "Stop_Loss": 660.0,
+      "PE": 37.4,
+      "Avg_ROCE_Pct": 41.7,
+      "Cash_Conv_Pct": 101.9,
+      "Latest_Debt_Cr": 64.0,
+      "Cum_CFO_Cr": 2913.0,
+      "Cum_PAT_Cr": 2859.0,
+      "Moat_Rating": "Wide Moat (Unassailable Mutual Fund RTA Duopoly ~69% Market Share)",
+      "Forensic_Status": "100% Zero-Junk PASS (CFO/PAT 1.02x, Zero Net Debt, Pristine Governance)",
+      "Thesis_Summary": "Pristine capital-light duopoly tollbooth: CAMS processes ~69% of Indian mutual fund industry AUM. Exceptional 41.7% ROCE and 101.9% cash conversion. Structural beneficiary of the financialization of Indian household savings into SIPs without taking balance sheet credit risk.",
+      "Pillar_1_Business_Model": "Largest registrar and transfer agent (RTA) for Indian mutual funds, servicing 10 of the top 15 AMCs. Expanding into non-MF verticals: Alternative Investment Funds (AIF), PMS servicing, CAMSRep insurance repository, and Account Aggregator.",
+      "Pillar_2_Financial_Moat": "10-Year Average ROCE of 41.7% and 101.9% operating cash conversion. High operating leverage as AUM expansion yields direct revenue growth with minimal incremental capex.",
+      "Pillar_3_Qualitative_Scuttlebutt": "Mission-critical financial infrastructure with virtually zero AMC churn due to deep API and core banking integrations. CRISIL AAA equivalent operational governance.",
+      "Pillar_4_Macro_Risks": "Market cycle drawdowns impacting equity AUM valuations and regulatory capping of TER by SEBI. Counterbalanced by non-stop monthly SIP inflows (~Rs 23,000+ Cr/month industry-wide).",
+      "Trigger_Source": "Live Shoonya CNC Order Execution",
+      "GTT_Orders": {}
+    },
+    {
+      "Symbol": "ACCELYA",
+      "Name": "Accelya Solutions India Limited",
+      "Strategy": "Plan A: Munger Fortress Compounder",
+      "Horizon": "18 to 24-Month Airline Tech Moat",
+      "Engine": "Plan A",
+      "Quantity": 8,
+      "Order_No": "26090400191571",
+      "Product": "CNC Delivery",
+      "Entry_Price": 1131.0,
+      "Invested_Value": 9048.0,
+      "CMP": 1130.9,
+      "Current_Value": 9047.2,
+      "Unrealized_PnL": -0.8,
+      "Allocation_Pct": 20.7,
+      "Target_Price": 1450.0,
+      "Stop_Loss": 990.0,
+      "PE": 17.7,
+      "Avg_ROCE_Pct": 59.3,
+      "Cash_Conv_Pct": 123.1,
+      "Latest_Debt_Cr": 16.0,
+      "Cum_CFO_Cr": 1160.0,
+      "Cum_PAT_Cr": 942.0,
+      "Moat_Rating": "Wide Moat (Mission-Critical Global Airline Revenue Accounting & Settlement)",
+      "Forensic_Status": "100% Zero-Junk PASS (CFO/PAT 1.23x, Debt-Free Cash Cow, High Dividend Yield)",
+      "Thesis_Summary": "Essential software tollbooth for global aviation: Accelya manages passenger revenue accounting, cargo solutions, and billing settlement for 250+ airlines worldwide. Boasts a massive 59.3% average ROCE, 123.1% cash conversion, and a high dividend yield (>4.5%) with zero net debt.",
+      "Pillar_1_Business_Model": "Global provider of mission-critical airline financial and commercial software solutions, enabling seamless revenue reconciliation, fraud prevention, and BSP/ICH clearing integrations.",
+      "Pillar_2_Financial_Moat": "Phenomenal 59.3% 10-year average ROCE and 123.1% cash conversion ratio. Cumulative CFO of Rs 1,160 Cr vs PAT of Rs 942 Cr over a decade, funding generous dividend payouts.",
+      "Pillar_3_Qualitative_Scuttlebutt": "Deep software stickiness; replacing an airline's revenue accounting system carries prohibitive switching costs and operational disruption risk. Backed by Vista Equity Partners.",
+      "Pillar_4_Macro_Risks": "Global aviation passenger traffic volatility and geopolitical shocks to airline capacity. Insulated by long-term recurring SaaS/transaction fee contracts.",
+      "Trigger_Source": "Live Shoonya CNC Order Execution",
+      "GTT_Orders": {}
     }
   ],
   "last_scuttlebutt_sync": "2026-09-04 07:22:16"
