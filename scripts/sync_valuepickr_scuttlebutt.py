@@ -16,10 +16,10 @@ HEADERS = {
 # Known high-value dedicated topic mappings on ValuePickr
 TOPIC_MAP = {
     "CASTROLIND": {"id": 61884, "title": "Castrol - A stalwart at reasonable valuations"},
+    "LINCOLN": {"id": 3294, "title": "Lincoln Pharma ... the next mid-cap pharma in the making ...?"},
+    "CHAMBLFERT": {"id": 8695, "title": "Chambal Fertilisers and Chemicals - Sector with structural change"},
     "ACCELYA": {"id": 982, "title": "Accelya Kale Solutions - Niche & Sticky Business"},
-    "KSOLVES": {"id": 76222, "title": "Ksolves - a newage software development firm"},
-    "GVPIL": {"id": 66827, "title": "GE Power India - Flue Gas Desulfurization & Turbines"},
-    "ADVANIHOTR": {"id": 2489, "title": "Advani Hotels - Caravela Beach Resort Goa"}
+    "KSOLVES": {"id": 76222, "title": "Ksolves - a newage software development firm"}
 }
 
 def clean_html(raw_html):

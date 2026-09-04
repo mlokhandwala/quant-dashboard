@@ -72,8 +72,14 @@ interface ShoonyaStock {
   Strategy: string;
   Horizon: string;
   Allocation_Pct: number;
+  Quantity?: number;
+  Order_No?: string;
+  Product?: string;
   Entry_Price: number;
+  Invested_Value?: number;
   CMP: number;
+  Current_Value?: number;
+  Unrealized_PnL?: number;
   Target_Price: number;
   Stop_Loss: number;
   PE: number;
@@ -418,20 +424,20 @@ export default function QuantDashboard() {
               {/* Quick stats ribbon */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
                 <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Median 10-Yr ROCE</div>
-                  <div className="text-base font-bold text-amber-400 font-mono">59.3%</div>
+                  <div className="text-[11px] text-slate-400">Total Invested Capital</div>
+                  <div className="text-base font-bold text-white font-mono">₹9,912.85</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Avg Cash Conversion</div>
-                  <div className="text-base font-bold text-emerald-400 font-mono">189.7%</div>
+                  <div className="text-[11px] text-slate-400">Current Portfolio Value</div>
+                  <div className="text-base font-bold text-emerald-400 font-mono">₹9,906.50</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Aggregate Net Debt</div>
-                  <div className="text-base font-bold text-cyan-400 font-mono">₹121 Cr (Negligible)</div>
+                  <div className="text-[11px] text-slate-400">10-Yr Avg ROCE / Cash Conv</div>
+                  <div className="text-base font-bold text-amber-300 font-mono">39.2% / 105.5%</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Zero-Junk Forensic Pass</div>
-                  <div className="text-base font-bold text-emerald-300 font-mono">100% (5/5 Clean)</div>
+                  <div className="text-[11px] text-slate-400">Shoonya Order Status</div>
+                  <div className="text-base font-bold text-emerald-300 font-mono">3/3 COMPLETE (CNC)</div>
                 </div>
               </div>
             </div>
@@ -441,10 +447,11 @@ export default function QuantDashboard() {
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <h3 className="text-sm font-bold text-white flex items-center gap-2">
                   <Layers className="w-4 h-4 text-emerald-400" />
-                  Portfolio Holdings Ledger (Click row or &quot;Show Details&quot; to inspect full thesis)
+                  Live Holdings Ledger (Click row or &quot;View Thesis&quot; to inspect full conviction dossier)
                 </h3>
-                <span className="text-xs text-slate-400 font-mono">
-                  Autonomous GitHub Actions Sync: Active
+                <span className="text-xs text-emerald-400 font-mono flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Live Orders Filled on NSE
                 </span>
               </div>
 
@@ -453,13 +460,14 @@ export default function QuantDashboard() {
                   <thead>
                     <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
                       <th className="py-2.5 px-3">Script / Symbol</th>
-                      <th className="py-2.5 px-3">Company Name</th>
-                      <th className="py-2.5 px-3">Strategy / Horizon</th>
-                      <th className="py-2.5 px-3 text-right">Allocation</th>
-                      <th className="py-2.5 px-3 text-right">Entry (₹)</th>
+                      <th className="py-2.5 px-3">Qty (CNC)</th>
+                      <th className="py-2.5 px-3">Strategy Engine</th>
+                      <th className="py-2.5 px-3 text-right">Avg Buy (₹)</th>
                       <th className="py-2.5 px-3 text-right">CMP (₹)</th>
+                      <th className="py-2.5 px-3 text-right">Invested (₹)</th>
+                      <th className="py-2.5 px-3 text-right">Current (₹)</th>
                       <th className="py-2.5 px-3 text-right">P/E</th>
-                      <th className="py-2.5 px-3 text-right">Gain / Loss</th>
+                      <th className="py-2.5 px-3 text-right">Unrealized P&L</th>
                       <th className="py-2.5 px-3 text-center">Action</th>
                     </tr>
                   </thead>
@@ -467,8 +475,11 @@ export default function QuantDashboard() {
                     {portfolio.map((stock) => {
                       const isExpanded = expandedStock === stock.Symbol;
                       const gainPct = stock.Entry_Price && stock.CMP 
-                        ? (((stock.CMP - stock.Entry_Price) / stock.Entry_Price) * 100).toFixed(1) 
-                        : "0.0";
+                        ? (((stock.CMP - stock.Entry_Price) / stock.Entry_Price) * 100).toFixed(2) 
+                        : "0.00";
+                      const pnlAmt = stock.Invested_Value && stock.Current_Value
+                        ? (stock.Current_Value - stock.Invested_Value).toFixed(2)
+                        : (stock.Quantity ? ((stock.CMP - stock.Entry_Price) * stock.Quantity).toFixed(2) : "0.00");
                       const isGain = Number(gainPct) >= 0;
 
                       return (
@@ -479,26 +490,29 @@ export default function QuantDashboard() {
                           >
                             <td className="py-3 px-3 font-bold text-emerald-400 flex items-center gap-1.5">
                               {isExpanded ? <ChevronUp className="w-3.5 h-3.5 text-emerald-400" /> : <ChevronDown className="w-3.5 h-3.5 text-slate-500" />}
-                              {stock.Symbol}
+                              <div>
+                                <span>{stock.Symbol}</span>
+                                <div className="text-[10px] text-slate-400 font-sans font-normal">{stock.Name.split(" ")[0]} {stock.Name.split(" ")[1] || ""}</div>
+                              </div>
                             </td>
-                            <td className="py-3 px-3 font-sans text-slate-200 font-medium">
-                              {stock.Name}
-                            </td>
+                            <td className="py-3 px-3 text-slate-300 font-semibold">{stock.Quantity || "-"}</td>
                             <td className="py-3 px-3">
                               <span className={`px-2 py-0.5 rounded text-[10px] font-semibold font-sans ${
                                 stock.Strategy.includes("Plan A") 
                                   ? "bg-amber-500/10 text-amber-300 border border-amber-500/20"
                                   : "bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
                               }`}>
-                                {stock.Strategy.split(":")[0]} • {stock.Horizon}
+                                {stock.Strategy.split(":")[0]}
                               </span>
                             </td>
-                            <td className="py-3 px-3 text-right font-bold text-slate-200">{stock.Allocation_Pct}%</td>
-                            <td className="py-3 px-3 text-right text-slate-300">₹{stock.Entry_Price}</td>
-                            <td className="py-3 px-3 text-right font-bold text-white">₹{stock.CMP}</td>
+                            <td className="py-3 px-3 text-right text-slate-300">₹{stock.Entry_Price.toFixed(2)}</td>
+                            <td className="py-3 px-3 text-right font-bold text-white">₹{stock.CMP.toFixed(2)}</td>
+                            <td className="py-3 px-3 text-right text-slate-300">₹{(stock.Invested_Value || (stock.Entry_Price * (stock.Quantity || 1))).toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            <td className="py-3 px-3 text-right font-semibold text-white">₹{(stock.Current_Value || (stock.CMP * (stock.Quantity || 1))).toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
                             <td className="py-3 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
                             <td className={`py-3 px-3 text-right font-bold ${isGain ? "text-emerald-400" : "text-rose-400"}`}>
-                              {isGain ? `+${gainPct}%` : `${gainPct}%`}
+                              <div>{isGain ? `+₹${pnlAmt}` : `-₹${Math.abs(Number(pnlAmt))}`}</div>
+                              <div className="text-[10px]">{isGain ? `(+${gainPct}%)` : `(${gainPct}%)`}</div>
                             </td>
                             <td className="py-3 px-3 text-center">
                               <button
@@ -526,7 +540,14 @@ export default function QuantDashboard() {
                                   {/* Top Banner of the Dossier */}
                                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3.5 rounded-lg bg-slate-900/90 border border-slate-800">
                                     <div>
-                                      <div className="text-xs text-slate-400 uppercase tracking-wider font-mono">Investment Thesis Dossier</div>
+                                      <div className="text-xs text-slate-400 uppercase tracking-wider font-mono flex items-center gap-2">
+                                        <span>Investment Thesis Dossier</span>
+                                        {stock.Order_No && (
+                                          <span className="px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[10px]">
+                                            Order #{stock.Order_No} (CNC Filled)
+                                          </span>
+                                        )}
+                                      </div>
                                       <div className="text-base font-bold text-white flex items-center gap-2 mt-0.5">
                                         <span>{stock.Name} ({stock.Symbol})</span>
                                         <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">
