@@ -466,14 +466,31 @@ export default function QuantDashboard() {
                         ₹{totalCurrent.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
                       </div>
                     </div>
-                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                      <div className="text-[11px] text-slate-400">10-Yr Avg ROCE / Cash Conv</div>
-                      <div className="text-base font-bold text-amber-300 font-mono">39.2% / 105.5%</div>
-                    </div>
-                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                      <div className="text-[11px] text-slate-400">Shoonya Order Status</div>
-                      <div className="text-base font-bold text-emerald-300 font-mono">3/3 COMPLETE (CNC)</div>
-                    </div>
+                    {(() => {
+                      const totalInv = portfolio.reduce((acc, s) => acc + (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0);
+                      const weightedROCE = totalInv > 0
+                        ? portfolio.reduce((acc, s) => acc + (s.Avg_ROCE_Pct || 0) * (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0) / totalInv
+                        : 47.7;
+                      const weightedCashConv = totalInv > 0
+                        ? portfolio.reduce((acc, s) => acc + (s.Cash_Conv_Pct || 0) * (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0) / totalInv
+                        : 106.0;
+                      return (
+                        <>
+                          <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                            <div className="text-[11px] text-slate-400">10-Yr Avg ROCE / Cash Conv</div>
+                            <div className="text-base font-bold text-amber-300 font-mono">
+                              {weightedROCE.toFixed(1)}% / {weightedCashConv.toFixed(1)}%
+                            </div>
+                          </div>
+                          <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                            <div className="text-[11px] text-slate-400">Shoonya Order Status</div>
+                            <div className="text-base font-bold text-emerald-300 font-mono">
+                              {portfolio.length}/{portfolio.length} COMPLETE (CNC)
+                            </div>
+                          </div>
+                        </>
+                      );
+                    })()}
                   </div>
                 );
               })()}
