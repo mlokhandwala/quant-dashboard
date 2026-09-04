@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "last_updated": "2026-09-04 14:45:09",
-=======
-  "last_updated": "2026-09-04 08:46:03",
->>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
+  "last_updated": "2026-09-04 14:46:32",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -11,27 +7,10 @@
       "Strategy": "Plan A: Munger Fortress Compounder",
       "Horizon": "12 to 24-Month Long-Term Moat",
       "Engine": "Plan A",
-      "Quantity": 60,
-      "Order_No": "26090400127093",
       "Product": "CNC Delivery",
-<<<<<<< HEAD
-      "Entry_Price": 188.4,
-      "Invested_Value": 11304.25,
-      "CMP": 190.8,
-      "Current_Value": 11448.0,
-      "Unrealized_PnL": 143.75,
-      "Allocation_Pct": 25.8,
-=======
-      "Entry_Price": 187.64,
-      "Invested_Value": 4691.0,
-      "CMP": 189.63,
-      "Current_Value": 4690.5,
-      "Unrealized_PnL": -0.5,
-      "Allocation_Pct": 47.3,
->>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
       "Target_Price": 240.0,
       "Stop_Loss": 165.0,
-      "PE": 17.6,
+      "PE": 17.5,
       "Avg_ROCE_Pct": 78.7,
       "Cash_Conv_Pct": 99.3,
       "Latest_Debt_Cr": 53.0,
@@ -42,30 +21,15 @@
       "Thesis_Summary": "Dominant 100-year brand with 1.25 Lakh retail outlets across India. Outstanding 78.7% 10-year average ROCE, zero net debt, and 99.3% cash conversion. Dividend yield of 4.8% provides asymmetric downside cushion while synthetic fluids and EV transmission cooling fluids expand addressable TAM.",
       "Pillar_1_Business_Model": "Industry leader in premium automotive lubricants and fluids with 20%+ retail replacement market share. Operates automated blending plants at Patalganga, Paharpur, and Silvassa.",
       "Pillar_2_Financial_Moat": "10-Year Average ROCE of 78.7% with 99.3% operating cash conversion. Zero external long-term debt burden (only operational working capital). Free Cash Flow yield exceeds 5.5%.",
-      "Pillar_3_Qualitative_Scuttlebutt": "ValuePickr & CRISIL audit confirms unencumbered cash balance (> ?1,200 Cr). Clean statutory audit reports and parent BP (British Petroleum) governance oversight.",
+      "Pillar_3_Qualitative_Scuttlebutt": "ValuePickr & CRISIL audit confirms unencumbered cash balance (> Rs 1,200 Cr). Clean statutory audit reports and parent BP (British Petroleum) governance oversight.",
       "Pillar_4_Macro_Risks": "Input costs tied to base oil prices (crude derivative). Mitigated by strong consumer brand power allowing periodic retail price hikes to defend gross margins.",
       "Trigger_Source": "Live Shoonya CNC Order Execution",
-      "ValuePickr_Scuttlebutt": {
-        "topic_id": 61884,
-        "topic_title": "Castrol - A stalwart at reasonable valuations",
-        "thread_url": "https://forum.valuepickr.com/t/61884",
-        "posts": [
-          {
-            "author": "manish962",
-            "date": "2021-07-14",
-            "post_number": 2,
-            "text": "You need to put up detailed stock analysis. Borrowed ideas are not welcome on this forum. Till you comply, the thread remains locked.",
-            "url": "https://forum.valuepickr.com/t/61884/2"
-          },
-          {
-            "author": "theashworld",
-            "date": "2021-07-14",
-            "post_number": 1,
-            "text": "An excellent really detailed report covers it all \u2026 reliancesmartmoney.com castrol---initiation---211020.pdf 1248.50 KB Some highlights Industry Leader Fantastic RoE, RoCE, etc ratios Excellent dividend yield provides downside protection Near-nil threat of competition/disruption ...",
-            "url": "https://forum.valuepickr.com/t/61884/1"
-          }
-        ]
-      },
+      "Quantity": 60,
+      "Entry_Price": 188.4,
+      "Invested_Value": 11304.25,
+      "CMP": 190.72,
+      "Current_Value": 11443.2,
+      "Unrealized_PnL": 138.95,
       "GTT_Orders": {
         "oco_order": {
           "al_id": "26090400002068",
@@ -82,7 +46,8 @@
           },
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
-      }
+      },
+      "Allocation_Pct": 25.8
     },
     {
       "Symbol": "LINCOLN",
@@ -90,61 +55,29 @@
       "Strategy": "Plan B: Pabrai Dhandho Re-Rating",
       "Horizon": "18 to 36-Month Regulated Transition",
       "Engine": "Plan B",
-      "Quantity": 15,
-      "Order_No": "26090400127103",
       "Product": "CNC Delivery",
-<<<<<<< HEAD
-      "Entry_Price": 624.42,
-      "Invested_Value": 9366.35,
-      "CMP": 621.0,
-      "Current_Value": 9315.0,
-      "Unrealized_PnL": -51.35,
-      "Allocation_Pct": 21.4,
-=======
-      "Entry_Price": 623.87,
-      "Invested_Value": 3119.35,
-      "CMP": 624.25,
-      "Current_Value": 3112.5,
-      "Unrealized_PnL": -6.85,
-      "Allocation_Pct": 31.5,
->>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
       "Target_Price": 900.0,
       "Stop_Loss": 540.0,
-      "PE": 13.0,
+      "PE": 12.9,
       "Avg_ROCE_Pct": 20.9,
       "Cash_Conv_Pct": 89.7,
       "Latest_Debt_Cr": 4.0,
       "Cum_CFO_Cr": 626.0,
       "Cum_PAT_Cr": 698.0,
       "Moat_Rating": "Narrow Moat (EU-GMP / TGA Certified Export Expansion, Low-Cost Formulations)",
-      "Forensic_Status": "100% Zero-Junk PASS (Virtually Debt-Free ?4 Cr, Zero Promoter Pledge)",
-      "Thesis_Summary": "Pabrai Dhandho setup: Heads I win, tails I don't lose much. Trades at an attractive 12.9x P/E with a virtually debt-free balance sheet (?4 Cr net debt). Self-funded capex has upgraded facilities to EU-GMP and TGA (Australia) certifications, opening high-margin European and Canadian export channels to re-rate valuation toward 20x+ P/E.",
+      "Forensic_Status": "100% Zero-Junk PASS (Virtually Debt-Free Rs 4 Cr, Zero Promoter Pledge)",
+      "Thesis_Summary": "Pabrai Dhandho setup: Heads I win, tails I don't lose much. Trades at an attractive 12.9x P/E with a virtually debt-free balance sheet (Rs 4 Cr net debt). Self-funded capex has upgraded facilities to EU-GMP and TGA (Australia) certifications, opening high-margin European and Canadian export channels to re-rate valuation toward 20x+ P/E.",
       "Pillar_1_Business_Model": "Formulations manufacturer operating manufacturing plants at Khatraj and Mehsana, Gujarat. Diversified revenue: ~60% Exports across 60+ countries and ~40% domestic branded formulations supported by 50,000+ doctors and 10,000+ stockists.",
-      "Pillar_2_Financial_Moat": "10-Year Average ROCE of 20.9% and 89.7% cash conversion. Fixed assets expanded 3x from ?66 Cr to ?191 Cr entirely self-funded from operating cash flows without borrowing.",
-      "Pillar_3_Qualitative_Scuttlebutt": "CRISIL A / Stable reaffirmed. Bank limit utilization is exceptionally low at 4-5% over 12 months with ?90 Cr+ annual cash accruals. Zero adverse auditor qualifications.",
+      "Pillar_2_Financial_Moat": "10-Year Average ROCE of 20.9% and 89.7% cash conversion. Fixed assets expanded 3x from Rs 66 Cr to Rs 191 Cr entirely self-funded from operating cash flows without borrowing.",
+      "Pillar_3_Qualitative_Scuttlebutt": "CRISIL A / Stable reaffirmed. Bank limit utilization is exceptionally low at 4-5% over 12 months with Rs 90 Cr+ annual cash accruals. Zero adverse auditor qualifications.",
       "Pillar_4_Macro_Risks": "Emerging market currency risk on African receivables and Chinese API dependency. Mitigated by expanding EU/Australia regulated market filings and conservative working capital management.",
       "Trigger_Source": "Live Shoonya CNC Order Execution",
-      "ValuePickr_Scuttlebutt": {
-        "topic_id": 3294,
-        "topic_title": "Lincoln Pharma ... the next mid-cap pharma in the making ...?",
-        "thread_url": "https://forum.valuepickr.com/t/3294",
-        "posts": [
-          {
-            "author": "madhavojha",
-            "date": "2024-10-10",
-            "post_number": 240,
-            "text": "Lincoln Pharma has a history of inflating its profits, In FY 2012, the company reported a lower provision for bad debt, categorizing it under trade receivables. With other income sources including 22 crores from share valuations related to investments or trading. The company also...",
-            "url": "https://forum.valuepickr.com/t/3294/240"
-          },
-          {
-            "author": "praky",
-            "date": "2024-10-10",
-            "post_number": 239,
-            "text": "If we look at last year, the core profit growth YoY has been at 11% while the net profit growth has been at 22% due to the other income. However the stock p/e excluding the other income is still around 14 (souce screener). Stock still looks cheap to me. But for a rerating they wi...",
-            "url": "https://forum.valuepickr.com/t/3294/239"
-          }
-        ]
-      },
+      "Quantity": 15,
+      "Entry_Price": 624.42,
+      "Invested_Value": 9366.35,
+      "CMP": 621.0,
+      "Current_Value": 9315.0,
+      "Unrealized_PnL": -51.35,
       "GTT_Orders": {
         "oco_order": {
           "al_id": "26090400002069",
@@ -161,7 +94,8 @@
           },
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
-      }
+      },
+      "Allocation_Pct": 21.4
     },
     {
       "Symbol": "CHAMBLFERT",
@@ -169,24 +103,7 @@
       "Strategy": "Plan B: Pabrai Dhandho Re-Rating",
       "Horizon": "12 to 24-Month Capex / Re-Rating",
       "Engine": "Plan B",
-      "Quantity": 12,
-      "Order_No": "26090400127110",
       "Product": "CNC Delivery",
-<<<<<<< HEAD
-      "Entry_Price": 420.44,
-      "Invested_Value": 5045.3,
-      "CMP": 419.0,
-      "Current_Value": 5028.0,
-      "Unrealized_PnL": -17.3,
-      "Allocation_Pct": 11.5,
-=======
-      "Entry_Price": 420.5,
-      "Invested_Value": 2102.5,
-      "CMP": 420.3,
-      "Current_Value": 2104.25,
-      "Unrealized_PnL": 1.75,
-      "Allocation_Pct": 21.2,
->>>>>>> 56cd03303fc6e07d70d7d718b351d34d75ced7d1
       "Target_Price": 580.0,
       "Stop_Loss": 365.0,
       "PE": 8.6,
@@ -197,33 +114,18 @@
       "Cum_PAT_Cr": 13460.0,
       "Moat_Rating": "Cost Leadership Moat (Lowest Cost Urea Manufacturer in India, TAN Diversification)",
       "Forensic_Status": "100% Zero-Junk PASS (CFO/PAT 1.27x, Massive Free Cash Flow Generation)",
-      "Thesis_Summary": "Deep Value Dhandho setup: Trading at an ultra-low 8.6x P/E with 127.5% cash conversion (?17,167 Cr CFO over 10 years). State-of-the-art Gadepan plants produce ~3.4 MT of urea at lowest energy consumption in India. Ongoing ?1,645 Cr Technical Ammonium Nitrate (TAN) and Nitric Acid capex structurally transforms company from regulated fertilizer to high-margin specialty industrial chemical supplier.",
+      "Thesis_Summary": "Deep Value Dhandho setup: Trading at an ultra-low 8.6x P/E with 127.5% cash conversion (Rs 17,167 Cr CFO over 10 years). State-of-the-art Gadepan plants produce ~3.4 MT of urea at lowest energy consumption in India. Ongoing Rs 1,645 Cr Technical Ammonium Nitrate (TAN) and Nitric Acid capex structurally transforms company from regulated fertilizer to high-margin specialty industrial chemical supplier.",
       "Pillar_1_Business_Model": "Largest private sector urea manufacturer in India with 'Uttam Veer' brand commanding deep rural farmer loyalty across North and Central India. Expanding aggressively into crop protection chemicals, specialty nutrients, and industrial TAN.",
-      "Pillar_2_Financial_Moat": "127.5% 10-year cash conversion. Long-term debt successfully slashed from over ?9,000 Cr down to ?1,068 Cr via ferocious operating cash generation. Robust 18.0% ROCE across commodity cycles.",
+      "Pillar_2_Financial_Moat": "127.5% 10-year cash conversion. Long-term debt successfully slashed from over Rs 9,000 Cr down to Rs 1,068 Cr via ferocious operating cash generation. Robust 18.0% ROCE across commodity cycles.",
       "Pillar_3_Qualitative_Scuttlebutt": "KK Birla group flagship with premier corporate governance. ValuePickr consensus highlights TAN project commercialization as next structural margin catalyst.",
       "Pillar_4_Macro_Risks": "Domestic natural gas feedstock pricing and government subsidy payment lag. Insulated by pooled gas pricing mechanism and sovereign Direct Benefit Transfer (DBT) digital reforms.",
       "Trigger_Source": "Live Shoonya CNC Order Execution",
-      "ValuePickr_Scuttlebutt": {
-        "topic_id": 8695,
-        "topic_title": "Chambal Fertilisers and Chemicals - Sector with structural change",
-        "thread_url": "https://forum.valuepickr.com/t/8695",
-        "posts": [
-          {
-            "author": "visitkumaresh",
-            "date": "2026-06-15",
-            "post_number": 63,
-            "text": "My thesis is Even with NIP fixing g3 at a unfavourable side ( which in present position seems unlikely GOI may stick to the same ) which may offset by the pice increase as per ipp urea price mr Bajel concall reply. see today urea ebitda is around 2000 cr and in time the depreciat...",
-            "url": "https://forum.valuepickr.com/t/8695/63"
-          },
-          {
-            "author": "vikashkota",
-            "date": "2026-06-15",
-            "post_number": 62,
-            "text": "Chambal is transforming from a subsidy-driven urea company into a diversified agri-input and industrial chemicals platform, with TAN emerging as the next major growth engine while the G-3 policy decision remains the key monitorable. FY27: TAN-led earnings upgrade year. FY28\u2013FY29:...",
-            "url": "https://forum.valuepickr.com/t/8695/62"
-          }
-        ]
-      },
+      "Quantity": 12,
+      "Entry_Price": 420.44,
+      "Invested_Value": 5045.3,
+      "CMP": 419.5,
+      "Current_Value": 5034.0,
+      "Unrealized_PnL": -11.3,
       "GTT_Orders": {
         "oco_order": {
           "al_id": "26090400002061",
@@ -240,7 +142,8 @@
           },
           "status": "CONFIRMED ACTIVE ON SHOONYA OMS (1-Year Validity)"
         }
-      }
+      },
+      "Allocation_Pct": 11.5
     },
     {
       "Symbol": "CAMS",
@@ -248,15 +151,7 @@
       "Strategy": "Plan A: Munger Fortress Compounder",
       "Horizon": "24 to 36-Month Duopoly Moat",
       "Engine": "Plan A",
-      "Quantity": 12,
-      "Order_No": "26090400191562",
       "Product": "CNC Delivery",
-      "Entry_Price": 748.5,
-      "Invested_Value": 8982.0,
-      "CMP": 749.6,
-      "Current_Value": 8995.2,
-      "Unrealized_PnL": 13.2,
-      "Allocation_Pct": 20.5,
       "Target_Price": 950.0,
       "Stop_Loss": 660.0,
       "PE": 37.4,
@@ -273,7 +168,14 @@
       "Pillar_3_Qualitative_Scuttlebutt": "Mission-critical financial infrastructure with virtually zero AMC churn due to deep API and core banking integrations. CRISIL AAA equivalent operational governance.",
       "Pillar_4_Macro_Risks": "Market cycle drawdowns impacting equity AUM valuations and regulatory capping of TER by SEBI. Counterbalanced by non-stop monthly SIP inflows (~Rs 23,000+ Cr/month industry-wide).",
       "Trigger_Source": "Live Shoonya CNC Order Execution",
-      "GTT_Orders": {}
+      "Quantity": 12,
+      "Entry_Price": 748.5,
+      "Invested_Value": 8982.0,
+      "CMP": 749.6,
+      "Current_Value": 8995.2,
+      "Unrealized_PnL": 13.2,
+      "GTT_Orders": {},
+      "Allocation_Pct": 20.5
     },
     {
       "Symbol": "ACCELYA",
@@ -281,15 +183,7 @@
       "Strategy": "Plan A: Munger Fortress Compounder",
       "Horizon": "18 to 24-Month Airline Tech Moat",
       "Engine": "Plan A",
-      "Quantity": 8,
-      "Order_No": "26090400191571",
       "Product": "CNC Delivery",
-      "Entry_Price": 1131.0,
-      "Invested_Value": 9048.0,
-      "CMP": 1130.9,
-      "Current_Value": 9047.2,
-      "Unrealized_PnL": -0.8,
-      "Allocation_Pct": 20.7,
       "Target_Price": 1450.0,
       "Stop_Loss": 990.0,
       "PE": 17.7,
@@ -306,8 +200,15 @@
       "Pillar_3_Qualitative_Scuttlebutt": "Deep software stickiness; replacing an airline's revenue accounting system carries prohibitive switching costs and operational disruption risk. Backed by Vista Equity Partners.",
       "Pillar_4_Macro_Risks": "Global aviation passenger traffic volatility and geopolitical shocks to airline capacity. Insulated by long-term recurring SaaS/transaction fee contracts.",
       "Trigger_Source": "Live Shoonya CNC Order Execution",
-      "GTT_Orders": {}
+      "Quantity": 8,
+      "Entry_Price": 1131.0,
+      "Invested_Value": 9048.0,
+      "CMP": 1130.9,
+      "Current_Value": 9047.2,
+      "Unrealized_PnL": -0.8,
+      "GTT_Orders": {},
+      "Allocation_Pct": 20.7
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-04 08:46:18"
+  "last_scuttlebutt_sync": "2026-09-04 14:46:32"
 }
