@@ -445,24 +445,38 @@ export default function QuantDashboard() {
               </div>
 
               {/* Quick stats ribbon */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
-                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Total Invested Capital</div>
-                  <div className="text-base font-bold text-white font-mono">₹9,912.85</div>
-                </div>
-                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Current Portfolio Value</div>
-                  <div className="text-base font-bold text-emerald-400 font-mono">₹9,906.50</div>
-                </div>
-                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">10-Yr Avg ROCE / Cash Conv</div>
-                  <div className="text-base font-bold text-amber-300 font-mono">39.2% / 105.5%</div>
-                </div>
-                <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                  <div className="text-[11px] text-slate-400">Shoonya Order Status</div>
-                  <div className="text-base font-bold text-emerald-300 font-mono">3/3 COMPLETE (CNC)</div>
-                </div>
-              </div>
+              {(() => {
+                const totalInvested = portfolio.length > 0 
+                  ? portfolio.reduce((acc, s) => acc + (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0)
+                  : 9912.85;
+                const totalCurrent = portfolio.length > 0
+                  ? portfolio.reduce((acc, s) => acc + (s.Quantity && s.CMP ? s.CMP * s.Quantity : (s.Current_Value || (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : 0))), 0)
+                  : 9906.50;
+                return (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                      <div className="text-[11px] text-slate-400">Total Invested Capital</div>
+                      <div className="text-base font-bold text-white font-mono">
+                        ₹{totalInvested.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                      </div>
+                    </div>
+                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                      <div className="text-[11px] text-slate-400">Current Portfolio Value</div>
+                      <div className={`text-base font-bold font-mono ${totalCurrent >= totalInvested ? "text-emerald-400" : "text-rose-400"}`}>
+                        ₹{totalCurrent.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+                      </div>
+                    </div>
+                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                      <div className="text-[11px] text-slate-400">10-Yr Avg ROCE / Cash Conv</div>
+                      <div className="text-base font-bold text-amber-300 font-mono">39.2% / 105.5%</div>
+                    </div>
+                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
+                      <div className="text-[11px] text-slate-400">Shoonya Order Status</div>
+                      <div className="text-base font-bold text-emerald-300 font-mono">3/3 COMPLETE (CNC)</div>
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
 
             {/* Holdings Table with Expandable In-Row Thesis Drawer */}
@@ -497,13 +511,19 @@ export default function QuantDashboard() {
                   <tbody className="divide-y divide-slate-800/60 font-mono">
                     {portfolio.map((stock) => {
                       const isExpanded = expandedStock === stock.Symbol;
-                      const gainPct = stock.Entry_Price && stock.CMP 
-                        ? (((stock.CMP - stock.Entry_Price) / stock.Entry_Price) * 100).toFixed(2) 
-                        : "0.00";
-                      const pnlAmt = stock.Invested_Value && stock.Current_Value
-                        ? (stock.Current_Value - stock.Invested_Value).toFixed(2)
-                        : (stock.Quantity ? ((stock.CMP - stock.Entry_Price) * stock.Quantity).toFixed(2) : "0.00");
-                      const isGain = Number(gainPct) >= 0;
+                      const investedVal = stock.Quantity && stock.Entry_Price 
+                        ? stock.Entry_Price * stock.Quantity 
+                        : (stock.Invested_Value || 0);
+                      const currentVal = stock.Quantity && stock.CMP 
+                        ? stock.CMP * stock.Quantity 
+                        : (stock.Current_Value || investedVal);
+                      
+                      const diffAmt = currentVal - investedVal;
+                      const isGain = diffAmt >= 0;
+                      const pnlAmtStr = Math.abs(diffAmt).toFixed(2);
+                      
+                      const diffPct = investedVal > 0 ? (diffAmt / investedVal) * 100 : 0;
+                      const pnlPctStr = Math.abs(diffPct).toFixed(2);
 
                       return (
                         <React.Fragment key={stock.Symbol}>
@@ -530,12 +550,12 @@ export default function QuantDashboard() {
                             </td>
                             <td className="py-3 px-3 text-right text-slate-300">₹{stock.Entry_Price.toFixed(2)}</td>
                             <td className="py-3 px-3 text-right font-bold text-white">₹{stock.CMP.toFixed(2)}</td>
-                            <td className="py-3 px-3 text-right text-slate-300">₹{(stock.Invested_Value || (stock.Entry_Price * (stock.Quantity || 1))).toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
-                            <td className="py-3 px-3 text-right font-semibold text-white">₹{(stock.Current_Value || (stock.CMP * (stock.Quantity || 1))).toLocaleString('en-IN', {minimumFractionDigits: 2})}</td>
+                            <td className="py-3 px-3 text-right text-slate-300">₹{investedVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                            <td className="py-3 px-3 text-right font-semibold text-white">₹{currentVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
                             <td className="py-3 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
                             <td className={`py-3 px-3 text-right font-bold ${isGain ? "text-emerald-400" : "text-rose-400"}`}>
-                              <div>{isGain ? `+₹${pnlAmt}` : `-₹${Math.abs(Number(pnlAmt))}`}</div>
-                              <div className="text-[10px]">{isGain ? `(+${gainPct}%)` : `(${gainPct}%)`}</div>
+                              <div>{isGain ? `+₹${pnlAmtStr}` : `-₹${pnlAmtStr}`}</div>
+                              <div className="text-[10px]">{isGain ? `(+${pnlPctStr}%)` : `(-${pnlPctStr}%)`}</div>
                             </td>
                             <td className="py-3 px-3 text-center">
                               <button
