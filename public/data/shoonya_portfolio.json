@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04 09:39:09",
+  "last_updated": "2026-09-04 09:54:14",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -27,7 +27,7 @@
       "Quantity": 60,
       "Entry_Price": 188.4,
       "Invested_Value": 11304.25,
-      "CMP": 190.4,
+      "CMP": 190.19,
       "Current_Value": 11443.2,
       "Unrealized_PnL": 138.95,
       "GTT_Orders": {
@@ -96,7 +96,7 @@
       "Quantity": 15,
       "Entry_Price": 624.42,
       "Invested_Value": 9366.35,
-      "CMP": 620.55,
+      "CMP": 621.15,
       "Current_Value": 9315.0,
       "Unrealized_PnL": -51.35,
       "GTT_Orders": {
@@ -165,7 +165,7 @@
       "Quantity": 12,
       "Entry_Price": 420.44,
       "Invested_Value": 5045.3,
-      "CMP": 419.1,
+      "CMP": 419.0,
       "Current_Value": 5034.0,
       "Unrealized_PnL": -11.3,
       "GTT_Orders": {
@@ -234,7 +234,7 @@
       "Quantity": 12,
       "Entry_Price": 748.5,
       "Invested_Value": 8982.0,
-      "CMP": 747.2,
+      "CMP": 747.7,
       "Current_Value": 8995.2,
       "Unrealized_PnL": 13.2,
       "GTT_Orders": {},
@@ -266,7 +266,7 @@
       "Quantity": 8,
       "Entry_Price": 1131.0,
       "Invested_Value": 9048.0,
-      "CMP": 1131.0,
+      "CMP": 1131.9,
       "Current_Value": 9047.2,
       "Unrealized_PnL": -0.8,
       "GTT_Orders": {},
@@ -294,5 +294,5 @@
       }
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-04 09:39:28"
+  "last_scuttlebutt_sync": "2026-09-04 09:54:32"
 }
