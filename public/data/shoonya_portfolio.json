@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-04 14:09:44",
+  "last_updated": "2026-09-04 16:39:07",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -148,7 +148,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 580.0,
       "Stop_Loss": 365.0,
-      "PE": 8.6,
+      "PE": 8.7,
       "Avg_ROCE_Pct": 18.0,
       "Cash_Conv_Pct": 127.5,
       "Latest_Debt_Cr": 1068.0,
@@ -294,5 +294,5 @@
       }
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-04 14:10:03"
+  "last_scuttlebutt_sync": "2026-09-04 16:39:26"
 }
