@@ -164,15 +164,20 @@ export default function QuantDashboard() {
     async function loadData() {
       try {
         const basePath = process.env.NODE_ENV === "production" ? "/quant-dashboard" : "";
+        const ts = Date.now();
         const [macroRes, screenerRes, portRes] = await Promise.all([
-          fetch(`${basePath}/data/macro_pulse.json`),
-          fetch(`${basePath}/data/forensic_screener.json`),
-          fetch(`${basePath}/data/shoonya_portfolio.json`).catch(() => null)
+          fetch(`${basePath}/data/macro_pulse.json?t=${ts}`, { cache: "no-store" }),
+          fetch(`${basePath}/data/forensic_screener.json?t=${ts}`, { cache: "no-store" }),
+          fetch(`${basePath}/data/shoonya_portfolio.json?t=${ts}`, { cache: "no-store" }).catch(() => null)
         ]);
-        const m = await macroRes.json();
-        const s = await screenerRes.json();
-        setMacro(m);
-        setScreener(s);
+        if (macroRes.ok) {
+          const m = await macroRes.json();
+          setMacro(m);
+        }
+        if (screenerRes.ok) {
+          const s = await screenerRes.json();
+          setScreener(s);
+        }
         if (portRes && portRes.ok) {
           const p = await portRes.json();
           setPortfolio(p.portfolio || []);
@@ -185,6 +190,8 @@ export default function QuantDashboard() {
       }
     }
     loadData();
+    const interval = setInterval(loadData, 30000);
+    return () => clearInterval(interval);
   }, []);
 
   const filteredStocks = React.useMemo(() => {
