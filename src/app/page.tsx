@@ -97,6 +97,13 @@ interface ShoonyaStock {
   Pillar_4_Macro_Risks: string;
   Trigger_Source: string;
   GTT_Orders?: {
+    oco_order?: {
+      al_id: string;
+      condition: string;
+      leg1_target: { trigger: number; limit: number; desc: string };
+      leg2_stop_loss: { trigger: number; limit: number; desc: string };
+      status: string;
+    };
     target_harvest_gtt?: {
       al_id: string;
       condition: string;
@@ -599,7 +606,20 @@ export default function QuantDashboard() {
                                         <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
                                         <span className="text-blue-300 font-bold font-sans">Active Shoonya GTT Orders (1-Year Server-Side Trigger):</span>
                                       </div>
-                                      <div className="flex flex-wrap items-center gap-4 text-[11px]">
+                                      <div className="flex flex-wrap items-center gap-3 text-[11px]">
+                                        {stock.GTT_Orders.oco_order && (
+                                          <div className="flex flex-wrap items-center gap-2">
+                                            <div className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
+                                              <span>OCO Leg 1 (Target): </span>
+                                              <span className="font-bold text-white">Trigger ≥ ₹{stock.GTT_Orders.oco_order.leg1_target.trigger}</span> → Limit ₹{stock.GTT_Orders.oco_order.leg1_target.limit}
+                                            </div>
+                                            <div className="px-2 py-0.5 rounded bg-rose-500/10 border border-rose-500/30 text-rose-300">
+                                              <span>OCO Leg 2 (Stop-Loss): </span>
+                                              <span className="font-bold text-white">Trigger ≤ ₹{stock.GTT_Orders.oco_order.leg2_stop_loss.trigger}</span> → Limit ₹{stock.GTT_Orders.oco_order.leg2_stop_loss.limit}
+                                            </div>
+                                            <span className="text-[10px] text-slate-400 font-mono">(Alert #{stock.GTT_Orders.oco_order.al_id})</span>
+                                          </div>
+                                        )}
                                         {stock.GTT_Orders.target_harvest_gtt && (
                                           <div className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
                                             <span>Target Harvest: </span>
