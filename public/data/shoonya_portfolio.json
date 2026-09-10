@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-09 16:56:32",
+  "last_updated": "2026-09-10 08:53:04",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -10,7 +10,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 240.0,
       "Stop_Loss": 165.0,
-      "PE": 17.6,
+      "PE": 17.5,
       "Avg_ROCE_Pct": 78.7,
       "Cash_Conv_Pct": 99.3,
       "Latest_Debt_Cr": 53.0,
@@ -27,7 +27,7 @@
       "Quantity": 60,
       "Entry_Price": 188.4,
       "Invested_Value": 11304.25,
-      "CMP": 189.16,
+      "CMP": 187.7,
       "Current_Value": 11443.2,
       "Unrealized_PnL": 138.95,
       "GTT_Orders": {
@@ -79,7 +79,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 900.0,
       "Stop_Loss": 540.0,
-      "PE": 13.2,
+      "PE": 13.1,
       "Avg_ROCE_Pct": 20.9,
       "Cash_Conv_Pct": 89.7,
       "Latest_Debt_Cr": 4.0,
@@ -96,7 +96,7 @@
       "Quantity": 15,
       "Entry_Price": 624.42,
       "Invested_Value": 9366.35,
-      "CMP": 637.5,
+      "CMP": 633.4,
       "Current_Value": 9315.0,
       "Unrealized_PnL": -51.35,
       "GTT_Orders": {
@@ -148,7 +148,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 580.0,
       "Stop_Loss": 365.0,
-      "PE": 8.6,
+      "PE": 8.7,
       "Avg_ROCE_Pct": 18.0,
       "Cash_Conv_Pct": 127.5,
       "Latest_Debt_Cr": 1068.0,
@@ -165,7 +165,7 @@
       "Quantity": 12,
       "Entry_Price": 420.44,
       "Invested_Value": 5045.3,
-      "CMP": 415.6,
+      "CMP": 417.35,
       "Current_Value": 5034.0,
       "Unrealized_PnL": -11.3,
       "GTT_Orders": {
@@ -217,7 +217,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 950.0,
       "Stop_Loss": 660.0,
-      "PE": 35.9,
+      "PE": 36.7,
       "Avg_ROCE_Pct": 41.7,
       "Cash_Conv_Pct": 101.9,
       "Latest_Debt_Cr": 64.0,
@@ -234,7 +234,7 @@
       "Quantity": 12,
       "Entry_Price": 748.5,
       "Invested_Value": 8982.0,
-      "CMP": 715.0,
+      "CMP": 716.35,
       "Current_Value": 8995.2,
       "Unrealized_PnL": 13.2,
       "GTT_Orders": {},
@@ -266,7 +266,7 @@
       "Quantity": 8,
       "Entry_Price": 1131.0,
       "Invested_Value": 9048.0,
-      "CMP": 1119.9,
+      "CMP": 1118.7,
       "Current_Value": 9047.2,
       "Unrealized_PnL": -0.8,
       "GTT_Orders": {},
@@ -294,5 +294,5 @@
       }
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-09 16:56:52"
+  "last_scuttlebutt_sync": "2026-09-10 08:53:24"
 }
