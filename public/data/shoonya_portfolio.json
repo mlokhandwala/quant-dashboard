@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-11 08:50:25",
+  "last_updated": "2026-09-11 14:14:34",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -10,7 +10,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 240.0,
       "Stop_Loss": 165.0,
-      "PE": 17.6,
+      "PE": 17.5,
       "Avg_ROCE_Pct": 78.7,
       "Cash_Conv_Pct": 99.3,
       "Latest_Debt_Cr": 53.0,
@@ -27,7 +27,7 @@
       "Quantity": 60,
       "Entry_Price": 188.4,
       "Invested_Value": 11304.25,
-      "CMP": 188.46,
+      "CMP": 188.03,
       "Current_Value": 11443.2,
       "Unrealized_PnL": 138.95,
       "GTT_Orders": {
@@ -79,7 +79,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 900.0,
       "Stop_Loss": 540.0,
-      "PE": 13.0,
+      "PE": 12.9,
       "Avg_ROCE_Pct": 20.9,
       "Cash_Conv_Pct": 89.7,
       "Latest_Debt_Cr": 4.0,
@@ -96,7 +96,7 @@
       "Quantity": 15,
       "Entry_Price": 624.42,
       "Invested_Value": 9366.35,
-      "CMP": 626.1,
+      "CMP": 623.5,
       "Current_Value": 9315.0,
       "Unrealized_PnL": -51.35,
       "GTT_Orders": {
@@ -165,7 +165,7 @@
       "Quantity": 12,
       "Entry_Price": 420.44,
       "Invested_Value": 5045.3,
-      "CMP": 418.6,
+      "CMP": 418.8,
       "Current_Value": 5034.0,
       "Unrealized_PnL": -11.3,
       "GTT_Orders": {
@@ -234,7 +234,7 @@
       "Quantity": 12,
       "Entry_Price": 748.5,
       "Invested_Value": 8982.0,
-      "CMP": 707.5,
+      "CMP": 711.0,
       "Current_Value": 8995.2,
       "Unrealized_PnL": 13.2,
       "GTT_Orders": {},
@@ -249,7 +249,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 1450.0,
       "Stop_Loss": 990.0,
-      "PE": 17.4,
+      "PE": 17.5,
       "Avg_ROCE_Pct": 59.3,
       "Cash_Conv_Pct": 123.1,
       "Latest_Debt_Cr": 16.0,
@@ -266,7 +266,7 @@
       "Quantity": 8,
       "Entry_Price": 1131.0,
       "Invested_Value": 9048.0,
-      "CMP": 1115.2,
+      "CMP": 1118.4,
       "Current_Value": 9047.2,
       "Unrealized_PnL": -0.8,
       "GTT_Orders": {},
@@ -294,5 +294,5 @@
       }
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-11 08:50:44"
+  "last_scuttlebutt_sync": "2026-09-11 14:14:52"
 }
