@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17 09:21:57",
+  "last_updated": "2026-09-17 14:50:03",
   "portfolio": [
     {
       "Symbol": "CASTROLIND",
@@ -27,7 +27,7 @@
       "Quantity": 60,
       "Entry_Price": 188.4,
       "Invested_Value": 11304.25,
-      "CMP": 192.0,
+      "CMP": 191.72,
       "Current_Value": 11443.2,
       "Unrealized_PnL": 138.95,
       "GTT_Orders": {
@@ -96,7 +96,7 @@
       "Quantity": 15,
       "Entry_Price": 624.42,
       "Invested_Value": 9366.35,
-      "CMP": 603.0,
+      "CMP": 600.7,
       "Current_Value": 9315.0,
       "Unrealized_PnL": -51.35,
       "GTT_Orders": {
@@ -165,7 +165,7 @@
       "Quantity": 12,
       "Entry_Price": 420.44,
       "Invested_Value": 5045.3,
-      "CMP": 414.15,
+      "CMP": 413.9,
       "Current_Value": 5034.0,
       "Unrealized_PnL": -11.3,
       "GTT_Orders": {
@@ -217,7 +217,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 950.0,
       "Stop_Loss": 660.0,
-      "PE": 36.3,
+      "PE": 35.9,
       "Avg_ROCE_Pct": 41.7,
       "Cash_Conv_Pct": 101.9,
       "Latest_Debt_Cr": 64.0,
@@ -234,7 +234,7 @@
       "Quantity": 12,
       "Entry_Price": 748.5,
       "Invested_Value": 8982.0,
-      "CMP": 708.9,
+      "CMP": 714.95,
       "Current_Value": 8995.2,
       "Unrealized_PnL": 13.2,
       "GTT_Orders": {},
@@ -249,7 +249,7 @@
       "Product": "CNC Delivery",
       "Target_Price": 1450.0,
       "Stop_Loss": 990.0,
-      "PE": 17.6,
+      "PE": 17.5,
       "Avg_ROCE_Pct": 59.3,
       "Cash_Conv_Pct": 123.1,
       "Latest_Debt_Cr": 16.0,
@@ -266,7 +266,7 @@
       "Quantity": 8,
       "Entry_Price": 1131.0,
       "Invested_Value": 9048.0,
-      "CMP": 1123.6,
+      "CMP": 1122.0,
       "Current_Value": 9047.2,
       "Unrealized_PnL": -0.8,
       "GTT_Orders": {},
@@ -294,5 +294,5 @@
       }
     }
   ],
-  "last_scuttlebutt_sync": "2026-09-17 09:22:16"
+  "last_scuttlebutt_sync": "2026-09-17 14:50:22"
 }
