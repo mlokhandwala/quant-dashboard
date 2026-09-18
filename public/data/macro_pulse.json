@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-09-17 17:21:13 IST",
+  "last_updated": "2026-09-18 08:56:33 IST",
   "brent_crude": {
-    "value": 104.75,
+    "value": 98.66,
     "unit": "USD/bbl",
     "percentile_10yr": 94.0,
     "verdict": "ELEVATED",
-    "trend": "+14.3% 1-MoM"
+    "trend": "+5.2% 1-MoM"
   },
   "us_10y": {
     "value": 4.95,
@@ -22,18 +22,18 @@
     "trend": "Anchored Domestic Cost of Capital"
   },
   "dxy": {
-    "value": 100.24,
+    "value": 100.37,
     "unit": "Index",
     "percentile_10yr": 61.1,
     "verdict": "NEUTRAL-TO-SOFT",
-    "trend": "+1.4% 1-MoM"
+    "trend": "+1.5% 1-MoM"
   },
   "usdinr": {
-    "value": 0.0,
+    "value": 95.89,
     "unit": "INR",
     "percentile_10yr": 98.5,
     "verdict": "TAILWIND FOR EXPORTERS",
-    "trend": "+nan% 1-MoM"
+    "trend": "+0.4% 1-MoM"
   },
   "fii_dii_history": [
     {
@@ -6018,46 +6018,19 @@
     }
   ],
   "nifty_50": {
-    "value": 23270.6,
+    "value": 23352.1,
     "unit": "Index",
     "percentile_10yr": 75.0,
     "verdict": "CONSOLIDATION",
-    "trend": "-3.4% 1-MoM"
+    "trend": "-3.6% 1-MoM"
   },
   "daily_chart_history": [
-    {
-      "Date": "2024-10-15",
-      "Brent": 74.25,
-      "US10Y": 4.04,
-      "DXY": 103.26,
-      "USDINR": 0.0,
-      "Nifty50": 25057.3,
-      "IndiaGSec": 6.82
-    },
-    {
-      "Date": "2024-10-16",
-      "Brent": 74.22,
-      "US10Y": 4.02,
-      "DXY": 103.59,
-      "USDINR": 0.0,
-      "Nifty50": 24971.3,
-      "IndiaGSec": 6.82
-    },
-    {
-      "Date": "2024-10-17",
-      "Brent": 74.45,
-      "US10Y": 4.1,
-      "DXY": 103.83,
-      "USDINR": 0.0,
-      "Nifty50": 24749.8,
-      "IndiaGSec": 6.82
-    },
     {
       "Date": "2024-10-18",
       "Brent": 73.06,
       "US10Y": 4.07,
       "DXY": 103.49,
-      "USDINR": 0.0,
+      "USDINR": 84.05,
       "Nifty50": 24854.1,
       "IndiaGSec": 6.82
     },
@@ -6066,7 +6039,7 @@
       "Brent": 74.29,
       "US10Y": 4.18,
       "DXY": 104.01,
-      "USDINR": 0.0,
+      "USDINR": 84.07,
       "Nifty50": 24781.1,
       "IndiaGSec": 6.82
     },
@@ -6075,7 +6048,7 @@
       "Brent": 76.04,
       "US10Y": 4.2,
       "DXY": 104.08,
-      "USDINR": 0.0,
+      "USDINR": 84.07,
       "Nifty50": 24472.1,
       "IndiaGSec": 6.82
     },
@@ -6084,7 +6057,7 @@
       "Brent": 74.96,
       "US10Y": 4.24,
       "DXY": 104.43,
-      "USDINR": 0.0,
+      "USDINR": 84.08,
       "Nifty50": 24435.5,
       "IndiaGSec": 6.82
     },
@@ -6093,7 +6066,7 @@
       "Brent": 74.38,
       "US10Y": 4.2,
       "DXY": 104.06,
-      "USDINR": 0.0,
+      "USDINR": 84.07,
       "Nifty50": 24399.4,
       "IndiaGSec": 6.82
     },
@@ -6102,7 +6075,7 @@
       "Brent": 76.05,
       "US10Y": 4.23,
       "DXY": 104.26,
-      "USDINR": 0.0,
+      "USDINR": 84.08,
       "Nifty50": 24180.8,
       "IndiaGSec": 6.82
     },
@@ -6111,7 +6084,7 @@
       "Brent": 71.42,
       "US10Y": 4.28,
       "DXY": 104.32,
-      "USDINR": 0.0,
+      "USDINR": 84.1,
       "Nifty50": 24339.2,
       "IndiaGSec": 6.82
     },
@@ -6120,7 +6093,7 @@
       "Brent": 71.12,
       "US10Y": 4.27,
       "DXY": 104.28,
-      "USDINR": 0.0,
+      "USDINR": 84.1,
       "Nifty50": 24466.8,
       "IndiaGSec": 6.82
     },
@@ -6129,7 +6102,7 @@
       "Brent": 72.55,
       "US10Y": 4.27,
       "DXY": 103.99,
-      "USDINR": 0.0,
+      "USDINR": 84.09,
       "Nifty50": 24340.8,
       "IndiaGSec": 6.82
     },
@@ -6138,7 +6111,7 @@
       "Brent": 73.16,
       "US10Y": 4.28,
       "DXY": 103.98,
-      "USDINR": 0.0,
+      "USDINR": 84.09,
       "Nifty50": 24205.3,
       "IndiaGSec": 6.82
     },
@@ -6147,7 +6120,7 @@
       "Brent": 73.1,
       "US10Y": 4.36,
       "DXY": 104.28,
-      "USDINR": 0.0,
+      "USDINR": 84.09,
       "Nifty50": 24304.3,
       "IndiaGSec": 6.84
     },
@@ -6156,7 +6129,7 @@
       "Brent": 75.08,
       "US10Y": 4.31,
       "DXY": 103.89,
-      "USDINR": 0.0,
+      "USDINR": 84.13,
       "Nifty50": 23995.3,
       "IndiaGSec": 6.84
     },
@@ -6165,7 +6138,7 @@
       "Brent": 75.53,
       "US10Y": 4.29,
       "DXY": 103.42,
-      "USDINR": 0.0,
+      "USDINR": 84.15,
       "Nifty50": 24213.3,
       "IndiaGSec": 6.84
     },
@@ -6174,7 +6147,7 @@
       "Brent": 74.92,
       "US10Y": 4.43,
       "DXY": 105.09,
-      "USDINR": 0.0,
+      "USDINR": 84.12,
       "Nifty50": 24484.1,
       "IndiaGSec": 6.84
     },
@@ -6183,7 +6156,7 @@
       "Brent": 75.63,
       "US10Y": 4.34,
       "DXY": 104.51,
-      "USDINR": 0.0,
+      "USDINR": 84.25,
       "Nifty50": 24199.3,
       "IndiaGSec": 6.84
     },
@@ -6192,7 +6165,7 @@
       "Brent": 73.87,
       "US10Y": 4.31,
       "DXY": 105.0,
-      "USDINR": 0.0,
+      "USDINR": 84.31,
       "Nifty50": 24148.2,
       "IndiaGSec": 6.84
     },
@@ -6201,7 +6174,7 @@
       "Brent": 71.83,
       "US10Y": 4.31,
       "DXY": 105.54,
-      "USDINR": 0.0,
+      "USDINR": 84.38,
       "Nifty50": 24141.3,
       "IndiaGSec": 6.84
     },
@@ -6210,7 +6183,7 @@
       "Brent": 71.89,
       "US10Y": 4.43,
       "DXY": 106.02,
-      "USDINR": 0.0,
+      "USDINR": 84.4,
       "Nifty50": 23883.4,
       "IndiaGSec": 6.84
     },
@@ -6219,7 +6192,7 @@
       "Brent": 72.28,
       "US10Y": 4.45,
       "DXY": 106.48,
-      "USDINR": 0.0,
+      "USDINR": 84.4,
       "Nifty50": 23559.1,
       "IndiaGSec": 6.84
     },
@@ -6228,7 +6201,7 @@
       "Brent": 72.56,
       "US10Y": 4.42,
       "DXY": 106.67,
-      "USDINR": 0.0,
+      "USDINR": 84.42,
       "Nifty50": 23532.7,
       "IndiaGSec": 6.84
     },
@@ -6237,7 +6210,7 @@
       "Brent": 71.04,
       "US10Y": 4.43,
       "DXY": 106.69,
-      "USDINR": 0.0,
+      "USDINR": 84.47,
       "Nifty50": 23532.7,
       "IndiaGSec": 6.84
     },
@@ -6246,7 +6219,7 @@
       "Brent": 73.3,
       "US10Y": 4.41,
       "DXY": 106.28,
-      "USDINR": 0.0,
+      "USDINR": 84.48,
       "Nifty50": 23453.8,
       "IndiaGSec": 6.84
     },
@@ -6255,7 +6228,7 @@
       "Brent": 73.31,
       "US10Y": 4.38,
       "DXY": 106.21,
-      "USDINR": 0.0,
+      "USDINR": 84.4,
       "Nifty50": 23518.5,
       "IndiaGSec": 6.84
     },
@@ -6264,7 +6237,7 @@
       "Brent": 72.81,
       "US10Y": 4.41,
       "DXY": 106.68,
-      "USDINR": 0.0,
+      "USDINR": 84.4,
       "Nifty50": 23518.5,
       "IndiaGSec": 6.84
     },
@@ -6273,7 +6246,7 @@
       "Brent": 74.23,
       "US10Y": 4.43,
       "DXY": 106.97,
-      "USDINR": 0.0,
+      "USDINR": 84.38,
       "Nifty50": 23349.9,
       "IndiaGSec": 6.84
     },
@@ -6282,7 +6255,7 @@
       "Brent": 75.17,
       "US10Y": 4.41,
       "DXY": 107.49,
-      "USDINR": 0.0,
+      "USDINR": 84.49,
       "Nifty50": 23907.2,
       "IndiaGSec": 6.84
     },
@@ -6291,7 +6264,7 @@
       "Brent": 73.01,
       "US10Y": 4.26,
       "DXY": 106.82,
-      "USDINR": 0.0,
+      "USDINR": 84.44,
       "Nifty50": 24221.9,
       "IndiaGSec": 6.84
     },
@@ -6300,7 +6273,7 @@
       "Brent": 72.81,
       "US10Y": 4.3,
       "DXY": 107.01,
-      "USDINR": 0.0,
+      "USDINR": 84.38,
       "Nifty50": 24194.5,
       "IndiaGSec": 6.84
     },
@@ -6309,7 +6282,7 @@
       "Brent": 72.83,
       "US10Y": 4.24,
       "DXY": 106.08,
-      "USDINR": 0.0,
+      "USDINR": 84.34,
       "Nifty50": 24274.9,
       "IndiaGSec": 6.84
     },
@@ -6318,7 +6291,7 @@
       "Brent": 72.83,
       "US10Y": 4.24,
       "DXY": 106.08,
-      "USDINR": 0.0,
+      "USDINR": 84.42,
       "Nifty50": 23914.2,
       "IndiaGSec": 6.84
     },
@@ -6327,7 +6300,7 @@
       "Brent": 72.94,
       "US10Y": 4.18,
       "DXY": 105.74,
-      "USDINR": 0.0,
+      "USDINR": 84.47,
       "Nifty50": 24131.1,
       "IndiaGSec": 6.84
     },
@@ -6336,7 +6309,7 @@
       "Brent": 71.83,
       "US10Y": 4.2,
       "DXY": 106.45,
-      "USDINR": 0.0,
+      "USDINR": 84.56,
       "Nifty50": 24276.1,
       "IndiaGSec": 6.78
     },
@@ -6345,7 +6318,7 @@
       "Brent": 73.62,
       "US10Y": 4.22,
       "DXY": 106.37,
-      "USDINR": 0.0,
+      "USDINR": 84.74,
       "Nifty50": 24457.2,
       "IndiaGSec": 6.78
     },
@@ -6354,7 +6327,7 @@
       "Brent": 72.31,
       "US10Y": 4.18,
       "DXY": 106.34,
-      "USDINR": 0.0,
+      "USDINR": 84.68,
       "Nifty50": 24467.4,
       "IndiaGSec": 6.78
     },
@@ -6363,7 +6336,7 @@
       "Brent": 72.09,
       "US10Y": 4.18,
       "DXY": 105.71,
-      "USDINR": 0.0,
+      "USDINR": 84.71,
       "Nifty50": 24708.4,
       "IndiaGSec": 6.78
     },
@@ -6372,7 +6345,7 @@
       "Brent": 71.12,
       "US10Y": 4.15,
       "DXY": 105.97,
-      "USDINR": 0.0,
+      "USDINR": 84.68,
       "Nifty50": 24677.8,
       "IndiaGSec": 6.78
     },
@@ -6381,7 +6354,7 @@
       "Brent": 72.14,
       "US10Y": 4.2,
       "DXY": 106.15,
-      "USDINR": 0.0,
+      "USDINR": 84.67,
       "Nifty50": 24619.0,
       "IndiaGSec": 6.78
     },
@@ -6390,7 +6363,7 @@
       "Brent": 72.19,
       "US10Y": 4.22,
       "DXY": 106.4,
-      "USDINR": 0.0,
+      "USDINR": 84.85,
       "Nifty50": 24610.1,
       "IndiaGSec": 6.78
     },
@@ -6399,7 +6372,7 @@
       "Brent": 73.52,
       "US10Y": 4.27,
       "DXY": 106.71,
-      "USDINR": 0.0,
+      "USDINR": 84.87,
       "Nifty50": 24641.8,
       "IndiaGSec": 6.78
     },
@@ -6408,7 +6381,7 @@
       "Brent": 73.41,
       "US10Y": 4.32,
       "DXY": 106.96,
-      "USDINR": 0.0,
+      "USDINR": 84.86,
       "Nifty50": 24548.7,
       "IndiaGSec": 6.78
     },
@@ -6417,7 +6390,7 @@
       "Brent": 74.49,
       "US10Y": 4.4,
       "DXY": 107.0,
-      "USDINR": 0.0,
+      "USDINR": 84.84,
       "Nifty50": 24768.3,
       "IndiaGSec": 6.78
     },
@@ -6426,7 +6399,7 @@
       "Brent": 73.91,
       "US10Y": 4.4,
       "DXY": 106.86,
-      "USDINR": 0.0,
+      "USDINR": 84.8,
       "Nifty50": 24668.2,
       "IndiaGSec": 6.78
     },
@@ -6435,7 +6408,7 @@
       "Brent": 73.19,
       "US10Y": 4.39,
       "DXY": 106.96,
-      "USDINR": 0.0,
+      "USDINR": 84.92,
       "Nifty50": 24336.0,
       "IndiaGSec": 6.78
     },
@@ -6444,7 +6417,7 @@
       "Brent": 73.39,
       "US10Y": 4.49,
       "DXY": 108.03,
-      "USDINR": 0.0,
+      "USDINR": 84.92,
       "Nifty50": 24198.8,
       "IndiaGSec": 6.78
     },
@@ -6453,7 +6426,7 @@
       "Brent": 72.88,
       "US10Y": 4.57,
       "DXY": 108.41,
-      "USDINR": 0.0,
+      "USDINR": 85.17,
       "Nifty50": 23951.7,
       "IndiaGSec": 6.78
     },
@@ -6462,7 +6435,7 @@
       "Brent": 72.94,
       "US10Y": 4.52,
       "DXY": 107.62,
-      "USDINR": 0.0,
+      "USDINR": 85.28,
       "Nifty50": 23587.5,
       "IndiaGSec": 6.78
     },
@@ -6471,7 +6444,7 @@
       "Brent": 72.63,
       "US10Y": 4.6,
       "DXY": 108.04,
-      "USDINR": 0.0,
+      "USDINR": 84.94,
       "Nifty50": 23753.4,
       "IndiaGSec": 6.78
     },
@@ -6480,7 +6453,16 @@
       "Brent": 73.58,
       "US10Y": 4.59,
       "DXY": 108.26,
-      "USDINR": 0.0,
+      "USDINR": 85.1,
+      "Nifty50": 23727.7,
+      "IndiaGSec": 6.78
+    },
+    {
+      "Date": "2024-12-25",
+      "Brent": 73.58,
+      "US10Y": 4.59,
+      "DXY": 108.26,
+      "USDINR": 85.18,
       "Nifty50": 23727.7,
       "IndiaGSec": 6.78
     },
@@ -6489,7 +6471,7 @@
       "Brent": 73.26,
       "US10Y": 4.58,
       "DXY": 108.13,
-      "USDINR": 0.0,
+      "USDINR": 85.41,
       "Nifty50": 23750.2,
       "IndiaGSec": 6.78
     },
@@ -6498,7 +6480,7 @@
       "Brent": 74.17,
       "US10Y": 4.62,
       "DXY": 108.0,
-      "USDINR": 0.0,
+      "USDINR": 85.26,
       "Nifty50": 23813.4,
       "IndiaGSec": 6.78
     },
@@ -6507,7 +6489,7 @@
       "Brent": 74.39,
       "US10Y": 4.55,
       "DXY": 108.13,
-      "USDINR": 0.0,
+      "USDINR": 85.39,
       "Nifty50": 23644.9,
       "IndiaGSec": 6.78
     },
@@ -6516,7 +6498,7 @@
       "Brent": 74.64,
       "US10Y": 4.57,
       "DXY": 108.49,
-      "USDINR": 0.0,
+      "USDINR": 85.79,
       "Nifty50": 23644.8,
       "IndiaGSec": 6.78
     },
@@ -6525,7 +6507,7 @@
       "Brent": 74.64,
       "US10Y": 4.57,
       "DXY": 108.49,
-      "USDINR": 0.0,
+      "USDINR": 85.79,
       "Nifty50": 23742.9,
       "IndiaGSec": 6.72
     },
@@ -6534,7 +6516,7 @@
       "Brent": 75.93,
       "US10Y": 4.57,
       "DXY": 109.39,
-      "USDINR": 0.0,
+      "USDINR": 85.79,
       "Nifty50": 24188.7,
       "IndiaGSec": 6.72
     },
@@ -6543,7 +6525,7 @@
       "Brent": 76.51,
       "US10Y": 4.6,
       "DXY": 108.95,
-      "USDINR": 0.0,
+      "USDINR": 85.8,
       "Nifty50": 24004.8,
       "IndiaGSec": 6.72
     },
@@ -6552,7 +6534,7 @@
       "Brent": 76.3,
       "US10Y": 4.62,
       "DXY": 108.26,
-      "USDINR": 0.0,
+      "USDINR": 85.76,
       "Nifty50": 23616.1,
       "IndiaGSec": 6.72
     },
@@ -6561,7 +6543,7 @@
       "Brent": 77.05,
       "US10Y": 4.68,
       "DXY": 108.54,
-      "USDINR": 0.0,
+      "USDINR": 85.68,
       "Nifty50": 23707.9,
       "IndiaGSec": 6.72
     },
@@ -6570,7 +6552,7 @@
       "Brent": 76.16,
       "US10Y": 4.69,
       "DXY": 109.09,
-      "USDINR": 0.0,
+      "USDINR": 85.81,
       "Nifty50": 23688.9,
       "IndiaGSec": 6.72
     },
@@ -6579,7 +6561,7 @@
       "Brent": 76.92,
       "US10Y": 4.69,
       "DXY": 109.18,
-      "USDINR": 0.0,
+      "USDINR": 85.91,
       "Nifty50": 23526.5,
       "IndiaGSec": 6.72
     },
@@ -6588,7 +6570,7 @@
       "Brent": 79.76,
       "US10Y": 4.78,
       "DXY": 109.65,
-      "USDINR": 0.0,
+      "USDINR": 85.92,
       "Nifty50": 23431.5,
       "IndiaGSec": 6.72
     },
@@ -6597,7 +6579,7 @@
       "Brent": 81.01,
       "US10Y": 4.8,
       "DXY": 109.96,
-      "USDINR": 0.0,
+      "USDINR": 86.19,
       "Nifty50": 23085.9,
       "IndiaGSec": 6.72
     },
@@ -6606,7 +6588,7 @@
       "Brent": 79.92,
       "US10Y": 4.79,
       "DXY": 109.27,
-      "USDINR": 0.0,
+      "USDINR": 86.65,
       "Nifty50": 23176.1,
       "IndiaGSec": 6.72
     },
@@ -6615,7 +6597,7 @@
       "Brent": 82.03,
       "US10Y": 4.65,
       "DXY": 109.09,
-      "USDINR": 0.0,
+      "USDINR": 86.54,
       "Nifty50": 23213.2,
       "IndiaGSec": 6.72
     },
@@ -6624,7 +6606,7 @@
       "Brent": 81.29,
       "US10Y": 4.61,
       "DXY": 108.96,
-      "USDINR": 0.0,
+      "USDINR": 86.43,
       "Nifty50": 23311.8,
       "IndiaGSec": 6.72
     },
@@ -6633,7 +6615,7 @@
       "Brent": 80.79,
       "US10Y": 4.61,
       "DXY": 109.35,
-      "USDINR": 0.0,
+      "USDINR": 86.61,
       "Nifty50": 23203.2,
       "IndiaGSec": 6.72
     },
@@ -6642,7 +6624,7 @@
       "Brent": 80.79,
       "US10Y": 4.61,
       "DXY": 109.35,
-      "USDINR": 0.0,
+      "USDINR": 86.57,
       "Nifty50": 23344.8,
       "IndiaGSec": 6.72
     },
@@ -6651,7 +6633,7 @@
       "Brent": 79.29,
       "US10Y": 4.57,
       "DXY": 108.06,
-      "USDINR": 0.0,
+      "USDINR": 86.21,
       "Nifty50": 23024.7,
       "IndiaGSec": 6.72
     },
@@ -6660,7 +6642,7 @@
       "Brent": 79.0,
       "US10Y": 4.6,
       "DXY": 108.17,
-      "USDINR": 0.0,
+      "USDINR": 86.45,
       "Nifty50": 23155.3,
       "IndiaGSec": 6.72
     },
@@ -6669,7 +6651,7 @@
       "Brent": 78.29,
       "US10Y": 4.64,
       "DXY": 108.05,
-      "USDINR": 0.0,
+      "USDINR": 86.47,
       "Nifty50": 23205.3,
       "IndiaGSec": 6.72
     },
@@ -6678,7 +6660,7 @@
       "Brent": 78.5,
       "US10Y": 4.63,
       "DXY": 107.44,
-      "USDINR": 0.0,
+      "USDINR": 86.44,
       "Nifty50": 23092.2,
       "IndiaGSec": 6.72
     },
@@ -6687,7 +6669,7 @@
       "Brent": 77.08,
       "US10Y": 4.53,
       "DXY": 107.34,
-      "USDINR": 0.0,
+      "USDINR": 86.2,
       "Nifty50": 22829.2,
       "IndiaGSec": 6.72
     },
@@ -6696,7 +6678,7 @@
       "Brent": 77.49,
       "US10Y": 4.55,
       "DXY": 107.87,
-      "USDINR": 0.0,
+      "USDINR": 86.47,
       "Nifty50": 22957.2,
       "IndiaGSec": 6.72
     },
@@ -6705,7 +6687,7 @@
       "Brent": 76.58,
       "US10Y": 4.55,
       "DXY": 108.0,
-      "USDINR": 0.0,
+      "USDINR": 86.58,
       "Nifty50": 23163.1,
       "IndiaGSec": 6.72
     },
@@ -6714,7 +6696,7 @@
       "Brent": 76.87,
       "US10Y": 4.51,
       "DXY": 107.8,
-      "USDINR": 0.0,
+      "USDINR": 86.64,
       "Nifty50": 23249.5,
       "IndiaGSec": 6.72
     },
@@ -6723,7 +6705,7 @@
       "Brent": 76.76,
       "US10Y": 4.57,
       "DXY": 108.37,
-      "USDINR": 0.0,
+      "USDINR": 86.65,
       "Nifty50": 23508.4,
       "IndiaGSec": 6.72
     },
@@ -6732,7 +6714,7 @@
       "Brent": 76.76,
       "US10Y": 4.57,
       "DXY": 108.37,
-      "USDINR": 0.0,
+      "USDINR": 86.65,
       "Nifty50": 23482.2,
       "IndiaGSec": 6.69
     },
@@ -6741,7 +6723,7 @@
       "Brent": 75.96,
       "US10Y": 4.54,
       "DXY": 108.99,
-      "USDINR": 0.0,
+      "USDINR": 86.55,
       "Nifty50": 23361.1,
       "IndiaGSec": 6.69
     },
@@ -6750,7 +6732,7 @@
       "Brent": 76.2,
       "US10Y": 4.51,
       "DXY": 107.96,
-      "USDINR": 0.0,
+      "USDINR": 86.94,
       "Nifty50": 23739.2,
       "IndiaGSec": 6.69
     },
@@ -6759,7 +6741,7 @@
       "Brent": 74.61,
       "US10Y": 4.42,
       "DXY": 107.58,
-      "USDINR": 0.0,
+      "USDINR": 87.13,
       "Nifty50": 23696.3,
       "IndiaGSec": 6.69
     },
@@ -6768,7 +6750,7 @@
       "Brent": 74.29,
       "US10Y": 4.44,
       "DXY": 107.69,
-      "USDINR": 0.0,
+      "USDINR": 87.33,
       "Nifty50": 23603.3,
       "IndiaGSec": 6.69
     },
@@ -6777,7 +6759,7 @@
       "Brent": 74.66,
       "US10Y": 4.49,
       "DXY": 108.04,
-      "USDINR": 0.0,
+      "USDINR": 87.59,
       "Nifty50": 23559.9,
       "IndiaGSec": 6.69
     },
@@ -6786,7 +6768,7 @@
       "Brent": 75.87,
       "US10Y": 4.49,
       "DXY": 108.32,
-      "USDINR": 0.0,
+      "USDINR": 87.51,
       "Nifty50": 23381.6,
       "IndiaGSec": 6.69
     },
@@ -6795,7 +6777,7 @@
       "Brent": 77.0,
       "US10Y": 4.54,
       "DXY": 107.96,
-      "USDINR": 0.0,
+      "USDINR": 87.49,
       "Nifty50": 23071.8,
       "IndiaGSec": 6.69
     },
@@ -6804,7 +6786,7 @@
       "Brent": 75.18,
       "US10Y": 4.64,
       "DXY": 107.94,
-      "USDINR": 0.0,
+      "USDINR": 86.81,
       "Nifty50": 23045.2,
       "IndiaGSec": 6.69
     },
@@ -6813,7 +6795,7 @@
       "Brent": 75.02,
       "US10Y": 4.53,
       "DXY": 107.31,
-      "USDINR": 0.0,
+      "USDINR": 86.87,
       "Nifty50": 23031.4,
       "IndiaGSec": 6.69
     },
@@ -6822,7 +6804,7 @@
       "Brent": 74.74,
       "US10Y": 4.47,
       "DXY": 106.57,
-      "USDINR": 0.0,
+      "USDINR": 86.75,
       "Nifty50": 22929.2,
       "IndiaGSec": 6.69
     },
@@ -6831,7 +6813,7 @@
       "Brent": 74.74,
       "US10Y": 4.47,
       "DXY": 106.57,
-      "USDINR": 0.0,
+      "USDINR": 86.43,
       "Nifty50": 22959.5,
       "IndiaGSec": 6.69
     },
@@ -6840,7 +6822,7 @@
       "Brent": 75.84,
       "US10Y": 4.54,
       "DXY": 107.05,
-      "USDINR": 0.0,
+      "USDINR": 86.85,
       "Nifty50": 22945.3,
       "IndiaGSec": 6.69
     },
@@ -6849,7 +6831,7 @@
       "Brent": 76.04,
       "US10Y": 4.53,
       "DXY": 107.17,
-      "USDINR": 0.0,
+      "USDINR": 86.89,
       "Nifty50": 22932.9,
       "IndiaGSec": 6.69
     },
@@ -6858,7 +6840,7 @@
       "Brent": 76.48,
       "US10Y": 4.5,
       "DXY": 106.34,
-      "USDINR": 0.0,
+      "USDINR": 86.87,
       "Nifty50": 22913.2,
       "IndiaGSec": 6.69
     },
@@ -6867,7 +6849,7 @@
       "Brent": 74.43,
       "US10Y": 4.42,
       "DXY": 106.61,
-      "USDINR": 0.0,
+      "USDINR": 86.45,
       "Nifty50": 22795.9,
       "IndiaGSec": 6.69
     },
@@ -6876,7 +6858,7 @@
       "Brent": 74.78,
       "US10Y": 4.39,
       "DXY": 106.6,
-      "USDINR": 0.0,
+      "USDINR": 86.53,
       "Nifty50": 22553.3,
       "IndiaGSec": 6.69
     },
@@ -6885,7 +6867,7 @@
       "Brent": 73.02,
       "US10Y": 4.3,
       "DXY": 106.31,
-      "USDINR": 0.0,
+      "USDINR": 86.69,
       "Nifty50": 22547.6,
       "IndiaGSec": 6.69
     },
@@ -6894,7 +6876,7 @@
       "Brent": 72.53,
       "US10Y": 4.25,
       "DXY": 106.42,
-      "USDINR": 0.0,
+      "USDINR": 87.08,
       "Nifty50": 22547.6,
       "IndiaGSec": 6.69
     },
@@ -6903,7 +6885,7 @@
       "Brent": 74.04,
       "US10Y": 4.28,
       "DXY": 107.24,
-      "USDINR": 0.0,
+      "USDINR": 87.16,
       "Nifty50": 22545.1,
       "IndiaGSec": 6.69
     },
@@ -6912,7 +6894,7 @@
       "Brent": 73.18,
       "US10Y": 4.23,
       "DXY": 107.61,
-      "USDINR": 0.0,
+      "USDINR": 87.33,
       "Nifty50": 22124.7,
       "IndiaGSec": 6.69
     },
@@ -6921,7 +6903,7 @@
       "Brent": 71.62,
       "US10Y": 4.18,
       "DXY": 106.75,
-      "USDINR": 0.0,
+      "USDINR": 87.46,
       "Nifty50": 22119.3,
       "IndiaGSec": 6.65
     },
@@ -6930,7 +6912,7 @@
       "Brent": 71.04,
       "US10Y": 4.21,
       "DXY": 105.74,
-      "USDINR": 0.0,
+      "USDINR": 87.33,
       "Nifty50": 22082.7,
       "IndiaGSec": 6.65
     },
@@ -6939,7 +6921,7 @@
       "Brent": 69.3,
       "US10Y": 4.26,
       "DXY": 105.74,
-      "USDINR": 0.0,
+      "USDINR": 87.22,
       "Nifty50": 22337.3,
       "IndiaGSec": 6.65
     },
@@ -6948,7 +6930,7 @@
       "Brent": 69.46,
       "US10Y": 4.29,
       "DXY": 104.06,
-      "USDINR": 0.0,
+      "USDINR": 86.89,
       "Nifty50": 22544.7,
       "IndiaGSec": 6.65
     },
@@ -6957,7 +6939,7 @@
       "Brent": 70.36,
       "US10Y": 4.32,
       "DXY": 103.84,
-      "USDINR": 0.0,
+      "USDINR": 87.13,
       "Nifty50": 22552.5,
       "IndiaGSec": 6.65
     },
@@ -6966,7 +6948,7 @@
       "Brent": 69.28,
       "US10Y": 4.21,
       "DXY": 103.91,
-      "USDINR": 0.0,
+      "USDINR": 87.07,
       "Nifty50": 22460.3,
       "IndiaGSec": 6.65
     },
@@ -6975,7 +6957,7 @@
       "Brent": 69.56,
       "US10Y": 4.29,
       "DXY": 103.44,
-      "USDINR": 0.0,
+      "USDINR": 87.36,
       "Nifty50": 22497.9,
       "IndiaGSec": 6.65
     },
@@ -6984,7 +6966,7 @@
       "Brent": 70.95,
       "US10Y": 4.32,
       "DXY": 103.61,
-      "USDINR": 0.0,
+      "USDINR": 87.2,
       "Nifty50": 22470.5,
       "IndiaGSec": 6.65
     },
@@ -6993,7 +6975,7 @@
       "Brent": 69.88,
       "US10Y": 4.27,
       "DXY": 103.83,
-      "USDINR": 0.0,
+      "USDINR": 87.34,
       "Nifty50": 22397.2,
       "IndiaGSec": 6.65
     },
@@ -7002,7 +6984,7 @@
       "Brent": 70.58,
       "US10Y": 4.31,
       "DXY": 103.72,
-      "USDINR": 0.0,
+      "USDINR": 86.92,
       "Nifty50": 22397.2,
       "IndiaGSec": 6.65
     },
@@ -7011,7 +6993,7 @@
       "Brent": 71.07,
       "US10Y": 4.31,
       "DXY": 103.37,
-      "USDINR": 0.0,
+      "USDINR": 86.94,
       "Nifty50": 22508.8,
       "IndiaGSec": 6.65
     },
@@ -7020,7 +7002,7 @@
       "Brent": 70.56,
       "US10Y": 4.28,
       "DXY": 103.24,
-      "USDINR": 0.0,
+      "USDINR": 86.92,
       "Nifty50": 22834.3,
       "IndiaGSec": 6.65
     },
@@ -7029,7 +7011,7 @@
       "Brent": 70.78,
       "US10Y": 4.26,
       "DXY": 103.43,
-      "USDINR": 0.0,
+      "USDINR": 86.58,
       "Nifty50": 22907.6,
       "IndiaGSec": 6.65
     },
@@ -7038,7 +7020,7 @@
       "Brent": 72.0,
       "US10Y": 4.23,
       "DXY": 103.85,
-      "USDINR": 0.0,
+      "USDINR": 86.34,
       "Nifty50": 23190.7,
       "IndiaGSec": 6.65
     },
@@ -7047,7 +7029,7 @@
       "Brent": 72.16,
       "US10Y": 4.25,
       "DXY": 104.09,
-      "USDINR": 0.0,
+      "USDINR": 86.34,
       "Nifty50": 23350.4,
       "IndiaGSec": 6.65
     },
@@ -7056,7 +7038,7 @@
       "Brent": 73.0,
       "US10Y": 4.33,
       "DXY": 104.26,
-      "USDINR": 0.0,
+      "USDINR": 85.99,
       "Nifty50": 23658.3,
       "IndiaGSec": 6.65
     },
@@ -7065,7 +7047,7 @@
       "Brent": 73.02,
       "US10Y": 4.31,
       "DXY": 104.18,
-      "USDINR": 0.0,
+      "USDINR": 85.53,
       "Nifty50": 23668.7,
       "IndiaGSec": 6.65
     },
@@ -7074,7 +7056,7 @@
       "Brent": 73.79,
       "US10Y": 4.34,
       "DXY": 104.55,
-      "USDINR": 0.0,
+      "USDINR": 85.59,
       "Nifty50": 23486.8,
       "IndiaGSec": 6.65
     },
@@ -7083,7 +7065,7 @@
       "Brent": 74.03,
       "US10Y": 4.37,
       "DXY": 104.07,
-      "USDINR": 0.0,
+      "USDINR": 86.1,
       "Nifty50": 23591.9,
       "IndiaGSec": 6.65
     },
@@ -7092,7 +7074,7 @@
       "Brent": 73.63,
       "US10Y": 4.26,
       "DXY": 104.04,
-      "USDINR": 0.0,
+      "USDINR": 85.69,
       "Nifty50": 23519.3,
       "IndiaGSec": 6.65
     },
@@ -7101,7 +7083,7 @@
       "Brent": 74.74,
       "US10Y": 4.25,
       "DXY": 104.21,
-      "USDINR": 0.0,
+      "USDINR": 85.54,
       "Nifty50": 23519.3,
       "IndiaGSec": 6.65
     },
@@ -7110,7 +7092,7 @@
       "Brent": 74.49,
       "US10Y": 4.16,
       "DXY": 104.26,
-      "USDINR": 0.0,
+      "USDINR": 85.47,
       "Nifty50": 23165.7,
       "IndiaGSec": 6.58
     },
@@ -7119,7 +7101,7 @@
       "Brent": 74.95,
       "US10Y": 4.2,
       "DXY": 103.81,
-      "USDINR": 0.0,
+      "USDINR": 85.61,
       "Nifty50": 23332.3,
       "IndiaGSec": 6.58
     },
@@ -7128,7 +7110,7 @@
       "Brent": 70.14,
       "US10Y": 4.05,
       "DXY": 102.07,
-      "USDINR": 0.0,
+      "USDINR": 85.65,
       "Nifty50": 23250.1,
       "IndiaGSec": 6.58
     },
@@ -7137,7 +7119,7 @@
       "Brent": 65.58,
       "US10Y": 3.98,
       "DXY": 103.02,
-      "USDINR": 0.0,
+      "USDINR": 85.28,
       "Nifty50": 22904.4,
       "IndiaGSec": 6.58
     },
@@ -7146,7 +7128,7 @@
       "Brent": 64.21,
       "US10Y": 4.16,
       "DXY": 103.26,
-      "USDINR": 0.0,
+      "USDINR": 85.53,
       "Nifty50": 22161.6,
       "IndiaGSec": 6.58
     },
@@ -7155,7 +7137,7 @@
       "Brent": 62.82,
       "US10Y": 4.26,
       "DXY": 102.96,
-      "USDINR": 0.0,
+      "USDINR": 86.03,
       "Nifty50": 22535.8,
       "IndiaGSec": 6.58
     },
@@ -7164,7 +7146,7 @@
       "Brent": 65.48,
       "US10Y": 4.4,
       "DXY": 102.9,
-      "USDINR": 0.0,
+      "USDINR": 86.44,
       "Nifty50": 22399.2,
       "IndiaGSec": 6.58
     },
@@ -7173,7 +7155,7 @@
       "Brent": 63.33,
       "US10Y": 4.39,
       "DXY": 100.87,
-      "USDINR": 0.0,
+      "USDINR": 86.21,
       "Nifty50": 22399.2,
       "IndiaGSec": 6.58
     },
@@ -7182,7 +7164,7 @@
       "Brent": 64.76,
       "US10Y": 4.49,
       "DXY": 99.78,
-      "USDINR": 0.0,
+      "USDINR": 86.26,
       "Nifty50": 22828.6,
       "IndiaGSec": 6.58
     },
@@ -7191,7 +7173,7 @@
       "Brent": 64.88,
       "US10Y": 4.36,
       "DXY": 99.64,
-      "USDINR": 0.0,
+      "USDINR": 86.19,
       "Nifty50": 22828.6,
       "IndiaGSec": 6.58
     },
@@ -7200,7 +7182,7 @@
       "Brent": 64.67,
       "US10Y": 4.32,
       "DXY": 100.22,
-      "USDINR": 0.0,
+      "USDINR": 86.04,
       "Nifty50": 23328.6,
       "IndiaGSec": 6.58
     },
@@ -7209,7 +7191,7 @@
       "Brent": 65.85,
       "US10Y": 4.28,
       "DXY": 99.38,
-      "USDINR": 0.0,
+      "USDINR": 85.73,
       "Nifty50": 23437.2,
       "IndiaGSec": 6.58
     },
@@ -7218,7 +7200,7 @@
       "Brent": 67.96,
       "US10Y": 4.33,
       "DXY": 99.38,
-      "USDINR": 0.0,
+      "USDINR": 85.62,
       "Nifty50": 23851.7,
       "IndiaGSec": 6.58
     },
@@ -7227,7 +7209,7 @@
       "Brent": 66.26,
       "US10Y": 4.41,
       "DXY": 98.28,
-      "USDINR": 0.0,
+      "USDINR": 85.62,
       "Nifty50": 24125.6,
       "IndiaGSec": 6.58
     },
@@ -7236,7 +7218,7 @@
       "Brent": 67.44,
       "US10Y": 4.39,
       "DXY": 98.92,
-      "USDINR": 0.0,
+      "USDINR": 85.16,
       "Nifty50": 24167.2,
       "IndiaGSec": 6.58
     },
@@ -7245,7 +7227,7 @@
       "Brent": 66.12,
       "US10Y": 4.39,
       "DXY": 99.84,
-      "USDINR": 0.0,
+      "USDINR": 85.23,
       "Nifty50": 24328.9,
       "IndiaGSec": 6.58
     },
@@ -7254,7 +7236,7 @@
       "Brent": 66.55,
       "US10Y": 4.3,
       "DXY": 99.29,
-      "USDINR": 0.0,
+      "USDINR": 85.5,
       "Nifty50": 24246.7,
       "IndiaGSec": 6.58
     },
@@ -7263,7 +7245,7 @@
       "Brent": 66.87,
       "US10Y": 4.27,
       "DXY": 99.47,
-      "USDINR": 0.0,
+      "USDINR": 85.26,
       "Nifty50": 24039.3,
       "IndiaGSec": 6.58
     },
@@ -7272,7 +7254,7 @@
       "Brent": 65.86,
       "US10Y": 4.22,
       "DXY": 99.01,
-      "USDINR": 0.0,
+      "USDINR": 85.38,
       "Nifty50": 24328.5,
       "IndiaGSec": 6.58
     },
@@ -7281,7 +7263,7 @@
       "Brent": 64.25,
       "US10Y": 4.17,
       "DXY": 99.24,
-      "USDINR": 0.0,
+      "USDINR": 85.16,
       "Nifty50": 24335.9,
       "IndiaGSec": 6.58
     },
@@ -7290,7 +7272,7 @@
       "Brent": 63.12,
       "US10Y": 4.18,
       "DXY": 99.47,
-      "USDINR": 0.0,
+      "USDINR": 85.17,
       "Nifty50": 24334.2,
       "IndiaGSec": 6.58
     },
@@ -7299,7 +7281,7 @@
       "Brent": 62.13,
       "US10Y": 4.23,
       "DXY": 100.25,
-      "USDINR": 0.0,
+      "USDINR": 84.53,
       "Nifty50": 24334.2,
       "IndiaGSec": 6.45
     },
@@ -7308,7 +7290,7 @@
       "Brent": 61.29,
       "US10Y": 4.32,
       "DXY": 100.0,
-      "USDINR": 0.0,
+      "USDINR": 84.7,
       "Nifty50": 24346.7,
       "IndiaGSec": 6.45
     },
@@ -7317,7 +7299,7 @@
       "Brent": 60.23,
       "US10Y": 4.34,
       "DXY": 99.83,
-      "USDINR": 0.0,
+      "USDINR": 84.53,
       "Nifty50": 24461.2,
       "IndiaGSec": 6.45
     },
@@ -7326,7 +7308,7 @@
       "Brent": 62.15,
       "US10Y": 4.31,
       "DXY": 99.24,
-      "USDINR": 0.0,
+      "USDINR": 84.22,
       "Nifty50": 24379.6,
       "IndiaGSec": 6.45
     },
@@ -7335,7 +7317,7 @@
       "Brent": 61.12,
       "US10Y": 4.28,
       "DXY": 99.61,
-      "USDINR": 0.0,
+      "USDINR": 84.79,
       "Nifty50": 24414.4,
       "IndiaGSec": 6.45
     },
@@ -7344,7 +7326,7 @@
       "Brent": 62.84,
       "US10Y": 4.37,
       "DXY": 100.64,
-      "USDINR": 0.0,
+      "USDINR": 84.82,
       "Nifty50": 24273.8,
       "IndiaGSec": 6.45
     },
@@ -7353,7 +7335,7 @@
       "Brent": 63.91,
       "US10Y": 4.38,
       "DXY": 100.34,
-      "USDINR": 0.0,
+      "USDINR": 86.08,
       "Nifty50": 24008.0,
       "IndiaGSec": 6.45
     },
@@ -7362,7 +7344,7 @@
       "Brent": 64.96,
       "US10Y": 4.46,
       "DXY": 101.79,
-      "USDINR": 0.0,
+      "USDINR": 85.41,
       "Nifty50": 24924.7,
       "IndiaGSec": 6.45
     },
@@ -7371,7 +7353,7 @@
       "Brent": 66.63,
       "US10Y": 4.5,
       "DXY": 101.0,
-      "USDINR": 0.0,
+      "USDINR": 84.97,
       "Nifty50": 24578.3,
       "IndiaGSec": 6.45
     },
@@ -7380,7 +7362,7 @@
       "Brent": 66.09,
       "US10Y": 4.53,
       "DXY": 101.04,
-      "USDINR": 0.0,
+      "USDINR": 85.06,
       "Nifty50": 24666.9,
       "IndiaGSec": 6.45
     },
@@ -7389,7 +7371,7 @@
       "Brent": 64.53,
       "US10Y": 4.45,
       "DXY": 100.88,
-      "USDINR": 0.0,
+      "USDINR": 85.49,
       "Nifty50": 25062.1,
       "IndiaGSec": 6.45
     },
@@ -7398,7 +7380,7 @@
       "Brent": 65.41,
       "US10Y": 4.44,
       "DXY": 101.09,
-      "USDINR": 0.0,
+      "USDINR": 85.44,
       "Nifty50": 25019.8,
       "IndiaGSec": 6.45
     },
@@ -7407,7 +7389,7 @@
       "Brent": 65.54,
       "US10Y": 4.47,
       "DXY": 100.43,
-      "USDINR": 0.0,
+      "USDINR": 85.5,
       "Nifty50": 24945.4,
       "IndiaGSec": 6.45
     },
@@ -7416,7 +7398,7 @@
       "Brent": 65.38,
       "US10Y": 4.48,
       "DXY": 100.12,
-      "USDINR": 0.0,
+      "USDINR": 85.37,
       "Nifty50": 24683.9,
       "IndiaGSec": 6.45
     },
@@ -7425,7 +7407,7 @@
       "Brent": 64.91,
       "US10Y": 4.6,
       "DXY": 99.56,
-      "USDINR": 0.0,
+      "USDINR": 85.54,
       "Nifty50": 24813.4,
       "IndiaGSec": 6.45
     },
@@ -7434,7 +7416,7 @@
       "Brent": 64.44,
       "US10Y": 4.55,
       "DXY": 99.96,
-      "USDINR": 0.0,
+      "USDINR": 85.6,
       "Nifty50": 24609.7,
       "IndiaGSec": 6.45
     },
@@ -7443,7 +7425,7 @@
       "Brent": 64.78,
       "US10Y": 4.51,
       "DXY": 99.11,
-      "USDINR": 0.0,
+      "USDINR": 85.97,
       "Nifty50": 24853.2,
       "IndiaGSec": 6.45
     },
@@ -7452,7 +7434,7 @@
       "Brent": 64.78,
       "US10Y": 4.51,
       "DXY": 98.93,
-      "USDINR": 0.0,
+      "USDINR": 85.2,
       "Nifty50": 25001.2,
       "IndiaGSec": 6.45
     },
@@ -7461,7 +7443,7 @@
       "Brent": 64.09,
       "US10Y": 4.43,
       "DXY": 99.52,
-      "USDINR": 0.0,
+      "USDINR": 85.16,
       "Nifty50": 24826.2,
       "IndiaGSec": 6.45
     },
@@ -7470,7 +7452,7 @@
       "Brent": 64.9,
       "US10Y": 4.48,
       "DXY": 99.88,
-      "USDINR": 0.0,
+      "USDINR": 85.36,
       "Nifty50": 24752.4,
       "IndiaGSec": 6.45
     },
@@ -7479,7 +7461,7 @@
       "Brent": 64.15,
       "US10Y": 4.42,
       "DXY": 99.28,
-      "USDINR": 0.0,
+      "USDINR": 85.39,
       "Nifty50": 24833.6,
       "IndiaGSec": 6.45
     },
@@ -7488,7 +7470,7 @@
       "Brent": 63.9,
       "US10Y": 4.42,
       "DXY": 99.33,
-      "USDINR": 0.0,
+      "USDINR": 85.36,
       "Nifty50": 24750.7,
       "IndiaGSec": 6.45
     },
@@ -7497,7 +7479,7 @@
       "Brent": 64.63,
       "US10Y": 4.46,
       "DXY": 98.7,
-      "USDINR": 0.0,
+      "USDINR": 85.52,
       "Nifty50": 24716.6,
       "IndiaGSec": 6.52
     },
@@ -7506,7 +7488,7 @@
       "Brent": 65.63,
       "US10Y": 4.46,
       "DXY": 99.25,
-      "USDINR": 0.0,
+      "USDINR": 85.36,
       "Nifty50": 24542.5,
       "IndiaGSec": 6.52
     },
@@ -7515,7 +7497,7 @@
       "Brent": 64.86,
       "US10Y": 4.36,
       "DXY": 98.79,
-      "USDINR": 0.0,
+      "USDINR": 85.71,
       "Nifty50": 24620.2,
       "IndiaGSec": 6.52
     },
@@ -7524,7 +7506,7 @@
       "Brent": 65.34,
       "US10Y": 4.39,
       "DXY": 98.74,
-      "USDINR": 0.0,
+      "USDINR": 85.9,
       "Nifty50": 24750.9,
       "IndiaGSec": 6.52
     },
@@ -7533,7 +7515,7 @@
       "Brent": 66.47,
       "US10Y": 4.51,
       "DXY": 99.19,
-      "USDINR": 0.0,
+      "USDINR": 85.88,
       "Nifty50": 25003.1,
       "IndiaGSec": 6.52
     },
@@ -7542,7 +7524,7 @@
       "Brent": 67.04,
       "US10Y": 4.48,
       "DXY": 98.94,
-      "USDINR": 0.0,
+      "USDINR": 85.79,
       "Nifty50": 25103.2,
       "IndiaGSec": 6.52
     },
@@ -7551,7 +7533,7 @@
       "Brent": 66.87,
       "US10Y": 4.47,
       "DXY": 99.05,
-      "USDINR": 0.0,
+      "USDINR": 85.76,
       "Nifty50": 25104.2,
       "IndiaGSec": 6.52
     },
@@ -7560,7 +7542,7 @@
       "Brent": 69.77,
       "US10Y": 4.41,
       "DXY": 98.63,
-      "USDINR": 0.0,
+      "USDINR": 85.65,
       "Nifty50": 25141.4,
       "IndiaGSec": 6.52
     },
@@ -7569,7 +7551,7 @@
       "Brent": 69.36,
       "US10Y": 4.36,
       "DXY": 97.92,
-      "USDINR": 0.0,
+      "USDINR": 85.47,
       "Nifty50": 24888.2,
       "IndiaGSec": 6.52
     },
@@ -7578,7 +7560,7 @@
       "Brent": 74.23,
       "US10Y": 4.42,
       "DXY": 98.18,
-      "USDINR": 0.0,
+      "USDINR": 85.69,
       "Nifty50": 24718.6,
       "IndiaGSec": 6.52
     },
@@ -7587,7 +7569,7 @@
       "Brent": 73.23,
       "US10Y": 4.45,
       "DXY": 98.0,
-      "USDINR": 0.0,
+      "USDINR": 86.25,
       "Nifty50": 24946.5,
       "IndiaGSec": 6.52
     },
@@ -7596,7 +7578,7 @@
       "Brent": 76.45,
       "US10Y": 4.39,
       "DXY": 98.82,
-      "USDINR": 0.0,
+      "USDINR": 86.1,
       "Nifty50": 24853.4,
       "IndiaGSec": 6.52
     },
@@ -7605,7 +7587,7 @@
       "Brent": 76.7,
       "US10Y": 4.4,
       "DXY": 98.91,
-      "USDINR": 0.0,
+      "USDINR": 86.36,
       "Nifty50": 24812.1,
       "IndiaGSec": 6.52
     },
@@ -7614,7 +7596,7 @@
       "Brent": 76.7,
       "US10Y": 4.4,
       "DXY": 98.91,
-      "USDINR": 0.0,
+      "USDINR": 86.61,
       "Nifty50": 24793.2,
       "IndiaGSec": 6.52
     },
@@ -7623,7 +7605,7 @@
       "Brent": 77.01,
       "US10Y": 4.38,
       "DXY": 98.71,
-      "USDINR": 0.0,
+      "USDINR": 86.58,
       "Nifty50": 25112.4,
       "IndiaGSec": 6.52
     },
@@ -7632,7 +7614,7 @@
       "Brent": 71.48,
       "US10Y": 4.32,
       "DXY": 98.42,
-      "USDINR": 0.0,
+      "USDINR": 86.58,
       "Nifty50": 24971.9,
       "IndiaGSec": 6.52
     },
@@ -7641,7 +7623,7 @@
       "Brent": 67.14,
       "US10Y": 4.29,
       "DXY": 97.86,
-      "USDINR": 0.0,
+      "USDINR": 86.23,
       "Nifty50": 25044.3,
       "IndiaGSec": 6.52
     },
@@ -7650,7 +7632,7 @@
       "Brent": 67.68,
       "US10Y": 4.29,
       "DXY": 97.68,
-      "USDINR": 0.0,
+      "USDINR": 85.9,
       "Nifty50": 25244.8,
       "IndiaGSec": 6.52
     },
@@ -7659,7 +7641,7 @@
       "Brent": 67.73,
       "US10Y": 4.25,
       "DXY": 97.15,
-      "USDINR": 0.0,
+      "USDINR": 86.01,
       "Nifty50": 25549.0,
       "IndiaGSec": 6.52
     },
@@ -7668,7 +7650,7 @@
       "Brent": 67.77,
       "US10Y": 4.28,
       "DXY": 97.4,
-      "USDINR": 0.0,
+      "USDINR": 85.67,
       "Nifty50": 25637.8,
       "IndiaGSec": 6.52
     },
@@ -7677,7 +7659,7 @@
       "Brent": 67.61,
       "US10Y": 4.23,
       "DXY": 96.88,
-      "USDINR": 0.0,
+      "USDINR": 85.46,
       "Nifty50": 25517.1,
       "IndiaGSec": 6.52
     },
@@ -7686,7 +7668,7 @@
       "Brent": 67.11,
       "US10Y": 4.25,
       "DXY": 96.82,
-      "USDINR": 0.0,
+      "USDINR": 85.71,
       "Nifty50": 25541.8,
       "IndiaGSec": 6.61
     },
@@ -7695,7 +7677,7 @@
       "Brent": 69.11,
       "US10Y": 4.29,
       "DXY": 96.78,
-      "USDINR": 0.0,
+      "USDINR": 85.64,
       "Nifty50": 25453.4,
       "IndiaGSec": 6.61
     },
@@ -7704,7 +7686,7 @@
       "Brent": 68.8,
       "US10Y": 4.35,
       "DXY": 97.18,
-      "USDINR": 0.0,
+      "USDINR": 85.69,
       "Nifty50": 25405.3,
       "IndiaGSec": 6.61
     },
@@ -7713,7 +7695,7 @@
       "Brent": 68.29,
       "US10Y": 4.35,
       "DXY": 97.18,
-      "USDINR": 0.0,
+      "USDINR": 85.32,
       "Nifty50": 25461.0,
       "IndiaGSec": 6.61
     },
@@ -7722,7 +7704,7 @@
       "Brent": 69.58,
       "US10Y": 4.39,
       "DXY": 97.48,
-      "USDINR": 0.0,
+      "USDINR": 85.5,
       "Nifty50": 25461.3,
       "IndiaGSec": 6.61
     },
@@ -7731,7 +7713,7 @@
       "Brent": 70.15,
       "US10Y": 4.41,
       "DXY": 97.51,
-      "USDINR": 0.0,
+      "USDINR": 85.89,
       "Nifty50": 25522.5,
       "IndiaGSec": 6.61
     },
@@ -7740,7 +7722,7 @@
       "Brent": 70.19,
       "US10Y": 4.34,
       "DXY": 97.47,
-      "USDINR": 0.0,
+      "USDINR": 85.71,
       "Nifty50": 25476.1,
       "IndiaGSec": 6.61
     },
@@ -7749,7 +7731,7 @@
       "Brent": 68.64,
       "US10Y": 4.35,
       "DXY": 97.65,
-      "USDINR": 0.0,
+      "USDINR": 85.71,
       "Nifty50": 25355.2,
       "IndiaGSec": 6.61
     },
@@ -7758,7 +7740,7 @@
       "Brent": 70.36,
       "US10Y": 4.42,
       "DXY": 97.85,
-      "USDINR": 0.0,
+      "USDINR": 85.73,
       "Nifty50": 25149.8,
       "IndiaGSec": 6.61
     },
@@ -7767,7 +7749,7 @@
       "Brent": 69.21,
       "US10Y": 4.43,
       "DXY": 98.08,
-      "USDINR": 0.0,
+      "USDINR": 85.82,
       "Nifty50": 25082.3,
       "IndiaGSec": 6.61
     },
@@ -7776,7 +7758,7 @@
       "Brent": 68.71,
       "US10Y": 4.49,
       "DXY": 98.62,
-      "USDINR": 0.0,
+      "USDINR": 85.97,
       "Nifty50": 25195.8,
       "IndiaGSec": 6.61
     },
@@ -7785,7 +7767,7 @@
       "Brent": 68.52,
       "US10Y": 4.45,
       "DXY": 98.39,
-      "USDINR": 0.0,
+      "USDINR": 85.99,
       "Nifty50": 25212.1,
       "IndiaGSec": 6.61
     },
@@ -7794,7 +7776,7 @@
       "Brent": 69.52,
       "US10Y": 4.46,
       "DXY": 98.73,
-      "USDINR": 0.0,
+      "USDINR": 85.89,
       "Nifty50": 25111.4,
       "IndiaGSec": 6.61
     },
@@ -7803,7 +7785,7 @@
       "Brent": 69.28,
       "US10Y": 4.43,
       "DXY": 98.48,
-      "USDINR": 0.0,
+      "USDINR": 86.05,
       "Nifty50": 24968.4,
       "IndiaGSec": 6.61
     },
@@ -7812,7 +7794,7 @@
       "Brent": 69.21,
       "US10Y": 4.37,
       "DXY": 97.85,
-      "USDINR": 0.0,
+      "USDINR": 86.15,
       "Nifty50": 25090.7,
       "IndiaGSec": 6.61
     },
@@ -7821,7 +7803,7 @@
       "Brent": 68.59,
       "US10Y": 4.34,
       "DXY": 97.39,
-      "USDINR": 0.0,
+      "USDINR": 86.2,
       "Nifty50": 25060.9,
       "IndiaGSec": 6.61
     },
@@ -7830,7 +7812,7 @@
       "Brent": 68.51,
       "US10Y": 4.39,
       "DXY": 97.21,
-      "USDINR": 0.0,
+      "USDINR": 86.34,
       "Nifty50": 25219.9,
       "IndiaGSec": 6.61
     },
@@ -7839,7 +7821,7 @@
       "Brent": 69.18,
       "US10Y": 4.41,
       "DXY": 97.38,
-      "USDINR": 0.0,
+      "USDINR": 86.4,
       "Nifty50": 25062.1,
       "IndiaGSec": 6.61
     },
@@ -7848,7 +7830,7 @@
       "Brent": 68.44,
       "US10Y": 4.39,
       "DXY": 97.65,
-      "USDINR": 0.0,
+      "USDINR": 86.43,
       "Nifty50": 24837.0,
       "IndiaGSec": 6.61
     },
@@ -7857,7 +7839,7 @@
       "Brent": 70.04,
       "US10Y": 4.42,
       "DXY": 98.66,
-      "USDINR": 0.0,
+      "USDINR": 86.51,
       "Nifty50": 24680.9,
       "IndiaGSec": 6.61
     },
@@ -7866,7 +7848,7 @@
       "Brent": 72.51,
       "US10Y": 4.33,
       "DXY": 98.91,
-      "USDINR": 0.0,
+      "USDINR": 86.78,
       "Nifty50": 24821.1,
       "IndiaGSec": 6.61
     },
@@ -7875,7 +7857,7 @@
       "Brent": 73.24,
       "US10Y": 4.38,
       "DXY": 99.94,
-      "USDINR": 0.0,
+      "USDINR": 87.06,
       "Nifty50": 24855.1,
       "IndiaGSec": 6.61
     },
@@ -7884,7 +7866,7 @@
       "Brent": 72.53,
       "US10Y": 4.36,
       "DXY": 100.03,
-      "USDINR": 0.0,
+      "USDINR": 87.71,
       "Nifty50": 24768.3,
       "IndiaGSec": 6.61
     },
@@ -7893,7 +7875,7 @@
       "Brent": 69.67,
       "US10Y": 4.22,
       "DXY": 98.69,
-      "USDINR": 0.0,
+      "USDINR": 87.49,
       "Nifty50": 24565.3,
       "IndiaGSec": 6.54
     },
@@ -7902,7 +7884,7 @@
       "Brent": 68.76,
       "US10Y": 4.2,
       "DXY": 98.78,
-      "USDINR": 0.0,
+      "USDINR": 87.25,
       "Nifty50": 24722.8,
       "IndiaGSec": 6.54
     },
@@ -7911,7 +7893,7 @@
       "Brent": 67.64,
       "US10Y": 4.2,
       "DXY": 98.78,
-      "USDINR": 0.0,
+      "USDINR": 87.89,
       "Nifty50": 24649.6,
       "IndiaGSec": 6.54
     },
@@ -7920,7 +7902,7 @@
       "Brent": 66.89,
       "US10Y": 4.22,
       "DXY": 98.18,
-      "USDINR": 0.0,
+      "USDINR": 87.72,
       "Nifty50": 24574.2,
       "IndiaGSec": 6.54
     },
@@ -7929,7 +7911,7 @@
       "Brent": 66.43,
       "US10Y": 4.24,
       "DXY": 98.4,
-      "USDINR": 0.0,
+      "USDINR": 87.76,
       "Nifty50": 24596.2,
       "IndiaGSec": 6.54
     },
@@ -7938,7 +7920,7 @@
       "Brent": 66.59,
       "US10Y": 4.28,
       "DXY": 98.18,
-      "USDINR": 0.0,
+      "USDINR": 87.43,
       "Nifty50": 24363.3,
       "IndiaGSec": 6.54
     },
@@ -7947,7 +7929,7 @@
       "Brent": 66.63,
       "US10Y": 4.27,
       "DXY": 98.52,
-      "USDINR": 0.0,
+      "USDINR": 87.49,
       "Nifty50": 24585.1,
       "IndiaGSec": 6.54
     },
@@ -7956,7 +7938,7 @@
       "Brent": 66.12,
       "US10Y": 4.29,
       "DXY": 98.1,
-      "USDINR": 0.0,
+      "USDINR": 87.66,
       "Nifty50": 24487.4,
       "IndiaGSec": 6.54
     },
@@ -7965,7 +7947,7 @@
       "Brent": 65.63,
       "US10Y": 4.24,
       "DXY": 97.84,
-      "USDINR": 0.0,
+      "USDINR": 87.6,
       "Nifty50": 24619.3,
       "IndiaGSec": 6.54
     },
@@ -7974,7 +7956,7 @@
       "Brent": 66.84,
       "US10Y": 4.29,
       "DXY": 98.25,
-      "USDINR": 0.0,
+      "USDINR": 87.45,
       "Nifty50": 24631.3,
       "IndiaGSec": 6.54
     },
@@ -7983,7 +7965,7 @@
       "Brent": 65.85,
       "US10Y": 4.33,
       "DXY": 97.85,
-      "USDINR": 0.0,
+      "USDINR": 87.69,
       "Nifty50": 24631.3,
       "IndiaGSec": 6.54
     },
@@ -7992,7 +7974,7 @@
       "Brent": 66.6,
       "US10Y": 4.34,
       "DXY": 98.17,
-      "USDINR": 0.0,
+      "USDINR": 87.51,
       "Nifty50": 24876.9,
       "IndiaGSec": 6.54
     },
@@ -8001,7 +7983,7 @@
       "Brent": 65.79,
       "US10Y": 4.3,
       "DXY": 98.27,
-      "USDINR": 0.0,
+      "USDINR": 87.3,
       "Nifty50": 24980.7,
       "IndiaGSec": 6.54
     },
@@ -8010,7 +7992,7 @@
       "Brent": 66.84,
       "US10Y": 4.3,
       "DXY": 98.22,
-      "USDINR": 0.0,
+      "USDINR": 87.08,
       "Nifty50": 25050.6,
       "IndiaGSec": 6.54
     },
@@ -8019,7 +8001,7 @@
       "Brent": 67.67,
       "US10Y": 4.33,
       "DXY": 98.62,
-      "USDINR": 0.0,
+      "USDINR": 87.02,
       "Nifty50": 25083.8,
       "IndiaGSec": 6.54
     },
@@ -8028,7 +8010,7 @@
       "Brent": 67.73,
       "US10Y": 4.26,
       "DXY": 97.72,
-      "USDINR": 0.0,
+      "USDINR": 87.29,
       "Nifty50": 24870.1,
       "IndiaGSec": 6.54
     },
@@ -8037,7 +8019,7 @@
       "Brent": 68.8,
       "US10Y": 4.28,
       "DXY": 98.43,
-      "USDINR": 0.0,
+      "USDINR": 87.33,
       "Nifty50": 24967.8,
       "IndiaGSec": 6.54
     },
@@ -8046,7 +8028,7 @@
       "Brent": 67.22,
       "US10Y": 4.26,
       "DXY": 98.23,
-      "USDINR": 0.0,
+      "USDINR": 87.61,
       "Nifty50": 24712.1,
       "IndiaGSec": 6.54
     },
@@ -8055,7 +8037,7 @@
       "Brent": 68.05,
       "US10Y": 4.24,
       "DXY": 98.23,
-      "USDINR": 0.0,
+      "USDINR": 87.6,
       "Nifty50": 24712.1,
       "IndiaGSec": 6.54
     },
@@ -8064,7 +8046,7 @@
       "Brent": 68.62,
       "US10Y": 4.21,
       "DXY": 97.81,
-      "USDINR": 0.0,
+      "USDINR": 87.66,
       "Nifty50": 24500.9,
       "IndiaGSec": 6.54
     },
@@ -8073,7 +8055,7 @@
       "Brent": 68.12,
       "US10Y": 4.23,
       "DXY": 97.77,
-      "USDINR": 0.0,
+      "USDINR": 87.59,
       "Nifty50": 24426.8,
       "IndiaGSec": 6.54
     },
@@ -8082,7 +8064,7 @@
       "Brent": 68.12,
       "US10Y": 4.23,
       "DXY": 97.77,
-      "USDINR": 0.0,
+      "USDINR": 88.17,
       "Nifty50": 24625.1,
       "IndiaGSec": 6.59
     },
@@ -8091,7 +8073,7 @@
       "Brent": 69.14,
       "US10Y": 4.28,
       "DXY": 98.4,
-      "USDINR": 0.0,
+      "USDINR": 88.0,
       "Nifty50": 24579.6,
       "IndiaGSec": 6.59
     },
@@ -8100,7 +8082,7 @@
       "Brent": 67.6,
       "US10Y": 4.21,
       "DXY": 98.14,
-      "USDINR": 0.0,
+      "USDINR": 88.0,
       "Nifty50": 24715.1,
       "IndiaGSec": 6.59
     },
@@ -8109,7 +8091,7 @@
       "Brent": 66.99,
       "US10Y": 4.18,
       "DXY": 98.35,
-      "USDINR": 0.0,
+      "USDINR": 88.07,
       "Nifty50": 24734.3,
       "IndiaGSec": 6.59
     },
@@ -8118,7 +8100,7 @@
       "Brent": 65.5,
       "US10Y": 4.09,
       "DXY": 97.77,
-      "USDINR": 0.0,
+      "USDINR": 88.19,
       "Nifty50": 24741.0,
       "IndiaGSec": 6.59
     },
@@ -8127,7 +8109,7 @@
       "Brent": 66.02,
       "US10Y": 4.05,
       "DXY": 97.45,
-      "USDINR": 0.0,
+      "USDINR": 88.19,
       "Nifty50": 24773.2,
       "IndiaGSec": 6.59
     },
@@ -8136,7 +8118,7 @@
       "Brent": 66.39,
       "US10Y": 4.07,
       "DXY": 97.79,
-      "USDINR": 0.0,
+      "USDINR": 87.98,
       "Nifty50": 24868.6,
       "IndiaGSec": 6.59
     },
@@ -8145,7 +8127,7 @@
       "Brent": 67.49,
       "US10Y": 4.03,
       "DXY": 97.78,
-      "USDINR": 0.0,
+      "USDINR": 88.22,
       "Nifty50": 24973.1,
       "IndiaGSec": 6.59
     },
@@ -8154,7 +8136,7 @@
       "Brent": 66.37,
       "US10Y": 4.01,
       "DXY": 97.54,
-      "USDINR": 0.0,
+      "USDINR": 88.05,
       "Nifty50": 25005.5,
       "IndiaGSec": 6.59
     },
@@ -8163,7 +8145,7 @@
       "Brent": 66.99,
       "US10Y": 4.06,
       "DXY": 97.55,
-      "USDINR": 0.0,
+      "USDINR": 88.27,
       "Nifty50": 25114.0,
       "IndiaGSec": 6.59
     },
@@ -8172,7 +8154,7 @@
       "Brent": 67.44,
       "US10Y": 4.03,
       "DXY": 97.3,
-      "USDINR": 0.0,
+      "USDINR": 88.28,
       "Nifty50": 25069.2,
       "IndiaGSec": 6.59
     },
@@ -8181,7 +8163,7 @@
       "Brent": 68.47,
       "US10Y": 4.03,
       "DXY": 96.63,
-      "USDINR": 0.0,
+      "USDINR": 88.12,
       "Nifty50": 25239.1,
       "IndiaGSec": 6.59
     },
@@ -8190,7 +8172,7 @@
       "Brent": 67.95,
       "US10Y": 4.08,
       "DXY": 96.87,
-      "USDINR": 0.0,
+      "USDINR": 87.88,
       "Nifty50": 25330.2,
       "IndiaGSec": 6.59
     },
@@ -8199,7 +8181,7 @@
       "Brent": 67.44,
       "US10Y": 4.1,
       "DXY": 97.35,
-      "USDINR": 0.0,
+      "USDINR": 87.91,
       "Nifty50": 25423.6,
       "IndiaGSec": 6.59
     },
@@ -8208,7 +8190,7 @@
       "Brent": 66.68,
       "US10Y": 4.14,
       "DXY": 97.64,
-      "USDINR": 0.0,
+      "USDINR": 88.21,
       "Nifty50": 25327.1,
       "IndiaGSec": 6.59
     },
@@ -8217,7 +8199,7 @@
       "Brent": 66.57,
       "US10Y": 4.14,
       "DXY": 97.33,
-      "USDINR": 0.0,
+      "USDINR": 88.1,
       "Nifty50": 25202.3,
       "IndiaGSec": 6.59
     },
@@ -8226,7 +8208,7 @@
       "Brent": 67.63,
       "US10Y": 4.12,
       "DXY": 97.26,
-      "USDINR": 0.0,
+      "USDINR": 88.3,
       "Nifty50": 25169.5,
       "IndiaGSec": 6.59
     },
@@ -8235,7 +8217,7 @@
       "Brent": 69.31,
       "US10Y": 4.15,
       "DXY": 97.87,
-      "USDINR": 0.0,
+      "USDINR": 88.81,
       "Nifty50": 25056.9,
       "IndiaGSec": 6.59
     },
@@ -8244,7 +8226,7 @@
       "Brent": 69.42,
       "US10Y": 4.17,
       "DXY": 98.55,
-      "USDINR": 0.0,
+      "USDINR": 88.78,
       "Nifty50": 24890.8,
       "IndiaGSec": 6.59
     },
@@ -8253,7 +8235,7 @@
       "Brent": 70.13,
       "US10Y": 4.19,
       "DXY": 98.15,
-      "USDINR": 0.0,
+      "USDINR": 88.77,
       "Nifty50": 24654.7,
       "IndiaGSec": 6.59
     },
@@ -8262,7 +8244,7 @@
       "Brent": 67.97,
       "US10Y": 4.14,
       "DXY": 97.91,
-      "USDINR": 0.0,
+      "USDINR": 88.68,
       "Nifty50": 24634.9,
       "IndiaGSec": 6.59
     },
@@ -8271,7 +8253,7 @@
       "Brent": 67.02,
       "US10Y": 4.15,
       "DXY": 97.77,
-      "USDINR": 0.0,
+      "USDINR": 88.7,
       "Nifty50": 24611.1,
       "IndiaGSec": 6.59
     },
@@ -8280,7 +8262,7 @@
       "Brent": 65.35,
       "US10Y": 4.11,
       "DXY": 97.71,
-      "USDINR": 0.0,
+      "USDINR": 88.84,
       "Nifty50": 24836.3,
       "IndiaGSec": 6.48
     },
@@ -8289,7 +8271,7 @@
       "Brent": 64.11,
       "US10Y": 4.09,
       "DXY": 97.85,
-      "USDINR": 0.0,
+      "USDINR": 88.68,
       "Nifty50": 24836.3,
       "IndiaGSec": 6.48
     },
@@ -8298,7 +8280,7 @@
       "Brent": 64.53,
       "US10Y": 4.12,
       "DXY": 97.72,
-      "USDINR": 0.0,
+      "USDINR": 88.72,
       "Nifty50": 24894.2,
       "IndiaGSec": 6.48
     },
@@ -8307,7 +8289,7 @@
       "Brent": 65.47,
       "US10Y": 4.16,
       "DXY": 98.11,
-      "USDINR": 0.0,
+      "USDINR": 88.74,
       "Nifty50": 25077.7,
       "IndiaGSec": 6.48
     },
@@ -8316,7 +8298,7 @@
       "Brent": 65.45,
       "US10Y": 4.13,
       "DXY": 98.58,
-      "USDINR": 0.0,
+      "USDINR": 88.72,
       "Nifty50": 25108.3,
       "IndiaGSec": 6.48
     },
@@ -8325,7 +8307,7 @@
       "Brent": 66.25,
       "US10Y": 4.13,
       "DXY": 98.85,
-      "USDINR": 0.0,
+      "USDINR": 88.74,
       "Nifty50": 25046.2,
       "IndiaGSec": 6.48
     },
@@ -8334,7 +8316,7 @@
       "Brent": 65.22,
       "US10Y": 4.15,
       "DXY": 99.54,
-      "USDINR": 0.0,
+      "USDINR": 88.78,
       "Nifty50": 25181.8,
       "IndiaGSec": 6.48
     },
@@ -8343,7 +8325,7 @@
       "Brent": 62.73,
       "US10Y": 4.05,
       "DXY": 98.98,
-      "USDINR": 0.0,
+      "USDINR": 88.87,
       "Nifty50": 25285.3,
       "IndiaGSec": 6.48
     },
@@ -8352,7 +8334,7 @@
       "Brent": 63.32,
       "US10Y": 4.05,
       "DXY": 99.27,
-      "USDINR": 0.0,
+      "USDINR": 88.76,
       "Nifty50": 25227.3,
       "IndiaGSec": 6.48
     },
@@ -8361,7 +8343,7 @@
       "Brent": 62.39,
       "US10Y": 4.02,
       "DXY": 99.05,
-      "USDINR": 0.0,
+      "USDINR": 88.67,
       "Nifty50": 25145.5,
       "IndiaGSec": 6.48
     },
@@ -8370,7 +8352,7 @@
       "Brent": 61.91,
       "US10Y": 4.05,
       "DXY": 98.79,
-      "USDINR": 0.0,
+      "USDINR": 88.78,
       "Nifty50": 25323.6,
       "IndiaGSec": 6.48
     },
@@ -8379,7 +8361,7 @@
       "Brent": 61.06,
       "US10Y": 3.98,
       "DXY": 98.39,
-      "USDINR": 0.0,
+      "USDINR": 87.81,
       "Nifty50": 25585.3,
       "IndiaGSec": 6.48
     },
@@ -8388,7 +8370,7 @@
       "Brent": 61.29,
       "US10Y": 4.01,
       "DXY": 98.43,
-      "USDINR": 0.0,
+      "USDINR": 87.99,
       "Nifty50": 25709.8,
       "IndiaGSec": 6.48
     },
@@ -8397,7 +8379,7 @@
       "Brent": 61.01,
       "US10Y": 3.99,
       "DXY": 98.59,
-      "USDINR": 0.0,
+      "USDINR": 88.0,
       "Nifty50": 25843.2,
       "IndiaGSec": 6.48
     },
@@ -8406,7 +8388,7 @@
       "Brent": 61.32,
       "US10Y": 3.96,
       "DXY": 98.93,
-      "USDINR": 0.0,
+      "USDINR": 87.88,
       "Nifty50": 25868.6,
       "IndiaGSec": 6.48
     },
@@ -8415,7 +8397,7 @@
       "Brent": 62.59,
       "US10Y": 3.95,
       "DXY": 98.9,
-      "USDINR": 0.0,
+      "USDINR": 88.0,
       "Nifty50": 25868.6,
       "IndiaGSec": 6.48
     },
@@ -8424,7 +8406,7 @@
       "Brent": 65.99,
       "US10Y": 3.99,
       "DXY": 98.94,
-      "USDINR": 0.0,
+      "USDINR": 87.74,
       "Nifty50": 25891.4,
       "IndiaGSec": 6.48
     },
@@ -8433,7 +8415,7 @@
       "Brent": 65.94,
       "US10Y": 4.0,
       "DXY": 98.95,
-      "USDINR": 0.0,
+      "USDINR": 87.78,
       "Nifty50": 25795.2,
       "IndiaGSec": 6.48
     },
@@ -8442,7 +8424,7 @@
       "Brent": 65.62,
       "US10Y": 4.0,
       "DXY": 98.78,
-      "USDINR": 0.0,
+      "USDINR": 87.83,
       "Nifty50": 25966.1,
       "IndiaGSec": 6.48
     },
@@ -8451,7 +8433,7 @@
       "Brent": 64.4,
       "US10Y": 3.98,
       "DXY": 98.69,
-      "USDINR": 0.0,
+      "USDINR": 88.22,
       "Nifty50": 25936.2,
       "IndiaGSec": 6.48
     },
@@ -8460,7 +8442,7 @@
       "Brent": 64.92,
       "US10Y": 4.06,
       "DXY": 99.22,
-      "USDINR": 0.0,
+      "USDINR": 88.23,
       "Nifty50": 26053.9,
       "IndiaGSec": 6.48
     },
@@ -8469,7 +8451,7 @@
       "Brent": 65.0,
       "US10Y": 4.09,
       "DXY": 99.53,
-      "USDINR": 0.0,
+      "USDINR": 88.35,
       "Nifty50": 25877.8,
       "IndiaGSec": 6.48
     },
@@ -8478,7 +8460,7 @@
       "Brent": 65.07,
       "US10Y": 4.1,
       "DXY": 99.8,
-      "USDINR": 0.0,
+      "USDINR": 88.63,
       "Nifty50": 25722.1,
       "IndiaGSec": 6.48
     },
@@ -8487,7 +8469,7 @@
       "Brent": 64.89,
       "US10Y": 4.11,
       "DXY": 99.87,
-      "USDINR": 0.0,
+      "USDINR": 88.78,
       "Nifty50": 25763.3,
       "IndiaGSec": 6.54
     },
@@ -8496,7 +8478,7 @@
       "Brent": 64.44,
       "US10Y": 4.09,
       "DXY": 100.22,
-      "USDINR": 0.0,
+      "USDINR": 88.72,
       "Nifty50": 25597.7,
       "IndiaGSec": 6.54
     },
@@ -8505,7 +8487,7 @@
       "Brent": 63.52,
       "US10Y": 4.16,
       "DXY": 100.2,
-      "USDINR": 0.0,
+      "USDINR": 88.73,
       "Nifty50": 25597.7,
       "IndiaGSec": 6.54
     },
@@ -8514,7 +8496,7 @@
       "Brent": 63.38,
       "US10Y": 4.09,
       "DXY": 99.73,
-      "USDINR": 0.0,
+      "USDINR": 88.56,
       "Nifty50": 25509.7,
       "IndiaGSec": 6.54
     },
@@ -8523,7 +8505,7 @@
       "Brent": 63.63,
       "US10Y": 4.09,
       "DXY": 99.6,
-      "USDINR": 0.0,
+      "USDINR": 88.67,
       "Nifty50": 25492.3,
       "IndiaGSec": 6.54
     },
@@ -8532,7 +8514,7 @@
       "Brent": 64.06,
       "US10Y": 4.11,
       "DXY": 99.62,
-      "USDINR": 0.0,
+      "USDINR": 88.66,
       "Nifty50": 25574.3,
       "IndiaGSec": 6.54
     },
@@ -8541,7 +8523,7 @@
       "Brent": 65.16,
       "US10Y": 4.12,
       "DXY": 99.46,
-      "USDINR": 0.0,
+      "USDINR": 88.71,
       "Nifty50": 25694.9,
       "IndiaGSec": 6.54
     },
@@ -8550,7 +8532,7 @@
       "Brent": 62.71,
       "US10Y": 4.07,
       "DXY": 99.48,
-      "USDINR": 0.0,
+      "USDINR": 88.47,
       "Nifty50": 25875.8,
       "IndiaGSec": 6.54
     },
@@ -8559,7 +8541,7 @@
       "Brent": 63.01,
       "US10Y": 4.11,
       "DXY": 99.18,
-      "USDINR": 0.0,
+      "USDINR": 88.59,
       "Nifty50": 25879.2,
       "IndiaGSec": 6.54
     },
@@ -8568,7 +8550,7 @@
       "Brent": 64.39,
       "US10Y": 4.15,
       "DXY": 99.27,
-      "USDINR": 0.0,
+      "USDINR": 88.82,
       "Nifty50": 25910.1,
       "IndiaGSec": 6.54
     },
@@ -8577,7 +8559,7 @@
       "Brent": 64.2,
       "US10Y": 4.13,
       "DXY": 99.59,
-      "USDINR": 0.0,
+      "USDINR": 88.68,
       "Nifty50": 26013.4,
       "IndiaGSec": 6.54
     },
@@ -8586,7 +8568,7 @@
       "Brent": 64.89,
       "US10Y": 4.12,
       "DXY": 99.55,
-      "USDINR": 0.0,
+      "USDINR": 88.64,
       "Nifty50": 25910.1,
       "IndiaGSec": 6.54
     },
@@ -8595,7 +8577,7 @@
       "Brent": 63.51,
       "US10Y": 4.13,
       "DXY": 100.23,
-      "USDINR": 0.0,
+      "USDINR": 88.56,
       "Nifty50": 26052.7,
       "IndiaGSec": 6.54
     },
@@ -8604,7 +8586,7 @@
       "Brent": 63.38,
       "US10Y": 4.11,
       "DXY": 100.16,
-      "USDINR": 0.0,
+      "USDINR": 88.49,
       "Nifty50": 26192.2,
       "IndiaGSec": 6.54
     },
@@ -8613,7 +8595,7 @@
       "Brent": 62.56,
       "US10Y": 4.06,
       "DXY": 100.18,
-      "USDINR": 0.0,
+      "USDINR": 88.69,
       "Nifty50": 26068.2,
       "IndiaGSec": 6.54
     },
@@ -8622,7 +8604,7 @@
       "Brent": 63.37,
       "US10Y": 4.04,
       "DXY": 100.14,
-      "USDINR": 0.0,
+      "USDINR": 89.63,
       "Nifty50": 25959.5,
       "IndiaGSec": 6.54
     },
@@ -8631,7 +8613,7 @@
       "Brent": 62.48,
       "US10Y": 4.0,
       "DXY": 99.66,
-      "USDINR": 0.0,
+      "USDINR": 89.15,
       "Nifty50": 25884.8,
       "IndiaGSec": 6.54
     },
@@ -8640,7 +8622,7 @@
       "Brent": 63.13,
       "US10Y": 4.0,
       "DXY": 99.6,
-      "USDINR": 0.0,
+      "USDINR": 89.15,
       "Nifty50": 26205.3,
       "IndiaGSec": 6.54
     },
@@ -8649,7 +8631,7 @@
       "Brent": 63.13,
       "US10Y": 4.0,
       "DXY": 99.6,
-      "USDINR": 0.0,
+      "USDINR": 89.16,
       "Nifty50": 26215.6,
       "IndiaGSec": 6.54
     },
@@ -8658,7 +8640,7 @@
       "Brent": 63.2,
       "US10Y": 4.02,
       "DXY": 99.46,
-      "USDINR": 0.0,
+      "USDINR": 89.36,
       "Nifty50": 26202.9,
       "IndiaGSec": 6.54
     },
@@ -8667,7 +8649,7 @@
       "Brent": 63.17,
       "US10Y": 4.1,
       "DXY": 99.41,
-      "USDINR": 0.0,
+      "USDINR": 89.35,
       "Nifty50": 26175.8,
       "IndiaGSec": 6.63
     },
@@ -8676,7 +8658,7 @@
       "Brent": 62.45,
       "US10Y": 4.09,
       "DXY": 99.36,
-      "USDINR": 0.0,
+      "USDINR": 89.61,
       "Nifty50": 26032.2,
       "IndiaGSec": 6.63
     },
@@ -8685,7 +8667,7 @@
       "Brent": 62.67,
       "US10Y": 4.06,
       "DXY": 98.85,
-      "USDINR": 0.0,
+      "USDINR": 89.92,
       "Nifty50": 25986.0,
       "IndiaGSec": 6.63
     },
@@ -8694,7 +8676,7 @@
       "Brent": 63.26,
       "US10Y": 4.11,
       "DXY": 98.99,
-      "USDINR": 0.0,
+      "USDINR": 90.17,
       "Nifty50": 26033.8,
       "IndiaGSec": 6.63
     },
@@ -8703,7 +8685,7 @@
       "Brent": 63.75,
       "US10Y": 4.14,
       "DXY": 98.99,
-      "USDINR": 0.0,
+      "USDINR": 89.84,
       "Nifty50": 26186.4,
       "IndiaGSec": 6.63
     },
@@ -8712,7 +8694,7 @@
       "Brent": 62.49,
       "US10Y": 4.17,
       "DXY": 99.09,
-      "USDINR": 0.0,
+      "USDINR": 89.94,
       "Nifty50": 25960.6,
       "IndiaGSec": 6.63
     },
@@ -8721,7 +8703,7 @@
       "Brent": 61.94,
       "US10Y": 4.19,
       "DXY": 99.22,
-      "USDINR": 0.0,
+      "USDINR": 90.13,
       "Nifty50": 25839.7,
       "IndiaGSec": 6.63
     },
@@ -8730,7 +8712,7 @@
       "Brent": 62.21,
       "US10Y": 4.16,
       "DXY": 98.79,
-      "USDINR": 0.0,
+      "USDINR": 89.92,
       "Nifty50": 25758.0,
       "IndiaGSec": 6.63
     },
@@ -8739,7 +8721,7 @@
       "Brent": 61.28,
       "US10Y": 4.14,
       "DXY": 98.35,
-      "USDINR": 0.0,
+      "USDINR": 89.79,
       "Nifty50": 25898.6,
       "IndiaGSec": 6.63
     },
@@ -8748,7 +8730,7 @@
       "Brent": 61.12,
       "US10Y": 4.19,
       "DXY": 98.4,
-      "USDINR": 0.0,
+      "USDINR": 90.25,
       "Nifty50": 26046.9,
       "IndiaGSec": 6.63
     },
@@ -8757,7 +8739,7 @@
       "Brent": 60.56,
       "US10Y": 4.18,
       "DXY": 98.15,
-      "USDINR": 0.0,
+      "USDINR": 90.58,
       "Nifty50": 26027.3,
       "IndiaGSec": 6.63
     },
@@ -8766,7 +8748,7 @@
       "Brent": 58.92,
       "US10Y": 4.15,
       "DXY": 98.15,
-      "USDINR": 0.0,
+      "USDINR": 90.78,
       "Nifty50": 25860.1,
       "IndiaGSec": 6.63
     },
@@ -8775,7 +8757,7 @@
       "Brent": 59.68,
       "US10Y": 4.15,
       "DXY": 98.37,
-      "USDINR": 0.0,
+      "USDINR": 90.95,
       "Nifty50": 25818.6,
       "IndiaGSec": 6.63
     },
@@ -8784,7 +8766,7 @@
       "Brent": 59.82,
       "US10Y": 4.12,
       "DXY": 98.43,
-      "USDINR": 0.0,
+      "USDINR": 90.41,
       "Nifty50": 25815.6,
       "IndiaGSec": 6.63
     },
@@ -8793,7 +8775,7 @@
       "Brent": 60.47,
       "US10Y": 4.15,
       "DXY": 98.6,
-      "USDINR": 0.0,
+      "USDINR": 90.26,
       "Nifty50": 25966.4,
       "IndiaGSec": 6.63
     },
@@ -8802,7 +8784,7 @@
       "Brent": 62.07,
       "US10Y": 4.17,
       "DXY": 98.29,
-      "USDINR": 0.0,
+      "USDINR": 89.57,
       "Nifty50": 26172.4,
       "IndiaGSec": 6.63
     },
@@ -8811,7 +8793,7 @@
       "Brent": 62.38,
       "US10Y": 4.17,
       "DXY": 97.94,
-      "USDINR": 0.0,
+      "USDINR": 89.6,
       "Nifty50": 26177.2,
       "IndiaGSec": 6.63
     },
@@ -8820,7 +8802,7 @@
       "Brent": 62.24,
       "US10Y": 4.14,
       "DXY": 97.98,
-      "USDINR": 0.0,
+      "USDINR": 89.51,
       "Nifty50": 26142.1,
       "IndiaGSec": 6.63
     },
@@ -8829,7 +8811,7 @@
       "Brent": 60.64,
       "US10Y": 4.14,
       "DXY": 98.02,
-      "USDINR": 0.0,
+      "USDINR": 90.11,
       "Nifty50": 26042.3,
       "IndiaGSec": 6.63
     },
@@ -8838,7 +8820,7 @@
       "Brent": 61.94,
       "US10Y": 4.12,
       "DXY": 98.04,
-      "USDINR": 0.0,
+      "USDINR": 89.83,
       "Nifty50": 25942.1,
       "IndiaGSec": 6.63
     },
@@ -8847,7 +8829,7 @@
       "Brent": 61.92,
       "US10Y": 4.13,
       "DXY": 98.24,
-      "USDINR": 0.0,
+      "USDINR": 89.9,
       "Nifty50": 25938.8,
       "IndiaGSec": 6.63
     },
@@ -8856,7 +8838,7 @@
       "Brent": 60.85,
       "US10Y": 4.16,
       "DXY": 98.28,
-      "USDINR": 0.0,
+      "USDINR": 89.77,
       "Nifty50": 26129.6,
       "IndiaGSec": 6.63
     },
@@ -8865,7 +8847,7 @@
       "Brent": 60.85,
       "US10Y": 4.16,
       "DXY": 98.28,
-      "USDINR": 0.0,
+      "USDINR": 89.77,
       "Nifty50": 26146.6,
       "IndiaGSec": 6.73
     },
@@ -8874,7 +8856,7 @@
       "Brent": 60.75,
       "US10Y": 4.19,
       "DXY": 98.42,
-      "USDINR": 0.0,
+      "USDINR": 89.96,
       "Nifty50": 26328.6,
       "IndiaGSec": 6.73
     },
@@ -8883,7 +8865,7 @@
       "Brent": 61.76,
       "US10Y": 4.16,
       "DXY": 98.27,
-      "USDINR": 0.0,
+      "USDINR": 90.01,
       "Nifty50": 26250.3,
       "IndiaGSec": 6.73
     },
@@ -8892,7 +8874,7 @@
       "Brent": 60.7,
       "US10Y": 4.18,
       "DXY": 98.58,
-      "USDINR": 0.0,
+      "USDINR": 90.23,
       "Nifty50": 26178.7,
       "IndiaGSec": 6.73
     },
@@ -8901,7 +8883,7 @@
       "Brent": 59.96,
       "US10Y": 4.14,
       "DXY": 98.68,
-      "USDINR": 0.0,
+      "USDINR": 90.17,
       "Nifty50": 26140.8,
       "IndiaGSec": 6.73
     },
@@ -8910,7 +8892,7 @@
       "Brent": 61.99,
       "US10Y": 4.18,
       "DXY": 98.93,
-      "USDINR": 0.0,
+      "USDINR": 89.86,
       "Nifty50": 25876.8,
       "IndiaGSec": 6.73
     },
@@ -8919,7 +8901,7 @@
       "Brent": 63.34,
       "US10Y": 4.17,
       "DXY": 99.13,
-      "USDINR": 0.0,
+      "USDINR": 89.91,
       "Nifty50": 25683.3,
       "IndiaGSec": 6.73
     },
@@ -8928,7 +8910,7 @@
       "Brent": 63.87,
       "US10Y": 4.19,
       "DXY": 98.86,
-      "USDINR": 0.0,
+      "USDINR": 90.24,
       "Nifty50": 25790.2,
       "IndiaGSec": 6.73
     },
@@ -8937,7 +8919,7 @@
       "Brent": 65.47,
       "US10Y": 4.17,
       "DXY": 99.13,
-      "USDINR": 0.0,
+      "USDINR": 90.13,
       "Nifty50": 25732.3,
       "IndiaGSec": 6.73
     },
@@ -8946,7 +8928,7 @@
       "Brent": 66.52,
       "US10Y": 4.14,
       "DXY": 99.13,
-      "USDINR": 0.0,
+      "USDINR": 90.27,
       "Nifty50": 25665.6,
       "IndiaGSec": 6.73
     },
@@ -8955,7 +8937,7 @@
       "Brent": 63.76,
       "US10Y": 4.16,
       "DXY": 99.32,
-      "USDINR": 0.0,
+      "USDINR": 90.18,
       "Nifty50": 25665.6,
       "IndiaGSec": 6.73
     },
@@ -8964,7 +8946,7 @@
       "Brent": 64.13,
       "US10Y": 4.23,
       "DXY": 99.39,
-      "USDINR": 0.0,
+      "USDINR": 90.36,
       "Nifty50": 25694.3,
       "IndiaGSec": 6.73
     },
@@ -8973,7 +8955,7 @@
       "Brent": 64.13,
       "US10Y": 4.23,
       "DXY": 99.39,
-      "USDINR": 0.0,
+      "USDINR": 90.7,
       "Nifty50": 25585.5,
       "IndiaGSec": 6.73
     },
@@ -8982,7 +8964,7 @@
       "Brent": 64.92,
       "US10Y": 4.3,
       "DXY": 98.64,
-      "USDINR": 0.0,
+      "USDINR": 90.9,
       "Nifty50": 25232.5,
       "IndiaGSec": 6.73
     },
@@ -8991,7 +8973,7 @@
       "Brent": 65.24,
       "US10Y": 4.25,
       "DXY": 98.76,
-      "USDINR": 0.0,
+      "USDINR": 91.12,
       "Nifty50": 25157.5,
       "IndiaGSec": 6.73
     },
@@ -9000,7 +8982,7 @@
       "Brent": 64.06,
       "US10Y": 4.25,
       "DXY": 98.36,
-      "USDINR": 0.0,
+      "USDINR": 91.54,
       "Nifty50": 25289.9,
       "IndiaGSec": 6.73
     },
@@ -9009,7 +8991,7 @@
       "Brent": 65.88,
       "US10Y": 4.24,
       "DXY": 97.6,
-      "USDINR": 0.0,
+      "USDINR": 91.56,
       "Nifty50": 25048.7,
       "IndiaGSec": 6.73
     },
@@ -9018,7 +9000,7 @@
       "Brent": 65.59,
       "US10Y": 4.21,
       "DXY": 97.04,
-      "USDINR": 0.0,
+      "USDINR": 91.5,
       "Nifty50": 25048.7,
       "IndiaGSec": 6.73
     },
@@ -9027,7 +9009,7 @@
       "Brent": 67.57,
       "US10Y": 4.22,
       "DXY": 96.22,
-      "USDINR": 0.0,
+      "USDINR": 91.71,
       "Nifty50": 25175.4,
       "IndiaGSec": 6.73
     },
@@ -9036,7 +9018,7 @@
       "Brent": 68.4,
       "US10Y": 4.25,
       "DXY": 96.45,
-      "USDINR": 0.0,
+      "USDINR": 91.53,
       "Nifty50": 25342.8,
       "IndiaGSec": 6.73
     },
@@ -9045,7 +9027,7 @@
       "Brent": 70.71,
       "US10Y": 4.23,
       "DXY": 96.28,
-      "USDINR": 0.0,
+      "USDINR": 92.04,
       "Nifty50": 25418.9,
       "IndiaGSec": 6.73
     },
@@ -9054,7 +9036,7 @@
       "Brent": 70.69,
       "US10Y": 4.24,
       "DXY": 96.99,
-      "USDINR": 0.0,
+      "USDINR": 91.78,
       "Nifty50": 25320.7,
       "IndiaGSec": 6.73
     },
@@ -9063,7 +9045,7 @@
       "Brent": 66.3,
       "US10Y": 4.28,
       "DXY": 97.61,
-      "USDINR": 0.0,
+      "USDINR": 91.69,
       "Nifty50": 25088.4,
       "IndiaGSec": 6.77
     },
@@ -9072,7 +9054,7 @@
       "Brent": 67.33,
       "US10Y": 4.27,
       "DXY": 97.44,
-      "USDINR": 0.0,
+      "USDINR": 90.25,
       "Nifty50": 25727.6,
       "IndiaGSec": 6.77
     },
@@ -9081,7 +9063,7 @@
       "Brent": 69.46,
       "US10Y": 4.28,
       "DXY": 97.62,
-      "USDINR": 0.0,
+      "USDINR": 90.42,
       "Nifty50": 25776.0,
       "IndiaGSec": 6.77
     },
@@ -9090,7 +9072,7 @@
       "Brent": 67.55,
       "US10Y": 4.21,
       "DXY": 97.82,
-      "USDINR": 0.0,
+      "USDINR": 90.12,
       "Nifty50": 25642.8,
       "IndiaGSec": 6.77
     },
@@ -9099,7 +9081,7 @@
       "Brent": 68.05,
       "US10Y": 4.21,
       "DXY": 97.63,
-      "USDINR": 0.0,
+      "USDINR": 90.31,
       "Nifty50": 25693.7,
       "IndiaGSec": 6.77
     },
@@ -9108,7 +9090,7 @@
       "Brent": 69.04,
       "US10Y": 4.2,
       "DXY": 96.82,
-      "USDINR": 0.0,
+      "USDINR": 90.59,
       "Nifty50": 25867.3,
       "IndiaGSec": 6.77
     },
@@ -9117,7 +9099,7 @@
       "Brent": 68.8,
       "US10Y": 4.15,
       "DXY": 96.8,
-      "USDINR": 0.0,
+      "USDINR": 90.82,
       "Nifty50": 25935.2,
       "IndiaGSec": 6.77
     },
@@ -9126,7 +9108,7 @@
       "Brent": 69.4,
       "US10Y": 4.17,
       "DXY": 96.83,
-      "USDINR": 0.0,
+      "USDINR": 90.59,
       "Nifty50": 25953.8,
       "IndiaGSec": 6.77
     },
@@ -9135,7 +9117,7 @@
       "Brent": 67.52,
       "US10Y": 4.1,
       "DXY": 96.93,
-      "USDINR": 0.0,
+      "USDINR": 90.74,
       "Nifty50": 25807.2,
       "IndiaGSec": 6.77
     },
@@ -9144,7 +9126,7 @@
       "Brent": 67.75,
       "US10Y": 4.06,
       "DXY": 96.88,
-      "USDINR": 0.0,
+      "USDINR": 90.56,
       "Nifty50": 25471.1,
       "IndiaGSec": 6.77
     },
@@ -9153,7 +9135,7 @@
       "Brent": 67.75,
       "US10Y": 4.06,
       "DXY": 96.88,
-      "USDINR": 0.0,
+      "USDINR": 90.57,
       "Nifty50": 25682.8,
       "IndiaGSec": 6.77
     },
@@ -9162,7 +9144,7 @@
       "Brent": 67.42,
       "US10Y": 4.05,
       "DXY": 97.16,
-      "USDINR": 0.0,
+      "USDINR": 90.78,
       "Nifty50": 25725.4,
       "IndiaGSec": 6.77
     },
@@ -9171,7 +9153,7 @@
       "Brent": 70.35,
       "US10Y": 4.08,
       "DXY": 97.7,
-      "USDINR": 0.0,
+      "USDINR": 90.63,
       "Nifty50": 25819.3,
       "IndiaGSec": 6.77
     },
@@ -9180,7 +9162,7 @@
       "Brent": 71.66,
       "US10Y": 4.07,
       "DXY": 97.93,
-      "USDINR": 0.0,
+      "USDINR": 90.79,
       "Nifty50": 25454.3,
       "IndiaGSec": 6.77
     },
@@ -9189,7 +9171,7 @@
       "Brent": 71.76,
       "US10Y": 4.09,
       "DXY": 97.8,
-      "USDINR": 0.0,
+      "USDINR": 91.04,
       "Nifty50": 25571.2,
       "IndiaGSec": 6.77
     },
@@ -9198,7 +9180,7 @@
       "Brent": 71.49,
       "US10Y": 4.03,
       "DXY": 97.7,
-      "USDINR": 0.0,
+      "USDINR": 90.73,
       "Nifty50": 25713.0,
       "IndiaGSec": 6.77
     },
@@ -9207,7 +9189,7 @@
       "Brent": 70.77,
       "US10Y": 4.03,
       "DXY": 97.88,
-      "USDINR": 0.0,
+      "USDINR": 91.02,
       "Nifty50": 25424.7,
       "IndiaGSec": 6.77
     },
@@ -9216,7 +9198,7 @@
       "Brent": 70.85,
       "US10Y": 4.05,
       "DXY": 97.7,
-      "USDINR": 0.0,
+      "USDINR": 90.92,
       "Nifty50": 25482.5,
       "IndiaGSec": 6.77
     },
@@ -9225,7 +9207,7 @@
       "Brent": 70.75,
       "US10Y": 4.02,
       "DXY": 97.79,
-      "USDINR": 0.0,
+      "USDINR": 90.95,
       "Nifty50": 25496.6,
       "IndiaGSec": 6.77
     },
@@ -9234,7 +9216,7 @@
       "Brent": 72.48,
       "US10Y": 3.96,
       "DXY": 97.61,
-      "USDINR": 0.0,
+      "USDINR": 91.01,
       "Nifty50": 25178.7,
       "IndiaGSec": 6.77
     },
@@ -9243,7 +9225,7 @@
       "Brent": 77.74,
       "US10Y": 4.05,
       "DXY": 98.38,
-      "USDINR": 0.0,
+      "USDINR": 91.08,
       "Nifty50": 24865.7,
       "IndiaGSec": 6.84
     },
@@ -9252,7 +9234,7 @@
       "Brent": 81.4,
       "US10Y": 4.06,
       "DXY": 99.05,
-      "USDINR": 0.0,
+      "USDINR": 91.56,
       "Nifty50": 24865.7,
       "IndiaGSec": 6.84
     },
@@ -9261,7 +9243,7 @@
       "Brent": 81.4,
       "US10Y": 4.08,
       "DXY": 98.77,
-      "USDINR": 0.0,
+      "USDINR": 92.01,
       "Nifty50": 24480.5,
       "IndiaGSec": 6.84
     },
@@ -9270,7 +9252,7 @@
       "Brent": 85.41,
       "US10Y": 4.15,
       "DXY": 99.32,
-      "USDINR": 0.0,
+      "USDINR": 92.12,
       "Nifty50": 24765.9,
       "IndiaGSec": 6.84
     },
@@ -9279,7 +9261,7 @@
       "Brent": 92.69,
       "US10Y": 4.13,
       "DXY": 98.99,
-      "USDINR": 0.0,
+      "USDINR": 91.79,
       "Nifty50": 24450.4,
       "IndiaGSec": 6.84
     },
@@ -9288,7 +9270,7 @@
       "Brent": 98.96,
       "US10Y": 4.14,
       "DXY": 99.18,
-      "USDINR": 0.0,
+      "USDINR": 91.94,
       "Nifty50": 24028.1,
       "IndiaGSec": 6.84
     },
@@ -9297,7 +9279,7 @@
       "Brent": 87.8,
       "US10Y": 4.14,
       "DXY": 98.83,
-      "USDINR": 0.0,
+      "USDINR": 91.22,
       "Nifty50": 24261.6,
       "IndiaGSec": 6.84
     },
@@ -9306,7 +9288,7 @@
       "Brent": 91.98,
       "US10Y": 4.21,
       "DXY": 99.23,
-      "USDINR": 0.0,
+      "USDINR": 92.17,
       "Nifty50": 23866.8,
       "IndiaGSec": 6.84
     },
@@ -9315,7 +9297,7 @@
       "Brent": 100.46,
       "US10Y": 4.27,
       "DXY": 99.74,
-      "USDINR": 0.0,
+      "USDINR": 92.23,
       "Nifty50": 23639.2,
       "IndiaGSec": 6.84
     },
@@ -9324,7 +9306,7 @@
       "Brent": 103.14,
       "US10Y": 4.28,
       "DXY": 100.36,
-      "USDINR": 0.0,
+      "USDINR": 92.39,
       "Nifty50": 23151.1,
       "IndiaGSec": 6.84
     },
@@ -9333,7 +9315,7 @@
       "Brent": 100.21,
       "US10Y": 4.22,
       "DXY": 99.71,
-      "USDINR": 0.0,
+      "USDINR": 92.56,
       "Nifty50": 23408.8,
       "IndiaGSec": 6.84
     },
@@ -9342,7 +9324,7 @@
       "Brent": 103.42,
       "US10Y": 4.2,
       "DXY": 99.58,
-      "USDINR": 0.0,
+      "USDINR": 92.28,
       "Nifty50": 23581.2,
       "IndiaGSec": 6.84
     },
@@ -9351,7 +9333,7 @@
       "Brent": 107.38,
       "US10Y": 4.26,
       "DXY": 100.09,
-      "USDINR": 0.0,
+      "USDINR": 92.39,
       "Nifty50": 23777.8,
       "IndiaGSec": 6.84
     },
@@ -9360,7 +9342,7 @@
       "Brent": 108.65,
       "US10Y": 4.28,
       "DXY": 99.23,
-      "USDINR": 0.0,
+      "USDINR": 93.25,
       "Nifty50": 23002.2,
       "IndiaGSec": 6.84
     },
@@ -9369,7 +9351,7 @@
       "Brent": 112.19,
       "US10Y": 4.39,
       "DXY": 99.65,
-      "USDINR": 0.0,
+      "USDINR": 93.08,
       "Nifty50": 23114.5,
       "IndiaGSec": 6.84
     },
@@ -9378,7 +9360,7 @@
       "Brent": 99.94,
       "US10Y": 4.33,
       "DXY": 98.95,
-      "USDINR": 0.0,
+      "USDINR": 93.9,
       "Nifty50": 22512.7,
       "IndiaGSec": 6.84
     },
@@ -9387,7 +9369,7 @@
       "Brent": 104.49,
       "US10Y": 4.39,
       "DXY": 99.43,
-      "USDINR": 0.0,
+      "USDINR": 93.24,
       "Nifty50": 22912.4,
       "IndiaGSec": 6.84
     },
@@ -9396,7 +9378,7 @@
       "Brent": 102.22,
       "US10Y": 4.33,
       "DXY": 99.6,
-      "USDINR": 0.0,
+      "USDINR": 94.3,
       "Nifty50": 23306.4,
       "IndiaGSec": 6.84
     },
@@ -9405,7 +9387,7 @@
       "Brent": 108.01,
       "US10Y": 4.42,
       "DXY": 99.9,
-      "USDINR": 0.0,
+      "USDINR": 94.69,
       "Nifty50": 23306.4,
       "IndiaGSec": 6.84
     },
@@ -9414,7 +9396,7 @@
       "Brent": 112.57,
       "US10Y": 4.44,
       "DXY": 100.15,
-      "USDINR": 0.0,
+      "USDINR": 94.31,
       "Nifty50": 22819.6,
       "IndiaGSec": 6.84
     },
@@ -9423,7 +9405,7 @@
       "Brent": 112.78,
       "US10Y": 4.34,
       "DXY": 100.51,
-      "USDINR": 0.0,
+      "USDINR": 94.78,
       "Nifty50": 22331.4,
       "IndiaGSec": 6.84
     },
@@ -9432,7 +9414,7 @@
       "Brent": 118.35,
       "US10Y": 4.31,
       "DXY": 99.96,
-      "USDINR": 0.0,
+      "USDINR": 94.36,
       "Nifty50": 22331.4,
       "IndiaGSec": 6.84
     },
@@ -9441,7 +9423,7 @@
       "Brent": 101.16,
       "US10Y": 4.32,
       "DXY": 99.65,
-      "USDINR": 0.0,
+      "USDINR": 93.48,
       "Nifty50": 22679.4,
       "IndiaGSec": 7.05
     },
@@ -9450,7 +9432,16 @@
       "Brent": 109.03,
       "US10Y": 4.31,
       "DXY": 100.03,
-      "USDINR": 0.0,
+      "USDINR": 92.64,
+      "Nifty50": 22713.1,
+      "IndiaGSec": 7.05
+    },
+    {
+      "Date": "2026-04-03",
+      "Brent": 109.03,
+      "US10Y": 4.31,
+      "DXY": 100.03,
+      "USDINR": 92.97,
       "Nifty50": 22713.1,
       "IndiaGSec": 7.05
     },
@@ -9459,7 +9450,7 @@
       "Brent": 109.77,
       "US10Y": 4.34,
       "DXY": 99.98,
-      "USDINR": 0.0,
+      "USDINR": 92.97,
       "Nifty50": 22968.2,
       "IndiaGSec": 7.05
     },
@@ -9468,7 +9459,7 @@
       "Brent": 109.27,
       "US10Y": 4.34,
       "DXY": 99.64,
-      "USDINR": 0.0,
+      "USDINR": 92.82,
       "Nifty50": 23123.7,
       "IndiaGSec": 7.05
     },
@@ -9477,7 +9468,7 @@
       "Brent": 94.75,
       "US10Y": 4.29,
       "DXY": 99.13,
-      "USDINR": 0.0,
+      "USDINR": 92.86,
       "Nifty50": 23997.3,
       "IndiaGSec": 7.05
     },
@@ -9486,7 +9477,7 @@
       "Brent": 95.92,
       "US10Y": 4.29,
       "DXY": 98.82,
-      "USDINR": 0.0,
+      "USDINR": 92.27,
       "Nifty50": 23775.1,
       "IndiaGSec": 7.05
     },
@@ -9495,7 +9486,7 @@
       "Brent": 95.2,
       "US10Y": 4.32,
       "DXY": 98.65,
-      "USDINR": 0.0,
+      "USDINR": 92.47,
       "Nifty50": 24050.6,
       "IndiaGSec": 7.05
     },
@@ -9504,7 +9495,7 @@
       "Brent": 99.36,
       "US10Y": 4.3,
       "DXY": 98.37,
-      "USDINR": 0.0,
+      "USDINR": 94.51,
       "Nifty50": 23842.7,
       "IndiaGSec": 7.05
     },
@@ -9513,7 +9504,7 @@
       "Brent": 94.79,
       "US10Y": 4.26,
       "DXY": 98.12,
-      "USDINR": 0.0,
+      "USDINR": 94.95,
       "Nifty50": 23842.7,
       "IndiaGSec": 7.05
     },
@@ -9522,7 +9513,7 @@
       "Brent": 94.93,
       "US10Y": 4.28,
       "DXY": 98.06,
-      "USDINR": 0.0,
+      "USDINR": 93.17,
       "Nifty50": 24231.3,
       "IndiaGSec": 7.05
     },
@@ -9531,7 +9522,7 @@
       "Brent": 99.39,
       "US10Y": 4.31,
       "DXY": 98.22,
-      "USDINR": 0.0,
+      "USDINR": 93.39,
       "Nifty50": 24196.8,
       "IndiaGSec": 7.05
     },
@@ -9540,7 +9531,7 @@
       "Brent": 90.38,
       "US10Y": 4.25,
       "DXY": 98.1,
-      "USDINR": 0.0,
+      "USDINR": 93.05,
       "Nifty50": 24353.6,
       "IndiaGSec": 7.05
     },
@@ -9549,7 +9540,7 @@
       "Brent": 95.48,
       "US10Y": 4.25,
       "DXY": 98.05,
-      "USDINR": 0.0,
+      "USDINR": 92.6,
       "Nifty50": 24364.8,
       "IndiaGSec": 7.05
     },
@@ -9558,7 +9549,7 @@
       "Brent": 98.48,
       "US10Y": 4.29,
       "DXY": 98.41,
-      "USDINR": 0.0,
+      "USDINR": 93.12,
       "Nifty50": 24576.6,
       "IndiaGSec": 7.05
     },
@@ -9567,7 +9558,7 @@
       "Brent": 101.91,
       "US10Y": 4.29,
       "DXY": 98.59,
-      "USDINR": 0.0,
+      "USDINR": 93.62,
       "Nifty50": 24378.1,
       "IndiaGSec": 7.05
     },
@@ -9576,7 +9567,7 @@
       "Brent": 105.07,
       "US10Y": 4.32,
       "DXY": 98.8,
-      "USDINR": 0.0,
+      "USDINR": 93.8,
       "Nifty50": 24173.1,
       "IndiaGSec": 7.05
     },
@@ -9585,7 +9576,7 @@
       "Brent": 105.33,
       "US10Y": 4.31,
       "DXY": 98.51,
-      "USDINR": 0.0,
+      "USDINR": 94.11,
       "Nifty50": 23897.9,
       "IndiaGSec": 7.05
     },
@@ -9594,7 +9585,7 @@
       "Brent": 108.23,
       "US10Y": 4.34,
       "DXY": 98.48,
-      "USDINR": 0.0,
+      "USDINR": 94.25,
       "Nifty50": 24092.7,
       "IndiaGSec": 7.05
     },
@@ -9603,7 +9594,7 @@
       "Brent": 111.26,
       "US10Y": 4.35,
       "DXY": 98.62,
-      "USDINR": 0.0,
+      "USDINR": 94.26,
       "Nifty50": 23995.7,
       "IndiaGSec": 7.05
     },
@@ -9612,7 +9603,7 @@
       "Brent": 118.03,
       "US10Y": 4.42,
       "DXY": 98.92,
-      "USDINR": 0.0,
+      "USDINR": 94.65,
       "Nifty50": 24177.7,
       "IndiaGSec": 7.05
     },
@@ -9621,7 +9612,7 @@
       "Brent": 114.01,
       "US10Y": 4.39,
       "DXY": 98.08,
-      "USDINR": 0.0,
+      "USDINR": 94.92,
       "Nifty50": 23997.6,
       "IndiaGSec": 7.05
     },
@@ -9630,7 +9621,7 @@
       "Brent": 108.17,
       "US10Y": 4.38,
       "DXY": 98.21,
-      "USDINR": 0.0,
+      "USDINR": 94.76,
       "Nifty50": 23997.6,
       "IndiaGSec": 7.02
     },
@@ -9639,7 +9630,7 @@
       "Brent": 114.44,
       "US10Y": 4.45,
       "DXY": 98.47,
-      "USDINR": 0.0,
+      "USDINR": 94.9,
       "Nifty50": 24119.3,
       "IndiaGSec": 7.02
     },
@@ -9648,7 +9639,7 @@
       "Brent": 109.87,
       "US10Y": 4.42,
       "DXY": 98.48,
-      "USDINR": 0.0,
+      "USDINR": 95.26,
       "Nifty50": 24032.8,
       "IndiaGSec": 7.02
     },
@@ -9657,7 +9648,7 @@
       "Brent": 101.27,
       "US10Y": 4.36,
       "DXY": 98.02,
-      "USDINR": 0.0,
+      "USDINR": 95.18,
       "Nifty50": 24330.9,
       "IndiaGSec": 7.02
     },
@@ -9666,7 +9657,7 @@
       "Brent": 100.06,
       "US10Y": 4.39,
       "DXY": 98.25,
-      "USDINR": 0.0,
+      "USDINR": 94.61,
       "Nifty50": 24326.7,
       "IndiaGSec": 7.02
     },
@@ -9675,7 +9666,7 @@
       "Brent": 101.29,
       "US10Y": 4.36,
       "DXY": 97.84,
-      "USDINR": 0.0,
+      "USDINR": 94.25,
       "Nifty50": 24176.2,
       "IndiaGSec": 7.02
     },
@@ -9684,7 +9675,7 @@
       "Brent": 104.21,
       "US10Y": 4.41,
       "DXY": 97.94,
-      "USDINR": 0.0,
+      "USDINR": 94.43,
       "Nifty50": 23815.8,
       "IndiaGSec": 7.02
     },
@@ -9693,7 +9684,7 @@
       "Brent": 107.77,
       "US10Y": 4.46,
       "DXY": 98.29,
-      "USDINR": 0.0,
+      "USDINR": 95.39,
       "Nifty50": 23379.6,
       "IndiaGSec": 7.02
     },
@@ -9702,7 +9693,7 @@
       "Brent": 105.63,
       "US10Y": 4.48,
       "DXY": 98.48,
-      "USDINR": 0.0,
+      "USDINR": 95.63,
       "Nifty50": 23412.6,
       "IndiaGSec": 7.02
     },
@@ -9711,7 +9702,7 @@
       "Brent": 105.72,
       "US10Y": 4.46,
       "DXY": 98.88,
-      "USDINR": 0.0,
+      "USDINR": 95.7,
       "Nifty50": 23689.6,
       "IndiaGSec": 7.02
     },
@@ -9720,7 +9711,7 @@
       "Brent": 109.26,
       "US10Y": 4.59,
       "DXY": 99.27,
-      "USDINR": 0.0,
+      "USDINR": 95.71,
       "Nifty50": 23643.5,
       "IndiaGSec": 7.02
     },
@@ -9729,7 +9720,7 @@
       "Brent": 112.1,
       "US10Y": 4.62,
       "DXY": 98.97,
-      "USDINR": 0.0,
+      "USDINR": 95.97,
       "Nifty50": 23649.9,
       "IndiaGSec": 7.02
     },
@@ -9738,7 +9729,7 @@
       "Brent": 111.28,
       "US10Y": 4.67,
       "DXY": 99.3,
-      "USDINR": 0.0,
+      "USDINR": 96.27,
       "Nifty50": 23618.0,
       "IndiaGSec": 7.02
     },
@@ -9747,7 +9738,7 @@
       "Brent": 105.02,
       "US10Y": 4.57,
       "DXY": 99.11,
-      "USDINR": 0.0,
+      "USDINR": 96.57,
       "Nifty50": 23659.0,
       "IndiaGSec": 7.02
     },
@@ -9756,7 +9747,7 @@
       "Brent": 102.58,
       "US10Y": 4.59,
       "DXY": 99.19,
-      "USDINR": 0.0,
+      "USDINR": 96.53,
       "Nifty50": 23654.7,
       "IndiaGSec": 7.02
     },
@@ -9765,7 +9756,7 @@
       "Brent": 103.54,
       "US10Y": 4.56,
       "DXY": 99.32,
-      "USDINR": 0.0,
+      "USDINR": 96.17,
       "Nifty50": 23719.3,
       "IndiaGSec": 7.02
     },
@@ -9774,7 +9765,7 @@
       "Brent": 103.54,
       "US10Y": 4.56,
       "DXY": 99.32,
-      "USDINR": 0.0,
+      "USDINR": 95.72,
       "Nifty50": 24031.7,
       "IndiaGSec": 7.02
     },
@@ -9783,7 +9774,7 @@
       "Brent": 99.58,
       "US10Y": 4.49,
       "DXY": 99.17,
-      "USDINR": 0.0,
+      "USDINR": 95.25,
       "Nifty50": 23913.7,
       "IndiaGSec": 7.02
     },
@@ -9792,7 +9783,7 @@
       "Brent": 94.29,
       "US10Y": 4.48,
       "DXY": 99.21,
-      "USDINR": 0.0,
+      "USDINR": 95.9,
       "Nifty50": 23907.2,
       "IndiaGSec": 7.02
     },
@@ -9801,7 +9792,7 @@
       "Brent": 93.71,
       "US10Y": 4.45,
       "DXY": 99.02,
-      "USDINR": 0.0,
+      "USDINR": 96.05,
       "Nifty50": 23907.2,
       "IndiaGSec": 7.02
     },
@@ -9810,7 +9801,7 @@
       "Brent": 92.05,
       "US10Y": 4.45,
       "DXY": 98.91,
-      "USDINR": 0.0,
+      "USDINR": 96.05,
       "Nifty50": 23547.8,
       "IndiaGSec": 7.02
     },
@@ -9819,7 +9810,7 @@
       "Brent": 94.98,
       "US10Y": 4.47,
       "DXY": 99.2,
-      "USDINR": 0.0,
+      "USDINR": 95.0,
       "Nifty50": 23382.6,
       "IndiaGSec": 6.89
     },
@@ -9828,7 +9819,7 @@
       "Brent": 96.0,
       "US10Y": 4.45,
       "DXY": 99.22,
-      "USDINR": 0.0,
+      "USDINR": 95.55,
       "Nifty50": 23483.6,
       "IndiaGSec": 6.89
     },
@@ -9837,7 +9828,7 @@
       "Brent": 97.81,
       "US10Y": 4.49,
       "DXY": 99.53,
-      "USDINR": 0.0,
+      "USDINR": 95.26,
       "Nifty50": 23405.6,
       "IndiaGSec": 6.89
     },
@@ -9846,7 +9837,7 @@
       "Brent": 95.03,
       "US10Y": 4.48,
       "DXY": 99.41,
-      "USDINR": 0.0,
+      "USDINR": 96.16,
       "Nifty50": 23416.6,
       "IndiaGSec": 6.89
     },
@@ -9855,7 +9846,7 @@
       "Brent": 93.09,
       "US10Y": 4.54,
       "DXY": 100.07,
-      "USDINR": 0.0,
+      "USDINR": 95.79,
       "Nifty50": 23366.7,
       "IndiaGSec": 6.89
     },
@@ -9864,7 +9855,7 @@
       "Brent": 94.25,
       "US10Y": 4.55,
       "DXY": 100.05,
-      "USDINR": 0.0,
+      "USDINR": 94.95,
       "Nifty50": 23123.0,
       "IndiaGSec": 6.89
     },
@@ -9873,7 +9864,7 @@
       "Brent": 91.45,
       "US10Y": 4.53,
       "DXY": 99.91,
-      "USDINR": 0.0,
+      "USDINR": 95.69,
       "Nifty50": 23242.1,
       "IndiaGSec": 6.89
     },
@@ -9882,7 +9873,7 @@
       "Brent": 93.1,
       "US10Y": 4.54,
       "DXY": 99.95,
-      "USDINR": 0.0,
+      "USDINR": 95.36,
       "Nifty50": 23214.9,
       "IndiaGSec": 6.89
     },
@@ -9891,7 +9882,7 @@
       "Brent": 90.38,
       "US10Y": 4.46,
       "DXY": 99.86,
-      "USDINR": 0.0,
+      "USDINR": 95.64,
       "Nifty50": 23161.6,
       "IndiaGSec": 6.89
     },
@@ -9900,7 +9891,7 @@
       "Brent": 87.33,
       "US10Y": 4.49,
       "DXY": 99.75,
-      "USDINR": 0.0,
+      "USDINR": 95.76,
       "Nifty50": 23622.9,
       "IndiaGSec": 6.89
     },
@@ -9909,7 +9900,7 @@
       "Brent": 83.17,
       "US10Y": 4.47,
       "DXY": 99.63,
-      "USDINR": 0.0,
+      "USDINR": 95.11,
       "Nifty50": 23853.9,
       "IndiaGSec": 6.89
     },
@@ -9918,7 +9909,7 @@
       "Brent": 78.96,
       "US10Y": 4.43,
       "DXY": 99.54,
-      "USDINR": 0.0,
+      "USDINR": 94.74,
       "Nifty50": 23989.2,
       "IndiaGSec": 6.89
     },
@@ -9927,7 +9918,7 @@
       "Brent": 79.55,
       "US10Y": 4.46,
       "DXY": 100.09,
-      "USDINR": 0.0,
+      "USDINR": 94.89,
       "Nifty50": 24085.7,
       "IndiaGSec": 6.89
     },
@@ -9936,7 +9927,7 @@
       "Brent": 79.85,
       "US10Y": 4.45,
       "DXY": 100.85,
-      "USDINR": 0.0,
+      "USDINR": 94.86,
       "Nifty50": 24168.0,
       "IndiaGSec": 6.89
     },
@@ -9945,7 +9936,7 @@
       "Brent": 79.85,
       "US10Y": 4.45,
       "DXY": 100.85,
-      "USDINR": 0.0,
+      "USDINR": 94.34,
       "Nifty50": 24013.1,
       "IndiaGSec": 6.89
     },
@@ -9954,7 +9945,7 @@
       "Brent": 77.9,
       "US10Y": 4.51,
       "DXY": 101.02,
-      "USDINR": 0.0,
+      "USDINR": 94.33,
       "Nifty50": 24102.9,
       "IndiaGSec": 6.89
     },
@@ -9963,7 +9954,7 @@
       "Brent": 77.08,
       "US10Y": 4.49,
       "DXY": 101.41,
-      "USDINR": 0.0,
+      "USDINR": 94.7,
       "Nifty50": 23824.1,
       "IndiaGSec": 6.89
     },
@@ -9972,7 +9963,7 @@
       "Brent": 73.74,
       "US10Y": 4.4,
       "DXY": 101.61,
-      "USDINR": 0.0,
+      "USDINR": 95.18,
       "Nifty50": 24021.7,
       "IndiaGSec": 6.89
     },
@@ -9981,7 +9972,7 @@
       "Brent": 75.26,
       "US10Y": 4.39,
       "DXY": 101.43,
-      "USDINR": 0.0,
+      "USDINR": 94.44,
       "Nifty50": 24056.0,
       "IndiaGSec": 6.89
     },
@@ -9990,7 +9981,7 @@
       "Brent": 71.99,
       "US10Y": 4.37,
       "DXY": 101.36,
-      "USDINR": 0.0,
+      "USDINR": 94.4,
       "Nifty50": 24056.0,
       "IndiaGSec": 6.89
     },
@@ -9999,7 +9990,7 @@
       "Brent": 73.15,
       "US10Y": 4.37,
       "DXY": 101.11,
-      "USDINR": 0.0,
+      "USDINR": 94.36,
       "Nifty50": 23946.2,
       "IndiaGSec": 6.89
     },
@@ -10008,7 +9999,7 @@
       "Brent": 72.92,
       "US10Y": 4.42,
       "DXY": 101.19,
-      "USDINR": 0.0,
+      "USDINR": 94.79,
       "Nifty50": 23865.8,
       "IndiaGSec": 6.89
     },
@@ -10017,7 +10008,7 @@
       "Brent": 71.57,
       "US10Y": 4.47,
       "DXY": 101.39,
-      "USDINR": 0.0,
+      "USDINR": 94.92,
       "Nifty50": 24005.8,
       "IndiaGSec": 6.89
     },
@@ -10026,7 +10017,7 @@
       "Brent": 71.8,
       "US10Y": 4.49,
       "DXY": 100.86,
-      "USDINR": 0.0,
+      "USDINR": 95.42,
       "Nifty50": 24175.7,
       "IndiaGSec": 6.89
     },
@@ -10035,7 +10026,7 @@
       "Brent": 71.8,
       "US10Y": 4.49,
       "DXY": 100.86,
-      "USDINR": 0.0,
+      "USDINR": 95.53,
       "Nifty50": 24270.8,
       "IndiaGSec": 6.89
     },
@@ -10044,7 +10035,7 @@
       "Brent": 71.99,
       "US10Y": 4.48,
       "DXY": 100.85,
-      "USDINR": 0.0,
+      "USDINR": 95.21,
       "Nifty50": 24430.3,
       "IndiaGSec": 6.89
     },
@@ -10053,7 +10044,7 @@
       "Brent": 74.16,
       "US10Y": 4.53,
       "DXY": 101.14,
-      "USDINR": 0.0,
+      "USDINR": 95.6,
       "Nifty50": 24398.7,
       "IndiaGSec": 6.89
     },
@@ -10062,7 +10053,7 @@
       "Brent": 78.02,
       "US10Y": 4.57,
       "DXY": 101.05,
-      "USDINR": 0.0,
+      "USDINR": 95.59,
       "Nifty50": 23882.1,
       "IndiaGSec": 6.89
     },
@@ -10071,7 +10062,7 @@
       "Brent": 76.3,
       "US10Y": 4.54,
       "DXY": 100.94,
-      "USDINR": 0.0,
+      "USDINR": 95.86,
       "Nifty50": 23962.8,
       "IndiaGSec": 6.89
     },
@@ -10080,7 +10071,7 @@
       "Brent": 76.01,
       "US10Y": 4.57,
       "DXY": 100.97,
-      "USDINR": 0.0,
+      "USDINR": 95.39,
       "Nifty50": 24206.9,
       "IndiaGSec": 6.89
     },
@@ -10089,7 +10080,7 @@
       "Brent": 83.3,
       "US10Y": 4.61,
       "DXY": 101.28,
-      "USDINR": 0.0,
+      "USDINR": 95.32,
       "Nifty50": 24211.0,
       "IndiaGSec": 6.89
     },
@@ -10098,7 +10089,7 @@
       "Brent": 84.73,
       "US10Y": 4.59,
       "DXY": 100.94,
-      "USDINR": 0.0,
+      "USDINR": 96.3,
       "Nifty50": 24052.1,
       "IndiaGSec": 6.89
     },
@@ -10107,7 +10098,7 @@
       "Brent": 84.95,
       "US10Y": 4.55,
       "DXY": 100.5,
-      "USDINR": 0.0,
+      "USDINR": 96.43,
       "Nifty50": 24078.5,
       "IndiaGSec": 6.89
     },
@@ -10116,7 +10107,7 @@
       "Brent": 84.23,
       "US10Y": 4.57,
       "DXY": 100.73,
-      "USDINR": 0.0,
+      "USDINR": 96.5,
       "Nifty50": 24072.8,
       "IndiaGSec": 6.89
     },
@@ -10125,7 +10116,7 @@
       "Brent": 88.1,
       "US10Y": 4.54,
       "DXY": 100.75,
-      "USDINR": 0.0,
+      "USDINR": 96.65,
       "Nifty50": 24334.3,
       "IndiaGSec": 6.89
     },
@@ -10134,7 +10125,7 @@
       "Brent": 89.22,
       "US10Y": 4.6,
       "DXY": 100.99,
-      "USDINR": 0.0,
+      "USDINR": 96.28,
       "Nifty50": 24238.5,
       "IndiaGSec": 6.89
     },
@@ -10143,7 +10134,7 @@
       "Brent": 91.01,
       "US10Y": 4.63,
       "DXY": 101.18,
-      "USDINR": 0.0,
+      "USDINR": 96.49,
       "Nifty50": 24187.7,
       "IndiaGSec": 6.89
     },
@@ -10152,7 +10143,7 @@
       "Brent": 94.07,
       "US10Y": 4.66,
       "DXY": 101.14,
-      "USDINR": 0.0,
+      "USDINR": 96.34,
       "Nifty50": 23996.2,
       "IndiaGSec": 6.89
     },
@@ -10161,7 +10152,7 @@
       "Brent": 100.69,
       "US10Y": 4.7,
       "DXY": 101.43,
-      "USDINR": 0.0,
+      "USDINR": 96.56,
       "Nifty50": 23869.6,
       "IndiaGSec": 6.89
     },
@@ -10170,7 +10161,7 @@
       "Brent": 96.78,
       "US10Y": 4.68,
       "DXY": 101.47,
-      "USDINR": 0.0,
+      "USDINR": 96.88,
       "Nifty50": 23767.4,
       "IndiaGSec": 6.89
     },
@@ -10179,7 +10170,7 @@
       "Brent": 88.36,
       "US10Y": 4.64,
       "DXY": 101.51,
-      "USDINR": 0.0,
+      "USDINR": 96.57,
       "Nifty50": 23995.9,
       "IndiaGSec": 6.89
     },
@@ -10188,7 +10179,7 @@
       "Brent": 84.09,
       "US10Y": 4.6,
       "DXY": 101.38,
-      "USDINR": 0.0,
+      "USDINR": 95.77,
       "Nifty50": 23985.3,
       "IndiaGSec": 6.89
     },
@@ -10197,7 +10188,7 @@
       "Brent": 90.74,
       "US10Y": 4.62,
       "DXY": 100.8,
-      "USDINR": 0.0,
+      "USDINR": 95.6,
       "Nifty50": 24250.2,
       "IndiaGSec": 6.89
     },
@@ -10206,7 +10197,7 @@
       "Brent": 89.03,
       "US10Y": 4.66,
       "DXY": 100.01,
-      "USDINR": 0.0,
+      "USDINR": 95.73,
       "Nifty50": 24317.2,
       "IndiaGSec": 6.89
     },
@@ -10215,7 +10206,7 @@
       "Brent": 90.12,
       "US10Y": 4.74,
       "DXY": 99.8,
-      "USDINR": 0.0,
+      "USDINR": 95.68,
       "Nifty50": 24383.6,
       "IndiaGSec": 6.89
     },
@@ -10224,7 +10215,7 @@
       "Brent": 83.77,
       "US10Y": 4.69,
       "DXY": 99.96,
-      "USDINR": 0.0,
+      "USDINR": 95.4,
       "Nifty50": 24774.3,
       "IndiaGSec": 6.89
     },
@@ -10233,7 +10224,7 @@
       "Brent": 79.36,
       "US10Y": 4.63,
       "DXY": 99.89,
-      "USDINR": 0.0,
+      "USDINR": 95.33,
       "Nifty50": 24614.9,
       "IndiaGSec": 6.89
     },
@@ -10242,7 +10233,7 @@
       "Brent": 79.45,
       "US10Y": 4.62,
       "DXY": 99.69,
-      "USDINR": 0.0,
+      "USDINR": 95.1,
       "Nifty50": 24624.7,
       "IndiaGSec": 6.89
     },
@@ -10251,7 +10242,7 @@
       "Brent": 82.49,
       "US10Y": 4.67,
       "DXY": 99.97,
-      "USDINR": 0.0,
+      "USDINR": 95.08,
       "Nifty50": 24636.0,
       "IndiaGSec": 6.89
     },
@@ -10260,7 +10251,7 @@
       "Brent": 83.55,
       "US10Y": 4.66,
       "DXY": 99.6,
-      "USDINR": 0.0,
+      "USDINR": 95.31,
       "Nifty50": 24570.7,
       "IndiaGSec": 6.89
     },
@@ -10269,7 +10260,7 @@
       "Brent": 87.72,
       "US10Y": 4.7,
       "DXY": 99.81,
-      "USDINR": 0.0,
+      "USDINR": 95.21,
       "Nifty50": 24583.8,
       "IndiaGSec": 6.89
     },
@@ -10278,7 +10269,7 @@
       "Brent": 88.91,
       "US10Y": 4.68,
       "DXY": 99.82,
-      "USDINR": 0.0,
+      "USDINR": 95.4,
       "Nifty50": 24471.7,
       "IndiaGSec": 6.89
     },
@@ -10287,7 +10278,7 @@
       "Brent": 88.98,
       "US10Y": 4.68,
       "DXY": 100.01,
-      "USDINR": 0.0,
+      "USDINR": 95.38,
       "Nifty50": 24435.9,
       "IndiaGSec": 6.89
     },
@@ -10296,7 +10287,7 @@
       "Brent": 87.07,
       "US10Y": 4.64,
       "DXY": 99.96,
-      "USDINR": 0.0,
+      "USDINR": 95.34,
       "Nifty50": 24395.8,
       "IndiaGSec": 6.89
     },
@@ -10305,7 +10296,7 @@
       "Brent": 88.52,
       "US10Y": 4.7,
       "DXY": 99.67,
-      "USDINR": 0.0,
+      "USDINR": 95.4,
       "Nifty50": 24366.0,
       "IndiaGSec": 6.89
     },
@@ -10314,7 +10305,7 @@
       "Brent": 90.87,
       "US10Y": 4.72,
       "DXY": 99.64,
-      "USDINR": 0.0,
+      "USDINR": 95.45,
       "Nifty50": 24287.7,
       "IndiaGSec": 6.89
     },
@@ -10323,7 +10314,7 @@
       "Brent": 91.02,
       "US10Y": 4.71,
       "DXY": 99.65,
-      "USDINR": 0.0,
+      "USDINR": 95.69,
       "Nifty50": 24154.9,
       "IndiaGSec": 6.89
     },
@@ -10332,7 +10323,7 @@
       "Brent": 91.62,
       "US10Y": 4.65,
       "DXY": 98.83,
-      "USDINR": 0.0,
+      "USDINR": 95.82,
       "Nifty50": 24078.3,
       "IndiaGSec": 6.89
     },
@@ -10341,7 +10332,7 @@
       "Brent": 93.78,
       "US10Y": 4.7,
       "DXY": 98.9,
-      "USDINR": 0.0,
+      "USDINR": 95.5,
       "Nifty50": 24231.8,
       "IndiaGSec": 6.89
     },
@@ -10350,7 +10341,7 @@
       "Brent": 94.39,
       "US10Y": 4.74,
       "DXY": 98.8,
-      "USDINR": 0.0,
+      "USDINR": 95.77,
       "Nifty50": 24252.0,
       "IndiaGSec": 6.89
     },
@@ -10359,7 +10350,7 @@
       "Brent": 92.17,
       "US10Y": 4.7,
       "DXY": 99.0,
-      "USDINR": 0.0,
+      "USDINR": 95.7,
       "Nifty50": 24219.1,
       "IndiaGSec": 6.89
     },
@@ -10368,7 +10359,7 @@
       "Brent": 88.58,
       "US10Y": 4.64,
       "DXY": 98.92,
-      "USDINR": 0.0,
+      "USDINR": 95.72,
       "Nifty50": 24334.6,
       "IndiaGSec": 6.89
     },
@@ -10377,7 +10368,7 @@
       "Brent": 87.84,
       "US10Y": 4.66,
       "DXY": 99.17,
-      "USDINR": 0.0,
+      "USDINR": 93.55,
       "Nifty50": 24207.8,
       "IndiaGSec": 6.89
     },
@@ -10386,7 +10377,7 @@
       "Brent": 89.7,
       "US10Y": 4.67,
       "DXY": 99.16,
-      "USDINR": 0.0,
+      "USDINR": 95.43,
       "Nifty50": 24090.8,
       "IndiaGSec": 6.89
     },
@@ -10395,7 +10386,7 @@
       "Brent": 89.31,
       "US10Y": 4.72,
       "DXY": 99.7,
-      "USDINR": 0.0,
+      "USDINR": 95.47,
       "Nifty50": 24175.7,
       "IndiaGSec": 6.89
     },
@@ -10404,7 +10395,7 @@
       "Brent": 90.49,
       "US10Y": 4.76,
       "DXY": 99.43,
-      "USDINR": 0.0,
+      "USDINR": 95.38,
       "Nifty50": 24080.4,
       "IndiaGSec": 6.89
     },
@@ -10413,7 +10404,7 @@
       "Brent": 94.65,
       "US10Y": 4.8,
       "DXY": 99.67,
-      "USDINR": 0.0,
+      "USDINR": 95.11,
       "Nifty50": 24055.8,
       "IndiaGSec": 6.89
     },
@@ -10422,7 +10413,7 @@
       "Brent": 95.63,
       "US10Y": 4.8,
       "DXY": 99.56,
-      "USDINR": 0.0,
+      "USDINR": 94.96,
       "Nifty50": 23914.4,
       "IndiaGSec": 6.89
     },
@@ -10431,7 +10422,7 @@
       "Brent": 95.52,
       "US10Y": 4.76,
       "DXY": 99.0,
-      "USDINR": 0.0,
+      "USDINR": 94.49,
       "Nifty50": 23873.4,
       "IndiaGSec": 6.89
     },
@@ -10440,7 +10431,7 @@
       "Brent": 96.28,
       "US10Y": 4.78,
       "DXY": 99.16,
-      "USDINR": 0.0,
+      "USDINR": 94.49,
       "Nifty50": 23897.7,
       "IndiaGSec": 6.89
     },
@@ -10449,7 +10440,7 @@
       "Brent": 96.28,
       "US10Y": 4.78,
       "DXY": 99.16,
-      "USDINR": 0.0,
+      "USDINR": 94.43,
       "Nifty50": 23779.2,
       "IndiaGSec": 6.89
     },
@@ -10458,7 +10449,7 @@
       "Brent": 97.92,
       "US10Y": 4.81,
       "DXY": 98.84,
-      "USDINR": 0.0,
+      "USDINR": 94.49,
       "Nifty50": 23635.1,
       "IndiaGSec": 6.89
     },
@@ -10467,7 +10458,7 @@
       "Brent": 101.21,
       "US10Y": 4.84,
       "DXY": 98.77,
-      "USDINR": 0.0,
+      "USDINR": 94.82,
       "Nifty50": 23431.5,
       "IndiaGSec": 6.89
     },
@@ -10476,7 +10467,7 @@
       "Brent": 107.63,
       "US10Y": 4.94,
       "DXY": 99.09,
-      "USDINR": 0.0,
+      "USDINR": 95.11,
       "Nifty50": 23477.8,
       "IndiaGSec": 6.89
     },
@@ -10485,7 +10476,7 @@
       "Brent": 104.61,
       "US10Y": 4.97,
       "DXY": 99.12,
-      "USDINR": 0.0,
+      "USDINR": 95.69,
       "Nifty50": 23398.1,
       "IndiaGSec": 6.89
     },
@@ -10494,7 +10485,7 @@
       "Brent": 105.68,
       "US10Y": 4.96,
       "DXY": 99.46,
-      "USDINR": 0.0,
+      "USDINR": 95.03,
       "Nifty50": 23398.1,
       "IndiaGSec": 6.89
     },
@@ -10503,7 +10494,7 @@
       "Brent": 108.75,
       "US10Y": 5.0,
       "DXY": 99.65,
-      "USDINR": 0.0,
+      "USDINR": 95.84,
       "Nifty50": 23118.6,
       "IndiaGSec": 6.89
     },
@@ -10512,17 +10503,26 @@
       "Brent": 105.83,
       "US10Y": 5.01,
       "DXY": 100.31,
-      "USDINR": 0.0,
+      "USDINR": 95.99,
       "Nifty50": 23217.6,
       "IndiaGSec": 6.89
     },
     {
       "Date": "2026-09-17",
-      "Brent": 104.75,
+      "Brent": 104.82,
       "US10Y": 4.95,
-      "DXY": 100.24,
-      "USDINR": 0.0,
+      "DXY": 100.22,
+      "USDINR": 96.13,
       "Nifty50": 23270.6,
+      "IndiaGSec": 6.89
+    },
+    {
+      "Date": "2026-09-18",
+      "Brent": 98.66,
+      "US10Y": 4.95,
+      "DXY": 100.37,
+      "USDINR": 95.89,
+      "Nifty50": 23352.1,
       "IndiaGSec": 6.89
     }
   ],
