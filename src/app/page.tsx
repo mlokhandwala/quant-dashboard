@@ -785,7 +785,7 @@ export default function QuantDashboard() {
               <div className="p-5 rounded-xl bg-[#0c121e] border border-emerald-500/30 space-y-2.5">
                 <div className="text-xs font-mono text-emerald-400 font-bold uppercase">Pillar 2B (~20% Allocation)</div>
                 <h4 className="text-sm font-bold text-white">Classic &quot;Dhandho&quot; Extreme Mispricing</h4>
-                <ul className="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+                  <ul className="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
                   <li><em>&quot;Heads I win big; tails I don&apos;t lose much&quot;</em></li>
                   <li>Deep Value Multiple: Ex-Cash P/E ≤ <strong>13.5x</strong></li>
                   <li>High Cash Yield: 3Y Avg Free Cash Flow Yield ≥ <strong>5.5%</strong></li>
@@ -793,6 +793,240 @@ export default function QuantDashboard() {
                   <li>10Y & 3Y Cash Conversion ≥ <strong>75%</strong> & 10Y PAT CAGR ≥ <strong>8%</strong></li>
                   <li><strong>Zero Government-Subsidy Captives</strong> (no urea/discoms)</li>
                 </ul>
+              </div>
+            </div>
+
+            {/* Section 4: Comparison of Our 6-Stage All-India Engine vs. World-Class Quant Funds */}
+            <div className="p-5 rounded-xl bg-gradient-to-r from-cyan-950/30 via-[#0c121e] to-[#0c121e] border border-cyan-500/40 space-y-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div className="flex items-center gap-2.5">
+                  <BarChart3 className="w-5 h-5 text-cyan-400" />
+                  <h3 className="text-base font-bold text-white">
+                    1. How Our 6-Stage All-India (`5,865`-Stock) Engine Compares to World-Class Quant Funds
+                  </h3>
+                </div>
+                <span className="px-3 py-1 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-mono text-xs font-bold">
+                  AQR QMJ Factor + AI/EV Moat + Forum Scuttlebutt
+                </span>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Why we rejected short-horizon intraday bots (our 144-session, 139,888-candle 5-minute backtest proved a losing <code className="text-rose-400">0.65 Profit Factor</code> after STT/slippage) and built a <strong>Hybrid Quantitative-Fundamental + Scuttlebutt Engine</strong> across all <strong>5,865 NSE + BSE companies</strong> (`5,105` verified financial dossiers):
+              </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs border-collapse font-mono">
+                  <thead>
+                    <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/70 uppercase text-[11px]">
+                      <th className="py-2.5 px-3">Dimension</th>
+                      <th className="py-2.5 px-3">HFT / Stat-Arb Quants (Renaissance, Citadel)</th>
+                      <th className="py-2.5 px-3">Global Factor Quants (AQR QMJ, Greenblatt)</th>
+                      <th className="py-2.5 px-3">Indian Quant MFs (Quant AMC, DSP Quant)</th>
+                      <th className="py-2.5 px-3 text-emerald-400">Our 6-Stage All-India Hybrid Engine</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60 font-sans">
+                    <tr>
+                      <td className="py-2.5 px-3 font-bold text-slate-200 font-mono">Holding Horizon</td>
+                      <td className="py-2.5 px-3 text-slate-400">Milliseconds to 3–5 Days</td>
+                      <td className="py-2.5 px-3 text-slate-300">6 Months to 3 Years</td>
+                      <td className="py-2.5 px-3 text-slate-300">1 Month to 12 Months</td>
+                      <td className="py-2.5 px-3 text-emerald-300 font-semibold">3 to 10+ Years (Zero-Brokerage CNC Compounding)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 font-bold text-slate-200 font-mono">Primary Alpha Source</td>
+                      <td className="py-2.5 px-3 text-slate-400">Order-book latency, options gamma, stat-arb</td>
+                      <td className="py-2.5 px-3 text-slate-300">Multi-factor sort (`ROCE`, `EV/EBIT`, `Low Accruals`)</td>
+                      <td className="py-2.5 px-3 text-slate-300">3M Price Momentum + EPS Revisions + Liquidity</td>
+                      <td className="py-2.5 px-3 text-emerald-300 font-semibold">10Y Forensics (`ROCE + ROIIC + CFO/PAT`) + AI/EV Moat + 6 Momentum Precursors</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 font-bold text-slate-200 font-mono">AI & EV Disruption Awareness</td>
+                      <td className="py-2.5 px-3 text-slate-400">Irrelevant (exits in minutes)</td>
+                      <td className="py-2.5 px-3 text-rose-300"><strong>BLIND (Rearview Trap):</strong> Buys headcount IT & ICE auto parts on trailing 5Y ROCE</td>
+                      <td className="py-2.5 px-3 text-rose-300"><strong>BLIND:</strong> Chases short-term momentum regardless of terminal risk</td>
+                      <td className="py-2.5 px-3 text-emerald-300 font-semibold"><strong>Stage 4 Built-In:</strong> Eliminates headcount IT (`INFY`, `LTM`) & ICE exhaust (`SHARDAMOTR`)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 font-bold text-slate-200 font-mono">Governance & Forum Gossip</td>
+                      <td className="py-2.5 px-3 text-slate-400">None</td>
+                      <td className="py-2.5 px-3 text-rose-300"><strong>BLIND:</strong> Misses related-party siphoning until write-offs years later</td>
+                      <td className="py-2.5 px-3 text-rose-300"><strong>BLIND</strong></td>
+                      <td className="py-2.5 px-3 text-emerald-300 font-semibold"><strong>Stage 5 Built-In:</strong> Google News RSS + ValuePickr 25-post scanner (caught `BLS` Post #473)</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 px-3 font-bold text-slate-200 font-mono">Liquidity & Size Edge</td>
+                      <td className="py-2.5 px-3 text-slate-400">Capped at $10B; liquid futures only</td>
+                      <td className="py-2.5 px-3 text-slate-300">$500M+ AUM; restricted to Top 200 mega-caps</td>
+                      <td className="py-2.5 px-3 text-slate-300">₹2,000+ Cr AUM; 2–4% impact cost in mid-caps</td>
+                      <td className="py-2.5 px-3 text-emerald-300 font-semibold"><strong>Family-Office Edge:</strong> Zero impact cost in ₹3,000–₹18,000 Cr monopolies (`CAMS`, `ICRA`, `NESCO`, `SJS`)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Section 5: The 6 Momentum Precursors Engine (Parameters, Logic & Live Scorecard) */}
+            <div className="p-5 rounded-xl bg-gradient-to-r from-amber-950/30 via-[#0c121e] to-[#0c121e] border border-amber-500/40 space-y-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div className="flex items-center gap-2.5">
+                  <Flame className="w-5 h-5 text-amber-400" />
+                  <h3 className="text-base font-bold text-white">
+                    2. The 6 Momentum Precursors Engine — Parameters, Mathematical Logic & Live Inflection Scorecard
+                  </h3>
+                </div>
+                <span className="px-3 py-1 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-mono text-xs font-bold">
+                  Leading Indicators (1–3 Quarters Before Breakout)
+                </span>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                <strong>Lagging Momentum</strong> buys a stock <em>after</em> it is already up +80% to +150%. <strong>Momentum Precursors</strong> are the 6 measurable balance-sheet, quarterly earnings-acceleration (PEAD), institutional stealth-accumulation, and Stage-2 base triggers that fire <strong>before or right as a multi-quarter breakout begins</strong>:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                <div className="p-3.5 rounded-lg bg-slate-900/80 border border-amber-500/30 space-y-1.5">
+                  <div className="flex items-center justify-between font-mono">
+                    <span className="font-bold text-amber-300">P1: Capex Commissioning</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-300">20 Pts</span>
+                  </div>
+                  <p className="text-slate-300">Multi-year plant expansion (`CWIP → Fixed Assets`) crosses 60% utilization; fixed depreciation is absorbed, unleashing operating leverage.</p>
+                  <div className="p-2 rounded bg-slate-950 font-mono text-[11px] text-amber-300">FA_Expansion_5Y &gt;= 1.40x &amp; D/E &lt;= 0.35x</div>
+                </div>
+
+                <div className="p-3.5 rounded-lg bg-slate-900/80 border border-emerald-500/30 space-y-1.5">
+                  <div className="flex items-center justify-between font-mono">
+                    <span className="font-bold text-emerald-300">P2: Earnings Accel (PEAD)</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300">20 Pts</span>
+                  </div>
+                  <p className="text-slate-300">Latest Quarterly YoY PAT growth accelerates above the 5-year historical CAGR; institutional analysts upgrade estimates over 3–4 quarters.</p>
+                  <div className="p-2 rounded bg-slate-950 font-mono text-[11px] text-emerald-300">Q_PAT_YoY &gt;= +20% &amp; &gt; PAT_CAGR_5Y</div>
+                </div>
+
+                <div className="p-3.5 rounded-lg bg-slate-900/80 border border-cyan-500/30 space-y-1.5">
+                  <div className="flex items-center justify-between font-mono">
+                    <span className="font-bold text-cyan-300">P3: OPM Margin Expansion</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-cyan-500/15 text-cyan-300">20 Pts</span>
+                  </div>
+                  <p className="text-slate-300">Quarterly Net Profit grows faster than Quarterly Sales—proving unit pricing power and expanding operating margins right now.</p>
+                  <div className="p-2 rounded bg-slate-950 font-mono text-[11px] text-cyan-300">Q_PAT_YoY &gt; Q_Sales_YoY (&gt;= +15% / +10%)</div>
+                </div>
+
+                <div className="p-3.5 rounded-lg bg-slate-900/80 border border-purple-500/30 space-y-1.5">
+                  <div className="flex items-center justify-between font-mono">
+                    <span className="font-bold text-purple-300">P4: Stealth Inst Buying</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/15 text-purple-300">15 Pts</span>
+                  </div>
+                  <p className="text-slate-300">Mutual Funds (`DIIs`) and `FIIs` quietly absorb shares over 2–4 quarters during sideways consolidation, shrinking the retail free float.</p>
+                  <div className="p-2 rounded bg-slate-950 font-mono text-[11px] text-purple-300">1Y Inst Chg &gt;= +0.5% or DII Chg &gt;= +1.0%</div>
+                </div>
+
+                <div className="p-3.5 rounded-lg bg-slate-900/80 border border-blue-500/30 space-y-1.5">
+                  <div className="flex items-center justify-between font-mono">
+                    <span className="font-bold text-blue-300">P5: Cash-Flow Velocity</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-300">10 Pts</span>
+                  </div>
+                  <p className="text-slate-300">3-Year Operating Cash Conversion (`CFO/PAT`) jumps above the 10-Year average, signaling faster customer collections &amp; order advances.</p>
+                  <div className="p-2 rounded bg-slate-950 font-mono text-[11px] text-blue-300">Cash_Conv_3Y &gt;= Cash_Conv_10Y &amp; &gt;= 80%</div>
+                </div>
+
+                <div className="p-3.5 rounded-lg bg-slate-900/80 border border-teal-500/30 space-y-1.5">
+                  <div className="flex items-center justify-between font-mono">
+                    <span className="font-bold text-teal-300">P6: Overhead Clearance</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-teal-500/15 text-teal-300">15 Pts</span>
+                  </div>
+                  <p className="text-slate-300">Trading above 50-DMA &amp; 200-DMA or consolidating within -2% to -22% of 52W High—meaning zero trapped bagholders waiting to sell.</p>
+                  <div className="p-2 rounded bg-slate-950 font-mono text-[11px] text-teal-300">CMP &gt;= 50 &amp; 200 DMA or -22% &lt;= 52W &lt;= -2%</div>
+                </div>
+              </div>
+
+              <div className="overflow-x-auto pt-2">
+                <table className="w-full text-left text-xs border-collapse font-mono">
+                  <thead>
+                    <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/70 uppercase text-[11px]">
+                      <th className="py-2.5 px-3">Stock</th>
+                      <th className="py-2.5 px-3">Action Tier</th>
+                      <th className="py-2.5 px-3 text-center">Precursors</th>
+                      <th className="py-2.5 px-3 text-right">Ex-Cash P/E</th>
+                      <th className="py-2.5 px-3 text-right">5Y Capex (P1)</th>
+                      <th className="py-2.5 px-3 text-right">Latest Qtr Sales / PAT YoY (P2 &amp; P3)</th>
+                      <th className="py-2.5 px-3 text-right">1Y Inst Buying (P4)</th>
+                      <th className="py-2.5 px-3">Momentum Inflection Catalyst</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60">
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2 px-3 font-bold text-emerald-400">TRAVELFOOD</td>
+                      <td className="py-2 px-3 text-emerald-300">Tier 1 (Buy Now)</td>
+                      <td className="py-2 px-3 text-center font-bold text-amber-300">5 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300">30.7x</td>
+                      <td className="py-2 px-3 text-right text-emerald-400 font-bold">3.82x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">+20.5% / +35.8%</td>
+                      <td className="py-2 px-3 text-right text-purple-300">+1.99% DII</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">Airport lounge monopoly; 3.82x gross-block expansion driving +35.8% Qtr PAT</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2 px-3 font-bold text-emerald-400">SJS</td>
+                      <td className="py-2 px-3 text-emerald-300">Core Buy Now</td>
+                      <td className="py-2 px-3 text-center font-bold text-amber-300">5 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300">29.2x</td>
+                      <td className="py-2 px-3 text-right text-emerald-400 font-bold">1.95x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">+24.3% / +111.4%</td>
+                      <td className="py-2 px-3 text-right text-purple-300 font-bold">+5.69% DII</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">EV-agnostic auto/appliance dials; +111.4% Qtr PAT + aggressive Mutual Fund buying</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2 px-3 font-bold text-emerald-400">CARERATING</td>
+                      <td className="py-2 px-3 text-emerald-300">Tier 1 (Buy Now)</td>
+                      <td className="py-2 px-3 text-center font-bold text-amber-300">5 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300">26.2x</td>
+                      <td className="py-2 px-3 text-right text-emerald-400">1.44x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">+19.1% / +26.9%</td>
+                      <td className="py-2 px-3 text-right text-purple-300">+1.82% DII</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">Ratings duopoly; 55% Inst held, +26.9% Qtr PAT acceleration, -13.6% off 52W High</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2 px-3 font-bold text-emerald-400">MAYURUNIQ</td>
+                      <td className="py-2 px-3 text-emerald-300">Tier 1 (Buy Now)</td>
+                      <td className="py-2 px-3 text-center font-bold text-amber-300">4 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300 font-bold">14.6x</td>
+                      <td className="py-2 px-3 text-right text-slate-400">1.03x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">+24.5% / +36.6%</td>
+                      <td className="py-2 px-3 text-right text-purple-300">+0.93% FII</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">BMW/Mercedes export ramp; broke above 50 &amp; 200 DMA (+6.8% 1M) at 14.6x Ex-Cash P/E</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2 px-3 font-bold text-emerald-400">CAMS</td>
+                      <td className="py-2 px-3 text-emerald-300">Tier 1 (Buy Now)</td>
+                      <td className="py-2 px-3 text-center font-bold text-amber-300">4 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300">34.4x</td>
+                      <td className="py-2 px-3 text-right text-emerald-400">1.74x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300">+11.6% / +17.6%</td>
+                      <td className="py-2 px-3 text-right text-purple-300 font-bold">+6.23% DII</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">68% MF RTA Toll-Bridge; +6.23% DII absorption + 102% 3Y CFO conversion</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3 font-bold text-cyan-300">VGUARD</td>
+                      <td className="py-2 px-3 text-cyan-300">Watchlist Tier B</td>
+                      <td className="py-2 px-3 text-center font-bold text-emerald-400">6 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300">36.1x</td>
+                      <td className="py-2 px-3 text-right text-emerald-400 font-bold">3.96x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">+23.5% / +75.7%</td>
+                      <td className="py-2 px-3 text-right text-purple-300">+1.09% Inst</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">All 6/6 precursors firing: 3.96x capex commissioning + +75.7% Qtr PAT jump</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3 font-bold text-cyan-300">GALAXYSURF</td>
+                      <td className="py-2 px-3 text-cyan-300">Watchlist Tier B</td>
+                      <td className="py-2 px-3 text-center font-bold text-amber-300">5 / 6</td>
+                      <td className="py-2 px-3 text-right text-cyan-300 font-bold">23.8x</td>
+                      <td className="py-2 px-3 text-right text-emerald-400">1.62x</td>
+                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">+39.4% / +110.1%</td>
+                      <td className="py-2 px-3 text-right text-purple-300">+0.33% Inst</td>
+                      <td className="py-2 px-3 font-sans text-slate-300">Specialty surfactants inflection: +110.1% Qtr PAT growth within -8% of 52W High</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
