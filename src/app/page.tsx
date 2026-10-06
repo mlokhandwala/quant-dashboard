@@ -1,40 +1,39 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { 
-  Activity, 
-  TrendingUp, 
-  TrendingDown, 
-  ShieldCheck, 
-  AlertTriangle, 
-  Search, 
-  Flame, 
-  Award, 
-  BarChart3, 
-  Globe2, 
-  DollarSign, 
+import {
+  Activity,
+  TrendingUp,
+  ShieldCheck,
+  AlertTriangle,
+  Search,
+  Flame,
+  Award,
+  BarChart3,
+  Globe2,
   Layers,
   ExternalLink,
-  ChevronRight,
   Briefcase,
   ChevronDown,
   ChevronUp,
   CheckCircle2,
-  MessageSquareQuote
+  MessageSquareQuote,
+  BookOpen,
+  Calculator,
+  Compass,
+  XCircle
 } from "lucide-react";
-import { 
-  ResponsiveContainer, 
-  BarChart, 
-  Bar, 
-  XAxis, 
-  YAxis, 
-  Tooltip, 
-  Legend, 
-  LineChart, 
-  Line, 
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
   CartesianGrid,
   AreaChart,
-  Area 
+  Area
 } from "recharts";
 
 interface MacroData {
@@ -52,18 +51,57 @@ interface MacroData {
 interface StockItem {
   Symbol: string;
   Name: string;
-  Period?: string;
-  Years?: number;
-  Cum_CFO_Cr: number;
-  Cum_PAT_Cr: number;
-  Cash_Conv_Pct: number;
-  Avg_ROCE_Pct: number;
-  Latest_Debt_Cr: number;
-  Peak_Debt_Cr?: number;
-  Sales_CAGR?: number;
+  Pillar_Tag?: string;
+  MCap_Cr?: number;
   CMP?: number;
   PE?: number;
-  MCap_Cr?: number;
+  Ex_Cash_PE?: number;
+  EV_EBIT?: number;
+  FCF_Yield_Pct?: number;
+  Avg_ROCE_Pct: number;
+  Latest_ROCE_Pct?: number;
+  ROIIC_5Y_Pct?: number;
+  Reinvest_Rate_5Y_Pct?: number;
+  Sales_CAGR?: number;
+  Sales_CAGR_5Y?: number;
+  PAT_CAGR_10Y?: number;
+  PAT_CAGR_5Y?: number;
+  Cash_Conv_Pct: number;
+  Cash_Conv_3Y_Pct?: number;
+  Cum_CFO_Cr: number;
+  Cum_PAT_Cr: number;
+  Latest_CFO_Cr?: number;
+  Latest_PAT_Cr?: number;
+  Avg_FCF_3Y_Cr?: number;
+  Latest_Debt_Cr: number;
+  Net_Cash_Cr?: number;
+  DE_Ratio?: number;
+  FA_Expansion_5Y?: number;
+  Promoter_Pct?: number;
+  Intrinsic_Value?: number;
+  MoS_Pct?: number;
+}
+
+interface AccountSummary {
+  client_id: string;
+  initial_capital: number;
+  settled_cash: number;
+  unsettled_sale_receivable_t1: number;
+  total_cash_after_t1: number;
+  usable_cash_today_80pct: number;
+  live_equity_value: number;
+  total_account_equity: number;
+  realized_pnl_since_inception: number;
+  unrealized_pnl_open: number;
+}
+
+interface DisqualifiedExit {
+  Symbol: string;
+  Qty_Sold: number;
+  Exit_Price?: number;
+  Order_No?: string;
+  Exit_Date: string;
+  Reason: string;
 }
 
 interface ShoonyaStock {
@@ -73,6 +111,8 @@ interface ShoonyaStock {
   Horizon: string;
   Allocation_Pct: number;
   Quantity?: number;
+  Recommended_Add_Qty?: number;
+  Target_Total_Qty?: number;
   Order_No?: string;
   Product?: string;
   Entry_Price: number;
@@ -81,11 +121,19 @@ interface ShoonyaStock {
   Current_Value?: number;
   Unrealized_PnL?: number;
   Target_Price: number;
+  Intrinsic_Value?: number;
+  MoS_Pct?: number;
   Stop_Loss: number;
   PE: number;
+  Ex_Cash_PE?: number;
   Avg_ROCE_Pct: number;
+  ROIIC_5Y_Pct?: number;
+  Reinvest_Rate_5Y_Pct?: number;
+  PAT_CAGR_5Y_Pct?: number;
   Cash_Conv_Pct: number;
+  Cash_Conv_3Y_Pct?: number;
   Latest_Debt_Cr: number;
+  Net_Cash_Cr?: number;
   Cum_CFO_Cr: number;
   Cum_PAT_Cr: number;
   Moat_Rating: string;
@@ -96,29 +144,6 @@ interface ShoonyaStock {
   Pillar_3_Qualitative_Scuttlebutt: string;
   Pillar_4_Macro_Risks: string;
   Trigger_Source: string;
-  GTT_Orders?: {
-    oco_order?: {
-      al_id: string;
-      condition: string;
-      leg1_target: { trigger: number; limit: number; desc: string };
-      leg2_stop_loss: { trigger: number; limit: number; desc: string };
-      status: string;
-    };
-    target_harvest_gtt?: {
-      al_id: string;
-      condition: string;
-      trigger: number;
-      limit: number;
-      status: string;
-    };
-    stop_loss_gtt?: {
-      al_id: string;
-      condition: string;
-      trigger: number;
-      limit: number;
-      status: string;
-    };
-  };
   ValuePickr_Scuttlebutt?: {
     topic_id: number;
     topic_title: string;
@@ -149,11 +174,13 @@ export default function QuantDashboard() {
   const [macro, setMacro] = useState<MacroData | null>(null);
   const [screener, setScreener] = useState<ScreenerData | null>(null);
   const [portfolio, setPortfolio] = useState<ShoonyaStock[]>([]);
+  const [accountSummary, setAccountSummary] = useState<AccountSummary | null>(null);
+  const [disqualifiedExits, setDisqualifiedExits] = useState<DisqualifiedExit[]>([]);
   const [portfolioUpdated, setPortfolioUpdated] = useState<string>("");
-  const [expandedStock, setExpandedStock] = useState<string | null>(null);
+  const [expandedStock, setExpandedStock] = useState<string | null>("SHARDAMOTR");
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<"macro" | "planA" | "planB" | "shoonya" | "traps" | "search">("shoonya");
+  const [activeTab, setActiveTab] = useState<"shoonya" | "knowledge" | "planA" | "planB" | "macro" | "traps" | "search">("shoonya");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedIndicator, setSelectedIndicator] = useState<"Brent" | "US10Y" | "IndiaGSec" | "USDINR" | "DXY" | "Nifty50">("Brent");
   const [timeframe, setTimeframe] = useState<"1M" | "6M" | "1Y" | "ALL">("1Y");
@@ -181,6 +208,8 @@ export default function QuantDashboard() {
         if (portRes && portRes.ok) {
           const p = await portRes.json();
           setPortfolio(p.portfolio || []);
+          setAccountSummary(p.account_summary || null);
+          setDisqualifiedExits(p.disqualified_exits || []);
           setPortfolioUpdated(p.last_updated || "");
         }
       } catch (err) {
@@ -213,14 +242,14 @@ export default function QuantDashboard() {
 
   const filteredFlowHistory = React.useMemo(() => {
     if (!macro?.fii_dii_history) return [];
-    let list = macro.fii_dii_history.map(item => {
+    const list = macro.fii_dii_history.map(item => {
       const fii = Number(item.FII_Net_Equity_Cr || 0);
       const dii = Number(item.DII_Net_Equity_Cr || 0);
       return {
         ...item,
         FII_Net_Equity_Cr: fii,
         DII_Net_Equity_Cr: dii,
-        Net_Domestic_Absorption_Cr: dii - Math.abs(fii < 0 ? fii : 0) // Net positive cushion
+        Net_Domestic_Absorption_Cr: dii - Math.abs(fii < 0 ? fii : 0)
       };
     });
     if (flowTimeframe === "3Y") return list.slice(-3);
@@ -297,22 +326,22 @@ export default function QuantDashboard() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-lg font-bold tracking-tight text-white">QUANT TERMINAL</h1>
+                <h1 className="text-lg font-bold tracking-tight text-white">BUFFETT–MUNGER & PABRAI TERMINAL</h1>
                 <span className="px-2 py-0.5 text-xs font-semibold rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  v1.0 Live
+                  v2.0 Authentic
                 </span>
               </div>
-              <p className="text-xs text-slate-400">Institutional Macro Regimes & 10-Year Forensic Screening Engine</p>
+              <p className="text-xs text-slate-400">10-Year Incremental ROIC (ROIIC), Reinvestment Runway & Intrinsic Value Engine</p>
             </div>
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3 text-xs">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-slate-900/90 border border-slate-800 text-slate-300">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              NSE 2,566 Equities Audited
+              {screener?.total_audited_equities?.toLocaleString() || "1,902"} NSE 10-Yr Audits
             </span>
-            <span className="hidden sm:inline-block text-slate-400">
-              Updated: {macro?.last_updated ? new Date(macro.last_updated).toLocaleDateString("en-IN", { month: "short", day: "numeric", year: "numeric" }) : "Today"}
+            <span className="hidden sm:inline-block text-slate-400 font-mono">
+              Synced: {portfolioUpdated || "2026-10-06"}
             </span>
           </div>
         </div>
@@ -331,7 +360,40 @@ export default function QuantDashboard() {
                 : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
             }`}
           >
-            <Briefcase className="w-4 h-4 text-slate-950" /> Shoonya Portfolio & Theses ({portfolio.length})
+            <Briefcase className="w-4 h-4" /> Shoonya Portfolio & Finalists ({portfolio.length})
+          </button>
+
+          <button
+            onClick={() => setActiveTab("knowledge")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+              activeTab === "knowledge"
+                ? "bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-lg shadow-amber-500/20 font-bold"
+                : "bg-amber-500/10 text-amber-300 hover:bg-amber-500/20 border border-amber-500/30"
+            }`}
+          >
+            <BookOpen className="w-4 h-4" /> Knowledge Store & Metrics Guide
+          </button>
+
+          <button
+            onClick={() => setActiveTab("planA")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+              activeTab === "planA"
+                ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20 font-semibold"
+                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
+            }`}
+          >
+            <Award className="w-4 h-4 text-amber-400" /> Pillar 1: Buffett–Munger ({screener?.plan_a_count})
+          </button>
+
+          <button
+            onClick={() => setActiveTab("planB")}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
+              activeTab === "planB"
+                ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20 font-semibold"
+                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
+            }`}
+          >
+            <Flame className="w-4 h-4 text-cyan-400" /> Pillar 2A/2B: Pabrai Spawners & Dhandho ({screener?.plan_b_count})
           </button>
 
           <button
@@ -343,28 +405,6 @@ export default function QuantDashboard() {
             }`}
           >
             <Globe2 className="w-4 h-4" /> Macro Regime Radar
-          </button>
-
-          <button
-            onClick={() => setActiveTab("planA")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
-              activeTab === "planA"
-                ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20 font-semibold"
-                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
-            }`}
-          >
-            <Award className="w-4 h-4 text-amber-400" /> Plan A: Munger Compounders ({screener?.plan_a_count})
-          </button>
-
-          <button
-            onClick={() => setActiveTab("planB")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition ${
-              activeTab === "planB"
-                ? "bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/20 font-semibold"
-                : "bg-slate-900/60 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800"
-            }`}
-          >
-            <Flame className="w-4 h-4 text-cyan-400" /> Plan B: Dhandho Deep Value ({screener?.plan_b_count})
           </button>
 
           {/* Archival Dropdown for Forensic Traps & All Equities Search */}
@@ -383,7 +423,7 @@ export default function QuantDashboard() {
 
             {moreMenuOpen && (
               <div 
-                className="absolute left-0 mt-2 w-64 rounded-xl bg-slate-900 border border-slate-800 shadow-2xl z-50 p-1.5 space-y-1 font-sans"
+                className="absolute right-0 mt-2 w-72 rounded-xl bg-slate-900 border border-slate-800 shadow-2xl z-50 p-1.5 space-y-1 font-sans"
                 onMouseLeave={() => setMoreMenuOpen(false)}
               >
                 <button
@@ -397,8 +437,8 @@ export default function QuantDashboard() {
                 >
                   <AlertTriangle className="w-4 h-4 text-rose-400 shrink-0" />
                   <div>
-                    <div className="font-semibold text-rose-300">Forensic Traps ({screener?.traps_count})</div>
-                    <div className="text-[10px] text-slate-400">125 high debt / paper profit disasters</div>
+                    <div className="font-semibold text-rose-300">Disqualified Cows & Traps ({screener?.traps_count})</div>
+                    <div className="text-[10px] text-slate-400">Optical ROCE dividend cows & subsidy traps</div>
                   </div>
                 </button>
 
@@ -413,8 +453,8 @@ export default function QuantDashboard() {
                 >
                   <Search className="w-4 h-4 text-purple-400 shrink-0" />
                   <div>
-                    <div className="font-semibold text-purple-300">2,566 Equities Auditor</div>
-                    <div className="text-[10px] text-slate-400">Search entire listed NSE database</div>
+                    <div className="font-semibold text-purple-300">Search All 1,902 Audited Equities</div>
+                    <div className="text-[10px] text-slate-400">Inspect ROIIC, Reinvest %, IV & MoS for any stock</div>
                   </div>
                 </button>
               </div>
@@ -422,11 +462,349 @@ export default function QuantDashboard() {
           </div>
         </div>
 
-        {/* TAB 0: SHOONYA ACTIVE INVESTMENTS & AUDITED THESES */}
+        {/* =====================================================================
+            TAB: KNOWLEDGE STORE & METRICS REFERENCE GUIDE
+           ===================================================================== */}
+        {activeTab === "knowledge" && (
+          <div className="space-y-6">
+            {/* Banner */}
+            <div className="p-6 rounded-xl bg-gradient-to-br from-amber-950/30 via-[#0c1424] to-[#080d17] border border-amber-500/40 shadow-xl space-y-3">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-400">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-bold text-white">
+                      Knowledge Store: Plain-English Guide to Our Core Metrics & Investment Charter
+                    </h2>
+                    <p className="text-xs text-slate-300 mt-0.5">
+                      Permanent reference guide explaining every number in our scanner (`Ex-Cash P/E`, `ROCE`, `Reinvest %`, `ROIIC`, `IV & MoS`) using real NSE examples.
+                    </p>
+                  </div>
+                </div>
+                <span className="px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold">
+                  Live Verified Benchmark: SHARDAMOTR @ ₹924.00
+                </span>
+              </div>
+
+              {/* Quick Example Pill Bar */}
+              <div className="p-3.5 rounded-lg bg-slate-900/90 border border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+                <span className="text-slate-400 font-sans font-semibold">How to read a live-verified scanner summary line:</span>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-2.5 py-1 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-bold">12.7x Ex-Cash P/E</span>
+                  <span className="px-2.5 py-1 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-bold">34.5% Live ROCE</span>
+                  <span className="px-2.5 py-1 rounded bg-purple-500/15 text-purple-300 border border-purple-500/30 font-bold">67% Reinvest</span>
+                  <span className="px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold">89.6% ROIIC</span>
+                  <span className="px-2.5 py-1 rounded bg-teal-500/15 text-teal-300 border border-teal-500/30 font-bold">IV: ₹1,809 (+49% MoS)</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 6 Core Metrics Glossary Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Card 1: Ex-Cash P/E */}
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-cyan-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-mono text-xs font-bold">
+                    1. 12.7x Ex-Cash P/E
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">True Price of the Business</span>
+                </div>
+                <h3 className="text-sm font-bold text-white">
+                  How many years of profit you are paying for the business (after subtracting its bank balance)
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  <strong>The Shop Analogy:</strong> Suppose you buy a shop for ₹10 Lakhs, and inside the shop&apos;s safe there is ₹2 Lakhs in debt-free cash that belongs to you the moment you buy it. Your <strong>true cost</strong> for the shop itself is ₹8 Lakhs. If the shop earns ₹63,000 a year in profit, you are really paying <strong>12.7x</strong> (`₹8L / ₹63k`) for the operating business.
+                </p>
+                <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-mono text-cyan-300">
+                  Formula: (Live Market Cap - Net Cash) ÷ Annual Net Profit (PAT)
+                </div>
+                <div className="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/20 text-xs text-slate-300">
+                  <strong className="text-cyan-400">In SHARDAMOTR (₹924):</strong> Live Market Cap is <code className="text-white">₹5,304 Cr</code>. It holds <code className="text-emerald-400">₹1,087 Cr Net Cash</code> (`20.5%` of Market Cap!). So you pay <code className="text-white">₹4,217 Cr</code> for a business earning <code className="text-white">₹332 Cr/yr</code> = <strong>12.7x Ex-Cash P/E</strong> (Similarly, <code className="text-emerald-400">ZENSARTECH</code> has <code className="text-emerald-400">₹1,842 Cr Net Cash</code> and trades at <strong>10.7x Ex-Cash P/E</strong>).
+                </div>
+              </div>
+
+              {/* Card 2: 10Y Median & Live ROCE */}
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-amber-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-mono text-xs font-bold">
+                    2. 34.5% Live ROCE (30% 10Y Med)
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">Existing Engine Profitability</span>
+                </div>
+                <h3 className="text-sm font-bold text-white">
+                  How much annual operating profit the business generates per ₹100 of capital tied up inside it
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  <strong>Meaning:</strong> Return on Capital Employed measures the quality of the business moat. We check <strong>BOTH</strong> the <strong>10-Year Median ROCE</strong> AND today&apos;s <strong>Live ROCE</strong> so a company whose recent returns are falling (<code className="text-rose-400">CMSINFO</code> dropped from 30% to 17.9% ROCE) is immediately caught and disqualified.
+                </p>
+                <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-mono text-amber-300">
+                  Formula: Operating Profit (EBIT) ÷ (Total Equity + Total Debt) ≥ 20%
+                </div>
+                <div className="p-3 rounded-lg bg-amber-950/20 border border-amber-500/20 text-xs text-slate-300">
+                  <strong className="text-amber-400">In Our Finalists:</strong> <code className="text-emerald-400">CAMS</code> earns <strong>47.0% Live ROCE</strong>, <code className="text-emerald-400">MPSLTD</code> earns <strong>38.7% Live ROCE</strong>, <code className="text-emerald-400">SHARDAMOTR</code> earns <strong>34.5% Live ROCE</strong>, and <code className="text-emerald-400">LTM</code> earns <strong>29.6% Live ROCE</strong>.
+                </div>
+              </div>
+
+              {/* Card 3: 5Y Reinvestment Rate */}
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-purple-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded bg-purple-500/15 text-purple-300 border border-purple-500/30 font-mono text-xs font-bold">
+                    3. 67% Reinvest (5-Yr Retention)
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">Fuel Ploughed Back Into Growth</span>
+                </div>
+                <h3 className="text-sm font-bold text-white">
+                  Out of every ₹100 of profit earned, how much is kept inside the business to build new capacity?
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  <strong>Why It Exposes &quot;Dividend Cow&quot; Traps:</strong> A company can boast a 60%–80% ROCE on an old factory built 20 years ago, but if its market is saturated and it has nowhere left to grow, it pays out 95%–100%+ of profits as dividends (<code className="text-rose-400">CASTROLIND</code> reinvested only <strong>5%</strong>; <code className="text-rose-400">ACCELYA</code> reinvested <strong>0%</strong>). Without reinvestment, earnings stagnate.
+                </p>
+                <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-mono text-purple-300">
+                  Formula: 100% - 5-Year Average Dividend Payout % (or ΔNet Worth ÷ ∑5Y PAT)
+                </div>
+                <div className="p-3 rounded-lg bg-purple-950/20 border border-purple-500/20 text-xs text-slate-300">
+                  <strong className="text-purple-400">In SHARDAMOTR & ZENSARTECH:</strong> <code className="text-emerald-400">SHARDAMOTR</code> retains <strong>67.0%</strong> of profits (expanding Fixed Assets + CWIP <strong>1.81x</strong> with zero net debt), and <code className="text-emerald-400">ZENSARTECH</code> retains <strong>65.2%</strong>.
+                </div>
+              </div>
+
+              {/* Card 4: 5Y & 3Y ROIIC */}
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-emerald-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-mono text-xs font-bold">
+                    4. 89.6% ROIIC (Incremental ROIC)
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">Charlie Munger&apos;s #1 Metric</span>
+                </div>
+                <h3 className="text-sm font-bold text-white">
+                  How much NEW annual profit was generated by every NEW ₹100 reinvested over the last 5 & 3 years?
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  <strong>Meaning:</strong> Legacy ROCE tells you about the past; <strong>ROIIC (Return on Incremental Invested Capital)</strong> tells you about the future. We require both <strong>5Y ROIIC ≥ 18%</strong> AND positive <strong>3Y ROIIC ≥ 10%</strong> with <strong>zero recent peak-profit breakdown</strong> so recent capex drags are caught automatically.
+                </p>
+                <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-mono text-emerald-300">
+                  Formula: ΔOperating Profit (EBIT) ÷ ΔInvested Capital (5Y & 3Y Windows)
+                </div>
+                <div className="p-3 rounded-lg bg-emerald-950/20 border border-emerald-500/20 text-xs text-slate-300">
+                  <strong className="text-emerald-400">In MPSLTD, LTM & CAMS:</strong> <code className="text-emerald-400">CAMS</code> earns <strong>71.7% (5Y) / 40.6% (3Y) ROIIC</strong>, <code className="text-emerald-400">MPSLTD</code> earns <strong>63.7% (5Y) / 40.8% (3Y) ROIIC</strong>, and <code className="text-emerald-400">LTM</code> earns <strong>55.8% (5Y) / 16.8% (3Y) ROIIC</strong>.
+                </div>
+              </div>
+
+              {/* Card 5: Intrinsic Value & Margin of Safety */}
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-teal-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded bg-teal-500/15 text-teal-300 border border-teal-500/30 font-mono text-xs font-bold">
+                    5. IV: ₹1,809 (+49% MoS)
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">Worth vs. Live Market Price</span>
+                </div>
+                <h3 className="text-sm font-bold text-white">
+                  What the business is conservatively worth (IV) and our percentage discount cushion (Margin of Safety)
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  <strong>Meaning:</strong> Instead of buying because a stock crossed a 200-day moving average, we calculate its conservative <strong>Intrinsic Value (IV)</strong> from its Owner Earnings (cash profits) plus Net Cash in the bank, divided by the <strong>live post-bonus/split Market Cap</strong> from Screener.
+                </p>
+                <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-mono text-teal-300">
+                  Margin of Safety (MoS %) = (Intrinsic Value - Current Price) ÷ Intrinsic Value
+                </div>
+                <div className="p-3 rounded-lg bg-teal-950/20 border border-teal-500/20 text-xs text-slate-300">
+                  <strong className="text-teal-400">In SHARDAMOTR & ZENSARTECH:</strong> <code className="text-emerald-400">SHARDAMOTR</code> has an Intrinsic Value of <strong>₹1,809/share</strong> vs live price <strong>₹924</strong> (<strong>+48.9% MoS</strong>). <code className="text-emerald-400">ZENSARTECH</code> has an IV of <strong>₹647/share</strong> vs live price <strong>₹447</strong> (<strong>+31.0% MoS</strong>).
+                </div>
+              </div>
+
+              {/* Card 6: 10Y & 3Y Cash Conversion */}
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-blue-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 rounded bg-blue-500/15 text-blue-300 border border-blue-500/30 font-mono text-xs font-bold">
+                    6. 101% (3Y) Cash Conv + Q1 YoY Growth
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">Real Cash & Live Momentum</span>
+                </div>
+                <h3 className="text-sm font-bold text-white">
+                  Are reported accounting profits turning into hard cash AND growing in the latest FY26 / Jun 2026 quarter?
+                </h3>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  <strong>Why We Check Both Cash Conversion AND Live FY26/Q1 Trajectory:</strong> Checking both 10Y & 3Y CFO/PAT catches subsidy traps (<code className="text-rose-400">CHAMBLFERT</code> dropped to 7% CFO/PAT in FY26), while checking live Consolidated & Standalone FY26 + Jun 2026 quarterly results catches companies whose recent profits rolled over (<code className="text-rose-400">CMSINFO</code> & <code className="text-rose-400">DHANUKA</code>).
+                </p>
+                <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-mono text-blue-300">
+                  Gates: 10Y & 3Y CFO/PAT ≥ 75% | 3Y Peak PAT Drawdown ≥ -6% | Q1 PAT YoY ≥ -15%
+                </div>
+                <div className="p-3 rounded-lg bg-blue-950/20 border border-blue-500/20 text-xs text-slate-300">
+                  <strong className="text-blue-400">In Our 5 Finalists:</strong> 3-Yr Cash Conversion is <strong>102.4% (`CAMS`)</strong>, <strong>101.6% (`LTM`)</strong>, <strong>101.2% (`SHARDAMOTR`)</strong>, <strong>89.9% (`ZENSARTECH`)</strong>, and <strong>81.6% (`MPSLTD`)</strong>.
+                </div>
+              </div>
+            </div>
+
+            {/* Section 2: The Master Compounding Law */}
+            <div className="p-5 rounded-xl bg-gradient-to-r from-emerald-950/30 via-[#0c121e] to-[#0c121e] border border-emerald-500/40 space-y-4">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div className="flex items-center gap-2.5">
+                  <Calculator className="w-5 h-5 text-emerald-400" />
+                  <h3 className="text-base font-bold text-white">
+                    Live Forensic Comparison: Verified Compounders vs. Disqualified Traps
+                  </h3>
+                </div>
+                <span className="px-3 py-1 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-mono text-xs font-bold">
+                  Intrinsic Growth Rate ≈ Reinvestment Rate × ROIIC
+                </span>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Compare our 5 live-verified finalists against the 4 stocks we exited and the 2 candidates (<code className="text-rose-400">CMSINFO</code>, <code className="text-rose-400">DHANUKA</code>) our upgraded live Screener audit blocked before purchase:
+              </p>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs border-collapse font-mono">
+                  <thead>
+                    <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/70 uppercase text-[11px]">
+                      <th className="py-2.5 px-3">Stock</th>
+                      <th className="py-2.5 px-3 text-right">Live ROCE</th>
+                      <th className="py-2.5 px-3 text-right">5Y Reinvest %</th>
+                      <th className="py-2.5 px-3 text-right">5Y / 3Y ROIIC</th>
+                      <th className="py-2.5 px-3 text-right">Peak PAT Drop</th>
+                      <th className="py-2.5 px-3 text-right">Live Ex-Cash P/E</th>
+                      <th className="py-2.5 px-3">Live Forensic Verdict</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60">
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2.5 px-3 font-bold text-emerald-400">CAMS (Live Held)</td>
+                      <td className="py-2.5 px-3 text-right text-amber-300 font-bold">47.0%</td>
+                      <td className="py-2.5 px-3 text-right text-purple-300">35.0%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400 font-bold">71.7% / 40.6%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400">0.0% (All-Time High)</td>
+                      <td className="py-2.5 px-3 text-right text-cyan-300 font-bold">34.4x</td>
+                      <td className="py-2.5 px-3 font-sans text-emerald-300">PASS: 68% MF RTA Monopoly; PAT ₹351→₹465→₹472→₹491 Cr; Q1 PAT +17.6% YoY</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2.5 px-3 font-bold text-emerald-400">LTM (Finalist)</td>
+                      <td className="py-2.5 px-3 text-right text-amber-300 font-bold">29.6%</td>
+                      <td className="py-2.5 px-3 text-right text-purple-300">49.3%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400 font-bold">55.8% / 16.8%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400">0.0% (All-Time High)</td>
+                      <td className="py-2.5 px-3 text-right text-cyan-300 font-bold">20.7x</td>
+                      <td className="py-2.5 px-3 font-sans text-emerald-300">PASS: L&T Tier-1 IT Compounder; ₹10,258 Cr Net Cash; Q1 PAT +17.1% YoY (+18% MoS)</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2.5 px-3 font-bold text-emerald-400">MPSLTD (Finalist)</td>
+                      <td className="py-2.5 px-3 text-right text-amber-300 font-bold">38.7%</td>
+                      <td className="py-2.5 px-3 text-right text-purple-300">33.8%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400 font-bold">63.7% / 40.8%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400">0.0% (All-Time High)</td>
+                      <td className="py-2.5 px-3 text-right text-cyan-300 font-bold">24.4x</td>
+                      <td className="py-2.5 px-3 font-sans text-emerald-300">PASS: 3.75x Asset Expansion; PAT ₹119→₹149→₹173→₹188 Cr; Q1 PAT +42.9% YoY</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2.5 px-3 font-bold text-emerald-400">SHARDAMOTR (Finalist)</td>
+                      <td className="py-2.5 px-3 text-right text-amber-300 font-bold">34.5%</td>
+                      <td className="py-2.5 px-3 text-right text-purple-300 font-bold">67.0%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400 font-bold">89.6% / 10.7%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400">-3.8% (EBIT Record)</td>
+                      <td className="py-2.5 px-3 text-right text-cyan-300 font-bold">12.7x</td>
+                      <td className="py-2.5 px-3 font-sans text-emerald-300">PASS: Triple-Crown (P1+2A+2B); ₹1,087 Cr Net Cash (20.5% MCap); Q1 Sales +33.7% YoY</td>
+                    </tr>
+                    <tr className="bg-emerald-950/15">
+                      <td className="py-2.5 px-3 font-bold text-emerald-400">ZENSARTECH (Finalist)</td>
+                      <td className="py-2.5 px-3 text-right text-amber-300 font-bold">22.8%</td>
+                      <td className="py-2.5 px-3 text-right text-purple-300 font-bold">65.2%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400 font-bold">34.3% / 7.2%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400">0.0% (All-Time High)</td>
+                      <td className="py-2.5 px-3 text-right text-cyan-300 font-bold">10.7x</td>
+                      <td className="py-2.5 px-3 font-sans text-emerald-300">PASS: Pillar 2B Dhandho; ₹1,842 Cr Net Cash (18.1% MCap); PAT at record ₹776 Cr TTM</td>
+                    </tr>
+                    <tr className="bg-rose-950/15">
+                      <td className="py-2.5 px-3 font-bold text-rose-400">CMSINFO (Blocked)</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400">17.9% (Fell)</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">74.7%</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400">26.4% / -61.5%</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400 font-bold">-21.2% Drop</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">10.8x</td>
+                      <td className="py-2.5 px-3 font-sans text-rose-300">BLOCKED PRE-BUY: PAT peaked at ₹372 Cr (FY25) and fell to ₹303 Cr (FY26) & ₹293 Cr (TTM)</td>
+                    </tr>
+                    <tr className="bg-rose-950/15">
+                      <td className="py-2.5 px-3 font-bold text-rose-400">DHANUKA (Blocked)</td>
+                      <td className="py-2.5 px-3 text-right text-amber-300">23.8%</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">79.4%</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400">23.2% / 2.2%</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400 font-bold">-9.8% (Q1 -35.7%)</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">14.6x</td>
+                      <td className="py-2.5 px-3 font-sans text-rose-300">BLOCKED PRE-BUY: Consolidated froze at FY25; live Standalone PAT fell & Q1 plunged -35.7% YoY</td>
+                    </tr>
+                    <tr className="bg-rose-950/15">
+                      <td className="py-2.5 px-3 font-bold text-rose-400">CASTROLIND (Exited)</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">79.0% (Optical)</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400 font-bold">5.0%</td>
+                      <td className="py-2.5 px-3 text-right text-slate-400">Low</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400">+4.3% CAGR</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">17.1x</td>
+                      <td className="py-2.5 px-3 font-sans text-rose-300">EXITED: Pays out 95% as dividends because legacy lubricant market is stagnant</td>
+                    </tr>
+                    <tr className="bg-rose-950/15">
+                      <td className="py-2.5 px-3 font-bold text-rose-400">ACCELYA (Exited)</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">56.5% (Optical)</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400 font-bold">0.0%</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400 font-bold">1.2%</td>
+                      <td className="py-2.5 px-3 text-right text-rose-400 font-bold">-1.8% CAGR</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">17.6x</td>
+                      <td className="py-2.5 px-3 font-sans text-rose-300">EXITED: Foreign PE parent extracts 107% of earnings; Fixed Assets shrank 56%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Section 3: Two-Pillar Architecture Summary */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-amber-500/30 space-y-2.5">
+                <div className="text-xs font-mono text-amber-400 font-bold uppercase">Pillar 1 (~60% Allocation)</div>
+                <h4 className="text-sm font-bold text-white">Buffett–Munger Reinvestment Compounders & Toll Bridges</h4>
+                <ul className="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+                  <li>10Y Median ROCE ≥ <strong>20%</strong> & Latest ROCE ≥ <strong>18%</strong></li>
+                  <li>5Y Incremental Return (ROIIC) ≥ <strong>18%</strong></li>
+                  <li>5Y Reinvestment Rate ≥ <strong>35%</strong> (or Capital-Light Toll Bridge like <code>CAMS</code>)</li>
+                  <li>COVID-Adjusted 5Y PAT CAGR ≥ <strong>11%</strong> & 10Y Sales CAGR ≥ <strong>8%</strong></li>
+                  <li>10Y Cash Conv ≥ <strong>75%</strong> & 3Y Cash Conv ≥ <strong>70%</strong></li>
+                  <li>Debt/Equity ≤ <strong>0.25x</strong> & Ex-Cash P/E ≤ <strong>38x</strong></li>
+                </ul>
+              </div>
+
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-cyan-500/30 space-y-2.5">
+                <div className="text-xs font-mono text-cyan-400 font-bold uppercase">Pillar 2A (~20% Allocation)</div>
+                <h4 className="text-sm font-bold text-white">Mohnish Pabrai &quot;Spawners&quot; (Multi-Bagger Engine)</h4>
+                <ul className="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+                  <li>Owner-Operated: Promoter Holding ≥ <strong>45%</strong> with <strong>0% Pledge</strong></li>
+                  <li>Aggressive Ploughback: 5Y Earnings Retention ≥ <strong>65%</strong> (Div Payout ≤ 30%)</li>
+                  <li>Physical Capacity Expansion: 5Y Gross Block Growth ≥ <strong>1.40x</strong></li>
+                  <li>10Y Median ROCE ≥ <strong>16%</strong> & 10Y PAT CAGR ≥ <strong>12%</strong></li>
+                  <li>Self-Funded Capex: 3Y Avg FCF &gt; 0 & Debt/Equity ≤ <strong>0.30x</strong></li>
+                  <li>Entry Multiple: Ex-Cash P/E ≤ <strong>22.0x</strong></li>
+                </ul>
+              </div>
+
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-emerald-500/30 space-y-2.5">
+                <div className="text-xs font-mono text-emerald-400 font-bold uppercase">Pillar 2B (~20% Allocation)</div>
+                <h4 className="text-sm font-bold text-white">Classic &quot;Dhandho&quot; Extreme Mispricing</h4>
+                <ul className="text-xs text-slate-300 space-y-1.5 list-disc pl-4">
+                  <li><em>&quot;Heads I win big; tails I don&apos;t lose much&quot;</em></li>
+                  <li>Deep Value Multiple: Ex-Cash P/E ≤ <strong>13.5x</strong></li>
+                  <li>High Cash Yield: 3Y Avg Free Cash Flow Yield ≥ <strong>5.5%</strong></li>
+                  <li>Hard Balance Sheet Floor: Debt/Equity ≤ <strong>0.15x</strong> + Net Cash cushion</li>
+                  <li>10Y & 3Y Cash Conversion ≥ <strong>75%</strong> & 10Y PAT CAGR ≥ <strong>8%</strong></li>
+                  <li><strong>Zero Government-Subsidy Captives</strong> (no urea/discoms)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* =====================================================================
+            TAB 0: SHOONYA ACTIVE INVESTMENTS & AUDITED CONVICTION DOSSIERS
+           ===================================================================== */}
         {activeTab === "shoonya" && (
           <div className="space-y-6">
-            {/* Header summary banner */}
-            <div className="p-5 rounded-xl bg-gradient-to-br from-[#0c1524] to-[#080d17] border border-emerald-500/30 shadow-xl space-y-3">
+            {/* Header & Live Account Reconciliation Banner */}
+            <div className="p-5 rounded-xl bg-gradient-to-br from-[#0c1524] to-[#080d17] border border-emerald-500/30 shadow-xl space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
@@ -434,85 +812,88 @@ export default function QuantDashboard() {
                   </div>
                   <div>
                     <h2 className="text-base font-bold text-white flex items-center gap-2">
-                      Active Shoonya Investments & Forensic Conviction Dossiers
+                      Shoonya Live Account (`FN237119`) & 8-Pillar Audited 5-Stock Conviction Portfolio
                     </h2>
                     <p className="text-xs text-slate-400">
-                      Vetted high-conviction positions with verified 4-Pillar Scuttlebutt, 10-Yr Cash Conversion, and Debt Cleanliness.
+                      100% CNC Delivery • Zero Mechanical Stop-Losses • Vetted across 10-Yr ROIIC, Reinvestment Runway & 8-Pillar Scuttlebutt
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono">
-                  <span className="px-3 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
-                    {portfolio.length} Live Positions
-                  </span>
-                  <span className="text-slate-400">
-                    {portfolioUpdated ? `Synced: ${portfolioUpdated}` : "Automated Periodic Updates Active"}
-                  </span>
+                  <button
+                    onClick={() => setActiveTab("knowledge")}
+                    className="px-3 py-1.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 hover:bg-amber-500/25 font-sans font-semibold transition flex items-center gap-1.5"
+                  >
+                    <BookOpen className="w-3.5 h-3.5" /> What do ROIIC / Ex-Cash P/E / MoS mean?
+                  </button>
                 </div>
               </div>
 
-              {/* Quick stats ribbon */}
-              {(() => {
-                const totalInvested = portfolio.length > 0 
-                  ? portfolio.reduce((acc, s) => acc + (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0)
-                  : 9912.85;
-                const totalCurrent = portfolio.length > 0
-                  ? portfolio.reduce((acc, s) => acc + (s.Quantity && s.CMP ? s.CMP * s.Quantity : (s.Current_Value || (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : 0))), 0)
-                  : 9906.50;
-                return (
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
-                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                      <div className="text-[11px] text-slate-400">Total Invested Capital</div>
-                      <div className="text-base font-bold text-white font-mono">
-                        ₹{totalInvested.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                      </div>
+              {/* Account Cash & Equity Reconciliation Ribbon */}
+              {accountSummary && (
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                  <div className="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+                    <div className="text-[11px] text-slate-400">Total Account Equity</div>
+                    <div className="text-base font-bold text-white font-mono">
+                      ₹{accountSummary.total_account_equity.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
                     </div>
-                    <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                      <div className="text-[11px] text-slate-400">Current Portfolio Value</div>
-                      <div className={`text-base font-bold font-mono ${totalCurrent >= totalInvested ? "text-emerald-400" : "text-rose-400"}`}>
-                        ₹{totalCurrent.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
-                      </div>
+                    <div className="text-[10px] text-slate-400 mt-0.5 font-mono">
+                      Initial Capital: ₹{accountSummary.initial_capital.toLocaleString("en-IN")}
                     </div>
-                    {(() => {
-                      const totalInv = portfolio.reduce((acc, s) => acc + (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0);
-                      const weightedROCE = totalInv > 0
-                        ? portfolio.reduce((acc, s) => acc + (s.Avg_ROCE_Pct || 0) * (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0) / totalInv
-                        : 47.7;
-                      const weightedCashConv = totalInv > 0
-                        ? portfolio.reduce((acc, s) => acc + (s.Cash_Conv_Pct || 0) * (s.Quantity && s.Entry_Price ? s.Entry_Price * s.Quantity : (s.Invested_Value || 0)), 0) / totalInv
-                        : 106.0;
-                      return (
-                        <>
-                          <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                            <div className="text-[11px] text-slate-400">10-Yr Avg ROCE / Cash Conv</div>
-                            <div className="text-base font-bold text-amber-300 font-mono">
-                              {weightedROCE.toFixed(1)}% / {weightedCashConv.toFixed(1)}%
-                            </div>
-                          </div>
-                          <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                            <div className="text-[11px] text-slate-400">Shoonya Order Status</div>
-                            <div className="text-base font-bold text-emerald-300 font-mono">
-                              {portfolio.length}/{portfolio.length} COMPLETE (CNC)
-                            </div>
-                          </div>
-                        </>
-                      );
-                    })()}
                   </div>
-                );
-              })()}
+
+                  <div className="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+                    <div className="text-[11px] text-slate-400">Total Cash Pool (Incl. T+1)</div>
+                    <div className="text-base font-bold text-emerald-400 font-mono">
+                      ₹{accountSummary.total_cash_after_t1.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
+                    </div>
+                    <div className="text-[10px] text-slate-400 mt-0.5 font-mono">
+                      Usable Today: ₹{accountSummary.usable_cash_today_80pct.toLocaleString("en-IN")}
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+                    <div className="text-[11px] text-slate-400">Live Stock Holding (CAMS)</div>
+                    <div className="text-base font-bold text-cyan-300 font-mono">
+                      ₹{accountSummary.live_equity_value.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
+                    </div>
+                    <div className="text-[10px] text-rose-400 mt-0.5 font-mono">
+                      Unrealized: ₹{accountSummary.unrealized_pnl_open.toFixed(2)}
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+                    <div className="text-[11px] text-slate-400">Realized P&L (4 Exits)</div>
+                    <div className="text-base font-bold text-amber-300 font-mono">
+                      ₹{accountSummary.realized_pnl_since_inception.toFixed(2)} (-0.91%)
+                    </div>
+                    <div className="text-[10px] text-slate-400 mt-0.5 font-mono">
+                      Cleaned 4 false-positive traps
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+                    <div className="text-[11px] text-slate-400">5-Stock Portfolio Avg Metrics</div>
+                    <div className="text-base font-bold text-emerald-300 font-mono">
+                      33% ROCE / 57% ROIIC
+                    </div>
+                    <div className="text-[10px] text-teal-300 mt-0.5 font-mono">
+                      Avg Ex-Cash P/E: 17.6x
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Holdings Table with Expandable In-Row Thesis Drawer */}
+            {/* Holdings & Finalist Watchlist Table with Expandable Thesis Drawer */}
             <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
                 <h3 className="text-sm font-bold text-white flex items-center gap-2">
                   <Layers className="w-4 h-4 text-emerald-400" />
-                  Live Holdings Ledger (Click row or &quot;View Thesis&quot; to inspect full conviction dossier)
+                  Live Holding & 8-Pillar Audited Conviction Portfolio (Click any row to view full 4-Pillar Dossier)
                 </h3>
-                <span className="text-xs text-emerald-400 font-mono flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                  Live Orders Filled on NSE
+                <span className="text-xs text-emerald-400 font-mono">
+                  1 Live Holding (`CAMS`) + 4 Audited Finalists Ready for Deployment
                 </span>
               </div>
 
@@ -520,35 +901,22 @@ export default function QuantDashboard() {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
-                      <th className="py-2.5 px-3">Script / Symbol</th>
-                      <th className="py-2.5 px-3">Qty (CNC)</th>
-                      <th className="py-2.5 px-3">Strategy Engine</th>
-                      <th className="py-2.5 px-3 text-right">Avg Buy (₹)</th>
+                      <th className="py-2.5 px-3">Stock</th>
+                      <th className="py-2.5 px-3">Status / Qty</th>
+                      <th className="py-2.5 px-3">Pillar Engine</th>
                       <th className="py-2.5 px-3 text-right">CMP (₹)</th>
-                      <th className="py-2.5 px-3 text-right">Invested (₹)</th>
-                      <th className="py-2.5 px-3 text-right">Current (₹)</th>
-                      <th className="py-2.5 px-3 text-right">P/E</th>
-                      <th className="py-2.5 px-3 text-right">Unrealized P&L</th>
-                      <th className="py-2.5 px-3 text-center">Action</th>
+                      <th className="py-2.5 px-3 text-right">Ex-Cash P/E</th>
+                      <th className="py-2.5 px-3 text-right">10Y ROCE</th>
+                      <th className="py-2.5 px-3 text-right">5Y ROIIC</th>
+                      <th className="py-2.5 px-3 text-right">5Y Reinvest</th>
+                      <th className="py-2.5 px-3 text-right">Intrinsic Value (MoS)</th>
+                      <th className="py-2.5 px-3 text-center">Dossier</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-800/60 font-mono">
                     {portfolio.map((stock) => {
                       const isExpanded = expandedStock === stock.Symbol;
-                      const investedVal = stock.Quantity && stock.Entry_Price 
-                        ? stock.Entry_Price * stock.Quantity 
-                        : (stock.Invested_Value || 0);
-                      const currentVal = stock.Quantity && stock.CMP 
-                        ? stock.CMP * stock.Quantity 
-                        : (stock.Current_Value || investedVal);
-                      
-                      const diffAmt = currentVal - investedVal;
-                      const isGain = diffAmt >= 0;
-                      const pnlAmtStr = Math.abs(diffAmt).toFixed(2);
-                      
-                      const diffPct = investedVal > 0 ? (diffAmt / investedVal) * 100 : 0;
-                      const pnlPctStr = Math.abs(diffPct).toFixed(2);
-
+                      const isLive = (stock.Quantity || 0) > 0;
                       return (
                         <React.Fragment key={stock.Symbol}>
                           <tr 
@@ -559,27 +927,42 @@ export default function QuantDashboard() {
                               {isExpanded ? <ChevronUp className="w-3.5 h-3.5 text-emerald-400" /> : <ChevronDown className="w-3.5 h-3.5 text-slate-500" />}
                               <div>
                                 <span>{stock.Symbol}</span>
-                                <div className="text-[10px] text-slate-400 font-sans font-normal">{stock.Name.split(" ")[0]} {stock.Name.split(" ")[1] || ""}</div>
+                                <div className="text-[10px] text-slate-400 font-sans font-normal">{stock.Name}</div>
                               </div>
                             </td>
-                            <td className="py-3 px-3 text-slate-300 font-semibold">{stock.Quantity || "-"}</td>
+                            <td className="py-3 px-3">
+                              {isLive ? (
+                                <div>
+                                  <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold">
+                                    LIVE: {stock.Quantity} Qty
+                                  </span>
+                                  {stock.Recommended_Add_Qty ? (
+                                    <div className="text-[10px] text-cyan-300 mt-0.5">+{stock.Recommended_Add_Qty} Qty Add Proposed</div>
+                                  ) : null}
+                                </div>
+                              ) : (
+                                <span className="px-2 py-0.5 rounded bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 text-[10px] font-semibold">
+                                  PROPOSED: {stock.Recommended_Add_Qty} Qty
+                                </span>
+                              )}
+                            </td>
                             <td className="py-3 px-3">
                               <span className={`px-2 py-0.5 rounded text-[10px] font-semibold font-sans ${
-                                stock.Strategy.includes("Plan A") 
+                                stock.Strategy.includes("Pillar 1")
                                   ? "bg-amber-500/10 text-amber-300 border border-amber-500/20"
                                   : "bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
                               }`}>
-                                {stock.Strategy.split(":")[0]}
+                                {stock.Strategy}
                               </span>
                             </td>
-                            <td className="py-3 px-3 text-right text-slate-300">₹{stock.Entry_Price.toFixed(2)}</td>
                             <td className="py-3 px-3 text-right font-bold text-white">₹{stock.CMP.toFixed(2)}</td>
-                            <td className="py-3 px-3 text-right text-slate-300">₹{investedVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                            <td className="py-3 px-3 text-right font-semibold text-white">₹{currentVal.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
-                            <td className="py-3 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
-                            <td className={`py-3 px-3 text-right font-bold ${isGain ? "text-emerald-400" : "text-rose-400"}`}>
-                              <div>{isGain ? `+₹${pnlAmtStr}` : `-₹${pnlAmtStr}`}</div>
-                              <div className="text-[10px]">{isGain ? `(+${pnlPctStr}%)` : `(-${pnlPctStr}%)`}</div>
+                            <td className="py-3 px-3 text-right font-bold text-cyan-300">{stock.Ex_Cash_PE || stock.PE}x</td>
+                            <td className="py-3 px-3 text-right font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</td>
+                            <td className="py-3 px-3 text-right font-bold text-emerald-400">{stock.ROIIC_5Y_Pct || "-"}%</td>
+                            <td className="py-3 px-3 text-right text-purple-300">{stock.Reinvest_Rate_5Y_Pct || "-"}%</td>
+                            <td className="py-3 px-3 text-right">
+                              <div className="font-bold text-teal-300">₹{stock.Intrinsic_Value || stock.Target_Price}</div>
+                              <div className="text-[10px] text-emerald-400">(+{stock.MoS_Pct || 0}% MoS)</div>
                             </td>
                             <td className="py-3 px-3 text-center">
                               <button
@@ -593,7 +976,7 @@ export default function QuantDashboard() {
                                     : "bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700"
                                 }`}
                               >
-                                {isExpanded ? "Hide Thesis" : "View Thesis ▾"}
+                                {isExpanded ? "Hide ▴" : "View Dossier ▾"}
                               </button>
                             </td>
                           </tr>
@@ -601,180 +984,75 @@ export default function QuantDashboard() {
                           {/* Expandable In-Row Thesis Drawer */}
                           {isExpanded && (
                             <tr className="bg-[#090e17] border-b-2 border-emerald-500/40">
-                              <td colSpan={9} className="p-5 font-sans">
+                              <td colSpan={10} className="p-5 font-sans">
                                 <div className="space-y-4 max-w-6xl mx-auto">
-                                  
-                                  {/* Top Banner of the Dossier */}
                                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 p-3.5 rounded-lg bg-slate-900/90 border border-slate-800">
                                     <div>
                                       <div className="text-xs text-slate-400 uppercase tracking-wider font-mono flex items-center gap-2">
-                                        <span>Investment Thesis Dossier</span>
-                                        {stock.Order_No && (
-                                          <span className="px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[10px]">
-                                            Order #{stock.Order_No} (CNC Filled)
-                                          </span>
-                                        )}
-                                      </div>
-                                      <div className="text-base font-bold text-white flex items-center gap-2 mt-0.5">
-                                        <span>{stock.Name} ({stock.Symbol})</span>
-                                        <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">
-                                          {stock.Forensic_Status.split("(")[0].trim()}
+                                        <span>8-Pillar Audited Conviction Dossier</span>
+                                        <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px]">
+                                          {stock.Forensic_Status}
                                         </span>
+                                      </div>
+                                      <div className="text-base font-bold text-white mt-1">
+                                        {stock.Name} ({stock.Symbol}) — <span className="text-emerald-400">{stock.Moat_Rating}</span>
                                       </div>
                                     </div>
 
                                     <div className="flex flex-wrap items-center gap-4 text-xs font-mono">
                                       <div>
-                                        <span className="text-slate-400">Target: </span>
-                                        <span className="font-bold text-emerald-400">₹{stock.Target_Price}</span>
+                                        <span className="text-slate-400">Net Cash: </span>
+                                        <span className="font-bold text-emerald-400">₹{stock.Net_Cash_Cr || 0} Cr</span>
                                       </div>
                                       <div>
-                                        <span className="text-slate-400">Stop-Loss: </span>
-                                        <span className="font-bold text-rose-400">₹{stock.Stop_Loss}</span>
+                                        <span className="text-slate-400">Debt: </span>
+                                        <span className="font-bold text-cyan-300">₹{stock.Latest_Debt_Cr} Cr</span>
                                       </div>
                                       <div>
-                                        <span className="text-slate-400">10-Yr ROCE: </span>
-                                        <span className="font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</span>
-                                      </div>
-                                      <div>
-                                        <span className="text-slate-400">10-Yr Cash Conv: </span>
-                                        <span className="font-bold text-emerald-300">{stock.Cash_Conv_Pct}%</span>
+                                        <span className="text-slate-400">10Y / 3Y Cash Conv: </span>
+                                        <span className="font-bold text-emerald-300">{stock.Cash_Conv_Pct}% / {stock.Cash_Conv_3Y_Pct || stock.Cash_Conv_Pct}%</span>
                                       </div>
                                     </div>
                                   </div>
 
-                                  {/* Active Shoonya GTT Orders Ribbon */}
-                                  {stock.GTT_Orders && (
-                                    <div className="p-3 rounded-lg bg-blue-950/20 border border-blue-500/30 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                                      <div className="flex items-center gap-2">
-                                        <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-                                        <span className="text-blue-300 font-bold font-sans">Active Shoonya GTT Orders (1-Year Server-Side Trigger):</span>
-                                      </div>
-                                      <div className="flex flex-wrap items-center gap-3 text-[11px]">
-                                        {stock.GTT_Orders.oco_order && (
-                                          <div className="flex flex-wrap items-center gap-2">
-                                            <div className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
-                                              <span>OCO Leg 1 (Target): </span>
-                                              <span className="font-bold text-white">Trigger ≥ ₹{stock.GTT_Orders.oco_order.leg1_target.trigger}</span> → Limit ₹{stock.GTT_Orders.oco_order.leg1_target.limit}
-                                            </div>
-                                            <div className="px-2 py-0.5 rounded bg-rose-500/10 border border-rose-500/30 text-rose-300">
-                                              <span>OCO Leg 2 (Stop-Loss): </span>
-                                              <span className="font-bold text-white">Trigger ≤ ₹{stock.GTT_Orders.oco_order.leg2_stop_loss.trigger}</span> → Limit ₹{stock.GTT_Orders.oco_order.leg2_stop_loss.limit}
-                                            </div>
-                                            <span className="text-[10px] text-slate-400 font-mono">(Alert #{stock.GTT_Orders.oco_order.al_id})</span>
-                                          </div>
-                                        )}
-                                        {stock.GTT_Orders.target_harvest_gtt && (
-                                          <div className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
-                                            <span>Target Harvest: </span>
-                                            <span className="font-bold text-white">Trigger ≥ ₹{stock.GTT_Orders.target_harvest_gtt.trigger}</span> → Limit ₹{stock.GTT_Orders.target_harvest_gtt.limit}
-                                            <span className="text-[10px] text-slate-400 ml-1.5">(Alert #{stock.GTT_Orders.target_harvest_gtt.al_id})</span>
-                                          </div>
-                                        )}
-                                        {stock.GTT_Orders.stop_loss_gtt && (
-                                          <div className="px-2 py-0.5 rounded bg-rose-500/10 border border-rose-500/30 text-rose-300">
-                                            <span>Stop-Loss Floor: </span>
-                                            <span className="font-bold text-white">Trigger ≤ ₹{stock.GTT_Orders.stop_loss_gtt.trigger}</span> → Limit ₹{stock.GTT_Orders.stop_loss_gtt.limit}
-                                            <span className="text-[10px] text-slate-400 ml-1.5">(Alert #{stock.GTT_Orders.stop_loss_gtt.al_id})</span>
-                                          </div>
-                                        )}
-                                      </div>
-                                    </div>
-                                  )}
-
-                                  {/* Core Executive Summary */}
                                   <div className="p-3.5 rounded-lg bg-emerald-950/20 border border-emerald-500/30 text-xs text-slate-200 leading-relaxed">
-                                    <span className="font-bold text-emerald-400 uppercase tracking-wide mr-2 font-mono">Core Conviction Rationale:</span>
+                                    <span className="font-bold text-emerald-400 uppercase tracking-wide mr-2 font-mono">Executive Summary:</span>
                                     {stock.Thesis_Summary}
                                   </div>
 
-                                  {/* The 4-Pillar Deep Dive Grid */}
                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-                                    {/* Pillar 1: Business Model */}
                                     <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
                                       <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
                                         <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                                        1. Business Engine & Competitive Advantage
+                                        1. Business Engine & Competitive Moat
                                       </div>
-                                      <p className="text-slate-400 leading-relaxed">
-                                        {stock.Pillar_1_Business_Model}
-                                      </p>
+                                      <p className="text-slate-400 leading-relaxed">{stock.Pillar_1_Business_Model}</p>
                                     </div>
 
-                                    {/* Pillar 2: Financial Moat */}
                                     <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
                                       <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
                                         <Award className="w-4 h-4 text-amber-400" />
-                                        2. 10-Year Audited Financial Moat
+                                        2. 10-Year Audited Financial Compounding
                                       </div>
-                                      <p className="text-slate-400 leading-relaxed">
-                                        {stock.Pillar_2_Financial_Moat}
-                                      </p>
+                                      <p className="text-slate-400 leading-relaxed">{stock.Pillar_2_Financial_Moat}</p>
                                     </div>
 
-                                    {/* Pillar 3: Qualitative Scuttlebutt */}
                                     <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
                                       <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
                                         <ShieldCheck className="w-4 h-4 text-cyan-400" />
-                                        3. Qualitative Scuttlebutt & Governance Audit
+                                        3. 8-Pillar Qualitative Scuttlebutt & Governance
                                       </div>
-                                      <p className="text-slate-400 leading-relaxed">
-                                        {stock.Pillar_3_Qualitative_Scuttlebutt}
-                                      </p>
+                                      <p className="text-slate-400 leading-relaxed">{stock.Pillar_3_Qualitative_Scuttlebutt}</p>
                                     </div>
 
-                                    {/* Pillar 4: Macro & Risks */}
                                     <div className="p-3.5 rounded-lg bg-slate-900/70 border border-slate-800 space-y-1.5">
                                       <div className="font-bold text-slate-200 flex items-center gap-1.5 text-xs">
-                                        <AlertTriangle className="w-4 h-4 text-rose-400" />
-                                        4. Macro Vulnerabilities & Downside Protections
+                                        <Compass className="w-4 h-4 text-amber-400" />
+                                        4. Key Risks & Why It Is Mispriced Today
                                       </div>
-                                      <p className="text-slate-400 leading-relaxed">
-                                        {stock.Pillar_4_Macro_Risks}
-                                      </p>
+                                      <p className="text-slate-400 leading-relaxed">{stock.Pillar_4_Macro_Risks}</p>
                                     </div>
                                   </div>
-
-                                  {/* Verbatim ValuePickr Grassroots Discussion */}
-                                  {stock.ValuePickr_Scuttlebutt && (
-                                    <div className="p-3.5 rounded-lg bg-slate-900/90 border border-cyan-500/30 space-y-2.5">
-                                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-slate-800 pb-2">
-                                        <div className="font-bold text-cyan-300 flex items-center gap-1.5 text-xs">
-                                          <MessageSquareQuote className="w-4 h-4 text-cyan-400" />
-                                          ValuePickr Grassroots Investor Discussion (Verbatim Excerpts)
-                                        </div>
-                                        <a 
-                                          href={stock.ValuePickr_Scuttlebutt.thread_url}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="text-[11px] text-cyan-400 hover:text-cyan-300 font-mono flex items-center gap-1 hover:underline"
-                                        >
-                                          Open Thread #{stock.ValuePickr_Scuttlebutt.topic_id} <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                      </div>
-
-                                      <div className="space-y-2">
-                                        {stock.ValuePickr_Scuttlebutt.posts.map((post, idx) => (
-                                          <div key={idx} className="p-2.5 rounded bg-slate-950/60 border border-slate-800/80 text-xs">
-                                            <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1 font-mono">
-                                              <span className="font-semibold text-emerald-400">@{post.author}</span>
-                                              <span>{post.date}</span>
-                                            </div>
-                                            <p className="text-slate-300 italic leading-relaxed font-sans">
-                                              &quot;{post.text}&quot;
-                                            </p>
-                                          </div>
-                                        ))}
-                                      </div>
-                                    </div>
-                                  )}
-
-                                  {/* Bottom Status bar */}
-                                  <div className="flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-500 pt-1">
-                                    <span>Moat Rating: <span className="text-slate-300 font-sans">{stock.Moat_Rating}</span></span>
-                                    <span>Source: <span className="text-slate-300">{stock.Trigger_Source}</span></span>
-                                  </div>
-
                                 </div>
                               </td>
                             </tr>
@@ -786,16 +1064,39 @@ export default function QuantDashboard() {
                 </table>
               </div>
             </div>
+
+            {/* Disqualified & Exited Audit Log */}
+            {disqualifiedExits.length > 0 && (
+              <div className="p-5 rounded-xl bg-[#0c121e] border border-rose-500/30 shadow-md space-y-3">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2.5">
+                  <h3 className="text-sm font-bold text-rose-400 flex items-center gap-2">
+                    <XCircle className="w-4 h-4" />
+                    Disqualified & Exited Legacy Positions (Forensic Cleanup Log)
+                  </h3>
+                  <span className="text-xs text-slate-400 font-mono">4 False-Positive Traps Liquidated</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {disqualifiedExits.map((ex) => (
+                    <div key={ex.Symbol} className="p-3 rounded-lg bg-rose-950/15 border border-rose-500/20 text-xs space-y-1">
+                      <div className="flex items-center justify-between font-mono">
+                        <span className="font-bold text-rose-300">{ex.Symbol} (Sold {ex.Qty_Sold} Qty)</span>
+                        <span className="text-slate-400">{ex.Exit_Date} {ex.Exit_Price ? `@ ₹${ex.Exit_Price}` : ""}</span>
+                      </div>
+                      <p className="text-slate-300 leading-relaxed">{ex.Reason}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
-        {/* TAB 1: MACRO REGIME RADAR */}
+        {/* =====================================================================
+            TAB 1: MACRO REGIME RADAR
+           ===================================================================== */}
         {activeTab === "macro" && macro && (
           <div className="space-y-6">
-            {/* Top Indicator KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-              
-              {/* Brent Crude */}
               <div 
                 onClick={() => setSelectedIndicator("Brent")}
                 className={`p-4 rounded-xl border transition cursor-pointer relative overflow-hidden ${
@@ -817,13 +1118,8 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-rose-400 flex items-center gap-1">
                   <TrendingUp className="w-3.5 h-3.5" /> {macro.brent_crude.trend}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
-                  <span>Margin Squeeze Risk</span>
-                  <span className="text-[10px] text-rose-400 underline font-mono">Click to chart</span>
-                </div>
               </div>
 
-              {/* US 10Y Yield */}
               <div 
                 onClick={() => setSelectedIndicator("US10Y")}
                 className={`p-4 rounded-xl border transition cursor-pointer relative ${
@@ -844,13 +1140,8 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-amber-400 flex items-center gap-1">
                   <AlertTriangle className="w-3.5 h-3.5" /> {macro.us_10y.verdict}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
-                  <span>Global Discount Rate</span>
-                  <span className="text-[10px] text-amber-400 underline font-mono">Click to chart</span>
-                </div>
               </div>
 
-              {/* India 10Y G-Sec */}
               <div 
                 onClick={() => setSelectedIndicator("IndiaGSec")}
                 className={`p-4 rounded-xl border transition cursor-pointer relative ${
@@ -871,13 +1162,8 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-emerald-400 flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5" /> BENIGN / ANCHORED
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
-                  <span>Low domestic borrowing cost</span>
-                  <span className="text-[10px] text-emerald-400 underline font-mono">Click to chart</span>
-                </div>
               </div>
 
-              {/* USD / INR */}
               <div 
                 onClick={() => setSelectedIndicator("USDINR")}
                 className={`p-4 rounded-xl border transition cursor-pointer relative ${
@@ -896,13 +1182,8 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-cyan-400 flex items-center gap-1">
                   <TrendingUp className="w-3.5 h-3.5" /> Exporter Tailwinds
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
-                  <span>IT / Pharma Boost</span>
-                  <span className="text-[10px] text-cyan-400 underline font-mono">Click to chart</span>
-                </div>
               </div>
 
-              {/* Dollar Index (DXY) */}
               <div 
                 onClick={() => setSelectedIndicator("DXY")}
                 className={`p-4 rounded-xl border transition cursor-pointer relative ${
@@ -923,42 +1204,25 @@ export default function QuantDashboard() {
                 <div className="mt-2 text-xs font-medium text-purple-400 flex items-center gap-1">
                   <Activity className="w-3.5 h-3.5 text-purple-400" /> Neutral-to-Soft
                 </div>
-                <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
-                  <span>Limits EM Outflows</span>
-                  <span className="text-[10px] text-purple-400 underline font-mono">Click to chart</span>
-                </div>
               </div>
-
             </div>
 
-            {/* EXPANDED INTERACTIVE HISTORICAL CHART CARD */}
             <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
                 <div>
-                  <div className="flex items-center gap-2">
-                    <h2 className="text-base font-bold text-white flex items-center gap-2">
-                      <BarChart3 className="w-5 h-5 text-emerald-400" />
-                      {activeConfig.name} Multi-Horizon Historical Trajectory
-                    </h2>
-                    <span className="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">
-                      Unit: {activeConfig.unit}
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-400 mt-1 max-w-3xl">
-                    {activeConfig.desc}
-                  </p>
+                  <h2 className="text-base font-bold text-white flex items-center gap-2">
+                    <BarChart3 className="w-5 h-5 text-emerald-400" />
+                    {activeConfig.name} Multi-Horizon Historical Trajectory ({activeConfig.unit})
+                  </h2>
+                  <p className="text-xs text-slate-400 mt-1 max-w-3xl">{activeConfig.desc}</p>
                 </div>
-
-                {/* Timeframe Buttons */}
                 <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs font-mono">
                   {(["1M", "6M", "1Y", "ALL"] as const).map((tf) => (
                     <button
                       key={tf}
                       onClick={() => setTimeframe(tf)}
                       className={`px-3 py-1 rounded transition ${
-                        timeframe === tf
-                          ? "bg-emerald-500 text-slate-950 font-bold"
-                          : "text-slate-400 hover:text-white"
+                        timeframe === tf ? "bg-emerald-500 text-slate-950 font-bold" : "text-slate-400 hover:text-white"
                       }`}
                     >
                       {tf}
@@ -967,7 +1231,6 @@ export default function QuantDashboard() {
                 </div>
               </div>
 
-              {/* Chart Body */}
               <div className="h-80 w-full pt-2">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={filteredChartHistory} margin={{ top: 10, right: 20, left: 10, bottom: 20 }}>
@@ -978,170 +1241,30 @@ export default function QuantDashboard() {
                       </linearGradient>
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
-                    <XAxis 
-                      dataKey="Date" 
-                      stroke="#64748b" 
-                      tick={{ fill: "#94a3b8", fontSize: 11 }}
-                      tickFormatter={(val) => {
-                        const d = new Date(val);
-                        return `${d.toLocaleString("default", { month: "short" })} ${d.getFullYear().toString().slice(-2)}`;
-                      }}
-                    />
-                    <YAxis 
-                      stroke="#64748b" 
-                      tick={{ fill: "#94a3b8", fontSize: 11 }}
-                      domain={["auto", "auto"]}
-                    />
-                    <Tooltip 
-                      contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", borderRadius: "8px", fontSize: "12px", fontFamily: "monospace" }}
-                      formatter={(val: any) => [`${Number(val).toLocaleString()} ${activeConfig.unit}`, activeConfig.name]}
-                    />
-                    <Area 
-                      isAnimationActive={true}
-                      animationDuration={300}
-                      type="monotone" 
-                      dataKey={activeConfig.dataKey} 
-                      stroke={activeConfig.color} 
-                      strokeWidth={2}
-                      fillOpacity={1} 
-                      fill="url(#colorGradient)" 
-                    />
+                    <XAxis dataKey="Date" stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 11 }} />
+                    <YAxis stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 11 }} domain={["auto", "auto"]} />
+                    <Tooltip contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", borderRadius: "8px", fontSize: "12px", fontFamily: "monospace" }} />
+                    <Area type="monotone" dataKey={activeConfig.dataKey} stroke={activeConfig.color} strokeWidth={2} fillOpacity={1} fill="url(#colorGradient)" />
                   </AreaChart>
                 </ResponsiveContainer>
-              </div>
-
-              <div className="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs border-t border-slate-800/80 text-slate-400 font-mono">
-                <div className="flex items-center gap-4">
-                  <span>Click other macro cards above to switch indicator view</span>
-                  <button 
-                    onClick={() => setSelectedIndicator("Nifty50")} 
-                    className={`underline hover:text-white ${selectedIndicator === "Nifty50" ? "text-emerald-400 font-bold" : ""}`}
-                  >
-                    View Nifty 50 Trend
-                  </button>
-                </div>
-                <span>Data points: {filteredChartHistory.length} trading sessions</span>
-              </div>
-            </div>
-
-            {/* Institutional Flow Decoupling Chart */}
-            <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h2 className="text-base font-bold text-white flex items-center gap-2">
-                      <BarChart3 className="w-5 h-5 text-emerald-400" />
-                      Institutional Absorption: Domestic Structural Revolution (₹ Cr)
-                    </h2>
-                    <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
-                      {flowTimeframe === "ALL" ? "2015-2026 (12Y)" : flowTimeframe === "5Y" ? "2022-2026 (5Y)" : "2024-2026 (3Y)"}
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-400 mt-0.5">
-                    Multi-horizon comparison of Foreign Institutional (FII) vs Domestic Institutional (DII) Net Equity Flows
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-2">
-                  {/* Mode Toggle */}
-                  <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs font-mono">
-                    <button
-                      onClick={() => setFlowMode("both")}
-                      className={`px-2.5 py-1 rounded transition ${
-                        flowMode === "both"
-                          ? "bg-emerald-500 text-slate-950 font-bold"
-                          : "text-slate-400 hover:text-white"
-                      }`}
-                    >
-                      FII vs DII
-                    </button>
-                    <button
-                      onClick={() => setFlowMode("net")}
-                      className={`px-2.5 py-1 rounded transition ${
-                        flowMode === "net"
-                          ? "bg-cyan-500 text-slate-950 font-bold"
-                          : "text-slate-400 hover:text-white"
-                      }`}
-                    >
-                      Net Absorption
-                    </button>
-                  </div>
-
-                  {/* Horizon Toggle */}
-                  <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs font-mono">
-                    {(["3Y", "5Y", "ALL"] as const).map((h) => (
-                      <button
-                        key={h}
-                        onClick={() => setFlowTimeframe(h)}
-                        className={`px-2.5 py-1 rounded transition ${
-                          flowTimeframe === h
-                            ? "bg-slate-700 text-white font-bold"
-                            : "text-slate-400 hover:text-white"
-                        }`}
-                      >
-                        {h}
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="text-xs text-slate-300 bg-slate-900/90 px-2.5 py-1.5 rounded-lg border border-slate-800 font-mono hidden sm:block">
-                    2026 YTD DII: <span className="font-bold text-emerald-400">+₹3,80,000 Cr</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="h-80 w-full pt-2">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={filteredFlowHistory} margin={{ top: 20, right: 20, left: 10, bottom: 20 }}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
-                    <XAxis dataKey="Year" stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 12 }} />
-                    <YAxis stroke="#64748b" tick={{ fill: "#94a3b8", fontSize: 11 }} tickFormatter={(val) => `₹${Math.round(val / 1000)}k`} />
-                    <Tooltip 
-                      contentStyle={{ backgroundColor: "#0f172a", borderColor: "#334155", borderRadius: "8px", fontSize: "12px", fontFamily: "monospace" }}
-                      formatter={(val: any) => [`₹${Number(val).toLocaleString("en-IN")} Cr`]}
-                    />
-                    <Legend wrapperStyle={{ fontSize: "12px", paddingTop: "10px" }} />
-                    {flowMode === "both" ? (
-                      <>
-                        <Bar isAnimationActive={true} animationDuration={300} dataKey="FII_Net_Equity_Cr" name="FII Net Equity (₹ Cr)" fill="#f43f5e" radius={[4, 4, 0, 0]} />
-                        <Bar isAnimationActive={true} animationDuration={300} dataKey="DII_Net_Equity_Cr" name="DII Net Equity (₹ Cr)" fill="#10b981" radius={[4, 4, 0, 0]} />
-                      </>
-                    ) : (
-                      <Bar isAnimationActive={true} animationDuration={300} dataKey="Net_Domestic_Absorption_Cr" name="Net Domestic Absorption Cushion (₹ Cr)" fill="#06b6d4" radius={[4, 4, 0, 0]} />
-                    )}
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-xs text-slate-300">
-                <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
-                  <div className="font-semibold text-emerald-400 mb-1">Permanent Domestic Bid</div>
-                  DII SIP inflows (~₹28,000+ Cr/month) have structurally decoupled Indian equities from foreign capital flight.
-                </div>
-                <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
-                  <div className="font-semibold text-cyan-400 mb-1">Sovereign Debt Anchored</div>
-                  G-Sec yields at 6.89% (35th percentile) allow top-tier balance sheets to fund growth at low cost of capital.
-                </div>
-                <div className="p-3 rounded-lg bg-slate-900/80 border border-slate-800">
-                  <div className="font-semibold text-amber-400 mb-1">Crude & Capex Posture</div>
-                  Crude at $96.66 warrants prioritizing companies with pricing power (Plan A) over commodity-input price takers.
-                </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* TAB 2: PLAN A (MUNGER COMPOUNDERS) */}
+        {/* =====================================================================
+            TAB 2: PILLAR 1 (BUFFETT-MUNGER REINVESTMENT COMPOUNDERS)
+           ===================================================================== */}
         {activeTab === "planA" && screener && (
           <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
               <div>
                 <h2 className="text-base font-bold text-white flex items-center gap-2">
                   <Award className="w-5 h-5 text-amber-400" />
-                  Plan A: Quality Moat Compounders (Top {screener.plan_a_top.length} Stocks)
+                  Pillar 1: Buffett–Munger Reinvestment Compounders & Toll Bridges ({screener.plan_a_count} Stocks)
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Criteria: 10-Year Average ROCE = 20%, 10-Year Cash Conversion (CFO/PAT) = 70%, Debt ≤ ₹300 Cr.
+                  Gates: 10Y Med ROCE ≥ 20%, 5Y ROIIC ≥ 18%, Reinvest ≥ 35% (or Toll Bridge), COVID-Adj 5Y PAT CAGR ≥ 11%, 10Y/3Y Cash Conv ≥ 75%, D/E ≤ 0.25x, Ex-Cash P/E ≤ 38x.
                 </p>
               </div>
               <div className="text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded border border-emerald-500/20 font-medium">
@@ -1155,27 +1278,31 @@ export default function QuantDashboard() {
                   <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
                     <th className="py-2.5 px-3">Ticker</th>
                     <th className="py-2.5 px-3">Company Name</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr Avg ROCE</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">CMP (₹)</th>
-                    <th className="py-2.5 px-3 text-right">P/E</th>
+                    <th className="py-2.5 px-3 text-right">10Y Med ROCE</th>
+                    <th className="py-2.5 px-3 text-right">5Y ROIIC</th>
+                    <th className="py-2.5 px-3 text-right">5Y Reinvest</th>
+                    <th className="py-2.5 px-3 text-right">5Y PAT CAGR</th>
+                    <th className="py-2.5 px-3 text-right">10Y / 3Y Cash Conv</th>
+                    <th className="py-2.5 px-3 text-right">Net Cash (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">Ex-Cash P/E</th>
+                    <th className="py-2.5 px-3 text-right">IV (MoS %)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800/60 font-mono">
                   {screener.plan_a_top.map((stock) => (
                     <tr key={stock.Symbol} className="hover:bg-slate-800/40 transition">
-                      <td className="py-2 px-3 font-bold text-emerald-400">{stock.Symbol}</td>
-                      <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
-                      <td className="py-2 px-3 text-right font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-emerald-300 font-bold">{stock.Cash_Conv_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-cyan-300">₹{stock.Latest_Debt_Cr}</td>
-                      <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `₹${stock.CMP}` : "-"}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
+                      <td className="py-2.5 px-3 font-bold text-emerald-400">{stock.Symbol}</td>
+                      <td className="py-2.5 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
+                      <td className="py-2.5 px-3 text-right font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right font-bold text-emerald-400">{stock.ROIIC_5Y_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right text-purple-300">{stock.Reinvest_Rate_5Y_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-300 font-bold">{stock.PAT_CAGR_5Y}%</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">{stock.Cash_Conv_Pct}% / {stock.Cash_Conv_3Y_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right text-cyan-300">₹{stock.Net_Cash_Cr}</td>
+                      <td className="py-2.5 px-3 text-right font-bold text-white">{stock.Ex_Cash_PE}x</td>
+                      <td className="py-2.5 px-3 text-right text-teal-300">
+                        ₹{stock.Intrinsic_Value} <span className="text-[10px]">({stock.MoS_Pct && stock.MoS_Pct > 0 ? `+${stock.MoS_Pct}%` : `${stock.MoS_Pct}%`})</span>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -1184,17 +1311,19 @@ export default function QuantDashboard() {
           </div>
         )}
 
-        {/* TAB 3: PLAN B (DHANDHO DEEP VALUE) */}
+        {/* =====================================================================
+            TAB 3: PILLAR 2A & 2B (PABRAI SPAWNERS & DHANDHO MISPRICING)
+           ===================================================================== */}
         {activeTab === "planB" && screener && (
           <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
               <div>
                 <h2 className="text-base font-bold text-white flex items-center gap-2">
                   <Flame className="w-5 h-5 text-cyan-400" />
-                  Plan B: Pabrai Dhandho Deep Value (Top {screener.plan_b_top.length} Stocks)
+                  Pillar 2A (Pabrai Spawners) & Pillar 2B (Classic Dhandho ≤ 13.5x Ex-Cash P/E)
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Criteria: 10-Year Cash Conversion ≥ 75%, Clean Balance Sheet (Debt ≤ ₹150 Cr), ROCE 15% to 35%.
+                  Owner-operated Spawners (Promoter ≥ 45%, Reinvest ≥ 65%, Gross Block Exp ≥ 1.4x) & Deep Value Dhandho setups with high FCF yield.
                 </p>
               </div>
               <div className="text-xs text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded border border-cyan-500/20 font-medium">
@@ -1207,78 +1336,34 @@ export default function QuantDashboard() {
                 <thead>
                   <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
                     <th className="py-2.5 px-3">Ticker</th>
-                    <th className="py-2.5 px-3">Company Name</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr Avg ROCE</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">CMP (₹)</th>
-                    <th className="py-2.5 px-3 text-right">P/E</th>
+                    <th className="py-2.5 px-3">Company / Sub-Pillar</th>
+                    <th className="py-2.5 px-3 text-right">Promoter %</th>
+                    <th className="py-2.5 px-3 text-right">5Y Reinvest</th>
+                    <th className="py-2.5 px-3 text-right">5Y Asset Exp</th>
+                    <th className="py-2.5 px-3 text-right">10Y ROCE</th>
+                    <th className="py-2.5 px-3 text-right">10Y / 5Y PAT CAGR</th>
+                    <th className="py-2.5 px-3 text-right">Net Cash (₹ Cr)</th>
+                    <th className="py-2.5 px-3 text-right">Ex-Cash P/E</th>
+                    <th className="py-2.5 px-3 text-right">IV (MoS %)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-800/60 font-mono">
                   {screener.plan_b_top.map((stock) => (
                     <tr key={stock.Symbol} className="hover:bg-slate-800/40 transition">
-                      <td className="py-2 px-3 font-bold text-cyan-400">{stock.Symbol}</td>
-                      <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
-                      <td className="py-2 px-3 text-right font-bold text-emerald-300">{stock.Cash_Conv_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-amber-300 font-bold">{stock.Avg_ROCE_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{stock.Latest_Debt_Cr}</td>
-                      <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `₹${stock.CMP}` : "-"}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">{stock.PE || "-"}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        )}
-
-        {/* TAB 4: FORENSIC TRAPS */}
-        {activeTab === "traps" && screener && (
-          <div className="p-5 rounded-xl bg-[#0c121e] border border-rose-500/30 shadow-md space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
-              <div>
-                <h2 className="text-base font-bold text-rose-400 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5" />
-                  Forensic Disasters & Paper Profit Traps (Top {screener.traps_top.length} Leveraged Traps)
-                </h2>
-                <p className="text-xs text-slate-400 mt-0.5">
-                  Eliminated at Gate 1 (Excessive Debt) and Gate 5 (Cash Conversion &lt; 30% or Negative Operating Cash).
-                </p>
-              </div>
-              <div className="text-xs text-rose-400 bg-rose-500/10 px-3 py-1 rounded border border-rose-500/20 font-medium">
-                {screener.traps_count} Disqualified across NSE
-              </div>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
-                <thead>
-                  <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
-                    <th className="py-2.5 px-3">Ticker</th>
-                    <th className="py-2.5 px-3">Company Name</th>
-                    <th className="py-2.5 px-3 text-right">Total Debt (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
-                    <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
-                    <th className="py-2.5 px-3">Forensic Diagnosis</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800/60 font-mono">
-                  {screener.traps_top.map((stock) => (
-                    <tr key={stock.Symbol} className="hover:bg-rose-950/20 transition">
-                      <td className="py-2 px-3 font-bold text-rose-400">{stock.Symbol}</td>
-                      <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
-                      <td className="py-2 px-3 text-right font-bold text-rose-300">₹{Math.round(stock.Latest_Debt_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-rose-400 font-bold">{stock.Cash_Conv_Pct}%</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                      <td className="py-2 px-3 font-sans text-xs text-rose-300/80">
-                        {stock.Latest_Debt_Cr > 5000 ? "Crushing Debt Burden" : "Severe Accrual Mirage / Low CFO"}
+                      <td className="py-2.5 px-3 font-bold text-cyan-400">{stock.Symbol}</td>
+                      <td className="py-2.5 px-3 font-sans">
+                        <div className="text-slate-200 font-medium">{stock.Name}</div>
+                        <div className="text-[10px] text-cyan-400">{stock.Pillar_Tag}</div>
+                      </td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">{stock.Promoter_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right font-bold text-purple-300">{stock.Reinvest_Rate_5Y_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-300">{stock.FA_Expansion_5Y}x</td>
+                      <td className="py-2.5 px-3 text-right font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</td>
+                      <td className="py-2.5 px-3 text-right text-slate-300">{stock.PAT_CAGR_10Y}% / {stock.PAT_CAGR_5Y}%</td>
+                      <td className="py-2.5 px-3 text-right text-emerald-400">₹{stock.Net_Cash_Cr}</td>
+                      <td className="py-2.5 px-3 text-right font-bold text-white">{stock.Ex_Cash_PE}x</td>
+                      <td className="py-2.5 px-3 text-right text-teal-300">
+                        ₹{stock.Intrinsic_Value} <span className="text-[10px]">({stock.MoS_Pct && stock.MoS_Pct > 0 ? `+${stock.MoS_Pct}%` : `${stock.MoS_Pct}%`})</span>
                       </td>
                     </tr>
                   ))}
@@ -1288,24 +1373,79 @@ export default function QuantDashboard() {
           </div>
         )}
 
-        {/* TAB 5: SEARCH ANY OF 2,566 EQUITIES */}
+        {/* =====================================================================
+            TAB 4: FORENSIC TRAPS & STAGNANT DIVIDEND COWS
+           ===================================================================== */}
+        {activeTab === "traps" && screener && (
+          <div className="p-5 rounded-xl bg-[#0c121e] border border-rose-500/30 shadow-md space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+              <div>
+                <h2 className="text-base font-bold text-rose-400 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5" />
+                  Disqualified Optical-ROCE Dividend Cows, Subsidy Traps & Debt Disasters
+                </h2>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Includes high-ROCE stagnant cows (`CASTROLIND`, `ACCELYA`, `SANOFI`) and sovereign subsidy / paper-profit traps (`CHAMBLFERT`).
+                </p>
+              </div>
+              <div className="text-xs text-rose-400 bg-rose-500/10 px-3 py-1 rounded border border-rose-500/20 font-medium">
+                {screener.traps_count} Flagged
+              </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
+                    <th className="py-2.5 px-3">Ticker</th>
+                    <th className="py-2.5 px-3">Company Name</th>
+                    <th className="py-2.5 px-3 text-right">10Y ROCE</th>
+                    <th className="py-2.5 px-3 text-right">5Y Reinvest</th>
+                    <th className="py-2.5 px-3 text-right">5Y PAT CAGR</th>
+                    <th className="py-2.5 px-3 text-right">3Y Cash Conv</th>
+                    <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
+                    <th className="py-2.5 px-3">Forensic Diagnosis</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800/60 font-mono">
+                  {screener.traps_top.map((stock) => (
+                    <tr key={stock.Symbol} className="hover:bg-rose-950/20 transition">
+                      <td className="py-2 px-3 font-bold text-rose-400">{stock.Symbol}</td>
+                      <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
+                      <td className="py-2 px-3 text-right text-amber-300">{stock.Avg_ROCE_Pct}%</td>
+                      <td className="py-2 px-3 text-right text-rose-300 font-bold">{stock.Reinvest_Rate_5Y_Pct}%</td>
+                      <td className="py-2 px-3 text-right text-rose-400">{stock.PAT_CAGR_5Y}%</td>
+                      <td className="py-2 px-3 text-right text-slate-300">{stock.Cash_Conv_3Y_Pct}%</td>
+                      <td className="py-2 px-3 text-right text-rose-300">₹{Math.round(stock.Latest_Debt_Cr).toLocaleString()}</td>
+                      <td className="py-2 px-3 font-sans text-xs text-rose-300/90">{stock.Pillar_Tag}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* =====================================================================
+            TAB 5: SEARCH ANY OF 1,902 AUDITED EQUITIES
+           ===================================================================== */}
         {activeTab === "search" && screener && (
           <div className="p-5 rounded-xl bg-[#0c121e] border border-slate-800 shadow-md space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
               <div>
                 <h2 className="text-base font-bold text-white flex items-center gap-2">
                   <Search className="w-5 h-5 text-purple-400" />
-                  Instant Forensic Auditor across 2,566 Listed Equities
+                  Instant Forensic Auditor across {screener.total_audited_equities.toLocaleString()} NSE Equities
                 </h2>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Type any company name or ticker to inspect 10-year cash conversion, debt solvency, and ROCE
+                  Type any ticker or company name to inspect 10Y ROCE, 5Y ROIIC, Reinvestment Rate, Ex-Cash P/E, and Intrinsic Value
                 </p>
               </div>
               <div className="relative w-full sm:w-72">
                 <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
                 <input
                   type="text"
-                  placeholder="e.g. INFY, RELIANCE, TATA..."
+                  placeholder="e.g. CMSINFO, CAMS, CASTROL..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 font-mono"
@@ -1315,7 +1455,7 @@ export default function QuantDashboard() {
 
             {searchQuery.trim() === "" ? (
               <div className="text-center py-12 text-slate-500 text-xs">
-                Type a ticker or company name above to view its 10-year audited forensic metrics.
+                Type a ticker or company name above to view its 10-year Buffett–Munger & Pabrai forensic metrics.
               </div>
             ) : filteredStocks.length === 0 ? (
               <div className="text-center py-12 text-slate-400 text-xs">
@@ -1328,12 +1468,13 @@ export default function QuantDashboard() {
                     <tr className="border-b border-slate-800 text-slate-400 bg-slate-900/60 uppercase font-mono text-[11px]">
                       <th className="py-2.5 px-3">Ticker</th>
                       <th className="py-2.5 px-3">Company Name</th>
-                      <th className="py-2.5 px-3 text-right">10-Yr Cash Conv</th>
-                      <th className="py-2.5 px-3 text-right">10-Yr Avg ROCE</th>
-                      <th className="py-2.5 px-3 text-right">Debt (₹ Cr)</th>
-                      <th className="py-2.5 px-3 text-right">10-Yr CFO (₹ Cr)</th>
-                      <th className="py-2.5 px-3 text-right">10-Yr PAT (₹ Cr)</th>
-                      <th className="py-2.5 px-3 text-right">CMP (₹)</th>
+                      <th className="py-2.5 px-3 text-right">10Y ROCE</th>
+                      <th className="py-2.5 px-3 text-right">5Y ROIIC</th>
+                      <th className="py-2.5 px-3 text-right">5Y Reinvest</th>
+                      <th className="py-2.5 px-3 text-right">5Y PAT CAGR</th>
+                      <th className="py-2.5 px-3 text-right">10Y/3Y Cash Conv</th>
+                      <th className="py-2.5 px-3 text-right">Ex-Cash P/E</th>
+                      <th className="py-2.5 px-3 text-right">IV (MoS %)</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-800/60 font-mono">
@@ -1341,18 +1482,15 @@ export default function QuantDashboard() {
                       <tr key={stock.Symbol} className="hover:bg-slate-800/40 transition">
                         <td className="py-2 px-3 font-bold text-purple-400">{stock.Symbol}</td>
                         <td className="py-2 px-3 font-sans text-slate-200 font-medium">{stock.Name}</td>
-                        <td className={`py-2 px-3 text-right font-bold ${stock.Cash_Conv_Pct >= 70 ? "text-emerald-400" : stock.Cash_Conv_Pct < 30 ? "text-rose-400" : "text-amber-400"}`}>
-                          {stock.Cash_Conv_Pct}%
+                        <td className="py-2 px-3 text-right font-bold text-amber-300">{stock.Avg_ROCE_Pct}%</td>
+                        <td className="py-2 px-3 text-right font-bold text-emerald-400">{stock.ROIIC_5Y_Pct}%</td>
+                        <td className="py-2 px-3 text-right text-purple-300">{stock.Reinvest_Rate_5Y_Pct}%</td>
+                        <td className="py-2 px-3 text-right text-slate-200">{stock.PAT_CAGR_5Y}%</td>
+                        <td className="py-2 px-3 text-right text-slate-300">{stock.Cash_Conv_Pct}% / {stock.Cash_Conv_3Y_Pct}%</td>
+                        <td className="py-2 px-3 text-right font-bold text-cyan-300">{stock.Ex_Cash_PE}x</td>
+                        <td className="py-2 px-3 text-right text-teal-300">
+                          ₹{stock.Intrinsic_Value} <span className="text-[10px]">({stock.MoS_Pct && stock.MoS_Pct > 0 ? `+${stock.MoS_Pct}%` : `${stock.MoS_Pct}%`})</span>
                         </td>
-                        <td className={`py-2 px-3 text-right font-bold ${stock.Avg_ROCE_Pct >= 20 ? "text-emerald-400" : "text-slate-300"}`}>
-                          {stock.Avg_ROCE_Pct}%
-                        </td>
-                        <td className={`py-2 px-3 text-right ${stock.Latest_Debt_Cr > 1000 ? "text-rose-400 font-bold" : "text-slate-300"}`}>
-                          ₹{stock.Latest_Debt_Cr}
-                        </td>
-                        <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_CFO_Cr).toLocaleString()}</td>
-                        <td className="py-2 px-3 text-right text-slate-300">₹{Math.round(stock.Cum_PAT_Cr).toLocaleString()}</td>
-                        <td className="py-2 px-3 text-right text-slate-200">{stock.CMP ? `₹${stock.CMP}` : "-"}</td>
                       </tr>
                     ))}
                   </tbody>
