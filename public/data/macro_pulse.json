@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-10-06 18:41:16 IST",
+  "last_updated": "2026-10-07 10:58:35 IST",
   "brent_crude": {
-    "value": 100.71,
+    "value": 101.98,
     "unit": "USD/bbl",
     "percentile_10yr": 94.0,
     "verdict": "ELEVATED",
-    "trend": "+4.6% 1-MoM"
+    "trend": "+4.1% 1-MoM"
   },
   "us_10y": {
-    "value": 5.26,
+    "value": 5.27,
     "unit": "%",
     "percentile_10yr": 99.3,
     "verdict": "RESTRICTIVE",
@@ -22,18 +22,18 @@
     "trend": "Anchored Domestic Cost of Capital"
   },
   "dxy": {
-    "value": 101.85,
+    "value": 102.32,
     "unit": "Index",
     "percentile_10yr": 61.1,
-    "verdict": "NEUTRAL-TO-SOFT",
-    "trend": "+2.7% 1-MoM"
+    "verdict": "STRONG DOLLAR",
+    "trend": "+3.5% 1-MoM"
   },
   "usdinr": {
-    "value": 96.41,
+    "value": 96.78,
     "unit": "INR",
     "percentile_10yr": 98.5,
     "verdict": "TAILWIND FOR EXPORTERS",
-    "trend": "+2.1% 1-MoM"
+    "trend": "+2.4% 1-MoM"
   },
   "fii_dii_history": [
     {
@@ -6018,22 +6018,13 @@
     }
   ],
   "nifty_50": {
-    "value": 22555.8,
+    "value": 22603.1,
     "unit": "Index",
     "percentile_10yr": 75.0,
     "verdict": "CONSOLIDATION",
-    "trend": "-5.1% 1-MoM"
+    "trend": "-4.4% 1-MoM"
   },
   "daily_chart_history": [
-    {
-      "Date": "2024-11-05",
-      "Brent": 75.53,
-      "US10Y": 4.29,
-      "DXY": 103.42,
-      "USDINR": 84.15,
-      "Nifty50": 24213.3,
-      "IndiaGSec": 6.84
-    },
     {
       "Date": "2024-11-06",
       "Brent": 74.92,
@@ -10518,11 +10509,20 @@
     },
     {
       "Date": "2026-10-06",
-      "Brent": 100.71,
-      "US10Y": 5.26,
-      "DXY": 101.85,
-      "USDINR": 96.41,
-      "Nifty50": 22555.8,
+      "Brent": 100.58,
+      "US10Y": 5.27,
+      "DXY": 101.83,
+      "USDINR": 96.34,
+      "Nifty50": 22776.1,
+      "IndiaGSec": 6.89
+    },
+    {
+      "Date": "2026-10-07",
+      "Brent": 101.98,
+      "US10Y": 5.27,
+      "DXY": 102.32,
+      "USDINR": 96.78,
+      "Nifty50": 22603.1,
       "IndiaGSec": 6.89
     }
   ],
