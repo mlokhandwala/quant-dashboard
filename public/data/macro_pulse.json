@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-10-12 11:49:54 IST",
+  "last_updated": "2026-10-12 21:27:24 IST",
   "brent_crude": {
-    "value": 106.01,
+    "value": 105.92,
     "unit": "USD/bbl",
     "percentile_10yr": 94.0,
     "verdict": "ELEVATED",
@@ -22,11 +22,11 @@
     "trend": "Anchored Domestic Cost of Capital"
   },
   "dxy": {
-    "value": 102.42,
+    "value": 102.58,
     "unit": "Index",
     "percentile_10yr": 61.1,
     "verdict": "STRONG DOLLAR",
-    "trend": "+3.3% 1-MoM"
+    "trend": "+3.5% 1-MoM"
   },
   "usdinr": {
     "value": 95.76,
@@ -6018,11 +6018,11 @@
     }
   ],
   "nifty_50": {
-    "value": 22363.3,
+    "value": 22520.4,
     "unit": "Index",
     "percentile_10yr": 75.0,
     "verdict": "CONSOLIDATION",
-    "trend": "-4.4% 1-MoM"
+    "trend": "-3.8% 1-MoM"
   },
   "daily_chart_history": [
     {
@@ -10518,11 +10518,11 @@
     },
     {
       "Date": "2026-10-12",
-      "Brent": 106.01,
+      "Brent": 105.92,
       "US10Y": 5.24,
-      "DXY": 102.42,
+      "DXY": 102.58,
       "USDINR": 95.76,
-      "Nifty50": 22363.3,
+      "Nifty50": 22520.4,
       "IndiaGSec": 6.89
     }
   ],
