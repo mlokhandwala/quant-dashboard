@@ -1,14 +1,14 @@
 {
-  "last_updated": "2026-10-14 17:40:21 IST",
+  "last_updated": "2026-10-15 09:03:29 IST",
   "brent_crude": {
-    "value": 106.52,
+    "value": 103.89,
     "unit": "USD/bbl",
     "percentile_10yr": 94.0,
     "verdict": "ELEVATED",
-    "trend": "-2.1% 1-MoM"
+    "trend": "-1.8% 1-MoM"
   },
   "us_10y": {
-    "value": 5.21,
+    "value": 5.19,
     "unit": "%",
     "percentile_10yr": 99.3,
     "verdict": "RESTRICTIVE",
@@ -22,18 +22,18 @@
     "trend": "Anchored Domestic Cost of Capital"
   },
   "dxy": {
-    "value": 102.69,
+    "value": 102.02,
     "unit": "Index",
     "percentile_10yr": 61.1,
     "verdict": "STRONG DOLLAR",
-    "trend": "+3.1% 1-MoM"
+    "trend": "+1.7% 1-MoM"
   },
   "usdinr": {
-    "value": 95.14,
+    "value": 94.99,
     "unit": "INR",
     "percentile_10yr": 98.5,
     "verdict": "TAILWIND FOR EXPORTERS",
-    "trend": "-0.7% 1-MoM"
+    "trend": "-1.0% 1-MoM"
   },
   "fii_dii_history": [
     {
@@ -6018,22 +6018,13 @@
     }
   ],
   "nifty_50": {
-    "value": 22622.7,
+    "value": 22999.6,
     "unit": "Index",
     "percentile_10yr": 75.0,
     "verdict": "CONSOLIDATION",
-    "trend": "-2.1% 1-MoM"
+    "trend": "-0.9% 1-MoM"
   },
   "daily_chart_history": [
-    {
-      "Date": "2024-11-13",
-      "Brent": 72.28,
-      "US10Y": 4.45,
-      "DXY": 106.48,
-      "USDINR": 84.4,
-      "Nifty50": 23559.1,
-      "IndiaGSec": 6.84
-    },
     {
       "Date": "2024-11-14",
       "Brent": 72.56,
@@ -10518,11 +10509,20 @@
     },
     {
       "Date": "2026-10-14",
-      "Brent": 106.52,
-      "US10Y": 5.21,
-      "DXY": 102.69,
-      "USDINR": 95.14,
+      "Brent": 106.06,
+      "US10Y": 5.19,
+      "DXY": 102.55,
+      "USDINR": 95.29,
       "Nifty50": 22622.7,
+      "IndiaGSec": 6.89
+    },
+    {
+      "Date": "2026-10-15",
+      "Brent": 103.89,
+      "US10Y": 5.19,
+      "DXY": 102.02,
+      "USDINR": 94.99,
+      "Nifty50": 22999.6,
       "IndiaGSec": 6.89
     }
   ],
