@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-27 15:49:43",
+  "last_updated": "2026-10-27 18:28:12",
   "account_summary": {
     "client_id": "FN237119",
     "initial_capital": 60000.0,
@@ -526,5 +526,5 @@
       "Reason": "Consolidated-vs-Standalone Freeze & Q1 Margin Drop: Consolidated page froze at Mar 2025; live Standalone FY26/TTM PAT fell -9.8% (\u20b9297 Cr \u2192 \u20b9287 Cr \u2192 \u20b9268 Cr) and Q1 Jun 2026 PAT dropped -35.7% YoY."
     }
   ],
-  "last_scuttlebutt_sync": "2026-10-27 15:49:43"
+  "last_scuttlebutt_sync": "2026-10-27 18:28:12"
 }
