@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09 22:46:52",
+  "last_updated": "2026-11-10 12:26:14",
   "account_summary": {
     "client_id": "FN237119",
     "initial_capital": 60000.0,
@@ -80,7 +80,7 @@
       "Intrinsic_Value": 4528.19,
       "MoS_Pct": 3.8,
       "Stop_Loss": 0.0,
-      "PE": 22.0,
+      "PE": 21.6,
       "Ex_Cash_PE": 17.8,
       "Avg_ROCE_Pct": 22.0,
       "Latest_ROCE_Pct": 23.0,
@@ -127,7 +127,7 @@
       "Intrinsic_Value": 969.7,
       "MoS_Pct": 21.9,
       "Stop_Loss": 0.0,
-      "PE": 16.2,
+      "PE": 15.7,
       "Ex_Cash_PE": 14.6,
       "Avg_ROCE_Pct": 20.5,
       "Latest_ROCE_Pct": 24.5,
@@ -409,7 +409,7 @@
       "Intrinsic_Value": 3038.67,
       "MoS_Pct": -8.2,
       "Stop_Loss": 0.0,
-      "PE": 31.1,
+      "PE": 30.9,
       "Ex_Cash_PE": 33.0,
       "Avg_ROCE_Pct": 27.0,
       "Latest_ROCE_Pct": 26.6,
@@ -526,5 +526,5 @@
       "Reason": "Consolidated-vs-Standalone Freeze & Q1 Margin Drop: Consolidated page froze at Mar 2025; live Standalone FY26/TTM PAT fell -9.8% (\u20b9297 Cr \u2192 \u20b9287 Cr \u2192 \u20b9268 Cr) and Q1 Jun 2026 PAT dropped -35.7% YoY."
     }
   ],
-  "last_scuttlebutt_sync": "2026-11-09 22:46:52"
+  "last_scuttlebutt_sync": "2026-11-10 12:26:14"
 }
